@@ -1,0 +1,404 @@
+{
+  "results": [
+    {
+      "file": "C:\\Users\\cal\\Desktop\\example-device-driver-scanner\\fixtures\\helper-O2.sys",
+      "sha256": "87f428490eb5a5ddab4d8f004f6215a5ddf1fc0e8e94a04cc1b15531cb1209ed",
+      "broad_classification": "BROAD_SAT_PARTIAL_LEAD",
+      "narrow_classification": "PATTERN_CANDIDATE",
+      "writable_image_slot_calls": [
+        {
+          "variant": "WRITABLE_IMAGE_SLOT_CALL",
+          "entry_model": "WDM",
+          "dispatch_rva": "0x1110",
+          "call_rva": "0x10a7",
+          "slot_rva": "0x3000",
+          "function_rva": "0x10a0",
+          "section": ".data",
+          "initial_target_rva": "0x1000",
+          "instruction": "jmp rax",
+          "narrow_input_variant_candidate": true,
+          "narrow_input_arguments": [
+            "rcx"
+          ],
+          "static_evidence_tier": "SAT_PARTIAL_MODELED_PATH",
+          "static_path_evidence": {
+            "call_chain_rvas": [
+              "0x1110",
+              "0x10a0"
+            ],
+            "modeled_path_feasibility": {
+              "status": "SAT_PARTIAL_MODEL",
+              "modeled_predicates": 3,
+              "witness": {
+                "output_length_0_32": "0x4",
+                "systembuffer_pointer_64": "0xffffffffffffffff",
+                "ioctl_0_32": "0x226000"
+              },
+              "scope": "Only tracked integer predicates; not proof of runtime reachability, handle access, or full buffer validity."
+            }
+          },
+          "user_handle_access": "UNVERIFIED",
+          "runtime_reachability": "UNVERIFIED"
+        }
+      ],
+      "wdm_path_refinement": {
+        "status": "REFINED",
+        "sites_matched": 1,
+        "sites_total": 1,
+        "path_search_steps": 72,
+        "limitations": [
+          "bounded_leaf_or_thunk_decode"
+        ]
+      },
+      "known_limits": [
+        "Static branch model is partial and MAY joins discard path correlation.",
+        "WDF queue registration and callback invocation are not runtime-proven.",
+        "Writable image slot is not evidence of a user-controlled pointer write.",
+        "User handle access and live IOCTL execution were not tested."
+      ]
+    },
+    {
+      "file": "C:\\Users\\cal\\Desktop\\example-device-driver-scanner\\fixtures\\helper-Od.sys",
+      "sha256": "33a55f5e73d05e4d8ee45ec999755eeac0ca99f34866bf102767024c51c851e6",
+      "broad_classification": "BROAD_SAT_PARTIAL_LEAD",
+      "narrow_classification": "PATTERN_CANDIDATE",
+      "writable_image_slot_calls": [
+        {
+          "variant": "WRITABLE_IMAGE_SLOT_CALL",
+          "entry_model": "WDM",
+          "dispatch_rva": "0x1130",
+          "call_rva": "0x106d",
+          "slot_rva": "0x3000",
+          "function_rva": "0x1050",
+          "section": ".data",
+          "initial_target_rva": "0x1000",
+          "instruction": "call rax",
+          "narrow_input_variant_candidate": true,
+          "narrow_input_arguments": [
+            "rcx",
+            "stack_arg_6"
+          ],
+          "static_evidence_tier": "SAT_PARTIAL_MODELED_PATH",
+          "static_path_evidence": {
+            "call_chain_rvas": [
+              "0x1130",
+              "0x1050"
+            ],
+            "modeled_path_feasibility": {
+              "status": "SAT_PARTIAL_MODEL",
+              "modeled_predicates": 5,
+              "witness": {
+                "input_length_0_32": "0x1000",
+                "output_length_0_32": "0x4",
+                "ioctl_0_32": "0x226000",
+                "systembuffer_pointer_64": "0xffffffffffffffff"
+              },
+              "scope": "Only tracked integer predicates; not proof of runtime reachability, handle access, or full buffer validity."
+            }
+          },
+          "user_handle_access": "UNVERIFIED",
+          "runtime_reachability": "UNVERIFIED"
+        }
+      ],
+      "wdm_path_refinement": {
+        "status": "REFINED",
+        "sites_matched": 1,
+        "sites_total": 1,
+        "path_search_steps": 198,
+        "limitations": []
+      },
+      "known_limits": [
+        "Static branch model is partial and MAY joins discard path correlation.",
+        "WDF queue registration and callback invocation are not runtime-proven.",
+        "Writable image slot is not evidence of a user-controlled pointer write.",
+        "User handle access and live IOCTL execution were not tested."
+      ]
+    },
+    {
+      "file": "C:\\Users\\cal\\Desktop\\example-device-driver-scanner\\fixtures\\internal-O2.sys",
+      "sha256": "23a0c16e146d89702e043cc07777e5fa417bb09a987dd211fe2eff8597fd53e1",
+      "broad_classification": "NO_BROAD_IMAGE_SLOT_IN_MODELED_PATHS",
+      "narrow_classification": "NO_CANDIDATE_IN_MODELED_PATHS",
+      "writable_image_slot_calls": [],
+      "wdm_path_refinement": {
+        "status": "NOT_APPLICABLE",
+        "limitations": []
+      },
+      "known_limits": [
+        "Static branch model is partial and MAY joins discard path correlation.",
+        "WDF queue registration and callback invocation are not runtime-proven.",
+        "Writable image slot is not evidence of a user-controlled pointer write.",
+        "User handle access and live IOCTL execution were not tested."
+      ]
+    },
+    {
+      "file": "C:\\Users\\cal\\Desktop\\example-device-driver-scanner\\fixtures\\internal-Od.sys",
+      "sha256": "35ee9a5423123f28881a4c2cfa6567570fad9c3ecbf30382e1308f91249cfd62",
+      "broad_classification": "NO_BROAD_IMAGE_SLOT_IN_MODELED_PATHS",
+      "narrow_classification": "NO_CANDIDATE_IN_MODELED_PATHS",
+      "writable_image_slot_calls": [],
+      "wdm_path_refinement": {
+        "status": "NOT_APPLICABLE",
+        "limitations": []
+      },
+      "known_limits": [
+        "Static branch model is partial and MAY joins discard path correlation.",
+        "WDF queue registration and callback invocation are not runtime-proven.",
+        "Writable image slot is not evidence of a user-controlled pointer write.",
+        "User handle access and live IOCTL execution were not tested."
+      ]
+    },
+    {
+      "file": "C:\\Users\\cal\\Desktop\\example-device-driver-scanner\\fixtures\\positive-O2.sys",
+      "sha256": "cb4c388a212127337351b615f2b9e22d60151bc9f43c66a0090abbdaf4fdd604",
+      "broad_classification": "BROAD_SAT_PARTIAL_LEAD",
+      "narrow_classification": "PATTERN_CANDIDATE",
+      "writable_image_slot_calls": [
+        {
+          "variant": "WRITABLE_IMAGE_SLOT_CALL",
+          "entry_model": "WDM",
+          "dispatch_rva": "0x1100",
+          "call_rva": "0x1150",
+          "slot_rva": "0x3000",
+          "function_rva": "0x1100",
+          "section": ".data",
+          "initial_target_rva": "0x1000",
+          "instruction": "call r8",
+          "narrow_input_variant_candidate": true,
+          "narrow_input_arguments": [
+            "rcx"
+          ],
+          "static_evidence_tier": "SAT_PARTIAL_MODELED_PATH",
+          "static_path_evidence": {
+            "call_chain_rvas": [
+              "0x1100"
+            ],
+            "modeled_path_feasibility": {
+              "status": "SAT_PARTIAL_MODEL",
+              "modeled_predicates": 3,
+              "witness": {
+                "output_length_0_32": "0x4",
+                "systembuffer_pointer_64": "0xffffffffffffffff",
+                "ioctl_0_32": "0x226000"
+              },
+              "scope": "Only tracked integer predicates; not proof of runtime reachability, handle access, or full buffer validity."
+            }
+          },
+          "user_handle_access": "UNVERIFIED",
+          "runtime_reachability": "UNVERIFIED"
+        }
+      ],
+      "wdm_path_refinement": {
+        "status": "REFINED",
+        "sites_matched": 1,
+        "sites_total": 1,
+        "path_search_steps": 71,
+        "limitations": []
+      },
+      "known_limits": [
+        "Static branch model is partial and MAY joins discard path correlation.",
+        "WDF queue registration and callback invocation are not runtime-proven.",
+        "Writable image slot is not evidence of a user-controlled pointer write.",
+        "User handle access and live IOCTL execution were not tested."
+      ]
+    },
+    {
+      "file": "C:\\Users\\cal\\Desktop\\example-device-driver-scanner\\fixtures\\positive-Od.sys",
+      "sha256": "6024ad606c4645dafd0d2cad3e47652611f235c530418c177351658f9bef7a5f",
+      "broad_classification": "BROAD_SAT_PARTIAL_LEAD",
+      "narrow_classification": "PATTERN_CANDIDATE",
+      "writable_image_slot_calls": [
+        {
+          "variant": "WRITABLE_IMAGE_SLOT_CALL",
+          "entry_model": "WDM",
+          "dispatch_rva": "0x1100",
+          "call_rva": "0x11b9",
+          "slot_rva": "0x3000",
+          "function_rva": "0x1100",
+          "section": ".data",
+          "initial_target_rva": "0x1000",
+          "instruction": "call rax",
+          "narrow_input_variant_candidate": true,
+          "narrow_input_arguments": [
+            "rcx"
+          ],
+          "static_evidence_tier": "SAT_PARTIAL_MODELED_PATH",
+          "static_path_evidence": {
+            "call_chain_rvas": [
+              "0x1100"
+            ],
+            "modeled_path_feasibility": {
+              "status": "SAT_PARTIAL_MODEL",
+              "modeled_predicates": 5,
+              "witness": {
+                "input_length_0_32": "0x1000",
+                "output_length_0_32": "0x4",
+                "ioctl_0_32": "0x226000",
+                "systembuffer_pointer_64": "0xffffffffffffffff"
+              },
+              "scope": "Only tracked integer predicates; not proof of runtime reachability, handle access, or full buffer validity."
+            }
+          },
+          "user_handle_access": "UNVERIFIED",
+          "runtime_reachability": "UNVERIFIED"
+        }
+      ],
+      "wdm_path_refinement": {
+        "status": "REFINED",
+        "sites_matched": 1,
+        "sites_total": 1,
+        "path_search_steps": 189,
+        "limitations": []
+      },
+      "known_limits": [
+        "Static branch model is partial and MAY joins discard path correlation.",
+        "WDF queue registration and callback invocation are not runtime-proven.",
+        "Writable image slot is not evidence of a user-controlled pointer write.",
+        "User handle access and live IOCTL execution were not tested."
+      ]
+    },
+    {
+      "file": "C:\\Users\\cal\\Desktop\\example-device-driver-scanner\\fixtures\\readonly-O2.sys",
+      "sha256": "7aecbaf15b2f164e6e9d220f7cd105235d28b387413ace654370df54d014adab",
+      "broad_classification": "NO_BROAD_IMAGE_SLOT_IN_MODELED_PATHS",
+      "narrow_classification": "NO_CANDIDATE_IN_MODELED_PATHS",
+      "writable_image_slot_calls": [],
+      "wdm_path_refinement": {
+        "status": "NOT_APPLICABLE",
+        "limitations": []
+      },
+      "known_limits": [
+        "Static branch model is partial and MAY joins discard path correlation.",
+        "WDF queue registration and callback invocation are not runtime-proven.",
+        "Writable image slot is not evidence of a user-controlled pointer write.",
+        "User handle access and live IOCTL execution were not tested."
+      ]
+    },
+    {
+      "file": "C:\\Users\\cal\\Desktop\\example-device-driver-scanner\\fixtures\\readonly-Od.sys",
+      "sha256": "a778f71c58c910e5294dd288d034b6983ad3e0bee7f4f90bcb843b3defe84764",
+      "broad_classification": "NO_BROAD_IMAGE_SLOT_IN_MODELED_PATHS",
+      "narrow_classification": "NO_CANDIDATE_IN_MODELED_PATHS",
+      "writable_image_slot_calls": [],
+      "wdm_path_refinement": {
+        "status": "NOT_APPLICABLE",
+        "limitations": []
+      },
+      "known_limits": [
+        "Static branch model is partial and MAY joins discard path correlation.",
+        "WDF queue registration and callback invocation are not runtime-proven.",
+        "Writable image slot is not evidence of a user-controlled pointer write.",
+        "User handle access and live IOCTL execution were not tested."
+      ]
+    },
+    {
+      "file": "C:\\Users\\cal\\Desktop\\example-device-driver-scanner\\fixtures\\unrelated-O2.sys",
+      "sha256": "5c69aa7d7164612fb59bae00f9d89f0cb7c3e120bd9c83a9d763ea58dd62ae5e",
+      "broad_classification": "BROAD_SAT_PARTIAL_LEAD",
+      "narrow_classification": "NO_CANDIDATE_IN_MODELED_PATHS",
+      "writable_image_slot_calls": [
+        {
+          "variant": "WRITABLE_IMAGE_SLOT_CALL",
+          "entry_model": "WDM",
+          "dispatch_rva": "0x1100",
+          "call_rva": "0x1152",
+          "slot_rva": "0x3000",
+          "function_rva": "0x1100",
+          "section": ".data",
+          "initial_target_rva": "0x1000",
+          "instruction": "call rax",
+          "narrow_input_variant_candidate": false,
+          "narrow_input_arguments": [],
+          "static_evidence_tier": "SAT_PARTIAL_MODELED_PATH",
+          "static_path_evidence": {
+            "call_chain_rvas": [
+              "0x1100"
+            ],
+            "modeled_path_feasibility": {
+              "status": "SAT_PARTIAL_MODEL",
+              "modeled_predicates": 3,
+              "witness": {
+                "output_length_0_32": "0x4",
+                "systembuffer_pointer_64": "0xffffffffffffffff",
+                "ioctl_0_32": "0x226000"
+              },
+              "scope": "Only tracked integer predicates; not proof of runtime reachability, handle access, or full buffer validity."
+            }
+          },
+          "user_handle_access": "UNVERIFIED",
+          "runtime_reachability": "UNVERIFIED"
+        }
+      ],
+      "wdm_path_refinement": {
+        "status": "REFINED",
+        "sites_matched": 1,
+        "sites_total": 1,
+        "path_search_steps": 67,
+        "limitations": []
+      },
+      "known_limits": [
+        "Static branch model is partial and MAY joins discard path correlation.",
+        "WDF queue registration and callback invocation are not runtime-proven.",
+        "Writable image slot is not evidence of a user-controlled pointer write.",
+        "User handle access and live IOCTL execution were not tested."
+      ]
+    },
+    {
+      "file": "C:\\Users\\cal\\Desktop\\example-device-driver-scanner\\fixtures\\unrelated-Od.sys",
+      "sha256": "4e342529dcc1b383bf633462eceb215e08080c4758ef0ca228a62d0ac93b49c7",
+      "broad_classification": "BROAD_SAT_PARTIAL_LEAD",
+      "narrow_classification": "NO_CANDIDATE_IN_MODELED_PATHS",
+      "writable_image_slot_calls": [
+        {
+          "variant": "WRITABLE_IMAGE_SLOT_CALL",
+          "entry_model": "WDM",
+          "dispatch_rva": "0x1100",
+          "call_rva": "0x11c2",
+          "slot_rva": "0x3000",
+          "function_rva": "0x1100",
+          "section": ".data",
+          "initial_target_rva": "0x1000",
+          "instruction": "call rax",
+          "narrow_input_variant_candidate": false,
+          "narrow_input_arguments": [],
+          "static_evidence_tier": "SAT_PARTIAL_MODELED_PATH",
+          "static_path_evidence": {
+            "call_chain_rvas": [
+              "0x1100"
+            ],
+            "modeled_path_feasibility": {
+              "status": "SAT_PARTIAL_MODEL",
+              "modeled_predicates": 5,
+              "witness": {
+                "input_length_0_32": "0x1000",
+                "output_length_0_32": "0x4",
+                "ioctl_0_32": "0x226000",
+                "systembuffer_pointer_64": "0xffffffffffffffff"
+              },
+              "scope": "Only tracked integer predicates; not proof of runtime reachability, handle access, or full buffer validity."
+            }
+          },
+          "user_handle_access": "UNVERIFIED",
+          "runtime_reachability": "UNVERIFIED"
+        }
+      ],
+      "wdm_path_refinement": {
+        "status": "REFINED",
+        "sites_matched": 1,
+        "sites_total": 1,
+        "path_search_steps": 190,
+        "limitations": []
+      },
+      "known_limits": [
+        "Static branch model is partial and MAY joins discard path correlation.",
+        "WDF queue registration and callback invocation are not runtime-proven.",
+        "Writable image slot is not evidence of a user-controlled pointer write.",
+        "User handle access and live IOCTL execution were not tested."
+      ]
+    }
+  ],
+  "summary": {
+    "BROAD_SAT_PARTIAL_LEAD": 6,
+    "NO_BROAD_IMAGE_SLOT_IN_MODELED_PATHS": 4
+  }
+}

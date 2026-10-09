@@ -1,0 +1,156 @@
+IMAGE: C:\Windows\System32\drivers\mmcss.sys
+BASE: 0x140000000
+ENTRY RVA: 0xf4d0
+SECTIONS:
+b'.text\x00\x00\x00' RVA=0x1000 size=0x49f7 flags=0x68000020
+b'fothk\x00\x00\x00' RVA=0x6000 size=0x1000 flags=0x68000020
+b'.rdata\x00\x00' RVA=0x7000 size=0x1820 flags=0x48000040
+b'.data\x00\x00\x00' RVA=0x9000 size=0x42c flags=0xc8000040
+b'.pdata\x00\x00' RVA=0xa000 size=0xa8c flags=0x48000040
+b'.idata\x00\x00' RVA=0xb000 size=0xe58 flags=0x48000040
+b'PAGE\x00\x00\x00\x00' RVA=0xc000 size=0x2e10 flags=0x60000020
+b'INIT\x00\x00\x00\x00' RVA=0xf000 size=0x15f3 flags=0x62000020
+b'INITCONS' RVA=0x11000 size=0x65c flags=0x42000040
+b'INITDATA' RVA=0x12000 size=0x48 flags=0xc2000040
+b'GFIDS\x00\x00\x00' RVA=0x13000 size=0x64 flags=0x42000040
+b'.rsrc\x00\x00\x00' RVA=0x14000 size=0x730 flags=0x42000040
+b'.reloc\x00\x00' RVA=0x15000 size=0x6b0 flags=0x42000040
+IMPORTS:
+0xb000 EtwRegister
+0xb008 EtwUnregister
+0xb010 PsGetThreadProcessId
+0xb018 PsGetThreadId
+0xb020 EtwWrite
+0xb028 __C_specific_handler
+0xb030 RtlUnregisterFeatureConfigurationChangeNotification
+0xb038 RtlUnregisterFeatureUsageProvider
+0xb040 IofCompleteRequest
+0xb048 ZwQuerySystemInformation
+0xb050 RtlCompareUnicodeString
+0xb058 KeEnterCriticalRegion
+0xb060 KeLeaveCriticalRegion
+0xb068 PsGetCurrentProcess
+0xb070 ExGetPreviousMode
+0xb078 IoCreateFileEx
+0xb080 ExRaiseDatatypeMisalignment
+0xb088 MmUserProbeAddress
+0xb090 ProbeForWrite
+0xb098 IoDeleteDevice
+0xb0a0 IoCreateDevice
+0xb0a8 RtlInitUnicodeString
+0xb0b0 MmGetSystemRoutineAddress
+0xb0b8 IoWMIRegistrationControl
+0xb0c0 RtlRecordFeatureUsage
+0xb0c8 RtlArmFeatureUsageProviderFlushNotification
+0xb0d0 RtlQueryFeatureConfigurationChangeStamp
+0xb0d8 RtlQueryFeatureConfiguration
+0xb0e0 RtlRegisterFeatureConfigurationChangeNotification
+0xb0e8 RtlRegisterFeatureUsageProvider
+0xb0f0 _wcsicmp
+0xb0f8 PsGetCurrentProcessId
+0xb100 PsGetCurrentThreadId
+0xb108 PsSetCreateThreadNotifyRoutine
+0xb110 PsRemoveCreateThreadNotifyRoutine
+0xb118 RtlRbInsertNodeEx
+0xb120 RtlRbRemoveNode
+0xb128 PsGetThreadProcess
+0xb130 ExAllocatePool2
+0xb138 ZwQueryInformationThread
+0xb140 ZwSetInformationThread
+0xb148 ObfReferenceObject
+0xb150 KeSetBasePriorityThread
+0xb158 KeSetPriorityThread
+0xb160 ObfDereferenceObject
+0xb168 ExFreePoolWithTag
+0xb170 ExRegisterExtension
+0xb178 ExUnregisterExtension
+0xb180 KeQueryInterruptTimePrecise
+0xb188 RtlInitUnicodeStringEx
+0xb190 ZwQueryValueKey
+0xb198 ZwEnumerateKey
+0xb1a0 ZwOpenKey
+0xb1a8 ZwClose
+0xb1b0 ZwOpenFile
+0xb1b8 ZwDeviceIoControlFile
+0xb1c0 ExUnblockOnAddressPushLockEx
+0xb1c8 ExBlockOnAddressPushLock
+0xb1d0 IoFreeWorkItem
+0xb1d8 IoQueueWorkItem
+0xb1e0 IoAllocateWorkItem
+0xb1e8 KeAcquireSpinLockRaiseToDpc
+0xb1f0 KeReleaseSpinLock
+0xb1f8 ExAcquirePushLockExclusiveEx
+0xb200 ExReleasePushLockExclusiveEx
+0xb208 KeUpdateThreadTag
+0xb210 PoNotifyMediaBuffering
+0xb218 PoLatencySensitivityHint
+0xb220 ExAllocateTimer
+0xb228 KeInitializeEvent
+0xb230 PsCreateSystemThread
+0xb238 KeWaitForSingleObject
+0xb240 ExDeleteTimer
+0xb248 KeSetActualBasePriorityThread
+0xb250 KeAlertThread
+0xb258 PoCpuIdledSinceLastCallImprecise
+0xb260 KeSetEvent
+0xb268 PsTerminateSystemThread
+0xb270 ExSetTimer
+0xb278 ExCancelTimer
+FUNCTION RVA 0xeac0:
+0000eac0 48895c2410               mov      qword ptr [rsp + 0x10], rbx 
+0000eac5 48896c2418               mov      qword ptr [rsp + 0x18], rbp 
+0000eaca 56                       push     rsi 
+0000eacb 57                       push     rdi 
+0000eacc 4157                     push     r15 
+0000eace 4883ec20                 sub      rsp, 0x20 
+0000ead2 488baab8000000           mov      rbp, qword ptr [rdx + 0xb8] 
+0000ead9 4c8d3d109cffff           lea      r15, [rip - 0x63f0] RVA 0x86f0 b'.rdata\x00\x00' writable=False
+0000eae0 488bf2                   mov      rsi, rdx 
+0000eae3 4c89742440               mov      qword ptr [rsp + 0x40], r14 
+0000eae8 33ff                     xor      edi, edi 
+0000eaea 488b5d30                 mov      rbx, qword ptr [rbp + 0x30] 
+0000eaee 83ff03                   cmp      edi, 3 
+0000eaf1 734e                     jae      0x14000eb41 
+0000eaf3 488d0c7f                 lea      rcx, [rdi + rdi*2] 
+0000eaf7 4533c0                   xor      r8d, r8d 
+0000eafa 4d8d34cf                 lea      r14, [r15 + rcx*8] 
+0000eafe 498bd6                   mov      rdx, r14 
+0000eb01 488d4b58                 lea      rcx, [rbx + 0x58] 
+0000eb05 48ff1544c5ffff           call     qword ptr [rip - 0x3abc] RtlCompareUnicodeString; RVA 0xb050 b'.idata\x00\x00' writable=False
+0000eb0c 0f1f440000               nop      dword ptr [rax + rax] 
+0000eb11 85c0                     test     eax, eax 
+0000eb13 7528                     jne      0x14000eb3d 
+0000eb15 498b4610                 mov      rax, qword ptr [r14 + 0x10] 
+0000eb19 488bd5                   mov      rdx, rbp 
+0000eb1c 488bce                   mov      rcx, rsi 
+0000eb1f e8fc65ffff               call     0x140005120 
+0000eb24 4c8b742440               mov      r14, qword ptr [rsp + 0x40] 
+0000eb29 488b5c2448               mov      rbx, qword ptr [rsp + 0x48] 
+0000eb2e 488b6c2450               mov      rbp, qword ptr [rsp + 0x50] 
+0000eb33 4883c420                 add      rsp, 0x20 
+0000eb37 415f                     pop      r15 
+0000eb39 5f                       pop      rdi 
+0000eb3a 5e                       pop      rsi 
+0000eb3b c3                       ret       
+0000eb3c cc                       int3      
+0000eb3d ffc7                     inc      edi 
+0000eb3f ebad                     jmp      0x14000eaee 
+0000eb41 488b0db8a4ffff           mov      rcx, qword ptr [rip - 0x5b48] RVA 0x9000 b'.data\x00\x00\x00' writable=True
+0000eb48 8b412c                   mov      eax, dword ptr [rcx + 0x2c] 
+0000eb4b a801                     test     al, 1 
+0000eb4d 7413                     je       0x14000eb62 
+0000eb4f 80792902                 cmp      byte ptr [rcx + 0x29], 2 
+0000eb53 720d                     jb       0x14000eb62 
+0000eb55 488b4918                 mov      rcx, qword ptr [rcx + 0x18] 
+0000eb59 4c8d4b58                 lea      r9, [rbx + 0x58] 
+0000eb5d e8725cffff               call     0x1400047d4 
+0000eb62 33d2                     xor      edx, edx 
+0000eb64 c74630250200c0           mov      dword ptr [rsi + 0x30], 0xc0000225 
+0000eb6b 488bce                   mov      rcx, rsi 
+0000eb6e 48c7463800000000         mov      qword ptr [rsi + 0x38], 0 
+0000eb76 48ff15c3c4ffff           call     qword ptr [rip - 0x3b3d] IofCompleteRequest; RVA 0xb040 b'.idata\x00\x00' writable=False
+0000eb7d 0f1f440000               nop      dword ptr [rax + rax] 
+0000eb82 b8250200c0               mov      eax, 0xc0000225 
+0000eb87 eb9b                     jmp      0x14000eb24 
+FUNCTION RVA 0x5120:
+00005120 ff2572610000             jmp      qword ptr [rip + 0x6172] CFG guard dispatch/check slot; RVA 0xb298 b'.idata\x00\x00' writable=False

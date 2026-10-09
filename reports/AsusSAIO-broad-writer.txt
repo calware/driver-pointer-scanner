@@ -1,0 +1,93 @@
+IMAGE: C:\Windows\System32\DriverStore\FileRepository\asussci2.inf_amd64_ec0a7aca8834d5bc\ASUSSystemAnalysis\AsusSAIO.sys
+BASE: 0x140000000
+ENTRY RVA: 0x8000
+SECTIONS:
+b'.text\x00\x00\x00' RVA=0x1000 size=0x2a4a flags=0x68000020
+b'.rdata\x00\x00' RVA=0x4000 size=0x934 flags=0x48000040
+b'.data\x00\x00\x00' RVA=0x5000 size=0xf0 flags=0xc8000040
+b'.pdata\x00\x00' RVA=0x6000 size=0x228 flags=0x48000040
+b'PAGE\x00\x00\x00\x00' RVA=0x7000 size=0x5cc flags=0x60000020
+b'INIT\x00\x00\x00\x00' RVA=0x8000 size=0x412 flags=0x62000020
+b'.rsrc\x00\x00\x00' RVA=0x9000 size=0x398 flags=0x42000040
+b'.reloc\x00\x00' RVA=0xa000 size=0x20 flags=0x42000040
+IMPORTS:
+0x4000 HalGetBusDataByOffset
+0x4010 WppAutoLogTrace
+0x4018 imp_WppRecorderReplay
+0x4020 WppAutoLogStop
+0x4028 WppAutoLogStart
+0x4038 MmGetSystemRoutineAddress
+0x4040 KeInitializeMutex
+0x4048 ExAllocatePool2
+0x4050 ExFreePoolWithTag
+0x4058 IofCompleteRequest
+0x4060 IoCreateDevice
+0x4068 IoCreateSymbolicLink
+0x4070 IoDeleteDevice
+0x4078 KeDelayExecutionThread
+0x4080 IoGetCurrentProcess
+0x4088 IoWMIRegistrationControl
+0x4090 ZwClose
+0x4098 RtlEqualSid
+0x40a0 ZwOpenProcessTokenEx
+0x40a8 ZwQueryInformationToken
+0x40b0 SeExports
+0x40b8 KeReleaseMutex
+0x40c0 KeWaitForSingleObject
+0x40c8 MmMapIoSpace
+0x40d0 MmUnmapIoSpace
+0x40d8 __C_specific_handler
+0x40e0 RtlInitUnicodeString
+0x40e8 IoDeleteSymbolicLink
+FUNCTION RVA 0x7168:
+00007168 4055                     push     rbp 
+0000716a 488bec                   mov      rbp, rsp 
+0000716d 4883ec40                 sub      rsp, 0x40 
+00007171 83651000                 and      dword ptr [rbp + 0x10], 0 
+00007175 488d1574030000           lea      rdx, [rip + 0x374] RVA 0x74f0 b'PAGE\x00\x00\x00\x00' writable=False
+0000717c 488d4df0                 lea      rcx, [rbp - 0x10] 
+00007180 ff155acfffff             call     qword ptr [rip - 0x30a6] RtlInitUnicodeString; RVA 0x40e0 b'.rdata\x00\x00' writable=False
+00007186 488d4df0                 lea      rcx, [rbp - 0x10] 
+0000718a ff15a8ceffff             call     qword ptr [rip - 0x3158] MmGetSystemRoutineAddress; RVA 0x4038 b'.rdata\x00\x00' writable=False
+00007190 488d1579030000           lea      rdx, [rip + 0x379] RVA 0x7510 b'PAGE\x00\x00\x00\x00' writable=False
+00007197 488905a2deffff           mov      qword ptr [rip - 0x215e], rax RVA 0x5040 b'.data\x00\x00\x00' writable=True
+0000719e 488d4df0                 lea      rcx, [rbp - 0x10] 
+000071a2 ff1538cfffff             call     qword ptr [rip - 0x30c8] RtlInitUnicodeString; RVA 0x40e0 b'.rdata\x00\x00' writable=False
+000071a8 488d4df0                 lea      rcx, [rbp - 0x10] 
+000071ac ff1586ceffff             call     qword ptr [rip - 0x317a] MmGetSystemRoutineAddress; RVA 0x4038 b'.rdata\x00\x00' writable=False
+000071b2 488d1577030000           lea      rdx, [rip + 0x377] RVA 0x7530 b'PAGE\x00\x00\x00\x00' writable=False
+000071b9 48890568deffff           mov      qword ptr [rip - 0x2198], rax RVA 0x5028 b'.data\x00\x00\x00' writable=True
+000071c0 488d4df0                 lea      rcx, [rbp - 0x10] 
+000071c4 ff1516cfffff             call     qword ptr [rip - 0x30ea] RtlInitUnicodeString; RVA 0x40e0 b'.rdata\x00\x00' writable=False
+000071ca 488d4df0                 lea      rcx, [rbp - 0x10] 
+000071ce ff1564ceffff             call     qword ptr [rip - 0x319c] MmGetSystemRoutineAddress; RVA 0x4038 b'.rdata\x00\x00' writable=False
+000071d4 48890545deffff           mov      qword ptr [rip - 0x21bb], rax RVA 0x5020 b'.data\x00\x00\x00' writable=True
+000071db 488b055edeffff           mov      rax, qword ptr [rip - 0x21a2] RVA 0x5040 b'.data\x00\x00\x00' writable=True
+000071e2 c7055cdeffff02000000     mov      dword ptr [rip - 0x21a4], 2 RVA 0x5048 b'.data\x00\x00\x00' writable=True
+000071ec 4885c0                   test     rax, rax 
+000071ef 7412                     je       0x140007203 
+000071f1 4533c9                   xor      r9d, r9d 
+000071f4 488d4d10                 lea      rcx, [rbp + 0x10] 
+000071f8 4533c0                   xor      r8d, r8d 
+000071fb 33d2                     xor      edx, edx 
+000071fd ff15fdceffff             call     qword ptr [rip - 0x3103] CFG guard dispatch/check slot; RVA 0x4100 b'.rdata\x00\x00' writable=False
+00007203 837d1006                 cmp      dword ptr [rbp + 0x10], 6 
+00007207 7253                     jb       0x14000725c 
+00007209 488d1560030000           lea      rdx, [rip + 0x360] RVA 0x7570 b'PAGE\x00\x00\x00\x00' writable=False
+00007210 488d4df0                 lea      rcx, [rbp - 0x10] 
+00007214 ff15c6ceffff             call     qword ptr [rip - 0x313a] RtlInitUnicodeString; RVA 0x40e0 b'.rdata\x00\x00' writable=False
+0000721a 488d4df0                 lea      rcx, [rbp - 0x10] 
+0000721e ff1514ceffff             call     qword ptr [rip - 0x31ec] MmGetSystemRoutineAddress; RVA 0x4038 b'.rdata\x00\x00' writable=False
+00007224 4889050ddeffff           mov      qword ptr [rip - 0x21f3], rax RVA 0x5038 b'.data\x00\x00\x00' writable=True
+0000722b 4885c0                   test     rax, rax 
+0000722e 742c                     je       0x14000725c 
+00007230 488d1579030000           lea      rdx, [rip + 0x379] RVA 0x75b0 b'PAGE\x00\x00\x00\x00' writable=False
+00007237 488d4df0                 lea      rcx, [rbp - 0x10] 
+0000723b ff159fceffff             call     qword ptr [rip - 0x3161] RtlInitUnicodeString; RVA 0x40e0 b'.rdata\x00\x00' writable=False
+00007241 488d4df0                 lea      rcx, [rbp - 0x10] 
+00007245 ff15edcdffff             call     qword ptr [rip - 0x3213] MmGetSystemRoutineAddress; RVA 0x4038 b'.rdata\x00\x00' writable=False
+0000724b 488905deddffff           mov      qword ptr [rip - 0x2222], rax RVA 0x5030 b'.data\x00\x00\x00' writable=True
+00007252 c705ecddffff04000000     mov      dword ptr [rip - 0x2214], 4 RVA 0x5048 b'.data\x00\x00\x00' writable=True
+0000725c 4883c440                 add      rsp, 0x40 
+00007260 5d                       pop      rbp 
+00007261 c3                       ret       

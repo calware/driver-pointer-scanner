@@ -1,0 +1,111 @@
+IMAGE: C:\Windows\System32\drivers\1394ohci.sys
+BASE: 0x1c0000000
+ENTRY RVA: 0x36fd0
+SECTIONS:
+b'.text\x00\x00\x00' RVA=0x1000 size=0x36f77 flags=0x68000020
+b'fothk\x00\x00\x00' RVA=0x38000 size=0x1000 flags=0x68000020
+b'.rdata\x00\x00' RVA=0x39000 size=0x25f4 flags=0x48000040
+b'.data\x00\x00\x00' RVA=0x3c000 size=0x740 flags=0xc8000040
+b'.pdata\x00\x00' RVA=0x3d000 size=0x13d4 flags=0x48000040
+b'.idata\x00\x00' RVA=0x3f000 size=0x97a flags=0x48000040
+b'PAGE\x00\x00\x00\x00' RVA=0x40000 size=0x562 flags=0x60000020
+b'INIT\x00\x00\x00\x00' RVA=0x41000 size=0x36 flags=0x62000020
+b'GFIDS\x00\x00\x00' RVA=0x42000 size=0x16c flags=0x42000040
+b'.rsrc\x00\x00\x00' RVA=0x43000 size=0x29a0 flags=0x42000040
+b'.reloc\x00\x00' RVA=0x46000 size=0x1704 flags=0x42000040
+IMPORTS:
+0x3f000 KeStallExecutionProcessor
+0x3f010 WdfVersionUnbind
+0x3f018 WdfLdrQueryInterface
+0x3f020 WdfVersionBind
+0x3f028 WdfVersionBindClass
+0x3f030 WdfVersionUnbindClass
+0x3f040 WppAutoLogStart
+0x3f048 WppAutoLogTrace
+0x3f050 imp_WppRecorderReplay
+0x3f058 WppAutoLogStop
+0x3f068 ExFreePoolWithTag
+0x3f070 MmMapLockedPagesSpecifyCache
+0x3f078 KeAcquireInStackQueuedSpinLock
+0x3f080 KeSetTimer
+0x3f088 IoBuildPartialMdl
+0x3f090 KeInitializeDpc
+0x3f098 KeInitializeSpinLock
+0x3f0a0 KeInitializeTimer
+0x3f0a8 RtlClearBit
+0x3f0b0 KeCancelTimer
+0x3f0b8 RtlInitializeBitMap
+0x3f0c0 RtlFindClearBitsAndSet
+0x3f0c8 RtlClearAllBits
+0x3f0d0 RtlAnsiStringToUnicodeString
+0x3f0d8 _vsnwprintf
+0x3f0e0 ExAllocateFromNPagedLookasideList
+0x3f0e8 RtlAppendUnicodeToString
+0x3f0f0 RtlFreeUnicodeString
+0x3f0f8 RtlInitAnsiString
+0x3f100 RtlStringFromGUID
+0x3f108 KeDelayExecutionThread
+0x3f110 IoGetDmaAdapter
+0x3f118 RtlInitUnicodeString
+0x3f120 _wcsicmp
+0x3f128 MmGetSystemRoutineAddress
+0x3f130 IoWMIRegistrationControl
+0x3f138 MmUnmapIoSpace
+0x3f140 MmMapIoSpaceEx
+0x3f148 RtlCompareUnicodeString
+0x3f150 ZwEnumerateKey
+0x3f158 ExInitializeNPagedLookasideList
+0x3f160 IoAllocateMdl
+0x3f168 MmBuildMdlForNonPagedPool
+0x3f170 IoFreeMdl
+0x3f178 ExAllocatePool2
+0x3f180 KeSetEvent
+0x3f188 ExpInterlockedPushEntrySList
+0x3f190 ExQueryDepthSList
+0x3f198 DbgPrintEx
+0x3f1a0 RtlCopyUnicodeString
+0x3f1a8 ExDeleteNPagedLookasideList
+0x3f1b0 ExFreeToNPagedLookasideList
+0x3f1b8 ExpInterlockedPopEntrySList
+0x3f1c0 RtlAppendUnicodeStringToString
+0x3f1c8 KeReleaseInStackQueuedSpinLock
+0x3f1d0 __chkstk
+FUNCTION RVA 0x15990:
+00015990 4053                     push     rbx 
+00015992 4883ec30                 sub      rsp, 0x30 
+00015996 488b05f36a0200           mov      rax, qword ptr [rip + 0x26af3] RVA 0x3c490 b'.data\x00\x00\x00' writable=True
+0001599d 488bda                   mov      rbx, rdx 
+000159a0 4c8b05b9670200           mov      r8, qword ptr [rip + 0x267b9] RVA 0x3c160 b'.data\x00\x00\x00' writable=True
+000159a7 488bd1                   mov      rdx, rcx 
+000159aa 488b0de76a0200           mov      rcx, qword ptr [rip + 0x26ae7] RVA 0x3c498 b'.data\x00\x00\x00' writable=True
+000159b1 488b8050060000           mov      rax, qword ptr [rax + 0x650] 
+000159b8 e8131c0200               call     0x1c00375d0 
+000159bd 8b4c2460                 mov      ecx, dword ptr [rsp + 0x60] 
+000159c1 81f900042200             cmp      ecx, 0x220400 
+000159c7 7461                     je       0x1c0015a2a 
+000159c9 488d05a0670200           lea      rax, [rip + 0x267a0] RVA 0x3c170 b'.data\x00\x00\x00' writable=True
+000159d0 48390599670200           cmp      qword ptr [rip + 0x26799], rax RVA 0x3c170 b'.data\x00\x00\x00' writable=True
+000159d7 742c                     je       0x1c0015a05 
+000159d9 894c2428                 mov      dword ptr [rsp + 0x28], ecx 
+000159dd 488d05e4390200           lea      rax, [rip + 0x239e4] RVA 0x393c8 b'.rdata\x00\x00' writable=False
+000159e4 488b0d2d670200           mov      rcx, qword ptr [rip + 0x2672d] RVA 0x3c118 b'.data\x00\x00\x00' writable=True
+000159eb 41b90d000000             mov      r9d, 0xd 
+000159f1 b202                     mov      dl, 2 
+000159f3 4889442420               mov      qword ptr [rsp + 0x20], rax 
+000159f8 488b4940                 mov      rcx, qword ptr [rcx + 0x40] 
+000159fc 458d41fb                 lea      r8d, [r9 - 5] 
+00015a00 e85b25ffff               call     0x1c0007f60 
+00015a05 488b05846a0200           mov      rax, qword ptr [rip + 0x26a84] RVA 0x3c490 b'.data\x00\x00\x00' writable=True
+00015a0c 41b80d0000c0             mov      r8d, 0xc000000d 
+00015a12 488b0d7f6a0200           mov      rcx, qword ptr [rip + 0x26a7f] RVA 0x3c498 b'.data\x00\x00\x00' writable=True
+00015a19 488bd3                   mov      rdx, rbx 
+00015a1c 488b8038080000           mov      rax, qword ptr [rax + 0x838] 
+00015a23 e8a81b0200               call     0x1c00375d0 
+00015a28 eb0b                     jmp      0x1c0015a35 
+00015a2a 488bd3                   mov      rdx, rbx 
+00015a2d 488bc8                   mov      rcx, rax 
+00015a30 e8b3faffff               call     0x1c00154e8 
+00015a35 4883c430                 add      rsp, 0x30 
+00015a39 5b                       pop      rbx 
+00015a3a c3                       ret       
+00015a3b cc                       int3      

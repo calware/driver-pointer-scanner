@@ -1,0 +1,810 @@
+{
+  "results": [
+    {
+      "schema_version": 2,
+      "file": "C:\\Windows\\System32\\drivers\\afd.sys",
+      "sha256": "c6da5fb094ecbe65e9a2ab7a2efb08e67bf8e1e91542fab44683597ce24492a1",
+      "classification": "INCONCLUSIVE",
+      "vulnerability_claim": false,
+      "user_openability": "UNCONFIRMED_REQUIRES_RUNTIME_AND_DEPLOYMENT_SECURITY",
+      "namespace_import_hints": [
+        "IoCreateDevice"
+      ],
+      "namespace_string_hints": [
+        "\\Device\\Afd",
+        "\\Device\\BTHMS_RFCOMM",
+        "\\Device\\IrDA",
+        "\\Device\\Pgm",
+        "\\Device\\RawIp",
+        "\\Device\\RawIp6",
+        "\\Device\\Tcp",
+        "\\Device\\Tcp6",
+        "\\Device\\Udp",
+        "\\Device\\Udp6"
+      ],
+      "create_dispatch_rvas": [],
+      "device_control_dispatch_rvas": [],
+      "findings": [],
+      "unproven_writable_indirect_calls": [],
+      "limitations": [
+        "call_depth_or_recursion_limit",
+        "device_control_dispatch_not_resolved",
+        "instruction_state_budget_exhausted",
+        "per_instruction_state_limit"
+      ],
+      "initialization_limitations": [
+        "call_depth_or_recursion_limit",
+        "instruction_state_budget_exhausted",
+        "per_instruction_state_limit"
+      ],
+      "initialization_states_processed": 12005,
+      "dispatch_root_provenance": {
+        "abstract_initialization_rvas": [],
+        "synthetic_execution_rvas": [],
+        "fixed_point_initialization_rvas": []
+      },
+      "synthetic_initialization": {
+        "status": "EMU_ERROR",
+        "device_control_dispatch_rvas": [],
+        "create_dispatch_rvas": [],
+        "instructions": 2126,
+        "import_calls": {
+          "RtlQueryFeatureConfigurationChangeStamp": 1,
+          "RtlQueryFeatureConfiguration": 30
+        },
+        "model": "One synthetic successful-import DriverEntry execution; offline only; not proof of live registration.",
+        "error": "Unhandled CPU exception (UC_ERR_EXCEPTION)",
+        "fault_rva": "0x41cf7"
+      },
+      "fixed_point_initialization": {
+        "analysis_model": "DriverEntry fixed-point MAY registration analysis; branches joined",
+        "coverage": {
+          "status": "INCOMPLETE",
+          "complete": false
+        },
+        "device_control_dispatch_rvas": [],
+        "create_dispatch_rvas": [],
+        "registration_sites": {},
+        "limitations": [
+          "callback_slot_address_widened",
+          "external_call_memory_effects_unmodeled",
+          "fixed_point_budget_exhausted",
+          "global_write_alias_effects_unmodeled",
+          "helper_memory_effects_not_propagated",
+          "imprecise_memory_read",
+          "memory_cells_widened",
+          "partial_register_write",
+          "pointer_truncation",
+          "rep_memory_effects_overapproximated",
+          "unmodeled_instruction_effects",
+          "unresolved_indirect_call",
+          "unresolved_memory_write"
+        ],
+        "metrics": {
+          "transfer_evaluations": 30000,
+          "instruction_states": 3505,
+          "functions": 71,
+          "join_updates": 26558
+        }
+      },
+      "fixed_point_analysis": {
+        "analysis_model": "dispatch-rooted finite fixed-point MAY dataflow; predicates discarded",
+        "coverage": {
+          "status": "INCOMPLETE",
+          "complete": false,
+          "dispatch_roots_total": 0,
+          "dispatch_roots_completed": 0,
+          "semantic_coverage_complete": false
+        },
+        "findings": [],
+        "unproven_writable_indirect_calls": [],
+        "limitations": [
+          "device_control_dispatch_not_resolved"
+        ],
+        "metrics": {
+          "transfer_evaluations": 0,
+          "join_updates": 0,
+          "branch_joins": 0,
+          "instruction_states": 0,
+          "functions": 0,
+          "max_queue": 0
+        },
+        "predicates": "DISCARDED_AT_JOINS_NOT_RUNTIME_CONFIRMED"
+      },
+      "analysis_engine": "fixedpoint",
+      "analysis_model": "x64 WDM offsets; abstract initialization, optional synthetic Unicorn path, bounded legacy or finite MAY dispatch analysis"
+    },
+    {
+      "schema_version": 2,
+      "file": "C:\\Windows\\System32\\drivers\\cdfs.sys",
+      "sha256": "aad5c128205c5876e89b9f3fd55535ab3d373eb58ae519f0898ac93c71f48b86",
+      "classification": "INCONCLUSIVE",
+      "vulnerability_claim": false,
+      "user_openability": "UNCONFIRMED_REQUIRES_RUNTIME_AND_DEPLOYMENT_SECURITY",
+      "namespace_import_hints": [
+        "IoCreateDevice"
+      ],
+      "namespace_string_hints": [],
+      "create_dispatch_rvas": [
+        "0x1240"
+      ],
+      "device_control_dispatch_rvas": [
+        "0x1240"
+      ],
+      "findings": [],
+      "unproven_writable_indirect_calls": [],
+      "limitations": [
+        "call_depth_or_recursion_limit",
+        "external_call_memory_effects_unmodeled",
+        "fixed_point_budget_exhausted",
+        "global_write_alias_effects_unmodeled",
+        "helper_memory_effects_not_propagated",
+        "imprecise_memory_read",
+        "instruction_state_budget_exhausted",
+        "memory_cells_widened",
+        "partial_register_write",
+        "per_instruction_state_limit",
+        "pointer_truncation",
+        "rep_memory_effects_overapproximated",
+        "unmodeled_instruction_effects",
+        "unresolved_indirect_call",
+        "unresolved_memory_write"
+      ],
+      "initialization_limitations": [
+        "call_depth_or_recursion_limit",
+        "instruction_state_budget_exhausted",
+        "per_instruction_state_limit"
+      ],
+      "initialization_states_processed": 12005,
+      "dispatch_root_provenance": {
+        "abstract_initialization_rvas": [],
+        "synthetic_execution_rvas": [],
+        "fixed_point_initialization_rvas": [
+          "0x1240"
+        ]
+      },
+      "synthetic_initialization": {
+        "status": "EMU_ERROR",
+        "device_control_dispatch_rvas": [],
+        "create_dispatch_rvas": [],
+        "instructions": 117,
+        "import_calls": {
+          "RtlQueryFeatureConfigurationChangeStamp": 1,
+          "RtlQueryFeatureConfiguration": 1
+        },
+        "model": "One synthetic successful-import DriverEntry execution; offline only; not proof of live registration.",
+        "error": "Unhandled CPU exception (UC_ERR_EXCEPTION)",
+        "fault_rva": "0x10c7"
+      },
+      "fixed_point_initialization": {
+        "analysis_model": "DriverEntry fixed-point MAY registration analysis; branches joined",
+        "coverage": {
+          "status": "FIXED_POINT_COMPLETE",
+          "complete": true
+        },
+        "device_control_dispatch_rvas": [
+          "0x1240"
+        ],
+        "create_dispatch_rvas": [
+          "0x1240"
+        ],
+        "registration_sites": {
+          "16": [
+            "0x1e40f"
+          ],
+          "27": [
+            "0x1e41a"
+          ],
+          "18": [
+            "0x1e424"
+          ],
+          "17": [
+            "0x1e42d"
+          ],
+          "14": [
+            "0x1e434"
+          ],
+          "13": [
+            "0x1e43b"
+          ],
+          "12": [
+            "0x1e442"
+          ],
+          "10": [
+            "0x1e449"
+          ],
+          "6": [
+            "0x1e450"
+          ],
+          "5": [
+            "0x1e457"
+          ],
+          "4": [
+            "0x1e45e"
+          ],
+          "3": [
+            "0x1e465"
+          ],
+          "2": [
+            "0x1e46c"
+          ],
+          "0": [
+            "0x1e473"
+          ]
+        },
+        "limitations": [
+          "external_call_memory_effects_unmodeled",
+          "global_write_alias_effects_unmodeled",
+          "helper_memory_effects_not_propagated",
+          "imprecise_memory_read",
+          "partial_register_write",
+          "rep_memory_effects_overapproximated",
+          "unmodeled_instruction_effects",
+          "unresolved_memory_write"
+        ],
+        "metrics": {
+          "transfer_evaluations": 4084,
+          "instruction_states": 852,
+          "functions": 15,
+          "join_updates": 3243
+        }
+      },
+      "fixed_point_analysis": {
+        "analysis_model": "dispatch-rooted finite fixed-point MAY dataflow; predicates discarded",
+        "coverage": {
+          "status": "INCOMPLETE",
+          "complete": false,
+          "dispatch_roots_total": 1,
+          "dispatch_roots_completed": 0,
+          "semantic_coverage_complete": false
+        },
+        "findings": [],
+        "unproven_writable_indirect_calls": [],
+        "limitations": [
+          "external_call_memory_effects_unmodeled",
+          "fixed_point_budget_exhausted",
+          "global_write_alias_effects_unmodeled",
+          "helper_memory_effects_not_propagated",
+          "imprecise_memory_read",
+          "memory_cells_widened",
+          "partial_register_write",
+          "pointer_truncation",
+          "rep_memory_effects_overapproximated",
+          "unmodeled_instruction_effects",
+          "unresolved_indirect_call",
+          "unresolved_memory_write"
+        ],
+        "metrics": {
+          "transfer_evaluations": 50000,
+          "join_updates": 43803,
+          "branch_joins": 4741,
+          "instruction_states": 6231,
+          "functions": 75,
+          "max_queue": 734
+        },
+        "predicates": "DISCARDED_AT_JOINS_NOT_RUNTIME_CONFIRMED"
+      },
+      "analysis_engine": "fixedpoint",
+      "analysis_model": "x64 WDM offsets; abstract initialization, optional synthetic Unicorn path, bounded legacy or finite MAY dispatch analysis"
+    },
+    {
+      "schema_version": 2,
+      "file": "C:\\Windows\\System32\\drivers\\exfat.sys",
+      "sha256": "aab24ed31f52c10c01d71cbb49c9f744714eae3d272cc7743a5a86dddae6e4b1",
+      "classification": "INCONCLUSIVE",
+      "vulnerability_claim": false,
+      "user_openability": "UNCONFIRMED_REQUIRES_RUNTIME_AND_DEPLOYMENT_SECURITY",
+      "namespace_import_hints": [
+        "IoCreateDevice"
+      ],
+      "namespace_string_hints": [
+        "\\Device\\KsecDD"
+      ],
+      "create_dispatch_rvas": [
+        "0x312d0"
+      ],
+      "device_control_dispatch_rvas": [
+        "0x34440"
+      ],
+      "findings": [],
+      "unproven_writable_indirect_calls": [
+        {
+          "dispatch_rva": "0x34440",
+          "call_rva": "0x12ea0",
+          "function_rva": "0x12ea0",
+          "slot_rva": "0x20270",
+          "section": ".data",
+          "initial_target_rva": null,
+          "arguments": {
+            "rcx": [
+              {
+                "kind": "const",
+                "offset": 144
+              },
+              {
+                "kind": "stack",
+                "offset": -88
+              },
+              {
+                "kind": "unknown",
+                "offset": null
+              }
+            ],
+            "rdx": [
+              {
+                "kind": "const",
+                "offset": 0
+              },
+              {
+                "kind": "unknown",
+                "offset": null
+              }
+            ],
+            "r8": [
+              {
+                "kind": "const",
+                "offset": 0
+              },
+              {
+                "kind": "const",
+                "offset": 2
+              },
+              {
+                "kind": "const",
+                "offset": 3
+              }
+            ],
+            "r9": [
+              {
+                "kind": "stack",
+                "offset": 24
+              },
+              {
+                "kind": "stack",
+                "offset": 32
+              },
+              {
+                "kind": "unknown",
+                "offset": null
+              }
+            ],
+            "stack_arg_6": [
+              {
+                "kind": "const",
+                "offset": 4
+              },
+              {
+                "kind": "const",
+                "offset": 8
+              },
+              {
+                "kind": "unknown",
+                "offset": null
+              }
+            ]
+          },
+          "systembuffer_arguments": [],
+          "instruction": "jmp qword ptr [rip + 0x11ca2]",
+          "modeled_path_feasibility": {
+            "status": "NOT_CHECKED",
+            "reason": "MAY joins discard branch predicates"
+          },
+          "interpretation": "Fixed-point MAY candidate; correlated predicates, runtime invocation and successful completion are not proved."
+        },
+        {
+          "dispatch_rva": "0x34440",
+          "call_rva": "0x12ea0",
+          "function_rva": "0x12ea0",
+          "slot_rva": "0x20290",
+          "section": ".data",
+          "initial_target_rva": null,
+          "arguments": {
+            "rcx": [
+              {
+                "kind": "const",
+                "offset": 144
+              },
+              {
+                "kind": "stack",
+                "offset": -88
+              },
+              {
+                "kind": "unknown",
+                "offset": null
+              }
+            ],
+            "rdx": [
+              {
+                "kind": "const",
+                "offset": 0
+              },
+              {
+                "kind": "unknown",
+                "offset": null
+              }
+            ],
+            "r8": [
+              {
+                "kind": "const",
+                "offset": 0
+              },
+              {
+                "kind": "const",
+                "offset": 2
+              },
+              {
+                "kind": "const",
+                "offset": 3
+              }
+            ],
+            "r9": [
+              {
+                "kind": "stack",
+                "offset": 24
+              },
+              {
+                "kind": "stack",
+                "offset": 32
+              },
+              {
+                "kind": "unknown",
+                "offset": null
+              }
+            ],
+            "stack_arg_6": [
+              {
+                "kind": "const",
+                "offset": 4
+              },
+              {
+                "kind": "const",
+                "offset": 8
+              },
+              {
+                "kind": "unknown",
+                "offset": null
+              }
+            ]
+          },
+          "systembuffer_arguments": [],
+          "instruction": "jmp qword ptr [rip + 0x11ca2]",
+          "modeled_path_feasibility": {
+            "status": "NOT_CHECKED",
+            "reason": "MAY joins discard branch predicates"
+          },
+          "interpretation": "Fixed-point MAY candidate; correlated predicates, runtime invocation and successful completion are not proved."
+        }
+      ],
+      "limitations": [
+        "call_depth_or_recursion_limit",
+        "external_call_memory_effects_unmodeled",
+        "fixed_point_budget_exhausted",
+        "global_write_alias_effects_unmodeled",
+        "helper_memory_effects_not_propagated",
+        "imprecise_memory_read",
+        "instruction_state_budget_exhausted",
+        "memory_cells_widened",
+        "partial_register_write",
+        "per_instruction_state_limit",
+        "pointer_truncation",
+        "rep_memory_effects_overapproximated",
+        "unmodeled_instruction_effects",
+        "unresolved_memory_write"
+      ],
+      "initialization_limitations": [
+        "call_depth_or_recursion_limit",
+        "instruction_state_budget_exhausted",
+        "per_instruction_state_limit"
+      ],
+      "initialization_states_processed": 12005,
+      "dispatch_root_provenance": {
+        "abstract_initialization_rvas": [],
+        "synthetic_execution_rvas": [],
+        "fixed_point_initialization_rvas": [
+          "0x34440"
+        ]
+      },
+      "synthetic_initialization": {
+        "status": "EMU_ERROR",
+        "device_control_dispatch_rvas": [],
+        "create_dispatch_rvas": [],
+        "instructions": 662,
+        "import_calls": {
+          "RtlQueryFeatureConfigurationChangeStamp": 1,
+          "RtlQueryFeatureConfiguration": 10
+        },
+        "model": "One synthetic successful-import DriverEntry execution; offline only; not proof of live registration.",
+        "error": "Unhandled CPU exception (UC_ERR_EXCEPTION)",
+        "fault_rva": "0x1507"
+      },
+      "fixed_point_initialization": {
+        "analysis_model": "DriverEntry fixed-point MAY registration analysis; branches joined",
+        "coverage": {
+          "status": "FIXED_POINT_COMPLETE",
+          "complete": true
+        },
+        "device_control_dispatch_rvas": [
+          "0x34440"
+        ],
+        "create_dispatch_rvas": [
+          "0x312d0"
+        ],
+        "registration_sites": {
+          "0": [
+            "0x611b2"
+          ],
+          "2": [
+            "0x611c8"
+          ],
+          "3": [
+            "0x611db"
+          ],
+          "4": [
+            "0x611e9"
+          ],
+          "5": [
+            "0x611f7"
+          ],
+          "6": [
+            "0x61205"
+          ],
+          "9": [
+            "0x61213"
+          ],
+          "10": [
+            "0x61221"
+          ],
+          "11": [
+            "0x6122f"
+          ],
+          "18": [
+            "0x6123d"
+          ],
+          "12": [
+            "0x6124b"
+          ],
+          "13": [
+            "0x61259"
+          ],
+          "17": [
+            "0x61267"
+          ],
+          "14": [
+            "0x61275"
+          ],
+          "16": [
+            "0x61283"
+          ],
+          "27": [
+            "0x61291"
+          ]
+        },
+        "limitations": [
+          "external_call_memory_effects_unmodeled",
+          "global_write_alias_effects_unmodeled",
+          "helper_memory_effects_not_propagated",
+          "imprecise_memory_read",
+          "memory_cells_widened",
+          "partial_register_write",
+          "rep_memory_effects_overapproximated",
+          "unmodeled_instruction_effects",
+          "unresolved_indirect_call",
+          "unresolved_indirect_jump",
+          "unresolved_memory_write"
+        ],
+        "metrics": {
+          "transfer_evaluations": 6940,
+          "instruction_states": 1403,
+          "functions": 18,
+          "join_updates": 5516
+        }
+      },
+      "fixed_point_analysis": {
+        "analysis_model": "dispatch-rooted finite fixed-point MAY dataflow; predicates discarded",
+        "coverage": {
+          "status": "INCOMPLETE",
+          "complete": false,
+          "dispatch_roots_total": 1,
+          "dispatch_roots_completed": 0,
+          "semantic_coverage_complete": false
+        },
+        "findings": [],
+        "unproven_writable_indirect_calls": [
+          {
+            "dispatch_rva": "0x34440",
+            "call_rva": "0x12ea0",
+            "function_rva": "0x12ea0",
+            "slot_rva": "0x20270",
+            "section": ".data",
+            "initial_target_rva": null,
+            "arguments": {
+              "rcx": [
+                {
+                  "kind": "const",
+                  "offset": 144
+                },
+                {
+                  "kind": "stack",
+                  "offset": -88
+                },
+                {
+                  "kind": "unknown",
+                  "offset": null
+                }
+              ],
+              "rdx": [
+                {
+                  "kind": "const",
+                  "offset": 0
+                },
+                {
+                  "kind": "unknown",
+                  "offset": null
+                }
+              ],
+              "r8": [
+                {
+                  "kind": "const",
+                  "offset": 0
+                },
+                {
+                  "kind": "const",
+                  "offset": 2
+                },
+                {
+                  "kind": "const",
+                  "offset": 3
+                }
+              ],
+              "r9": [
+                {
+                  "kind": "stack",
+                  "offset": 24
+                },
+                {
+                  "kind": "stack",
+                  "offset": 32
+                },
+                {
+                  "kind": "unknown",
+                  "offset": null
+                }
+              ],
+              "stack_arg_6": [
+                {
+                  "kind": "const",
+                  "offset": 4
+                },
+                {
+                  "kind": "const",
+                  "offset": 8
+                },
+                {
+                  "kind": "unknown",
+                  "offset": null
+                }
+              ]
+            },
+            "systembuffer_arguments": [],
+            "instruction": "jmp qword ptr [rip + 0x11ca2]",
+            "modeled_path_feasibility": {
+              "status": "NOT_CHECKED",
+              "reason": "MAY joins discard branch predicates"
+            },
+            "interpretation": "Fixed-point MAY candidate; correlated predicates, runtime invocation and successful completion are not proved."
+          },
+          {
+            "dispatch_rva": "0x34440",
+            "call_rva": "0x12ea0",
+            "function_rva": "0x12ea0",
+            "slot_rva": "0x20290",
+            "section": ".data",
+            "initial_target_rva": null,
+            "arguments": {
+              "rcx": [
+                {
+                  "kind": "const",
+                  "offset": 144
+                },
+                {
+                  "kind": "stack",
+                  "offset": -88
+                },
+                {
+                  "kind": "unknown",
+                  "offset": null
+                }
+              ],
+              "rdx": [
+                {
+                  "kind": "const",
+                  "offset": 0
+                },
+                {
+                  "kind": "unknown",
+                  "offset": null
+                }
+              ],
+              "r8": [
+                {
+                  "kind": "const",
+                  "offset": 0
+                },
+                {
+                  "kind": "const",
+                  "offset": 2
+                },
+                {
+                  "kind": "const",
+                  "offset": 3
+                }
+              ],
+              "r9": [
+                {
+                  "kind": "stack",
+                  "offset": 24
+                },
+                {
+                  "kind": "stack",
+                  "offset": 32
+                },
+                {
+                  "kind": "unknown",
+                  "offset": null
+                }
+              ],
+              "stack_arg_6": [
+                {
+                  "kind": "const",
+                  "offset": 4
+                },
+                {
+                  "kind": "const",
+                  "offset": 8
+                },
+                {
+                  "kind": "unknown",
+                  "offset": null
+                }
+              ]
+            },
+            "systembuffer_arguments": [],
+            "instruction": "jmp qword ptr [rip + 0x11ca2]",
+            "modeled_path_feasibility": {
+              "status": "NOT_CHECKED",
+              "reason": "MAY joins discard branch predicates"
+            },
+            "interpretation": "Fixed-point MAY candidate; correlated predicates, runtime invocation and successful completion are not proved."
+          }
+        ],
+        "limitations": [
+          "external_call_memory_effects_unmodeled",
+          "fixed_point_budget_exhausted",
+          "global_write_alias_effects_unmodeled",
+          "helper_memory_effects_not_propagated",
+          "imprecise_memory_read",
+          "memory_cells_widened",
+          "partial_register_write",
+          "pointer_truncation",
+          "rep_memory_effects_overapproximated",
+          "unmodeled_instruction_effects",
+          "unresolved_memory_write"
+        ],
+        "metrics": {
+          "transfer_evaluations": 50000,
+          "join_updates": 43940,
+          "branch_joins": 5992,
+          "instruction_states": 6135,
+          "functions": 87,
+          "max_queue": 242
+        },
+        "predicates": "DISCARDED_AT_JOINS_NOT_RUNTIME_CONFIRMED"
+      },
+      "analysis_engine": "fixedpoint",
+      "analysis_model": "x64 WDM offsets; abstract initialization, optional synthetic Unicorn path, bounded legacy or finite MAY dispatch analysis"
+    }
+  ],
+  "summary": {
+    "INCONCLUSIVE": 3
+  }
+}

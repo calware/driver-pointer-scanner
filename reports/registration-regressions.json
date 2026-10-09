@@ -1,0 +1,94 @@
+{
+  "results": [
+    {
+      "schema_version": 1,
+      "file": "C:\\Windows\\System32\\drivers\\rasacd.sys",
+      "sha256": "4d156bf1af4a10c6039a4679c5cbc74a5aba8f6eff84bef635a72c742bbf4218",
+      "classification": "INCONCLUSIVE",
+      "vulnerability_claim": false,
+      "user_openability": "UNCONFIRMED_REQUIRES_RUNTIME_AND_DEPLOYMENT_SECURITY",
+      "namespace_import_hints": [
+        "IoCreateDevice"
+      ],
+      "namespace_string_hints": [
+        "\\Device\\RasAcd"
+      ],
+      "create_dispatch_rvas": [
+        "0x2680"
+      ],
+      "device_control_dispatch_rvas": [
+        "0x2680"
+      ],
+      "findings": [],
+      "unproven_writable_indirect_calls": [],
+      "limitations": [
+        "call_depth_or_recursion_limit",
+        "instruction_state_budget_exhausted",
+        "per_instruction_state_limit",
+        "unresolved_branch"
+      ],
+      "initialization_states_processed": 804,
+      "analysis_model": "x64 WDM offsets; bounded interprocedural abstract interpretation; unconstrained branch union"
+    },
+    {
+      "schema_version": 1,
+      "file": "C:\\Windows\\System32\\drivers\\rootmdm.sys",
+      "sha256": "ebcd1fd9a9b659df91db67981cd6747f9f9aa2aacd7f37bd714f9c942a43be2b",
+      "classification": "INCONCLUSIVE",
+      "vulnerability_claim": false,
+      "user_openability": "UNCONFIRMED_REQUIRES_RUNTIME_AND_DEPLOYMENT_SECURITY",
+      "namespace_import_hints": [
+        "IoCreateDevice"
+      ],
+      "namespace_string_hints": [
+        "\\DosDevices\\"
+      ],
+      "create_dispatch_rvas": [
+        "0x1090",
+        "0x7750"
+      ],
+      "device_control_dispatch_rvas": [
+        "0x1090"
+      ],
+      "findings": [],
+      "unproven_writable_indirect_calls": [],
+      "limitations": [
+        "unresolved_branch"
+      ],
+      "initialization_states_processed": 891,
+      "analysis_model": "x64 WDM offsets; bounded interprocedural abstract interpretation; unconstrained branch union"
+    },
+    {
+      "schema_version": 1,
+      "file": "C:\\Windows\\System32\\drivers\\netbios.sys",
+      "sha256": "29c10b2bd9c7272c7c71462f39252a75de0159eccfc58bdf1c407d8c226f0afc",
+      "classification": "INCONCLUSIVE",
+      "vulnerability_claim": false,
+      "user_openability": "UNCONFIRMED_REQUIRES_RUNTIME_AND_DEPLOYMENT_SECURITY",
+      "namespace_import_hints": [
+        "IoCreateDevice"
+      ],
+      "namespace_string_hints": [
+        "\\Device\\Netbios"
+      ],
+      "create_dispatch_rvas": [
+        "0xede0"
+      ],
+      "device_control_dispatch_rvas": [
+        "0xede0"
+      ],
+      "findings": [],
+      "unproven_writable_indirect_calls": [],
+      "limitations": [
+        "call_depth_or_recursion_limit",
+        "instruction_state_budget_exhausted",
+        "per_instruction_state_limit"
+      ],
+      "initialization_states_processed": 828,
+      "analysis_model": "x64 WDM offsets; bounded interprocedural abstract interpretation; unconstrained branch union"
+    }
+  ],
+  "summary": {
+    "INCONCLUSIVE": 3
+  }
+}

@@ -1,0 +1,72 @@
+IMAGE: C:\Windows\System32\drivers\bttflt.sys
+BASE: 0x1c0000000
+ENTRY RVA: 0xd010
+SECTIONS:
+b'.text\x00\x00\x00' RVA=0x1000 size=0x3e77 flags=0x68000020
+b'fothk\x00\x00\x00' RVA=0x5000 size=0x1000 flags=0x68000020
+b'.rdata\x00\x00' RVA=0x6000 size=0x11d4 flags=0x48000040
+b'.data\x00\x00\x00' RVA=0x8000 size=0x300 flags=0xc8000040
+b'.pdata\x00\x00' RVA=0x9000 size=0x4ec flags=0x48000040
+b'.idata\x00\x00' RVA=0xa000 size=0x688 flags=0x48000040
+b'PAGE\x00\x00\x00\x00' RVA=0xb000 size=0x1b32 flags=0x60000020
+b'INIT\x00\x00\x00\x00' RVA=0xd000 size=0x255 flags=0x62000020
+b'GFIDS\x00\x00\x00' RVA=0xe000 size=0x88 flags=0x42000040
+b'.rsrc\x00\x00\x00' RVA=0xf000 size=0x3f8 flags=0x42000040
+b'.reloc\x00\x00' RVA=0x10000 size=0x408 flags=0x42000040
+IMPORTS:
+0xa000 IoBuildPartialMdl
+0xa008 ExAllocateFromLookasideListEx
+0xa010 KeAcquireSpinLockRaiseToDpc
+0xa018 ExDeleteLookasideListEx
+0xa020 IoDetachDevice
+0xa028 IoSynchronousCallDriver
+0xa030 IoFreeIrp
+0xa038 MmBuildMdlForNonPagedPool
+0xa040 IoAllocateMdl
+0xa048 RtlInitUnicodeString
+0xa050 KeInitializeSpinLock
+0xa058 IoDeleteDevice
+0xa060 IoForwardIrpSynchronously
+0xa068 IoBuildDeviceIoControlRequest
+0xa070 IoAttachDeviceToDeviceStack
+0xa078 KeReleaseSpinLock
+0xa080 ExAllocatePool2
+0xa088 IoAllocateIrpEx
+0xa090 IoFreeMdl
+0xa098 MmGetSystemRoutineAddress
+0xa0a0 ExFreeToLookasideListEx
+0xa0a8 IoCreateDevice
+0xa0b0 IofCallDriver
+0xa0b8 ExFreePoolWithTag
+0xa0c0 IoWMIRegistrationControl
+0xa0c8 ExInitializeLookasideListEx
+0xa0d0 KeInitializeEvent
+0xa0d8 MmUnmapLockedPages
+0xa0e0 IofCompleteRequest
+0xa0e8 KeWaitForSingleObject
+0xa0f0 RtlCompareMemory
+0xa0f8 KeGetCurrentProcessorNumberEx
+0xa100 RtlFlushNonVolatileMemory
+0xa108 RtlWriteNonVolatileMemory
+0xa110 MmUnmapIoSpace
+0xa118 MmGetPhysicalAddress
+0xa120 MmMapIoSpaceEx
+0xa128 ExUuidCreate
+0xa130 KeQueryActiveProcessorCountEx
+0xa138 __chkstk
+FUNCTION RVA 0x1d70:
+00001d70 4c8bdc                   mov      r11, rsp 
+00001d73 45894b20                 mov      dword ptr [r11 + 0x20], r9d 
+00001d77 4883ec48                 sub      rsp, 0x48 
+00001d7b 498363e800               and      qword ptr [r11 - 0x18], 0 
+00001d80 4d8d4320                 lea      r8, [r11 + 0x20] 
+00001d84 488b053d630000           mov      rax, qword ptr [rip + 0x633d] RVA 0x80c8 b'.data\x00\x00\x00' writable=True
+00001d8b 49c743e004000000         mov      qword ptr [r11 - 0x20], 4 
+00001d93 4d8943d8                 mov      qword ptr [r11 - 0x28], r8 
+00001d97 4c8d05f2440000           lea      r8, [rip + 0x44f2] RVA 0x6290 b'.rdata\x00\x00' writable=False
+00001d9e 440fb7ca                 movzx    r9d, dx 
+00001da2 ba2b000000               mov      edx, 0x2b 
+00001da7 e814280000               call     0x1c00045c0 
+00001dac 4883c448                 add      rsp, 0x48 
+00001db0 c3                       ret       
+00001db1 cc                       int3      

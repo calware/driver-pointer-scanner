@@ -1,0 +1,340 @@
+IMAGE: C:\Windows\System32\drivers\lltdio.sys
+BASE: 0x140000000
+ENTRY RVA: 0x15460
+SECTIONS:
+b'.text\x00\x00\x00' RVA=0x1000 size=0xa777 flags=0x68000020
+b'fothk\x00\x00\x00' RVA=0xc000 size=0x1000 flags=0x68000020
+b'.rdata\x00\x00' RVA=0xd000 size=0x1b70 flags=0x48000040
+b'.data\x00\x00\x00' RVA=0xf000 size=0x798 flags=0xc8000040
+b'.pdata\x00\x00' RVA=0x10000 size=0xb94 flags=0x48000040
+b'.idata\x00\x00' RVA=0x11000 size=0x15c2 flags=0x48000040
+b'PAGE\x00\x00\x00\x00' RVA=0x13000 size=0x1ccd flags=0x60000020
+b'INIT\x00\x00\x00\x00' RVA=0x15000 size=0x13d7 flags=0x62000020
+b'GFIDS\x00\x00\x00' RVA=0x17000 size=0x130 flags=0x42000040
+b'.rsrc\x00\x00\x00' RVA=0x18000 size=0x418 flags=0x42000040
+b'.reloc\x00\x00' RVA=0x19000 size=0xc60 flags=0x42000040
+IMPORTS:
+0x11000 KeQueryPerformanceCounter
+0x11010 NdisRetreatNetBufferDataStart
+0x11018 NdisAllocateNetBufferListPool
+0x11020 NdisFreeNetBufferList
+0x11028 NdisOidRequest
+0x11030 NdisGetSystemUpTimeEx
+0x11038 NdisSendNetBufferLists
+0x11040 NdisCancelSendNetBufferLists
+0x11048 NdisCloseAdapterEx
+0x11050 NdisAllocateMemoryWithTag
+0x11058 NdisReturnNetBufferLists
+0x11060 NdisAllocateGenericObject
+0x11068 NdisFreeMemory
+0x11070 NdisQueryAdapterInstanceName
+0x11078 NdisWaitEvent
+0x11080 NdisOpenAdapterEx
+0x11088 NdisInitializeEvent
+0x11090 NdisDeregisterProtocolDriver
+0x11098 NdisAdjustNetBufferCurrentMdl
+0x110a0 NdisGetDataBuffer
+0x110a8 NdisAdvanceNetBufferDataStart
+0x110b0 NdisRegisterProtocolDriver
+0x110b8 NdisGeneratePartialCancelId
+0x110c0 NdisSetEvent
+0x110c8 NdisFreeNetBufferListPool
+0x110d0 NdisFreeGenericObject
+0x110d8 NdisAllocateNetBufferAndNetBufferList
+0x110e8 NsiRegisterChangeNotification
+0x110f0 NsiDeregisterChangeNotification
+0x110f8 NsiGetParameter
+0x11108 KeInitializeEvent
+0x11110 KeWaitForSingleObject
+0x11118 ExAllocatePool2
+0x11120 IofCompleteRequest
+0x11128 KeAcquireSpinLockRaiseToDpc
+0x11130 KeReleaseSpinLock
+0x11138 KeGetCurrentIrql
+0x11140 MmMapLockedPagesSpecifyCache
+0x11148 KeDelayExecutionThread
+0x11150 KeSetEvent
+0x11158 KeAcquireSpinLockAtDpcLevel
+0x11160 KeReleaseSpinLockFromDpcLevel
+0x11168 RtlNotifyFeatureUsage
+0x11170 KeInitializeSpinLock
+0x11178 KeInitializeMutex
+0x11180 ExFreeToNPagedLookasideList
+0x11188 KeReleaseMutex
+0x11190 RtlLogUnexpectedCodepath
+0x11198 ExAllocateFromNPagedLookasideList
+0x111a0 IoAcquireCancelSpinLock
+0x111a8 IoReleaseCancelSpinLock
+0x111b0 ExInitializeNPagedLookasideList
+0x111b8 ExDeleteNPagedLookasideList
+0x111c0 KeLowerIrql
+0x111c8 ExNotifyCallback
+0x111d0 KfRaiseIrql
+0x111d8 KeSetTimer
+0x111e0 SeAccessCheck
+0x111e8 InitSafeBootMode
+0x111f0 ObSetSecurityObjectByPointer
+0x111f8 KeCancelTimer
+0x11200 KeFlushQueuedDpcs
+0x11208 RtlRandomEx
+0x11210 KeRemoveQueueDpc
+0x11218 KeInsertQueueDpc
+0x11220 RtlGetDaclSecurityDescriptor
+0x11228 SeExports
+0x11230 RtlSetOwnerSecurityDescriptor
+0x11238 RtlSetDaclSecurityDescriptor
+0x11240 RtlAddAccessAllowedAce
+0x11248 RtlMapGenericMask
+0x11250 IoGetFileObjectGenericMapping
+0x11258 RtlCreateAcl
+0x11260 RtlLengthSid
+0x11268 RtlCreateSecurityDescriptor
+0x11270 RtlSubAuthoritySid
+0x11278 ExFreePoolWithTag
+0x11280 RtlInitializeSid
+0x11288 RtlLengthRequiredSid
+0x11290 ExAllocatePool3
+0x11298 IoCreateDevice
+0x112a0 RtlUnregisterFeatureUsageProvider
+0x112a8 RtlRegisterFeatureUsageProvider
+0x112b0 RtlUnregisterFeatureConfigurationChangeNotification
+0x112b8 RtlRegisterFeatureConfigurationChangeNotification
+0x112c0 RtlQueryFeatureConfiguration
+0x112c8 RtlQueryFeatureConfigurationChangeStamp
+0x112d0 IoDeleteDevice
+0x112d8 ZwQueryValueKey
+0x112e0 ZwClose
+0x112e8 KeInitializeDpc
+0x112f0 ZwOpenKey
+0x112f8 IoBuildPartialMdl
+0x11300 MmMapLockedPagesWithReservedMapping
+0x11308 MmAllocateMappingAddress
+0x11310 MmUnmapReservedMapping
+0x11318 MmFreeMappingAddress
+0x11320 MmUnmapLockedPages
+0x11328 IoAllocateWorkItem
+0x11330 KeReadStateEvent
+0x11338 ZwWaitForSingleObject
+0x11340 ExAcquireFastMutexUnsafe
+0x11348 KeEnterCriticalRegion
+0x11350 ObfDereferenceObject
+0x11358 ZwNotifyChangeKey
+0x11360 ObReferenceObjectByHandle
+0x11368 IoQueueWorkItemEx
+0x11370 IoFreeWorkItem
+0x11378 ZwCreateEvent
+0x11380 ExEventObjectType
+0x11388 ExReleaseFastMutexUnsafe
+0x11390 KeLeaveCriticalRegion
+0x11398 ZwResetEvent
+0x113a0 ExRegisterCallback
+0x113a8 ExCreateCallback
+0x113b0 ExUnregisterCallback
+0x113b8 RtlArmFeatureUsageProviderFlushNotification
+0x113c0 RtlRecordFeatureUsage
+0x113c8 IoWMIRegistrationControl
+0x113d0 MmGetSystemRoutineAddress
+0x113d8 KeInitializeTimer
+0x113e0 RtlInitUnicodeString
+FUNCTION RVA 0x13eb0:
+00013eb0 488bc4                   mov      rax, rsp 
+00013eb3 48894808                 mov      qword ptr [rax + 8], rcx 
+00013eb7 53                       push     rbx 
+00013eb8 55                       push     rbp 
+00013eb9 56                       push     rsi 
+00013eba 57                       push     rdi 
+00013ebb 4154                     push     r12 
+00013ebd 4155                     push     r13 
+00013ebf 4156                     push     r14 
+00013ec1 4157                     push     r15 
+00013ec3 4883ec58                 sub      rsp, 0x58 
+00013ec7 4c8bbab8000000           mov      r15, qword ptr [rdx + 0xb8] 
+00013ece 33db                     xor      ebx, ebx 
+00013ed0 48895810                 mov      qword ptr [rax + 0x10], rbx 
+00013ed4 488bf2                   mov      rsi, rdx 
+00013ed7 48895a38                 mov      qword ptr [rdx + 0x38], rbx 
+00013edb 4c8bc9                   mov      r9, rcx 
+00013ede 48895818                 mov      qword ptr [rax + 0x18], rbx 
+00013ee2 8b0588b3ffff             mov      eax, dword ptr [rip - 0x4c78] RVA 0xf270 b'.data\x00\x00\x00' writable=True
+00013ee8 a801                     test     al, 1 
+00013eea 7441                     je       0x140013f2d 
+00013eec 488b0dcdb1ffff           mov      rcx, qword ptr [rip - 0x4e33] RVA 0xf0c0 b'.data\x00\x00\x00' writable=True
+00013ef3 4c8d25c6b1ffff           lea      r12, [rip - 0x4e3a] RVA 0xf0c0 b'.data\x00\x00\x00' writable=True
+00013efa 493bcc                   cmp      rcx, r12 
+00013efd 7424                     je       0x140013f23 
+00013eff 8d7b02                   lea      edi, [rbx + 2] 
+00013f02 40387929                 cmp      byte ptr [rcx + 0x29], dil 
+00013f06 721b                     jb       0x140013f23 
+00013f08 8b412c                   mov      eax, dword ptr [rcx + 0x2c] 
+00013f0b 4084c7                   test     dil, al 
+00013f0e 7413                     je       0x140013f23 
+00013f10 488b4918                 mov      rcx, qword ptr [rcx + 0x18] 
+00013f14 8d530a                   lea      edx, [rbx + 0xa] 
+00013f17 4c8d05e297ffff           lea      r8, [rip - 0x681e] RVA 0xd700 b'.rdata\x00\x00' writable=False
+00013f1e e8cdfafeff               call     0x1400039f0 
+00013f23 bb640300c0               mov      ebx, 0xc0000364 
+00013f28 e98e020000               jmp      0x1400141bb 
+00013f2d 458b4720                 mov      r8d, dword ptr [r15 + 0x20] 
+00013f31 4183f80c                 cmp      r8d, 0xc 
+00013f35 0f827b020000             jb       0x1400141b6 
+00013f3b 48395a18                 cmp      qword ptr [rdx + 0x18], rbx 
+00013f3f 0f8471020000             je       0x1400141b6 
+00013f45 488b0d74b1ffff           mov      rcx, qword ptr [rip - 0x4e8c] RVA 0xf0c0 b'.data\x00\x00\x00' writable=True
+00013f4c 4c8d256db1ffff           lea      r12, [rip - 0x4e93] RVA 0xf0c0 b'.data\x00\x00\x00' writable=True
+00013f53 bf02000000               mov      edi, 2 
+00013f58 493bcc                   cmp      rcx, r12 
+00013f5b 742f                     je       0x140013f8c 
+00013f5d 80792904                 cmp      byte ptr [rcx + 0x29], 4 
+00013f61 7229                     jb       0x140013f8c 
+00013f63 8b412c                   mov      eax, dword ptr [rcx + 0x2c] 
+00013f66 4084c7                   test     dil, al 
+00013f69 7421                     je       0x140013f8c 
+00013f6b 498b4730                 mov      rax, qword ptr [r15 + 0x30] 
+00013f6f 8d5709                   lea      edx, [rdi + 9] 
+00013f72 488b4918                 mov      rcx, qword ptr [rcx + 0x18] 
+00013f76 4489442428               mov      dword ptr [rsp + 0x28], r8d 
+00013f7b 4c8d057e97ffff           lea      r8, [rip - 0x6882] RVA 0xd700 b'.rdata\x00\x00' writable=False
+00013f82 4889442420               mov      qword ptr [rsp + 0x20], rax 
+00013f87 e858fdfeff               call     0x140003ce4 
+00013f8c 498b4730                 mov      rax, qword ptr [r15 + 0x30] 
+00013f90 488d153997ffff           lea      rdx, [rip - 0x68c7] RVA 0xd6d0 b'.rdata\x00\x00' writable=False
+00013f97 41b80a000000             mov      r8d, 0xa 
+00013f9d 48895818                 mov      qword ptr [rax + 0x18], rbx 
+00013fa1 488b5e18                 mov      rbx, qword ptr [rsi + 0x18] 
+00013fa5 488bcb                   mov      rcx, rbx 
+00013fa8 e8fffdffff               call     0x140013dac 
+00013fad 41b808000000             mov      r8d, 8 
+00013fb3 488d152697ffff           lea      rdx, [rip - 0x68da] RVA 0xd6e0 b'.rdata\x00\x00' writable=False
+00013fba 488bcb                   mov      rcx, rbx 
+00013fbd 4c8be8                   mov      r13, rax 
+00013fc0 e8e7fdffff               call     0x140013dac 
+00013fc5 41b80a000000             mov      r8d, 0xa 
+00013fcb 488d151e97ffff           lea      rdx, [rip - 0x68e2] RVA 0xd6f0 b'.rdata\x00\x00' writable=False
+00013fd2 488bcb                   mov      rcx, rbx 
+00013fd5 488be8                   mov      rbp, rax 
+00013fd8 e8cffdffff               call     0x140013dac 
+00013fdd 4533c0                   xor      r8d, r8d 
+00013fe0 4c8bf0                   mov      r14, rax 
+00013fe3 4d85ed                   test     r13, r13 
+00013fe6 0f84ca010000             je       0x1400141b6 
+00013fec 6641837d0601             cmp      word ptr [r13 + 6], 1 
+00013ff2 0f85be010000             jne      0x1400141b6 
+00013ff8 4885ed                   test     rbp, rbp 
+00013ffb 0f84b5010000             je       0x1400141b6 
+00014001 66837d0604               cmp      word ptr [rbp + 6], 4 
+00014006 0f85aa010000             jne      0x1400141b6 
+0001400c 4885c0                   test     rax, rax 
+0001400f 0f84a1010000             je       0x1400141b6 
+00014015 0fb74806                 movzx    ecx, word ptr [rax + 6] 
+00014019 663bcf                   cmp      cx, di 
+0001401c 0f8294010000             jb       0x1400141b6 
+00014022 f6c101                   test     cl, 1 
+00014025 0f858b010000             jne      0x1400141b6 
+0001402b 410fb64505               movzx    eax, byte ptr [r13 + 5] 
+00014030 460fb66c2809             movzx    r13d, byte ptr [rax + r13 + 9] 
+00014036 4180fd03                 cmp      r13b, 3 
+0001403a 0f8376010000             jae      0x1400141b6 
+00014040 410fb65605               movzx    edx, byte ptr [r14 + 5] 
+00014045 4883c209                 add      rdx, 9 
+00014049 4903d6                   add      rdx, r14 
+0001404c 48899424b8000000         mov      qword ptr [rsp + 0xb8], rdx 
+00014054 6644394411fe             cmp      word ptr [rcx + rdx - 2], r8w 
+0001405a 0f8556010000             jne      0x1400141b6 
+00014060 0fb64505                 movzx    eax, byte ptr [rbp + 5] 
+00014064 4533c9                   xor      r9d, r9d 
+00014067 33d2                     xor      edx, edx 
+00014069 8b4c2809                 mov      ecx, dword ptr [rax + rbp + 9] 
+0001406d 4869c1f0d8ffff           imul     rax, rcx, -0x2710 
+00014074 488d0d05b6ffff           lea      rcx, [rip - 0x49fb] RVA 0xf680 b'.data\x00\x00\x00' writable=True
+0001407b 48898424a8000000         mov      qword ptr [rsp + 0xa8], rax 
+00014083 488d8424a8000000         lea      rax, [rsp + 0xa8] 
+0001408b 4889442420               mov      qword ptr [rsp + 0x20], rax 
+00014090 48ff1579d0ffff           call     qword ptr [rip - 0x2f87] KeWaitForSingleObject; RVA 0x11110 b'.idata\x00\x00' writable=False
+00014097 0f1f440000               nop      dword ptr [rax + rax] 
+0001409c 8bd8                     mov      ebx, eax 
+0001409e 85c0                     test     eax, eax 
+000140a0 0f8815010000             js       0x1400141bb 
+000140a6 410fb75606               movzx    edx, word ptr [r14 + 6] 
+000140ab b940000000               mov      ecx, 0x40 
+000140b0 41b8496f4372             mov      r8d, 0x72436f49 
+000140b6 48ff155bd0ffff           call     qword ptr [rip - 0x2fa5] ExAllocatePool2; RVA 0x11118 b'.idata\x00\x00' writable=False
+000140bd 0f1f440000               nop      dword ptr [rax + rax] 
+000140c2 488be8                   mov      rbp, rax 
+000140c5 4885c0                   test     rax, rax 
+000140c8 750a                     jne      0x1400140d4 
+000140ca bb9a0000c0               mov      ebx, 0xc000009a 
+000140cf e9e7000000               jmp      0x1400141bb 
+000140d4 450fb74606               movzx    r8d, word ptr [r14 + 6] 
+000140d9 488bcd                   mov      rcx, rbp 
+000140dc 488b9424b8000000         mov      rdx, qword ptr [rsp + 0xb8] 
+000140e4 e8976effff               call     0x14000af80 
+000140e9 450fb74e06               movzx    r9d, word ptr [r14 + 6] 
+000140ee 488d0dfb8fffff           lea      rcx, [rip - 0x7005] RVA 0xd0f0 b'.rdata\x00\x00' writable=False
+000140f5 4a8b04e9                 mov      rax, qword ptr [rcx + r13*8] 
+000140f9 442bcf                   sub      r9d, edi 
+000140fc 488d8c24b0000000         lea      rcx, [rsp + 0xb0] 
+00014104 4c8bc5                   mov      r8, rbp 
+00014107 48894c2428               mov      qword ptr [rsp + 0x28], rcx 
+0001410c 488bd6                   mov      rdx, rsi 
+0001410f 488b4e18                 mov      rcx, qword ptr [rsi + 0x18] 
+00014113 48894c2420               mov      qword ptr [rsp + 0x20], rcx 
+00014118 498b4f30                 mov      rcx, qword ptr [r15 + 0x30] 
+0001411c e88f6cffff               call     0x14000adb0 
+00014121 8bd8                     mov      ebx, eax 
+00014123 3d03010000               cmp      eax, 0x103 
+00014128 7518                     jne      0x140014142 
+0001412a 33d2                     xor      edx, edx 
+0001412c 488bcd                   mov      rcx, rbp 
+0001412f 48ff1542d1ffff           call     qword ptr [rip - 0x2ebe] ExFreePoolWithTag; RVA 0x11278 b'.idata\x00\x00' writable=False
+00014136 0f1f440000               nop      dword ptr [rax + rax] 
+0001413b 8bc3                     mov      eax, ebx 
+0001413d e98f000000               jmp      0x1400141d1 
+00014142 85db                     test     ebx, ebx 
+00014144 7812                     js       0x140014158 
+00014146 498b4f30                 mov      rcx, qword ptr [r15 + 0x30] 
+0001414a 488b8424b0000000         mov      rax, qword ptr [rsp + 0xb0] 
+00014152 48894118                 mov      qword ptr [rcx + 0x18], rax 
+00014156 eb4b                     jmp      0x1400141a3 
+00014158 488b0d61afffff           mov      rcx, qword ptr [rip - 0x509f] RVA 0xf0c0 b'.data\x00\x00\x00' writable=True
+0001415f 493bcc                   cmp      rcx, r12 
+00014162 743f                     je       0x1400141a3 
+00014164 40387929                 cmp      byte ptr [rcx + 0x29], dil 
+00014168 7239                     jb       0x1400141a3 
+0001416a 8b412c                   mov      eax, dword ptr [rcx + 0x2c] 
+0001416d 4084c7                   test     dil, al 
+00014170 7431                     je       0x1400141a3 
+00014172 410fb74606               movzx    eax, word ptr [r14 + 6] 
+00014177 4c8b8c24a0000000         mov      r9, qword ptr [rsp + 0xa0] 
+0001417f 488b4918                 mov      rcx, qword ptr [rcx + 0x18] 
+00014183 895c2440                 mov      dword ptr [rsp + 0x40], ebx 
+00014187 89442438                 mov      dword ptr [rsp + 0x38], eax 
+0001418b 498b4730                 mov      rax, qword ptr [r15 + 0x30] 
+0001418f 48896c2430               mov      qword ptr [rsp + 0x30], rbp 
+00014194 44896c2428               mov      dword ptr [rsp + 0x28], r13d 
+00014199 4889442420               mov      qword ptr [rsp + 0x20], rax 
+0001419e e8a1fbfeff               call     0x140003d44 
+000141a3 33d2                     xor      edx, edx 
+000141a5 488bcd                   mov      rcx, rbp 
+000141a8 48ff15c9d0ffff           call     qword ptr [rip - 0x2f37] ExFreePoolWithTag; RVA 0x11278 b'.idata\x00\x00' writable=False
+000141af 0f1f440000               nop      dword ptr [rax + rax] 
+000141b4 eb05                     jmp      0x1400141bb 
+000141b6 bb0d0000c0               mov      ebx, 0xc000000d 
+000141bb 33d2                     xor      edx, edx 
+000141bd 895e30                   mov      dword ptr [rsi + 0x30], ebx 
+000141c0 488bce                   mov      rcx, rsi 
+000141c3 48ff1556cfffff           call     qword ptr [rip - 0x30aa] IofCompleteRequest; RVA 0x11120 b'.idata\x00\x00' writable=False
+000141ca 0f1f440000               nop      dword ptr [rax + rax] 
+000141cf 8bc3                     mov      eax, ebx 
+000141d1 4883c458                 add      rsp, 0x58 
+000141d5 415f                     pop      r15 
+000141d7 415e                     pop      r14 
+000141d9 415d                     pop      r13 
+000141db 415c                     pop      r12 
+000141dd 5f                       pop      rdi 
+000141de 5e                       pop      rsi 
+000141df 5d                       pop      rbp 
+000141e0 5b                       pop      rbx 
+000141e1 c3                       ret       
+000141e2 cc                       int3      
+FUNCTION RVA 0xadb0:
+0000adb0 ff2542660000             jmp      qword ptr [rip + 0x6642] CFG guard dispatch/check slot; RVA 0x113f8 b'.idata\x00\x00' writable=False

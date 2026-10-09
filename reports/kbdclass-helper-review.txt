@@ -1,0 +1,91 @@
+IMAGE: C:\Windows\System32\drivers\kbdclass.sys
+BASE: 0x140000000
+ENTRY RVA: 0x11010
+SECTIONS:
+b'.text\x00\x00\x00' RVA=0x1000 size=0x6b77 flags=0x68000020
+b'fothk\x00\x00\x00' RVA=0x8000 size=0x1000 flags=0x68000020
+b'.rdata\x00\x00' RVA=0x9000 size=0x167c flags=0x48000040
+b'.data\x00\x00\x00' RVA=0xb000 size=0x640 flags=0xc8000040
+b'.pdata\x00\x00' RVA=0xc000 size=0x7ec flags=0x48000040
+b'.idata\x00\x00' RVA=0xd000 size=0xd28 flags=0x48000040
+b'PAGE\x00\x00\x00\x00' RVA=0xe000 size=0x2c24 flags=0x60000020
+b'INIT\x00\x00\x00\x00' RVA=0x11000 size=0xde6 flags=0x62000020
+b'GFIDS\x00\x00\x00' RVA=0x12000 size=0xa8 flags=0x42000040
+b'.rsrc\x00\x00\x00' RVA=0x13000 size=0xe18 flags=0x42000040
+b'.reloc\x00\x00' RVA=0x14000 size=0x880 flags=0x42000040
+IMPORTS:
+0xd000 WmiSystemControl
+0xd008 WmiCompleteRequest
+0xd018 WppAutoLogStart
+0xd020 imp_WppRecorderReplay
+0xd028 WppAutoLogStop
+0xd030 WppAutoLogTrace
+0xd040 IoCancelIrp
+0xd048 KeGetCurrentIrql
+0xd050 IoRegisterDriverReinitialization
+0xd058 IoSetDeviceInterfaceState
+0xd060 IoDetachDevice
+0xd068 EtwSetInformation
+0xd070 IoWriteErrorLogEntry
+0xd078 IoUnregisterPlugPlayNotification
+0xd080 RtlAppendUnicodeToString
+0xd088 ExReleaseFastMutex
+0xd090 PoCallDriver
+0xd098 IoFreeIrp
+0xd0a0 ObfDereferenceObject
+0xd0a8 RtlFreeUnicodeString
+0xd0b0 RtlInitUnicodeString
+0xd0b8 PoRequestPowerIrp
+0xd0c0 KeInitializeSpinLock
+0xd0c8 IoOpenDeviceRegistryKey
+0xd0d0 IoOpenDriverRegistryKey
+0xd0d8 IoDeleteDevice
+0xd0e0 IoInitializeRemoveLockEx
+0xd0e8 RtlCopyUnicodeString
+0xd0f0 IoBuildDeviceIoControlRequest
+0xd0f8 RtlVerifyVersionInfo
+0xd100 PoSetPowerState
+0xd108 IoGetDeviceObjectPointer
+0xd110 RtlQueryRegistryValues
+0xd118 IoAttachDeviceToDeviceStack
+0xd120 ZwPowerInformation
+0xd128 IoReleaseRemoveLockAndWaitEx
+0xd130 KeReleaseSpinLock
+0xd138 KeSetEvent
+0xd140 ExAllocatePool2
+0xd148 KeAcquireSpinLockAtDpcLevel
+0xd150 EtwUnregister
+0xd158 IoRegisterPlugPlayNotification
+0xd160 IoGetDeviceProperty
+0xd168 ExAcquireFastMutex
+0xd170 MmGetSystemRoutineAddress
+0xd178 IoAllocateIrp
+0xd180 IoFreeWorkItem
+0xd188 KeReleaseSpinLockFromDpcLevel
+0xd190 IoCreateDevice
+0xd198 EtwRegister
+0xd1a0 IofCallDriver
+0xd1a8 ZwQueryValueKey
+0xd1b0 VerSetConditionMask
+0xd1b8 ExFreePoolWithTag
+0xd1c0 IoWMIRegistrationControl
+0xd1c8 KeInitializeEvent
+0xd1d0 IoQueueWorkItem
+0xd1d8 IofCompleteRequest
+0xd1e0 SeSinglePrivilegeCheck
+0xd1e8 KeWaitForSingleObject
+0xd1f0 IoAllocateErrorLogEntry
+0xd1f8 IoReleaseCancelSpinLock
+0xd200 ZwClose
+0xd208 ZwSetValueKey
+0xd210 PoStartNextPowerIrp
+0xd218 KeAcquireSpinLockRaiseToDpc
+0xd220 _vsnwprintf
+0xd228 RtlWriteRegistryValue
+0xd230 IoReleaseRemoveLockEx
+0xd238 IoAllocateWorkItem
+0xd240 IoRegisterDeviceInterface
+0xd248 EtwWriteTransfer
+0xd250 IoAcquireRemoveLockEx
+FUNCTION RVA 0x72d0:
+000072d0 ff25925f0000             jmp      qword ptr [rip + 0x5f92] CFG guard dispatch/check slot; RVA 0xd268 b'.idata\x00\x00' writable=False

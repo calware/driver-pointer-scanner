@@ -1,0 +1,3166 @@
+[
+  {
+    "Name": "1394ohci",
+    "DisplayName": "1394 OHCI Compliant Host Controller",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\1394ohci.sys"
+  },
+  {
+    "Name": "3ware",
+    "DisplayName": "3ware",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\3ware.sys"
+  },
+  {
+    "Name": "ACPI",
+    "DisplayName": "Microsoft ACPI Driver",
+    "State": "Running",
+    "StartMode": "Boot",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\ACPI.sys"
+  },
+  {
+    "Name": "AcpiAudioCompositorInbox",
+    "DisplayName": "ACPI Audio Compositor Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\DriverStore\\FileRepository\\acpiaudiocompositor.inf_amd64_3a22a3df84b6fbc6\\AcpiAudioCompositor.sys"
+  },
+  {
+    "Name": "AcpiDev",
+    "DisplayName": "ACPI Devices driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\AcpiDev.sys"
+  },
+  {
+    "Name": "acpiex",
+    "DisplayName": "Microsoft ACPIEx Driver",
+    "State": "Running",
+    "StartMode": "Boot",
+    "PathName": "C:\\WINDOWS\\system32\\Drivers\\acpiex.sys"
+  },
+  {
+    "Name": "acpipagr",
+    "DisplayName": "ACPI Processor Aggregator Driver",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\DriverStore\\FileRepository\\acpipagr.inf_amd64_d1093347a27ff89c\\acpipagr.sys"
+  },
+  {
+    "Name": "AcpiPmi",
+    "DisplayName": "ACPI Power Meter Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\DriverStore\\FileRepository\\acpipmi.inf_amd64_3ced06eb61dcc792\\acpipmi.sys"
+  },
+  {
+    "Name": "acpitime",
+    "DisplayName": "ACPI Wake Alarm Driver",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\acpitime.sys"
+  },
+  {
+    "Name": "Acx01000",
+    "DisplayName": "Acx01000",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\Acx01000.sys"
+  },
+  {
+    "Name": "ADP80XX",
+    "DisplayName": "ADP80XX",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\ADP80XX.SYS"
+  },
+  {
+    "Name": "aehd",
+    "DisplayName": "Android Emulator hypervisor driver Service",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\DRIVERS\\aehd.sys"
+  },
+  {
+    "Name": "AFD",
+    "DisplayName": "Ancillary Function Driver for Winsock",
+    "State": "Running",
+    "StartMode": "System",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\afd.sys"
+  },
+  {
+    "Name": "afunix",
+    "DisplayName": "afunix",
+    "State": "Running",
+    "StartMode": "System",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\afunix.sys"
+  },
+  {
+    "Name": "ahcache",
+    "DisplayName": "Application Compatibility Cache",
+    "State": "Running",
+    "StartMode": "System",
+    "PathName": "C:\\WINDOWS\\system32\\DRIVERS\\ahcache.sys"
+  },
+  {
+    "Name": "amdgpio2",
+    "DisplayName": "AMD GPIO Client Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\amdgpio2.sys"
+  },
+  {
+    "Name": "amdi2c",
+    "DisplayName": "AMD I2C Controller Service",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\amdi2c.sys"
+  },
+  {
+    "Name": "AmdK8",
+    "DisplayName": "AMD K8 Processor Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\amdk8.sys"
+  },
+  {
+    "Name": "AmdPPM",
+    "DisplayName": "AMD Processor Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\amdppm.sys"
+  },
+  {
+    "Name": "amdsata",
+    "DisplayName": "amdsata",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\amdsata.sys"
+  },
+  {
+    "Name": "amdsbs",
+    "DisplayName": "amdsbs",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\amdsbs.sys"
+  },
+  {
+    "Name": "amdwps",
+    "DisplayName": "AMD Workload Profiling Scheduling Driver",
+    "State": "Running",
+    "StartMode": "Boot",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\amdwps.sys"
+  },
+  {
+    "Name": "amdxata",
+    "DisplayName": "amdxata",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\amdxata.sys"
+  },
+  {
+    "Name": "AppID",
+    "DisplayName": "AppID Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\appid.sys"
+  },
+  {
+    "Name": "AppleSSD",
+    "DisplayName": "Apple Solid State Drive Device",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\AppleSSD.sys"
+  },
+  {
+    "Name": "applockerfltr",
+    "DisplayName": "Smartlocker Filter Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\applockerfltr.sys"
+  },
+  {
+    "Name": "AppvStrm",
+    "DisplayName": "AppvStrm",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\AppvStrm.sys"
+  },
+  {
+    "Name": "AppvVemgr",
+    "DisplayName": "AppvVemgr",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\AppvVemgr.sys"
+  },
+  {
+    "Name": "AppvVfs",
+    "DisplayName": "AppvVfs",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\AppvVfs.sys"
+  },
+  {
+    "Name": "aqnic650",
+    "DisplayName": "Marvell AQtion Network Adapter Driver",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\aqnic650.sys"
+  },
+  {
+    "Name": "arcsas",
+    "DisplayName": "Adaptec SAS/SATA-II RAID Storport's Miniport Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\arcsas.sys"
+  },
+  {
+    "Name": "Asusgio3",
+    "DisplayName": "Asusgio3",
+    "State": "Running",
+    "StartMode": "System",
+    "PathName": "\\??\\C:\\WINDOWS\\system32\\drivers\\AsIO3.sys"
+  },
+  {
+    "Name": "AsusSAIO",
+    "DisplayName": "AsusSAIO",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\DriverStore\\FileRepository\\asussci2.inf_amd64_ec0a7aca8834d5bc\\ASUSSystemAnalysis\\AsusSAIO.sys"
+  },
+  {
+    "Name": "AsyncMac",
+    "DisplayName": "RAS Asynchronous Media Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\asyncmac.sys"
+  },
+  {
+    "Name": "atapi",
+    "DisplayName": "IDE Channel",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\atapi.sys"
+  },
+  {
+    "Name": "ATKWMIACPIIO",
+    "DisplayName": "ATKWMIACPI Driver",
+    "State": "Running",
+    "StartMode": "System",
+    "PathName": "C:\\WINDOWS\\system32\\DriverStore\\FileRepository\\asussci2.inf_amd64_ec0a7aca8834d5bc\\ASUSOptimization\\AsusWmiAcpi.sys"
+  },
+  {
+    "Name": "b06bdrv",
+    "DisplayName": "QLogic Network Adapter VBD",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\bxvbda.sys"
+  },
+  {
+    "Name": "bam",
+    "DisplayName": "Background Activity Moderator Driver",
+    "State": "Running",
+    "StartMode": "System",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\bam.sys"
+  },
+  {
+    "Name": "BasicDisplay",
+    "DisplayName": "BasicDisplay",
+    "State": "Running",
+    "StartMode": "System",
+    "PathName": "C:\\WINDOWS\\system32\\DriverStore\\FileRepository\\basicdisplay.inf_amd64_9f34636ebdd89def\\BasicDisplay.sys"
+  },
+  {
+    "Name": "BasicRender",
+    "DisplayName": "BasicRender",
+    "State": "Running",
+    "StartMode": "System",
+    "PathName": "C:\\WINDOWS\\system32\\DriverStore\\FileRepository\\basicrender.inf_amd64_cf45ae7c2c82746d\\BasicRender.sys"
+  },
+  {
+    "Name": "bcmfn2",
+    "DisplayName": "bcmfn2 Service",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\bcmfn2.sys"
+  },
+  {
+    "Name": "Beep",
+    "DisplayName": "Beep",
+    "State": "Running",
+    "StartMode": "System",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\Beep.sys"
+  },
+  {
+    "Name": "bfs",
+    "DisplayName": "Brokering File System",
+    "State": "Running",
+    "StartMode": "Auto",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\bfs.sys"
+  },
+  {
+    "Name": "bindflt",
+    "DisplayName": "Windows Bind Filter Driver",
+    "State": "Running",
+    "StartMode": "Auto",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\bindflt.sys"
+  },
+  {
+    "Name": "bowser",
+    "DisplayName": "Browser",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\DRIVERS\\bowser.sys"
+  },
+  {
+    "Name": "BthA2dp",
+    "DisplayName": "Microsoft Bluetooth A2dp driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\BthA2dp.sys"
+  },
+  {
+    "Name": "BthEnum",
+    "DisplayName": "Bluetooth Enumerator Service",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\BthEnum.sys"
+  },
+  {
+    "Name": "BthHFEnum",
+    "DisplayName": "Microsoft Bluetooth Hands-Free Profile driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\bthhfenum.sys"
+  },
+  {
+    "Name": "BthLEEnum",
+    "DisplayName": "Bluetooth Low Energy Driver",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\Microsoft.Bluetooth.Legacy.LEEnumerator.sys"
+  },
+  {
+    "Name": "BthMini",
+    "DisplayName": "Bluetooth Radio Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\BTHMINI.sys"
+  },
+  {
+    "Name": "BTHMODEM",
+    "DisplayName": "Bluetooth Modem Communications Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\bthmodem.sys"
+  },
+  {
+    "Name": "BthPan",
+    "DisplayName": "Bluetooth Device (Personal Area Network)",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\bthpan.sys"
+  },
+  {
+    "Name": "BTHPORT",
+    "DisplayName": "Bluetooth Port Driver",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\BTHport.sys"
+  },
+  {
+    "Name": "BTHUSB",
+    "DisplayName": "Bluetooth Radio USB Driver",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\BTHUSB.sys"
+  },
+  {
+    "Name": "bttflt",
+    "DisplayName": "Microsoft Hyper-V VHDPMEM BTT Filter",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\bttflt.sys"
+  },
+  {
+    "Name": "buttonconverter",
+    "DisplayName": "Service for Portable Device Control devices",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\buttonconverter.sys"
+  },
+  {
+    "Name": "CAD",
+    "DisplayName": "Charge Arbitration Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\CAD.sys"
+  },
+  {
+    "Name": "CDD",
+    "DisplayName": "Canonical Display Driver",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\cdd.dll"
+  },
+  {
+    "Name": "cdfs",
+    "DisplayName": "CD/DVD File System Reader",
+    "State": "Stopped",
+    "StartMode": "Disabled",
+    "PathName": "C:\\WINDOWS\\system32\\DRIVERS\\cdfs.sys"
+  },
+  {
+    "Name": "cdrom",
+    "DisplayName": "CD-ROM Driver",
+    "State": "Running",
+    "StartMode": "System",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\cdrom.sys"
+  },
+  {
+    "Name": "cht4iscsi",
+    "DisplayName": "cht4iscsi",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\cht4sx64.sys"
+  },
+  {
+    "Name": "cht4vbd",
+    "DisplayName": "Chelsio Virtual Bus Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\cht4vx64.sys"
+  },
+  {
+    "Name": "CimFS",
+    "DisplayName": "CimFS",
+    "State": "Running",
+    "StartMode": "System",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\CimFS.sys"
+  },
+  {
+    "Name": "circlass",
+    "DisplayName": "Consumer IR Devices",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\circlass.sys"
+  },
+  {
+    "Name": "CldFlt",
+    "DisplayName": "Windows Cloud Files Filter Driver",
+    "State": "Running",
+    "StartMode": "Auto",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\cldflt.sys"
+  },
+  {
+    "Name": "CLFS",
+    "DisplayName": "Common Log (CLFS)",
+    "State": "Running",
+    "StartMode": "Boot",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\CLFS.sys"
+  },
+  {
+    "Name": "CmBatt",
+    "DisplayName": "Microsoft ACPI Control Method Battery Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\CmBatt.sys"
+  },
+  {
+    "Name": "CNG",
+    "DisplayName": "CNG",
+    "State": "Running",
+    "StartMode": "Boot",
+    "PathName": "C:\\WINDOWS\\system32\\Drivers\\cng.sys"
+  },
+  {
+    "Name": "cnghwassist",
+    "DisplayName": "CNG Hardware Assist algorithm provider",
+    "State": "Stopped",
+    "StartMode": "Disabled",
+    "PathName": "C:\\WINDOWS\\system32\\DRIVERS\\cnghwassist.sys"
+  },
+  {
+    "Name": "CompositeBus",
+    "DisplayName": "Composite Bus Enumerator Driver",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\DriverStore\\FileRepository\\compositebus.inf_amd64_8cf6fa9d3afdfa25\\CompositeBus.sys"
+  },
+  {
+    "Name": "condrv",
+    "DisplayName": "Console Driver",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\condrv.sys"
+  },
+  {
+    "Name": "CSC",
+    "DisplayName": "Offline Files Driver",
+    "State": "Running",
+    "StartMode": "System",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\csc.sys"
+  },
+  {
+    "Name": "dam",
+    "DisplayName": "Desktop Activity Moderator Driver",
+    "State": "Stopped",
+    "StartMode": "System",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\dam.sys"
+  },
+  {
+    "Name": "devmap",
+    "DisplayName": "Usermode Device Mapper Service",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\DriverStore\\FileRepository\\devmap.inf_amd64_be39703ead246fc4\\devmap.sys"
+  },
+  {
+    "Name": "Dfsc",
+    "DisplayName": "DFS Namespace Client Driver",
+    "State": "Running",
+    "StartMode": "System",
+    "PathName": "C:\\WINDOWS\\system32\\Drivers\\dfsc.sys"
+  },
+  {
+    "Name": "disk",
+    "DisplayName": "Disk Driver",
+    "State": "Running",
+    "StartMode": "Boot",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\disk.sys"
+  },
+  {
+    "Name": "DisplayMux",
+    "DisplayName": "Microsoft DisplayMux",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\DriverStore\\FileRepository\\displaymux.inf_amd64_da65a70f0c3ce0f3\\DisplayMux.sys"
+  },
+  {
+    "Name": "dmvsc",
+    "DisplayName": "dmvsc",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\dmvsc.sys"
+  },
+  {
+    "Name": "drmkaud",
+    "DisplayName": "Microsoft Trusted Audio Drivers",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\drmkaud.sys"
+  },
+  {
+    "Name": "DXGKrnl",
+    "DisplayName": "LDDM Graphics Subsystem",
+    "State": "Running",
+    "StartMode": "Boot",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\dxgkrnl.sys"
+  },
+  {
+    "Name": "e2fexpress",
+    "DisplayName": "Intel(R) PCI Express Network Connection Driver R",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\DriverStore\\FileRepository\\e2f.inf_amd64_d0d0d2073f0fc12f\\e2f.sys"
+  },
+  {
+    "Name": "e2fnexpress",
+    "DisplayName": "Intel(R) PCI Express Network Connection NetAdapter Driver",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\DriverStore\\FileRepository\\e2fn.inf_amd64_5075999c7c415a1d\\e2fn.sys"
+  },
+  {
+    "Name": "ebdrv",
+    "DisplayName": "QLogic 10 Gigabit Ethernet Adapter VBD",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\evbda.sys"
+  },
+  {
+    "Name": "ebdrv0",
+    "DisplayName": "QLogic Legacy Ethernet Adapter VBD",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\evbd0a.sys"
+  },
+  {
+    "Name": "EhStorClass",
+    "DisplayName": "Enhanced Storage Filter Driver",
+    "State": "Running",
+    "StartMode": "Boot",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\EhStorClass.sys"
+  },
+  {
+    "Name": "EhStorTcgDrv",
+    "DisplayName": "Microsoft driver for storage devices supporting IEEE 1667 and TCG protocols",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\EhStorTcgDrv.sys"
+  },
+  {
+    "Name": "ErrDev",
+    "DisplayName": "Microsoft Hardware Error Device Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\errdev.sys"
+  },
+  {
+    "Name": "ExecutionContext",
+    "DisplayName": "CPU Scheduler for High Performance I/O",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\Drivers\\ExecutionContext.sys"
+  },
+  {
+    "Name": "exfat",
+    "DisplayName": "exFAT File System Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\exfat.sys"
+  },
+  {
+    "Name": "fastfat",
+    "DisplayName": "FAT12/16/32 File System Driver",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\fastfat.sys"
+  },
+  {
+    "Name": "fdc",
+    "DisplayName": "Floppy Disk Controller Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\fdc.sys"
+  },
+  {
+    "Name": "FileCrypt",
+    "DisplayName": "FileCrypt",
+    "State": "Running",
+    "StartMode": "System",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\filecrypt.sys"
+  },
+  {
+    "Name": "FileInfo",
+    "DisplayName": "File Information FS MiniFilter",
+    "State": "Running",
+    "StartMode": "Boot",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\fileinfo.sys"
+  },
+  {
+    "Name": "Filetrace",
+    "DisplayName": "Filetrace",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\filetrace.sys"
+  },
+  {
+    "Name": "flpydisk",
+    "DisplayName": "Floppy Disk Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\flpydisk.sys"
+  },
+  {
+    "Name": "FltMgr",
+    "DisplayName": "FltMgr",
+    "State": "Running",
+    "StartMode": "Boot",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\fltmgr.sys"
+  },
+  {
+    "Name": "FsDepends",
+    "DisplayName": "File System Dependency Minifilter",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\FsDepends.sys"
+  },
+  {
+    "Name": "fse",
+    "DisplayName": "Flow steering engine",
+    "State": "Running",
+    "StartMode": "Boot",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\fse.sys"
+  },
+  {
+    "Name": "fvevol",
+    "DisplayName": "BitLocker Drive Encryption Filter Driver",
+    "State": "Running",
+    "StartMode": "Boot",
+    "PathName": "C:\\WINDOWS\\system32\\DRIVERS\\fvevol.sys"
+  },
+  {
+    "Name": "gencounter",
+    "DisplayName": "Microsoft Hyper-V Generation Counter",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\vmgencounter.sys"
+  },
+  {
+    "Name": "genericusbfn",
+    "DisplayName": "Generic USB Function Class",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\DriverStore\\FileRepository\\genericusbfn.inf_amd64_71c810ddc0116541\\genericusbfn.sys"
+  },
+  {
+    "Name": "GenPass",
+    "DisplayName": "Microsoft GenPass Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\DriverStore\\FileRepository\\genpass.inf_amd64_0c82d80c9252c9bd\\genpass.sys"
+  },
+  {
+    "Name": "GPIOClx0101",
+    "DisplayName": "Microsoft GPIO Class Extension Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\Drivers\\msgpioclx.sys"
+  },
+  {
+    "Name": "Hamachi",
+    "DisplayName": "LogMeIn Hamachi Virtual Miniport)",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\DRIVERS\\Hamdrv.sys"
+  },
+  {
+    "Name": "hcmon",
+    "DisplayName": "VMware hcmon",
+    "State": "Running",
+    "StartMode": "Auto",
+    "PathName": "C:\\WINDOWS\\system32\\DRIVERS\\hcmon.sys"
+  },
+  {
+    "Name": "HdAudAddService",
+    "DisplayName": "Microsoft 1.1 UAA Function Driver for High Definition Audio Service",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\HdAudio.sys"
+  },
+  {
+    "Name": "HDAudBus",
+    "DisplayName": "Microsoft UAA Bus Driver for High Definition Audio",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\HDAudBus.sys"
+  },
+  {
+    "Name": "HidBatt",
+    "DisplayName": "HID UPS Battery Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\HidBatt.sys"
+  },
+  {
+    "Name": "HidBth",
+    "DisplayName": "Microsoft Bluetooth HID Miniport",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\hidbth.sys"
+  },
+  {
+    "Name": "hidi2c",
+    "DisplayName": "Microsoft I2C HID Miniport Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\hidi2c.sys"
+  },
+  {
+    "Name": "hidinterrupt",
+    "DisplayName": "Common Driver for HID Buttons implemented with interrupts",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\hidinterrupt.sys"
+  },
+  {
+    "Name": "HidIr",
+    "DisplayName": "Microsoft Infrared HID Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\hidir.sys"
+  },
+  {
+    "Name": "hidspi",
+    "DisplayName": "Microsoft SPI HID Miniport Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\hidspi.sys"
+  },
+  {
+    "Name": "HidSpiCx",
+    "DisplayName": "HidSpi KMDF Class Extension",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\HidSpiCx.sys"
+  },
+  {
+    "Name": "HidUsb",
+    "DisplayName": "Microsoft HID Class Driver",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\hidusb.sys"
+  },
+  {
+    "Name": "hnswfpdriver",
+    "DisplayName": "HNS WFP Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\hnswfpdriver.sys"
+  },
+  {
+    "Name": "HpSAMD",
+    "DisplayName": "HpSAMD",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\HpSAMD.sys"
+  },
+  {
+    "Name": "Hsp",
+    "DisplayName": "Microsoft Pluton Service",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\Hsp.sys"
+  },
+  {
+    "Name": "HTTP",
+    "DisplayName": "HTTP Service",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\HTTP.sys"
+  },
+  {
+    "Name": "hvcrash",
+    "DisplayName": "hvcrash",
+    "State": "Stopped",
+    "StartMode": "Disabled",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\hvcrash.sys"
+  },
+  {
+    "Name": "hvservice",
+    "DisplayName": "Microsoft Hypervisor Service Driver",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\hvservice.sys"
+  },
+  {
+    "Name": "hvsocketcontrol",
+    "DisplayName": "hvsocketcontrol",
+    "State": "Running",
+    "StartMode": "System",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\hvsocketcontrol.sys"
+  },
+  {
+    "Name": "HwNClx0101",
+    "DisplayName": "Microsoft Hardware Notifications Class Extension Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\Drivers\\mshwnclx.sys"
+  },
+  {
+    "Name": "hwpolicy",
+    "DisplayName": "Hardware Policy Driver",
+    "State": "Stopped",
+    "StartMode": "Boot",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\hwpolicy.sys"
+  },
+  {
+    "Name": "hyperkbd",
+    "DisplayName": "hyperkbd",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\hyperkbd.sys"
+  },
+  {
+    "Name": "HyperVideo",
+    "DisplayName": "HyperVideo",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\HyperVideo.sys"
+  },
+  {
+    "Name": "I3CHost",
+    "DisplayName": "I3C Host Controller Service",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\DriverStore\\FileRepository\\i3chost.inf_amd64_e4de3766c4cde4e1\\i3chost.sys"
+  },
+  {
+    "Name": "i8042prt",
+    "DisplayName": "i8042 Keyboard and PS/2 Mouse Port Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\i8042prt.sys"
+  },
+  {
+    "Name": "iagpio",
+    "DisplayName": "Intel Serial IO GPIO Controller Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\iagpio.sys"
+  },
+  {
+    "Name": "iai2c",
+    "DisplayName": "Intel(R) Serial IO I2C Host Controller",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\iai2c.sys"
+  },
+  {
+    "Name": "iaLPSS2i_GPIO2",
+    "DisplayName": "Intel(R) Serial IO GPIO Driver v2",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\iaLPSS2i_GPIO2.sys"
+  },
+  {
+    "Name": "iaLPSS2i_GPIO2_BXT_P",
+    "DisplayName": "Intel(R) Serial IO GPIO Driver v2",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\iaLPSS2i_GPIO2_BXT_P.sys"
+  },
+  {
+    "Name": "iaLPSS2i_GPIO2_CNL",
+    "DisplayName": "Intel(R) Serial IO GPIO Driver v2",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\iaLPSS2i_GPIO2_CNL.sys"
+  },
+  {
+    "Name": "iaLPSS2i_GPIO2_GLK",
+    "DisplayName": "Intel(R) Serial IO GPIO Driver v2",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\iaLPSS2i_GPIO2_GLK.sys"
+  },
+  {
+    "Name": "iaLPSS2i_I2C",
+    "DisplayName": "Intel(R) Serial IO I2C Driver v2",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\iaLPSS2i_I2C.sys"
+  },
+  {
+    "Name": "iaLPSS2i_I2C_BXT_P",
+    "DisplayName": "Intel(R) Serial IO I2C Driver v2",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\iaLPSS2i_I2C_BXT_P.sys"
+  },
+  {
+    "Name": "iaLPSS2i_I2C_CNL",
+    "DisplayName": "Intel(R) Serial IO I2C Driver v2",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\iaLPSS2i_I2C_CNL.sys"
+  },
+  {
+    "Name": "iaLPSS2i_I2C_GLK",
+    "DisplayName": "Intel(R) Serial IO I2C Driver v2",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\iaLPSS2i_I2C_GLK.sys"
+  },
+  {
+    "Name": "iaLPSSi_GPIO",
+    "DisplayName": "Intel(R) Serial IO GPIO Controller Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\iaLPSSi_GPIO.sys"
+  },
+  {
+    "Name": "iaLPSSi_I2C",
+    "DisplayName": "Intel(R) Serial IO I2C Controller Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\iaLPSSi_I2C.sys"
+  },
+  {
+    "Name": "iaStorAVC",
+    "DisplayName": "Intel Chipset SATA RAID Controller",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\iaStorAVC.sys"
+  },
+  {
+    "Name": "iaStorV",
+    "DisplayName": "Intel RAID Controller Windows 7",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\iaStorV.sys"
+  },
+  {
+    "Name": "iaStorVD",
+    "DisplayName": "Intel(R) Chipset VMD RST Controller service",
+    "State": "Running",
+    "StartMode": "Boot",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\iaStorVD.sys"
+  },
+  {
+    "Name": "ibbus",
+    "DisplayName": "Mellanox InfiniBand Bus/AL (Filter Driver)",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\ibbus.sys"
+  },
+  {
+    "Name": "ibtusb",
+    "DisplayName": "Intel(R) Wireless Bluetooth(R)",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\DriverStore\\FileRepository\\ibtusb.inf_amd64_4d48e97cd3587c52\\ibtusb.sys"
+  },
+  {
+    "Name": "IndirectKmd",
+    "DisplayName": "Indirect Displays Kernel-Mode Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\IndirectKmd.sys"
+  },
+  {
+    "Name": "intelide",
+    "DisplayName": "intelide",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\intelide.sys"
+  },
+  {
+    "Name": "intelpep",
+    "DisplayName": "Intel(R) Power Engine Plug-in Driver",
+    "State": "Running",
+    "StartMode": "Boot",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\intelpep.sys"
+  },
+  {
+    "Name": "intelpmax",
+    "DisplayName": "Intel(R) Dynamic Device Peak Power Manager Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\intelpmax.sys"
+  },
+  {
+    "Name": "IntelPMT",
+    "DisplayName": "Intel(R) Platform Monitoring Technology Service",
+    "State": "Running",
+    "StartMode": "Boot",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\IntelPMT.sys"
+  },
+  {
+    "Name": "intelppm",
+    "DisplayName": "Intel Processor Driver",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\intelppm.sys"
+  },
+  {
+    "Name": "iorate",
+    "DisplayName": "Disk I/O Rate Filter Driver",
+    "State": "Running",
+    "StartMode": "Boot",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\iorate.sys"
+  },
+  {
+    "Name": "IpFilterDriver",
+    "DisplayName": "IP Traffic Filter Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\DRIVERS\\ipfltdrv.sys"
+  },
+  {
+    "Name": "IPMIDRV",
+    "DisplayName": "IPMIDRV",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\IPMIDrv.sys"
+  },
+  {
+    "Name": "IPNAT",
+    "DisplayName": "IP Network Address Translator",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\ipnat.sys"
+  },
+  {
+    "Name": "IPT",
+    "DisplayName": "IPT",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\ipt.sys"
+  },
+  {
+    "Name": "isapnp",
+    "DisplayName": "isapnp",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\isapnp.sys"
+  },
+  {
+    "Name": "iScsiPrt",
+    "DisplayName": "iScsiPort Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\msiscsi.sys"
+  },
+  {
+    "Name": "ItSas35i",
+    "DisplayName": "ItSas35i",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\ItSas35i.sys"
+  },
+  {
+    "Name": "kbdclass",
+    "DisplayName": "Keyboard Class Driver",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\kbdclass.sys"
+  },
+  {
+    "Name": "kbdhid",
+    "DisplayName": "Keyboard HID Driver",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\kbdhid.sys"
+  },
+  {
+    "Name": "kbldfltr",
+    "DisplayName": "kbldfltr",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\kbldfltr.sys"
+  },
+  {
+    "Name": "kdnic",
+    "DisplayName": "Microsoft Kernel Debug Network Miniport",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\kdnic.sys"
+  },
+  {
+    "Name": "kdnic_legacy",
+    "DisplayName": "Microsoft Kernel Debug Network Miniport (NDIS 6.20)",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\kdnic_legacy.sys"
+  },
+  {
+    "Name": "KSecDD",
+    "DisplayName": "KSecDD",
+    "State": "Running",
+    "StartMode": "Boot",
+    "PathName": "C:\\WINDOWS\\system32\\Drivers\\ksecdd.sys"
+  },
+  {
+    "Name": "KSecPkg",
+    "DisplayName": "KSecPkg",
+    "State": "Running",
+    "StartMode": "Boot",
+    "PathName": "C:\\WINDOWS\\system32\\Drivers\\ksecpkg.sys"
+  },
+  {
+    "Name": "KslD",
+    "DisplayName": "KslD",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\wd\\KslD.sys"
+  },
+  {
+    "Name": "ksthunk",
+    "DisplayName": "Kernel Streaming Thunks",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\ksthunk.sys"
+  },
+  {
+    "Name": "l1vhlwf",
+    "DisplayName": "Nested Network Virtualization",
+    "State": "Stopped",
+    "StartMode": "Auto",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\l1vhlwf.sys"
+  },
+  {
+    "Name": "l2bridge",
+    "DisplayName": "Bridge Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\l2bridge.sys"
+  },
+  {
+    "Name": "lltdio",
+    "DisplayName": "Link-Layer Topology Discovery Mapper I/O Driver",
+    "State": "Running",
+    "StartMode": "Auto",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\lltdio.sys"
+  },
+  {
+    "Name": "LSI_SAS",
+    "DisplayName": "LSI_SAS",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\lsi_sas.sys"
+  },
+  {
+    "Name": "LSI_SAS2i",
+    "DisplayName": "LSI_SAS2i",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\lsi_sas2i.sys"
+  },
+  {
+    "Name": "LSI_SAS3i",
+    "DisplayName": "LSI_SAS3i",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\lsi_sas3i.sys"
+  },
+  {
+    "Name": "luafv",
+    "DisplayName": "UAC File Virtualization",
+    "State": "Running",
+    "StartMode": "Auto",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\luafv.sys"
+  },
+  {
+    "Name": "lunparser",
+    "DisplayName": "LUN Parser",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\lunparser.sys"
+  },
+  {
+    "Name": "lxss",
+    "DisplayName": "lxss",
+    "State": "Running",
+    "StartMode": "Boot",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\lxss.sys"
+  },
+  {
+    "Name": "mausbhost",
+    "DisplayName": "MA-USB Host Controller Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\mausbhost.sys"
+  },
+  {
+    "Name": "mausbip",
+    "DisplayName": "MA-USB IP Filter Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\mausbip.sys"
+  },
+  {
+    "Name": "MbbCx",
+    "DisplayName": "MBB Network Adapter Class Extension",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\MbbCx.sys"
+  },
+  {
+    "Name": "megasas2i",
+    "DisplayName": "megasas2i",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\MegaSas2i.sys"
+  },
+  {
+    "Name": "megasas35i",
+    "DisplayName": "megasas35i",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\megasas35i.sys"
+  },
+  {
+    "Name": "megasr",
+    "DisplayName": "megasr",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\megasr.sys"
+  },
+  {
+    "Name": "MEIx64",
+    "DisplayName": "Intel(R) Management Engine Interface ",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\DriverStore\\FileRepository\\heci.inf_amd64_6b6e8cc42a3d1f09\\x64\\TeeDriverW10x64.sys"
+  },
+  {
+    "Name": "Microsoft_Bluetooth_AvrcpTransport",
+    "DisplayName": "Microsoft Bluetooth Avrcp Transport Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\Microsoft.Bluetooth.AvrcpTransport.sys"
+  },
+  {
+    "Name": "mlx4_bus",
+    "DisplayName": "Mellanox ConnectX Bus Enumerator",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\mlx4_bus.sys"
+  },
+  {
+    "Name": "MMCSS",
+    "DisplayName": "Multimedia Class Scheduler",
+    "State": "Running",
+    "StartMode": "Auto",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\mmcss.sys"
+  },
+  {
+    "Name": "Modem",
+    "DisplayName": "Modem",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\modem.sys"
+  },
+  {
+    "Name": "monitor",
+    "DisplayName": "Microsoft Monitor Class Function Driver Service",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\monitor.sys"
+  },
+  {
+    "Name": "mouclass",
+    "DisplayName": "Mouse Class Driver",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\mouclass.sys"
+  },
+  {
+    "Name": "mouhid",
+    "DisplayName": "Mouse HID Driver",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\mouhid.sys"
+  },
+  {
+    "Name": "mountmgr",
+    "DisplayName": "Mount Point Manager",
+    "State": "Running",
+    "StartMode": "Boot",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\mountmgr.sys"
+  },
+  {
+    "Name": "mpi3drvi",
+    "DisplayName": "mpi3drvi",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\mpi3drvi.sys"
+  },
+  {
+    "Name": "mpsdrv",
+    "DisplayName": "Windows Defender Firewall Authorization Driver",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\mpsdrv.sys"
+  },
+  {
+    "Name": "MRxDAV",
+    "DisplayName": "WebDav Client Redirector Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\mrxdav.sys"
+  },
+  {
+    "Name": "mrxsmb",
+    "DisplayName": "SMB MiniRedirector Wrapper and Engine",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\DRIVERS\\mrxsmb.sys"
+  },
+  {
+    "Name": "mrxsmb20",
+    "DisplayName": "SMB 2.0 MiniRedirector",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\DRIVERS\\mrxsmb20.sys"
+  },
+  {
+    "Name": "MsBridge",
+    "DisplayName": "Microsoft MAC Bridge",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\bridge.sys"
+  },
+  {
+    "Name": "Msfs",
+    "DisplayName": "Msfs",
+    "State": "Running",
+    "StartMode": "System",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\Msfs.sys"
+  },
+  {
+    "Name": "msgpiowin32",
+    "DisplayName": "Common Driver for Buttons, DockMode and Laptop/Slate Indicator",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\msgpiowin32.sys"
+  },
+  {
+    "Name": "mshidkmdf",
+    "DisplayName": "Pass-through HID to KMDF Filter Driver",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\mshidkmdf.sys"
+  },
+  {
+    "Name": "mshidumdf",
+    "DisplayName": "Pass-through HID to UMDF Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\mshidumdf.sys"
+  },
+  {
+    "Name": "msisadrv",
+    "DisplayName": "msisadrv",
+    "State": "Running",
+    "StartMode": "Boot",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\msisadrv.sys"
+  },
+  {
+    "Name": "MSKSSRV",
+    "DisplayName": "Microsoft Streaming Service Proxy",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\MSKSSRV.sys"
+  },
+  {
+    "Name": "MsLldp",
+    "DisplayName": "Microsoft Link-Layer Discovery Protocol",
+    "State": "Running",
+    "StartMode": "Auto",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\mslldp.sys"
+  },
+  {
+    "Name": "MSPCLOCK",
+    "DisplayName": "Microsoft Streaming Clock Proxy",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\MSPCLOCK.sys"
+  },
+  {
+    "Name": "MSPQM",
+    "DisplayName": "Microsoft Streaming Quality Manager Proxy",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\MSPQM.sys"
+  },
+  {
+    "Name": "MsQuic",
+    "DisplayName": "MsQuic",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\msquic.sys"
+  },
+  {
+    "Name": "MsQuicPrev",
+    "DisplayName": "MSQUIC",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\msquicprev.sys"
+  },
+  {
+    "Name": "MsRPC",
+    "DisplayName": "MsRPC",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\MsRPC.sys"
+  },
+  {
+    "Name": "MsSecCore",
+    "DisplayName": "Microsoft Security Core Boot Driver",
+    "State": "Running",
+    "StartMode": "Boot",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\msseccore.sys"
+  },
+  {
+    "Name": "MsSecFlt",
+    "DisplayName": "Microsoft Security Events Component Minifilter",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\mssecflt.sys"
+  },
+  {
+    "Name": "MsSecWfp",
+    "DisplayName": "Microsoft Security WFP Callout Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\mssecwfp.sys"
+  },
+  {
+    "Name": "mssmbios",
+    "DisplayName": "Microsoft System Management BIOS Driver",
+    "State": "Running",
+    "StartMode": "System",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\mssmbios.sys"
+  },
+  {
+    "Name": "MSTEE",
+    "DisplayName": "Microsoft Streaming Tee/Sink-to-Sink Converter",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\MSTEE.sys"
+  },
+  {
+    "Name": "MTConfig",
+    "DisplayName": "Microsoft Input Configuration Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\MTConfig.sys"
+  },
+  {
+    "Name": "mullvad-split-tunnel",
+    "DisplayName": "Mullvad Split Tunnel Service",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "\\??\\C:\\Program Files\\Mullvad VPN\\resources\\mullvad-split-tunnel.sys"
+  },
+  {
+    "Name": "MullvadWireGuard",
+    "DisplayName": "MullvadWireGuard",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\mullvad-wireguard.sys"
+  },
+  {
+    "Name": "Mup",
+    "DisplayName": "Mup",
+    "State": "Running",
+    "StartMode": "Boot",
+    "PathName": "C:\\WINDOWS\\system32\\Drivers\\mup.sys"
+  },
+  {
+    "Name": "mvumis",
+    "DisplayName": "mvumis",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\mvumis.sys"
+  },
+  {
+    "Name": "NativeWifiP",
+    "DisplayName": "NativeWiFi Filter",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\DRIVERS\\nwifi.sys"
+  },
+  {
+    "Name": "ndfltr",
+    "DisplayName": "NetworkDirect Service",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\ndfltr.sys"
+  },
+  {
+    "Name": "NDIS",
+    "DisplayName": "NDIS System Driver",
+    "State": "Running",
+    "StartMode": "Boot",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\ndis.sys"
+  },
+  {
+    "Name": "NdisCap",
+    "DisplayName": "Microsoft NDIS Capture",
+    "State": "Running",
+    "StartMode": "System",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\ndiscap.sys"
+  },
+  {
+    "Name": "NdisImPlatform",
+    "DisplayName": "Microsoft Network Adapter Multiplexor Protocol",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\NdisImPlatform.sys"
+  },
+  {
+    "Name": "NdisTapi",
+    "DisplayName": "Remote Access NDIS TAPI Driver",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\DRIVERS\\ndistapi.sys"
+  },
+  {
+    "Name": "Ndisuio",
+    "DisplayName": "NDIS Usermode I/O Protocol",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\ndisuio.sys"
+  },
+  {
+    "Name": "NdisVirtualBus",
+    "DisplayName": "Microsoft Virtual Network Adapter Enumerator",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\NdisVirtualBus.sys"
+  },
+  {
+    "Name": "NdisWan",
+    "DisplayName": "Remote Access NDIS WAN Driver",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\ndiswan.sys"
+  },
+  {
+    "Name": "ndiswanlegacy",
+    "DisplayName": "Remote Access LEGACY NDIS WAN Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\DRIVERS\\ndiswan.sys"
+  },
+  {
+    "Name": "NDKPerf",
+    "DisplayName": "NDKPerf Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\NDKPerf.sys"
+  },
+  {
+    "Name": "NDKPing",
+    "DisplayName": "NDKPing Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\NDKPing.sys"
+  },
+  {
+    "Name": "ndproxy",
+    "DisplayName": "NDIS Proxy Driver",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\DRIVERS\\NDProxy.sys"
+  },
+  {
+    "Name": "Ndu",
+    "DisplayName": "Windows Network Data Usage Monitoring Driver",
+    "State": "Running",
+    "StartMode": "Auto",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\Ndu.sys"
+  },
+  {
+    "Name": "NetAdapterCx",
+    "DisplayName": "Network Adapter WDF Class Extension Library",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\netadaptercx.sys"
+  },
+  {
+    "Name": "NetBIOS",
+    "DisplayName": "NetBIOS Interface",
+    "State": "Running",
+    "StartMode": "System",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\netbios.sys"
+  },
+  {
+    "Name": "NetBT",
+    "DisplayName": "NetBT",
+    "State": "Running",
+    "StartMode": "System",
+    "PathName": "C:\\WINDOWS\\system32\\DRIVERS\\netbt.sys"
+  },
+  {
+    "Name": "netvsc",
+    "DisplayName": "netvsc",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\netvsc.sys"
+  },
+  {
+    "Name": "NetworkPrivacyPolicy",
+    "DisplayName": "Microsoft Network Privacy Policy Service",
+    "State": "Stopped",
+    "StartMode": "Auto",
+    "PathName": "C:\\WINDOWS\\system32\\DriverStore\\FileRepository\\networkprivacypolicy.inf_amd64_95f202ccc263e8c7\\NetworkPrivacyPolicy.sys"
+  },
+  {
+    "Name": "Netwtw14",
+    "DisplayName": "___ Intel(R) Wireless Adapter Driver for Windows 10 - 64 Bit",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\DriverStore\\FileRepository\\netwtw6e.inf_amd64_c3785d6f1e6d5b0e\\Netwtw14.sys"
+  },
+  {
+    "Name": "Npfs",
+    "DisplayName": "Npfs",
+    "State": "Running",
+    "StartMode": "System",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\Npfs.sys"
+  },
+  {
+    "Name": "npsvctrig",
+    "DisplayName": "Named pipe service trigger provider",
+    "State": "Running",
+    "StartMode": "System",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\npsvctrig.sys"
+  },
+  {
+    "Name": "nsiproxy",
+    "DisplayName": "NSI Proxy Service Driver",
+    "State": "Running",
+    "StartMode": "System",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\nsiproxy.sys"
+  },
+  {
+    "Name": "Ntfs",
+    "DisplayName": "Ntfs",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\Ntfs.sys"
+  },
+  {
+    "Name": "Null",
+    "DisplayName": "Null",
+    "State": "Running",
+    "StartMode": "System",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\Null.sys"
+  },
+  {
+    "Name": "nvdimm",
+    "DisplayName": "Microsoft NVDIMM device driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\nvdimm.sys"
+  },
+  {
+    "Name": "NVHDA",
+    "DisplayName": "Service for NVIDIA High Definition Audio Driver",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\nvhda64v.sys"
+  },
+  {
+    "Name": "nvlddmkm",
+    "DisplayName": "nvlddmkm",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\DriverStore\\FileRepository\\nv_dispi.inf_amd64_67995ceab8993b08\\nvlddmkm.sys"
+  },
+  {
+    "Name": "nvmedisk",
+    "DisplayName": "Microsoft NVMe disk driver",
+    "State": "Running",
+    "StartMode": "Boot",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\nvmedisk.sys"
+  },
+  {
+    "Name": "nvraid",
+    "DisplayName": "nvraid",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\nvraid.sys"
+  },
+  {
+    "Name": "nvstor",
+    "DisplayName": "nvstor",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\nvstor.sys"
+  },
+  {
+    "Name": "nvvad_WaveExtensible",
+    "DisplayName": "NVIDIA Virtual Audio Device (Wave Extensible) (WDM)",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\nvvad64v.sys"
+  },
+  {
+    "Name": "P9Rdr",
+    "DisplayName": "Plan 9 Redirector Driver",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\p9rdr.sys"
+  },
+  {
+    "Name": "Parport",
+    "DisplayName": "Parallel port driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\parport.sys"
+  },
+  {
+    "Name": "partmgr",
+    "DisplayName": "Partition driver",
+    "State": "Running",
+    "StartMode": "Boot",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\partmgr.sys"
+  },
+  {
+    "Name": "passthruparser",
+    "DisplayName": "PassthroughParser",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\passthruparser.sys"
+  },
+  {
+    "Name": "pci",
+    "DisplayName": "PCI Bus Driver",
+    "State": "Running",
+    "StartMode": "Boot",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\pci.sys"
+  },
+  {
+    "Name": "pciide",
+    "DisplayName": "pciide",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\pciide.sys"
+  },
+  {
+    "Name": "pcip",
+    "DisplayName": "PCI Proxy driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\pcip.sys"
+  },
+  {
+    "Name": "pcmcia",
+    "DisplayName": "pcmcia",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\pcmcia.sys"
+  },
+  {
+    "Name": "pcw",
+    "DisplayName": "Performance Counters for Windows Driver",
+    "State": "Running",
+    "StartMode": "Boot",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\pcw.sys"
+  },
+  {
+    "Name": "pdc",
+    "DisplayName": "pdc",
+    "State": "Running",
+    "StartMode": "Boot",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\pdc.sys"
+  },
+  {
+    "Name": "PEAUTH",
+    "DisplayName": "PEAUTH",
+    "State": "Running",
+    "StartMode": "Auto",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\peauth.sys"
+  },
+  {
+    "Name": "percsas2i",
+    "DisplayName": "percsas2i",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\percsas2i.sys"
+  },
+  {
+    "Name": "percsas3i",
+    "DisplayName": "percsas3i",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\percsas3i.sys"
+  },
+  {
+    "Name": "PktMon",
+    "DisplayName": "Packet Monitor Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\PktMon.sys"
+  },
+  {
+    "Name": "PktMonApi",
+    "DisplayName": "Packet Monitor Export Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\PktMonApi.sys"
+  },
+  {
+    "Name": "PlutonHeci",
+    "DisplayName": "Microsoft Pluton Security Service",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\DriverStore\\FileRepository\\pluton-heci.inf_amd64_61361c9f4d99dfff\\pluton-heci.sys"
+  },
+  {
+    "Name": "PlutonHsp2",
+    "DisplayName": "Microsoft Pluton Service",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\DriverStore\\FileRepository\\plutonhsp2.inf_amd64_f09065190be08d98\\PlutonHsp2.sys"
+  },
+  {
+    "Name": "pmem",
+    "DisplayName": "Microsoft persistent memory disk driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\pmem.sys"
+  },
+  {
+    "Name": "PNPMEM",
+    "DisplayName": "Microsoft Memory Module Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\pnpmem.sys"
+  },
+  {
+    "Name": "portcfg",
+    "DisplayName": "portcfg",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\portcfg.sys"
+  },
+  {
+    "Name": "PptpMiniport",
+    "DisplayName": "WAN Miniport (PPTP)",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\raspptp.sys"
+  },
+  {
+    "Name": "PRM",
+    "DisplayName": "Microsoft PRM Driver",
+    "State": "Running",
+    "StartMode": "Boot",
+    "PathName": "C:\\WINDOWS\\system32\\DriverStore\\FileRepository\\prm.inf_amd64_7c38475757a1f016\\PRM.sys"
+  },
+  {
+    "Name": "Processor",
+    "DisplayName": "Processor Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\processr.sys"
+  },
+  {
+    "Name": "Psched",
+    "DisplayName": "QoS Packet Scheduler",
+    "State": "Running",
+    "StartMode": "System",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\pacer.sys"
+  },
+  {
+    "Name": "pvhdparser",
+    "DisplayName": "pvhdparser",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\pvhdparser.sys"
+  },
+  {
+    "Name": "pvscsi",
+    "DisplayName": "pvscsi Storage Controller Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\pvscsii.sys"
+  },
+  {
+    "Name": "QWAVEdrv",
+    "DisplayName": "QWAVE driver",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\qwavedrv.sys"
+  },
+  {
+    "Name": "Ramdisk",
+    "DisplayName": "Windows RAM Disk Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\ramdisk.sys"
+  },
+  {
+    "Name": "ramparser",
+    "DisplayName": "ramparser",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\ramparser.sys"
+  },
+  {
+    "Name": "RasAcd",
+    "DisplayName": "Remote Access Auto Connection Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\DRIVERS\\rasacd.sys"
+  },
+  {
+    "Name": "RasAgileVpn",
+    "DisplayName": "WAN Miniport (IKEv2)",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\AgileVpn.sys"
+  },
+  {
+    "Name": "Rasl2tp",
+    "DisplayName": "WAN Miniport (L2TP)",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\rasl2tp.sys"
+  },
+  {
+    "Name": "RasPppoe",
+    "DisplayName": "Remote Access PPPOE Driver",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\DRIVERS\\raspppoe.sys"
+  },
+  {
+    "Name": "RasSstp",
+    "DisplayName": "WAN Miniport (SSTP)",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\rassstp.sys"
+  },
+  {
+    "Name": "rdbss",
+    "DisplayName": "Redirected Buffering Sub System",
+    "State": "Running",
+    "StartMode": "System",
+    "PathName": "C:\\WINDOWS\\system32\\DRIVERS\\rdbss.sys"
+  },
+  {
+    "Name": "rdpbus",
+    "DisplayName": "Remote Desktop Device Redirector Bus Driver",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\rdpbus.sys"
+  },
+  {
+    "Name": "RDPDR",
+    "DisplayName": "Remote Desktop Device Redirector Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\rdpdr.sys"
+  },
+  {
+    "Name": "rdyboost",
+    "DisplayName": "ReadyBoost",
+    "State": "Running",
+    "StartMode": "Boot",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\rdyboost.sys"
+  },
+  {
+    "Name": "ReFS",
+    "DisplayName": "ReFS",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\ReFS.sys"
+  },
+  {
+    "Name": "ReFSv1",
+    "DisplayName": "ReFSv1",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\ReFSv1.sys"
+  },
+  {
+    "Name": "RFCOMM",
+    "DisplayName": "Bluetooth Device (RFCOMM Protocol TDI)",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\rfcomm.sys"
+  },
+  {
+    "Name": "rhproxy",
+    "DisplayName": "Resource Hub proxy driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\rhproxy.sys"
+  },
+  {
+    "Name": "rspndr",
+    "DisplayName": "Link-Layer Topology Discovery Responder",
+    "State": "Running",
+    "StartMode": "Auto",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\rspndr.sys"
+  },
+  {
+    "Name": "RzCommon",
+    "DisplayName": "Razer Control Service",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\RzCommon.sys"
+  },
+  {
+    "Name": "RzDev_0084",
+    "DisplayName": "Razer 0084 Service",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\RzDev_0084.sys"
+  },
+  {
+    "Name": "RzDev_0258",
+    "DisplayName": "Razer 0258 Service",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\RzDev_0258.sys"
+  },
+  {
+    "Name": "s3cap",
+    "DisplayName": "s3cap",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\vms3cap.sys"
+  },
+  {
+    "Name": "sbp2port",
+    "DisplayName": "SBP-2 Transport/Protocol Bus Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\sbp2port.sys"
+  },
+  {
+    "Name": "scfilter",
+    "DisplayName": "Smart card PnP Class Filter Driver",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\DRIVERS\\scfilter.sys"
+  },
+  {
+    "Name": "scmbus",
+    "DisplayName": "Microsoft Storage Class Memory Bus Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\scmbus.sys"
+  },
+  {
+    "Name": "sdbus",
+    "DisplayName": "sdbus",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\sdbus.sys"
+  },
+  {
+    "Name": "SdcaHidInbox",
+    "DisplayName": "SoundWire HID Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\DriverStore\\FileRepository\\sdcahid.inf_amd64_61ebd70adbe28135\\SdcaHid.sys"
+  },
+  {
+    "Name": "SdcaMfdInbox",
+    "DisplayName": "SoundWire Audio Multifunction Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\DriverStore\\FileRepository\\sdcamfd.inf_amd64_9c5d407de2184808\\SdcaMfd.sys"
+  },
+  {
+    "Name": "sdstor",
+    "DisplayName": "SD Storage Port Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\sdstor.sys"
+  },
+  {
+    "Name": "SerCx",
+    "DisplayName": "Serial UART Support Library",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\SerCx.sys"
+  },
+  {
+    "Name": "SerCx2",
+    "DisplayName": "Serial UART Support Library",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\SerCx2.sys"
+  },
+  {
+    "Name": "Serenum",
+    "DisplayName": "Serenum Filter Driver",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\serenum.sys"
+  },
+  {
+    "Name": "Serial",
+    "DisplayName": "Serial port driver",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\serial.sys"
+  },
+  {
+    "Name": "sermouse",
+    "DisplayName": "Serial Mouse Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\sermouse.sys"
+  },
+  {
+    "Name": "sfloppy",
+    "DisplayName": "High-Capacity Floppy Disk Drive",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\sfloppy.sys"
+  },
+  {
+    "Name": "SiSRaid2",
+    "DisplayName": "SiSRaid2",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\SiSRaid2.sys"
+  },
+  {
+    "Name": "SiSRaid4",
+    "DisplayName": "SiSRaid4",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\sisraid4.sys"
+  },
+  {
+    "Name": "SmartSAMD",
+    "DisplayName": "SmartSAMD",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\SmartSAMD.sys"
+  },
+  {
+    "Name": "smbdirect",
+    "DisplayName": "smbdirect",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\DRIVERS\\smbdirect.sys"
+  },
+  {
+    "Name": "spaceparser",
+    "DisplayName": "spaceparser",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\spaceparser.sys"
+  },
+  {
+    "Name": "spaceport",
+    "DisplayName": "Storage Spaces Driver",
+    "State": "Running",
+    "StartMode": "Boot",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\spaceport.sys"
+  },
+  {
+    "Name": "SpbCx",
+    "DisplayName": "Simple Peripheral Bus Support Library",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\SpbCx.sys"
+  },
+  {
+    "Name": "srv2",
+    "DisplayName": "Server SMB 2.xxx Driver",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\DRIVERS\\srv2.sys"
+  },
+  {
+    "Name": "srvnet",
+    "DisplayName": "srvnet",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\DRIVERS\\srvnet.sys"
+  },
+  {
+    "Name": "stexstor",
+    "DisplayName": "stexstor",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\stexstor.sys"
+  },
+  {
+    "Name": "storahci",
+    "DisplayName": "Microsoft Standard SATA AHCI Driver",
+    "State": "Running",
+    "StartMode": "Boot",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\storahci.sys"
+  },
+  {
+    "Name": "storflt",
+    "DisplayName": "Microsoft Hyper-V Storage Accelerator",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\vmstorfl.sys"
+  },
+  {
+    "Name": "stornvme",
+    "DisplayName": "Microsoft Standard NVM Express Driver",
+    "State": "Running",
+    "StartMode": "Boot",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\stornvme.sys"
+  },
+  {
+    "Name": "storqosflt",
+    "DisplayName": "Storage QoS Filter Driver",
+    "State": "Running",
+    "StartMode": "Auto",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\storqosflt.sys"
+  },
+  {
+    "Name": "storufs",
+    "DisplayName": "Microsoft Universal Flash Storage (UFS) Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\storufs.sys"
+  },
+  {
+    "Name": "storvsc",
+    "DisplayName": "storvsc",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\storvsc.sys"
+  },
+  {
+    "Name": "storvsp",
+    "DisplayName": "storvsp",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\storvsp.sys"
+  },
+  {
+    "Name": "swenum",
+    "DisplayName": "Software Bus Driver",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\DriverStore\\FileRepository\\swenum.inf_amd64_8b9dd76f362e3ec6\\swenum.sys"
+  },
+  {
+    "Name": "Tcpip",
+    "DisplayName": "TCP/IP Protocol Driver",
+    "State": "Running",
+    "StartMode": "Boot",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\tcpip.sys"
+  },
+  {
+    "Name": "Tcpip6",
+    "DisplayName": "@todo.dll,-100;Microsoft IPv6 Protocol Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\tcpip.sys"
+  },
+  {
+    "Name": "tcpipreg",
+    "DisplayName": "@%SystemRoot%\\System32\\drivers\\tcpipreg.sys,-10110,",
+    "State": "Running",
+    "StartMode": "Auto",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\tcpipreg.sys"
+  },
+  {
+    "Name": "tdx",
+    "DisplayName": "NetIO Legacy TDI Support Driver",
+    "State": "Running",
+    "StartMode": "System",
+    "PathName": "C:\\WINDOWS\\system32\\DRIVERS\\tdx.sys"
+  },
+  {
+    "Name": "terminpt",
+    "DisplayName": "Microsoft Remote Desktop Input Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\terminpt.sys"
+  },
+  {
+    "Name": "ThermalFilter",
+    "DisplayName": "Microsoft Thermal Filter Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\DriverStore\\FileRepository\\c_thermal.inf_amd64_b0db444d499ca6d4\\ThermalFilter.sys"
+  },
+  {
+    "Name": "TPM",
+    "DisplayName": "TPM",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\tpm.sys"
+  },
+  {
+    "Name": "TsUsbFlt",
+    "DisplayName": "Remote Desktop USB Hub Class Filter Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\tsusbflt.sys"
+  },
+  {
+    "Name": "TsUsbGD",
+    "DisplayName": "Remote Desktop Generic USB Device",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\TsUsbGD.sys"
+  },
+  {
+    "Name": "tsusbhub",
+    "DisplayName": "Remote Desktop USB Hub",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\tsusbhub.sys"
+  },
+  {
+    "Name": "tunnel",
+    "DisplayName": "Microsoft Tunnel Miniport Adapter Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\tunnel.sys"
+  },
+  {
+    "Name": "UASPStor",
+    "DisplayName": "USB Attached SCSI (UAS) Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\uaspstor.sys"
+  },
+  {
+    "Name": "UcmCx0101",
+    "DisplayName": "USB Connector Manager KMDF Class Extension",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\Drivers\\UcmCx.sys"
+  },
+  {
+    "Name": "UcmTcpciCx0101",
+    "DisplayName": "UCM-TCPCI KMDF Class Extension",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\Drivers\\UcmTcpciCx.sys"
+  },
+  {
+    "Name": "UcmUcsiAcpiClient",
+    "DisplayName": "UCM-UCSI ACPI Client",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\UcmUcsiAcpiClient.sys"
+  },
+  {
+    "Name": "UcmUcsiCx0101",
+    "DisplayName": "UCM-UCSI KMDF Class Extension",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\Drivers\\UcmUcsiCx.sys"
+  },
+  {
+    "Name": "UCPD",
+    "DisplayName": "UCPD",
+    "State": "Running",
+    "StartMode": "System",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\UCPD.sys"
+  },
+  {
+    "Name": "Ucx01000",
+    "DisplayName": "USB Host Support Library",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\ucx01000.sys"
+  },
+  {
+    "Name": "UdeCx",
+    "DisplayName": "USB Device Emulation Support Library",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\udecx.sys"
+  },
+  {
+    "Name": "udfs",
+    "DisplayName": "udfs",
+    "State": "Stopped",
+    "StartMode": "Disabled",
+    "PathName": "C:\\WINDOWS\\system32\\DRIVERS\\udfs.sys"
+  },
+  {
+    "Name": "UEFI",
+    "DisplayName": "Microsoft UEFI Driver",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\DriverStore\\FileRepository\\uefi.inf_amd64_0dab6d8c22d34611\\UEFI.sys"
+  },
+  {
+    "Name": "UevAgentDriver",
+    "DisplayName": "UevAgentDriver",
+    "State": "Stopped",
+    "StartMode": "Disabled",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\UevAgentDriver.sys"
+  },
+  {
+    "Name": "Ufx01000",
+    "DisplayName": "USB Function Class Extension",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\ufx01000.sys"
+  },
+  {
+    "Name": "UfxChipidea",
+    "DisplayName": "USB Chipidea Controller",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\DriverStore\\FileRepository\\ufxchipidea.inf_amd64_6e8bb2ed82835828\\UfxChipidea.sys"
+  },
+  {
+    "Name": "ufxsynopsys",
+    "DisplayName": "USB Synopsys Controller",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\ufxsynopsys.sys"
+  },
+  {
+    "Name": "uiomap",
+    "DisplayName": "Microsoft UIO Mapper Driver Service",
+    "State": "Running",
+    "StartMode": "System",
+    "PathName": "C:\\WINDOWS\\system32\\DriverStore\\FileRepository\\uiomap.inf_amd64_e6e3e44178152d2b\\uiomap.sys"
+  },
+  {
+    "Name": "umbus",
+    "DisplayName": "UMBus Enumerator Driver",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\DriverStore\\FileRepository\\umbus.inf_amd64_914dd46b4b013b1b\\umbus.sys"
+  },
+  {
+    "Name": "UmPass",
+    "DisplayName": "Microsoft UMPass Driver",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\DriverStore\\FileRepository\\umpass.inf_amd64_06e016c9ffecbf73\\umpass.sys"
+  },
+  {
+    "Name": "UnionFS",
+    "DisplayName": "UnionFS",
+    "State": "Running",
+    "StartMode": "Auto",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\UnionFS.sys"
+  },
+  {
+    "Name": "UrsChipidea",
+    "DisplayName": "Chipidea USB Role-Switch Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\DriverStore\\FileRepository\\urschipidea.inf_amd64_37fb14618bce547b\\urschipidea.sys"
+  },
+  {
+    "Name": "UrsCx01000",
+    "DisplayName": "USB Role-Switch Support Library",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\urscx01000.sys"
+  },
+  {
+    "Name": "UrsSynopsys",
+    "DisplayName": "Synopsys USB Role-Switch Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\DriverStore\\FileRepository\\urssynopsys.inf_amd64_ef0be23d0f063014\\urssynopsys.sys"
+  },
+  {
+    "Name": "usb-platformdetection",
+    "DisplayName": "Usb Platform Detection Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\DriverStore\\FileRepository\\usb-platformdetection.inf_amd64_de12f84035b68c95\\usb-platformdetection.sys"
+  },
+  {
+    "Name": "Usb4DeviceRouter",
+    "DisplayName": "USB4 Device Router Service",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\DriverStore\\FileRepository\\usb4devicerouter.inf_amd64_09a12e7a805b5eba\\Usb4DeviceRouter.sys"
+  },
+  {
+    "Name": "Usb4HostRouter",
+    "DisplayName": "USB4 Host Router Service",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\DriverStore\\FileRepository\\usb4hostrouter.inf_amd64_cdce2a72e414b155\\Usb4HostRouter.sys"
+  },
+  {
+    "Name": "usbaudio",
+    "DisplayName": "USB Audio Driver (WDM)",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\usbaudio.sys"
+  },
+  {
+    "Name": "usbaudio2",
+    "DisplayName": "USB Audio 2.0 Service",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\usbaudio2.sys"
+  },
+  {
+    "Name": "usbccgp",
+    "DisplayName": "Microsoft USB Generic Parent Driver",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\usbccgp.sys"
+  },
+  {
+    "Name": "usbcir",
+    "DisplayName": "eHome Infrared Receiver (USBCIR)",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\usbcir.sys"
+  },
+  {
+    "Name": "usbehci",
+    "DisplayName": "Microsoft USB 2.0 Enhanced Host Controller Miniport Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\usbehci.sys"
+  },
+  {
+    "Name": "usbhub",
+    "DisplayName": "Microsoft USB Standard Hub Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\usbhub.sys"
+  },
+  {
+    "Name": "USBHUB3",
+    "DisplayName": "SuperSpeed Hub",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\UsbHub3.sys"
+  },
+  {
+    "Name": "usbohci",
+    "DisplayName": "Microsoft USB Open Host Controller Miniport Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\usbohci.sys"
+  },
+  {
+    "Name": "usbprint",
+    "DisplayName": "Microsoft USB PRINTER Class",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\usbprint.sys"
+  },
+  {
+    "Name": "usbser",
+    "DisplayName": "Microsoft USB Serial Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\usbser.sys"
+  },
+  {
+    "Name": "USBSTOR",
+    "DisplayName": "USB Mass Storage Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\USBSTOR.SYS"
+  },
+  {
+    "Name": "usbuhci",
+    "DisplayName": "Microsoft USB Universal Host Controller Miniport Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\usbuhci.sys"
+  },
+  {
+    "Name": "USBXHCI",
+    "DisplayName": "USB xHCI Compliant Host Controller",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\USBXHCI.SYS"
+  },
+  {
+    "Name": "VBAudioVACMME",
+    "DisplayName": "VB-Audio Virtual Cable (WDM)",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\DriverStore\\FileRepository\\vbmmecable64_win10.inf_amd64_dd707570a4bf06fd\\vbaudio_cable64_win10.sys"
+  },
+  {
+    "Name": "vdrvroot",
+    "DisplayName": "Microsoft Virtual Drive Enumerator",
+    "State": "Running",
+    "StartMode": "Boot",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\vdrvroot.sys"
+  },
+  {
+    "Name": "VerifierExt",
+    "DisplayName": "Driver Verifier Extension",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\VerifierExt.sys"
+  },
+  {
+    "Name": "VfpExt",
+    "DisplayName": "Microsoft Azure VFP Switch Filter Extension",
+    "State": "Running",
+    "StartMode": "System",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\vfpext.sys"
+  },
+  {
+    "Name": "vhdmp",
+    "DisplayName": "vhdmp",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\vhdmp.sys"
+  },
+  {
+    "Name": "vhdparser",
+    "DisplayName": "vhdparser",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\vhdparser.sys"
+  },
+  {
+    "Name": "vhf",
+    "DisplayName": "Virtual HID Framework (VHF) Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\vhf.sys"
+  },
+  {
+    "Name": "Vid",
+    "DisplayName": "Vid",
+    "State": "Running",
+    "StartMode": "System",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\Vid.sys"
+  },
+  {
+    "Name": "VirtualRender",
+    "DisplayName": "VirtualRender",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\DriverStore\\FileRepository\\vrd.inf_amd64_4dd0e6d66a75bb7e\\vrd.sys"
+  },
+  {
+    "Name": "vmbus",
+    "DisplayName": "Virtual Machine Bus",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\vmbus.sys"
+  },
+  {
+    "Name": "VMBusHID",
+    "DisplayName": "VMBusHID",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\VMBusHID.sys"
+  },
+  {
+    "Name": "vmbusproxy",
+    "DisplayName": "vmbusproxy",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\vmbusproxy.sys"
+  },
+  {
+    "Name": "vmbusr",
+    "DisplayName": "Virtual Machine Bus Provider",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\vmbusr.sys"
+  },
+  {
+    "Name": "vmci",
+    "DisplayName": "VMware VMCI Bus Driver",
+    "State": "Running",
+    "StartMode": "Boot",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\vmci.sys"
+  },
+  {
+    "Name": "vmgid",
+    "DisplayName": "Microsoft Hyper-V Guest Infrastructure Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\vmgid.sys"
+  },
+  {
+    "Name": "VMnetAdapter",
+    "DisplayName": "VMware Virtual Ethernet Adapter Driver",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\vmnetadapter.sys"
+  },
+  {
+    "Name": "VMnetBridge",
+    "DisplayName": "VMware Bridge Protocol",
+    "State": "Running",
+    "StartMode": "Auto",
+    "PathName": "C:\\WINDOWS\\system32\\DRIVERS\\vmnetbridge.sys"
+  },
+  {
+    "Name": "VMnetuserif",
+    "DisplayName": "VMware Virtual Ethernet Userif for VMnet",
+    "State": "Running",
+    "StartMode": "Auto",
+    "PathName": "C:\\WINDOWS\\system32\\DRIVERS\\vmnetuserif.sys"
+  },
+  {
+    "Name": "vmsmp",
+    "DisplayName": "vmsmp",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\vmswitch.sys"
+  },
+  {
+    "Name": "VMSNPXY",
+    "DisplayName": "VmSwitch NIC Proxy Driver",
+    "State": "Running",
+    "StartMode": "Boot",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\VmsProxyHNic.sys"
+  },
+  {
+    "Name": "VMSP",
+    "DisplayName": "VmSwitch Protocol Driver",
+    "State": "Running",
+    "StartMode": "Auto",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\vmswitch.sys"
+  },
+  {
+    "Name": "VmsProxy",
+    "DisplayName": "VmSwitch Proxy Driver",
+    "State": "Running",
+    "StartMode": "Boot",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\VmsProxy.sys"
+  },
+  {
+    "Name": "VMSVSF",
+    "DisplayName": "VmSwitch Extensibility Filter",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\vmswitch.sys"
+  },
+  {
+    "Name": "VMSVSP",
+    "DisplayName": "VmSwitch Extensibility Protocol",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\vmswitch.sys"
+  },
+  {
+    "Name": "vmusb",
+    "DisplayName": "VMware USB Client Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\vmusb.sys"
+  },
+  {
+    "Name": "vmx86",
+    "DisplayName": "VMware vmx86",
+    "State": "Running",
+    "StartMode": "Auto",
+    "PathName": "C:\\WINDOWS\\system32\\DRIVERS\\vmx86.sys"
+  },
+  {
+    "Name": "volmgr",
+    "DisplayName": "Volume Manager Driver",
+    "State": "Running",
+    "StartMode": "Boot",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\volmgr.sys"
+  },
+  {
+    "Name": "volmgrx",
+    "DisplayName": "Dynamic Volume Manager",
+    "State": "Running",
+    "StartMode": "Boot",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\volmgrx.sys"
+  },
+  {
+    "Name": "volsnap",
+    "DisplayName": "Volume Shadow Copy driver",
+    "State": "Running",
+    "StartMode": "Boot",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\volsnap.sys"
+  },
+  {
+    "Name": "volume",
+    "DisplayName": "Volume driver",
+    "State": "Running",
+    "StartMode": "Boot",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\volume.sys"
+  },
+  {
+    "Name": "vpci",
+    "DisplayName": "Microsoft Hyper-V Virtual PCI Bus",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\vpci.sys"
+  },
+  {
+    "Name": "vpcivsp",
+    "DisplayName": "Microsoft Hyper-V PCI Server",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\vpcivsp.sys"
+  },
+  {
+    "Name": "vsmraid",
+    "DisplayName": "vsmraid",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\vsmraid.sys"
+  },
+  {
+    "Name": "vsock",
+    "DisplayName": "vSockets Virtual Machine Communication Interface Sockets driver",
+    "State": "Running",
+    "StartMode": "Boot",
+    "PathName": "C:\\WINDOWS\\system32\\DRIVERS\\vsock.sys"
+  },
+  {
+    "Name": "VSTXRAID",
+    "DisplayName": "VIA StorX Storage RAID Controller Windows Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\vstxraid.sys"
+  },
+  {
+    "Name": "vwifibus",
+    "DisplayName": "Virtual Wireless Bus Driver",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\DriverStore\\FileRepository\\netvwifibus.inf_amd64_ab4e111fe8221178\\vwifibus.sys"
+  },
+  {
+    "Name": "vwififlt",
+    "DisplayName": "Virtual WiFi Filter Driver",
+    "State": "Running",
+    "StartMode": "System",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\vwififlt.sys"
+  },
+  {
+    "Name": "vwifimp",
+    "DisplayName": "Virtual WiFi Miniport Service",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\DriverStore\\FileRepository\\netvwifimp.inf_amd64_2b7a99c97634cfaa\\vwifimp.sys"
+  },
+  {
+    "Name": "WacomPen",
+    "DisplayName": "Wacom Serial Pen HID Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\wacompen.sys"
+  },
+  {
+    "Name": "wanarp",
+    "DisplayName": "Remote Access IP ARP Driver",
+    "State": "Running",
+    "StartMode": "Auto",
+    "PathName": "C:\\WINDOWS\\system32\\DRIVERS\\wanarp.sys"
+  },
+  {
+    "Name": "wanarpv6",
+    "DisplayName": "Remote Access IPv6 ARP Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\DRIVERS\\wanarp.sys"
+  },
+  {
+    "Name": "wcifs",
+    "DisplayName": "Windows Container Isolation",
+    "State": "Running",
+    "StartMode": "Auto",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\wcifs.sys"
+  },
+  {
+    "Name": "WdAiNisDrv",
+    "DisplayName": "Microsoft WdAiNisDrv Driver",
+    "State": "Stopped",
+    "StartMode": "Disabled",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\wd\\WdAiNisDrv.sys"
+  },
+  {
+    "Name": "WdBoot",
+    "DisplayName": "Microsoft Defender Antivirus Boot Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\wd\\WdBoot.sys"
+  },
+  {
+    "Name": "Wdf01000",
+    "DisplayName": "Kernel Mode Driver Frameworks service",
+    "State": "Running",
+    "StartMode": "Boot",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\Wdf01000.sys"
+  },
+  {
+    "Name": "WdFilter",
+    "DisplayName": "Microsoft Defender Antivirus Mini-Filter Driver",
+    "State": "Stopped",
+    "StartMode": "Disabled",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\wd\\WdFilter.sys"
+  },
+  {
+    "Name": "wdiwifi",
+    "DisplayName": "WDI Driver Framework",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\DRIVERS\\wdiwifi.sys"
+  },
+  {
+    "Name": "WdmCompanionFilter",
+    "DisplayName": "WdmCompanionFilter",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\WdmCompanionFilter.sys"
+  },
+  {
+    "Name": "WdNisDrv",
+    "DisplayName": "Microsoft Defender Antivirus Network Inspection System Driver",
+    "State": "Stopped",
+    "StartMode": "Disabled",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\wd\\WdNisDrv.sys"
+  },
+  {
+    "Name": "WFPLWFS",
+    "DisplayName": "Microsoft Windows Filtering Platform",
+    "State": "Running",
+    "StartMode": "Boot",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\wfplwfs.sys"
+  },
+  {
+    "Name": "Wificx",
+    "DisplayName": "Wifi Network Adapter Class Extension",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\WifiCx.sys"
+  },
+  {
+    "Name": "WIMMount",
+    "DisplayName": "WIMMount",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\wimmount.sys"
+  },
+  {
+    "Name": "WinAccelCx0101",
+    "DisplayName": "Microsoft Accelerator Class Extension Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\WinAccelCx.sys"
+  },
+  {
+    "Name": "WindowsTrustedRT",
+    "DisplayName": "Windows Trusted Execution Environment Class Extension",
+    "State": "Running",
+    "StartMode": "Boot",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\WindowsTrustedRT.sys"
+  },
+  {
+    "Name": "WindowsTrustedRTProxy",
+    "DisplayName": "Microsoft Windows Trusted Runtime Secure Service",
+    "State": "Running",
+    "StartMode": "Boot",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\WindowsTrustedRTProxy.sys"
+  },
+  {
+    "Name": "wini3ctarget",
+    "DisplayName": "Generic driver for I3C Target Devices",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\DriverStore\\FileRepository\\wini3ctarget.inf_amd64_549b568fc038709c\\wini3ctarget.sys"
+  },
+  {
+    "Name": "WinMad",
+    "DisplayName": "WinMad Service",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\winmad.sys"
+  },
+  {
+    "Name": "WinNat",
+    "DisplayName": "Windows NAT Driver",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\winnat.sys"
+  },
+  {
+    "Name": "WINUSB",
+    "DisplayName": "WinUsb Driver",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\WinUSB.SYS"
+  },
+  {
+    "Name": "WinVerbs",
+    "DisplayName": "WinVerbs Service",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\winverbs.sys"
+  },
+  {
+    "Name": "WmiAcpi",
+    "DisplayName": "Microsoft Windows Management Interface for ACPI",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\wmiacpi.sys"
+  },
+  {
+    "Name": "Wof",
+    "DisplayName": "Windows Overlay File System Filter Driver",
+    "State": "Running",
+    "StartMode": "Boot",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\Wof.sys"
+  },
+  {
+    "Name": "WpdUpFltr",
+    "DisplayName": "WPD Upper Class Filter Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\WpdUpFltr.sys"
+  },
+  {
+    "Name": "ws2ifsl",
+    "DisplayName": "Windows Socket 2.0 Non-IFS Service Provider Support Environment",
+    "State": "Running",
+    "StartMode": "System",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\ws2ifsl.sys"
+  },
+  {
+    "Name": "WSDPrintDevice",
+    "DisplayName": "WSD Print Support",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\DriverStore\\FileRepository\\wsdprint.inf_amd64_1f9e32519098c0b6\\WSDPrint.sys"
+  },
+  {
+    "Name": "WSDScan",
+    "DisplayName": "WSD Scan Support",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\DriverStore\\FileRepository\\sti.inf_amd64_8ce330c68e1a560b\\WSDScan.sys"
+  },
+  {
+    "Name": "wtd",
+    "DisplayName": "wtd",
+    "State": "Running",
+    "StartMode": "Auto",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\wtd.sys"
+  },
+  {
+    "Name": "WudfPf",
+    "DisplayName": "User Mode Driver Frameworks Platform Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\WudfPf.sys"
+  },
+  {
+    "Name": "WUDFRd",
+    "DisplayName": "Windows Driver Foundation - User-mode Driver Framework Reflector",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\WUDFRd.sys"
+  },
+  {
+    "Name": "WUDFWpdFs",
+    "DisplayName": "WPD File System driver",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\WUDFRd.sys"
+  },
+  {
+    "Name": "xboxgip",
+    "DisplayName": "Xbox Game Input Protocol Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\xboxgip.sys"
+  },
+  {
+    "Name": "xinputhid",
+    "DisplayName": "XINPUT HID Filter Driver",
+    "State": "Stopped",
+    "StartMode": "Manual",
+    "PathName": "C:\\WINDOWS\\system32\\drivers\\xinputhid.sys"
+  },
+  {
+    "Name": "IOMap",
+    "DisplayName": "IOMap",
+    "State": "Running",
+    "StartMode": "Disabled",
+    "PathName": "\\??\\C:\\WINDOWS\\system32\\drivers\\IOMap64.sys"
+  },
+  {
+    "Name": "FvKMDSvc",
+    "DisplayName": "FvKMDSvc",
+    "State": "Running",
+    "StartMode": "Manual",
+    "PathName": "\\??\\C:\\WINDOWS\\system32\\VRFCAT-Plugins\\FrameViewKM_x64.sys"
+  }
+]

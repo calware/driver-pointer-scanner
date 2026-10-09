@@ -1,0 +1,268 @@
+IMAGE: C:\Windows\System32\drivers\appid.sys
+BASE: 0x140000000
+ENTRY RVA: 0x38010
+SECTIONS:
+b'.text\x00\x00\x00' RVA=0x1000 size=0x60df flags=0x68000020
+b'fothk\x00\x00\x00' RVA=0x8000 size=0x1000 flags=0x68000020
+b'.rdata\x00\x00' RVA=0x9000 size=0xf280 flags=0x48000040
+b'.data\x00\x00\x00' RVA=0x19000 size=0xa10 flags=0xc8000040
+b'.pdata\x00\x00' RVA=0x1a000 size=0x1320 flags=0x48000040
+b'.idata\x00\x00' RVA=0x1c000 size=0x25b4 flags=0x48000040
+b'PAGE\x00\x00\x00\x00' RVA=0x1f000 size=0x182bd flags=0x60000020
+b'INIT\x00\x00\x00\x00' RVA=0x38000 size=0x1074 flags=0x62000020
+b'GFIDS\x00\x00\x00' RVA=0x3a000 size=0xbc flags=0x42000040
+b'.rsrc\x00\x00\x00' RVA=0x3b000 size=0x3e0 flags=0x42000040
+b'.reloc\x00\x00' RVA=0x3c000 size=0x15e0 flags=0x42000040
+IMPORTS:
+0x1c000 CiFreePolicyInfo
+0x1c008 CiGetCertPublisherName
+0x1c010 CiValidateFileObject
+0x1c018 CiSetTrustedOriginClaimId
+0x1c028 FltReleaseFileNameInformation
+0x1c030 FltGetFileNameInformationUnsafe
+0x1c040 KeQueryPerformanceCounter
+0x1c050 NikEdpNotifyProcessTokenChange0
+0x1c060 BCryptDestroyHash
+0x1c068 BCryptOpenAlgorithmProvider
+0x1c070 BCryptCloseAlgorithmProvider
+0x1c078 BCryptHashData
+0x1c080 BCryptFinishHash
+0x1c088 BCryptGetProperty
+0x1c090 BCryptCreateHash
+0x1c098 BCryptGenRandom
+0x1c0a8 RpcAsyncInitializeHandle
+0x1c0b0 RpcBindingBind
+0x1c0b8 I_RpcExceptionFilter
+0x1c0c0 RpcAsyncCompleteCall
+0x1c0c8 Ndr64AsyncClientCall
+0x1c0d0 RpcAsyncCancelCall
+0x1c0d8 RpcBindingFree
+0x1c0e0 RpcBindingCreateW
+0x1c0e8 RpcBindingUnbind
+0x1c0f8 ExGetPreviousMode
+0x1c100 RtlDuplicateUnicodeString
+0x1c108 RtlFreeUnicodeString
+0x1c110 ExAcquireResourceSharedLite
+0x1c118 ExReleaseResourceLite
+0x1c120 ExAcquireResourceExclusiveLite
+0x1c128 RtlValidateUnicodeString
+0x1c130 RtlDowncaseUnicodeChar
+0x1c138 ZwOpenFile
+0x1c140 KeDelayExecutionThread
+0x1c148 FsRtlQueryKernelEaFile
+0x1c150 _stricmp
+0x1c158 RtlPrefixUnicodeString
+0x1c160 RtlSuffixUnicodeString
+0x1c168 RtlCopyUnicodeString
+0x1c170 RtlAppendUnicodeStringToString
+0x1c178 ObReferenceObjectByHandle
+0x1c180 IoFileObjectType
+0x1c188 ObfDereferenceObject
+0x1c190 ExEnterCriticalRegionAndAcquireResourceShared
+0x1c198 KeLeaveCriticalRegion
+0x1c1a0 KeEnterCriticalRegion
+0x1c1a8 ZwOpenEvent
+0x1c1b0 ZwWaitForSingleObject
+0x1c1b8 ZwSetEvent
+0x1c1c0 SeLocateProcessImageName
+0x1c1c8 ExFreePoolWithTag
+0x1c1d0 RtlRunOnceExecuteOnce
+0x1c1d8 ExCreateCallback
+0x1c1e0 ExRegisterCallback
+0x1c1e8 ExUnregisterCallback
+0x1c1f0 SeSetSecurityAttributesToken
+0x1c1f8 ExAllocatePool2
+0x1c200 ZwQuerySecurityAttributesToken
+0x1c208 ZwQuerySecurityPolicy
+0x1c210 PsQueryProcessCommandLine
+0x1c218 PsGetProcessId
+0x1c220 SeCompareSigningLevels
+0x1c228 RtlInitAnsiString
+0x1c230 PsGetProcessImageFileName
+0x1c238 PsGetCurrentProcess
+0x1c240 PsGetCurrentProcessId
+0x1c248 ZwQueryInformationFile
+0x1c250 ZwOpenProcessTokenEx
+0x1c258 RtlEqualUnicodeString
+0x1c260 RtlUTF8ToUnicodeN
+0x1c268 _vsnwprintf
+0x1c270 SeTokenObjectType
+0x1c278 ObOpenObjectByPointer
+0x1c280 PsProcessType
+0x1c288 PsReferencePrimaryToken
+0x1c290 ObCloseHandle
+0x1c298 PsDereferencePrimaryToken
+0x1c2a0 ZwGetCachedSigningLevel
+0x1c2a8 ZwSetCachedSigningLevel
+0x1c2b0 RtlQueryPackageClaims
+0x1c2b8 EtwWrite
+0x1c2c0 SeGetLogonSessionToken
+0x1c2c8 ZwDuplicateObject
+0x1c2d0 SeSrpAccessCheck
+0x1c2d8 ZwDuplicateToken
+0x1c2e0 _wcsicmp
+0x1c2e8 MmMapViewInSystemSpace
+0x1c2f0 ZwResetEvent
+0x1c2f8 IofCompleteRequest
+0x1c300 RtlNotifyFeatureUsage
+0x1c308 RtlUnregisterFeatureUsageProvider
+0x1c310 RtlCreateUnicodeString
+0x1c318 ZwQueryDirectoryFile
+0x1c320 RtlUnicodeStringToInt64
+0x1c328 EtwEventEnabled
+0x1c330 RtlLengthSid
+0x1c338 RtlGUIDFromString
+0x1c340 ZwReadFile
+0x1c348 ZwQueryValueKey
+0x1c350 RtlUpcaseUnicodeString
+0x1c358 RtlAvlInsertNodeEx
+0x1c360 ZwSetValueKey
+0x1c368 ExAcquirePushLockExclusiveEx
+0x1c370 ExReleasePushLockExclusiveEx
+0x1c378 ExAcquirePushLockSharedEx
+0x1c380 ExReleasePushLockSharedEx
+0x1c388 KeStackAttachProcess
+0x1c390 RtlRegisterFeatureUsageProvider
+0x1c398 RtlAvlRemoveNode
+0x1c3a0 PsLookupProcessByProcessId
+0x1c3a8 ZwOpenProcess
+0x1c3b0 ZwQueryInformationToken
+0x1c3b8 RtlQueryRegistryValuesEx
+0x1c3c0 FsRtlGetFileSize
+0x1c3c8 _vsnprintf
+0x1c3d0 ZwQueryVolumeInformationFile
+0x1c3d8 FsRtlSetKernelEaFile
+0x1c3e0 wcsrchr
+0x1c3e8 RtlGetNtSystemRoot
+0x1c3f0 ZwOpenSymbolicLinkObject
+0x1c3f8 ZwQuerySymbolicLinkObject
+0x1c400 ZwDeviceIoControlFile
+0x1c408 IoVolumeDeviceToDosName
+0x1c410 ZwFsControlFile
+0x1c418 ZwCreateFile
+0x1c420 ZwNotifyChangeDirectoryFile
+0x1c428 PsCreateSystemThread
+0x1c430 ZwAlertThread
+0x1c438 RtlInitEnumerationHashTable
+0x1c440 RtlEnumerateEntryHashTable
+0x1c448 RtlRemoveEntryHashTable
+0x1c450 RtlEndEnumerationHashTable
+0x1c458 RtlDeleteHashTable
+0x1c460 RtlLookupEntryHashTable
+0x1c468 RtlGetNextEntryHashTable
+0x1c470 RtlCreateHashTable
+0x1c478 RtlInsertEntryHashTable
+0x1c480 PsQueryProcessAttributesByToken
+0x1c488 ExQueryFastCacheDevLicense
+0x1c490 ZwUnloadKeyEx
+0x1c498 ZwLoadKeyEx
+0x1c4a0 KeExpandKernelStackAndCalloutEx
+0x1c4a8 ZwDeleteFile
+0x1c4b0 RtlCreateSecurityDescriptor
+0x1c4b8 RtlSetDaclSecurityDescriptor
+0x1c4c0 ZwSetSecurityObject
+0x1c4c8 RtlCreateAcl
+0x1c4d0 RtlAddAccessAllowedAce
+0x1c4d8 SeAccessCheck
+0x1c4e0 ZwOpenKey
+0x1c4e8 ZwCreateKey
+0x1c4f0 ZwEnumerateKey
+0x1c4f8 ZwQueryKey
+0x1c500 ZwQueryLicenseValue
+0x1c508 __C_specific_handler
+0x1c510 PsInitialSystemProcess
+0x1c518 LdrResSearchResource
+0x1c520 RtlCompareUnicodeString
+0x1c528 iswspace
+0x1c530 KeInitializeEvent
+0x1c538 KeWaitForSingleObject
+0x1c540 KeBugCheckEx
+0x1c548 RtlGetEnabledExtendedFeatures
+0x1c550 RtlGetVersion
+0x1c558 RtlCapabilityCheck
+0x1c560 ExReleasePushLockEx
+0x1c568 ExSubscribeWnfStateChange
+0x1c570 SeCaptureSubjectContextEx
+0x1c578 SeReleaseSubjectContext
+0x1c580 SeCaptureSubjectContext
+0x1c588 wcsnlen
+0x1c590 RtlIsSandboxedToken
+0x1c598 ZwCompareTokens
+0x1c5a0 ZwSetInformationThread
+0x1c5a8 ZwGetNextProcess
+0x1c5b0 ZwQueryInformationProcess
+0x1c5b8 ExUnsubscribeWnfStateChange
+0x1c5c0 ZwUpdateWnfStateData
+0x1c5c8 RtlAppendUnicodeToString
+0x1c5d0 wcsstr
+0x1c5d8 PsIsProtectedProcess
+0x1c5e0 SeSetSecurityAttributesTokenEx
+0x1c5e8 KeGetCurrentIrql
+0x1c5f0 SeQuerySecurityAttributesToken
+0x1c5f8 SeQuerySecurityAttributesTokenAccessInformation
+0x1c600 RtlCompareMemory
+0x1c608 RtlUnicodeStringToInteger
+0x1c610 EtwEnableTrace
+0x1c618 ZwWriteFile
+0x1c620 ZwTraceControl
+0x1c628 RtlUnregisterFeatureConfigurationChangeNotification
+0x1c630 RtlRegisterFeatureConfigurationChangeNotification
+0x1c638 RtlQueryFeatureConfiguration
+0x1c640 RtlQueryFeatureConfigurationChangeStamp
+0x1c648 RtlArmFeatureUsageProviderFlushNotification
+0x1c650 ExInitializeResourceLite
+0x1c658 ExDeleteResourceLite
+0x1c660 ExReleaseResourceAndLeaveCriticalRegion
+0x1c668 ExEnterCriticalRegionAndAcquireResourceExclusive
+0x1c670 EtwUnregister
+0x1c678 IoDeleteDevice
+0x1c680 IoDeleteSymbolicLink
+0x1c688 RtlRecordFeatureUsage
+0x1c690 IoWMIRegistrationControl
+0x1c698 MmGetSystemRoutineAddress
+0x1c6a0 ZwClose
+0x1c6a8 EtwWriteTransfer
+0x1c6b0 PsSetCreateProcessNotifyRoutineEx
+0x1c6b8 ZwCreateEvent
+0x1c6c0 IoCreateSymbolicLink
+0x1c6c8 ObSetSecurityObjectByPointer
+0x1c6d0 IoCreateDevice
+0x1c6d8 EtwRegister
+0x1c6e0 ObfReferenceObject
+0x1c6e8 EtwSetInformation
+0x1c6f0 KeUnstackDetachProcess
+0x1c6f8 RtlInitUnicodeString
+0x1c700 MmMapViewOfSection
+0x1c708 MmUnmapViewInSystemSpace
+0x1c710 ZwCreateSection
+0x1c718 MmUnmapViewOfSection
+FUNCTION RVA 0x21690:
+00021690 4053                     push     rbx 
+00021692 4883ec40                 sub      rsp, 0x40 
+00021696 4c8bd1                   mov      r10, rcx 
+00021699 33c0                     xor      eax, eax 
+0002169b 498b4810                 mov      rcx, qword ptr [r8 + 0x10] 
+0002169f 498bd8                   mov      rbx, r8 
+000216a2 48390a                   cmp      qword ptr [rdx], rcx 
+000216a5 753d                     jne      0x1400216e4 
+000216a7 4d8b5230                 mov      r10, qword ptr [r10 + 0x30] 
+000216ab 4d85d2                   test     r10, r10 
+000216ae 7434                     je       0x1400216e4 
+000216b0 498b4040                 mov      rax, qword ptr [r8 + 0x40] 
+000216b4 458b4828                 mov      r9d, dword ptr [r8 + 0x28] 
+000216b8 8b5318                   mov      edx, dword ptr [rbx + 0x18] 
+000216bb 4889442430               mov      qword ptr [rsp + 0x30], rax 
+000216c0 418b4038                 mov      eax, dword ptr [r8 + 0x38] 
+000216c4 89442428                 mov      dword ptr [rsp + 0x28], eax 
+000216c8 498b4030                 mov      rax, qword ptr [r8 + 0x30] 
+000216cc 4d8b4020                 mov      r8, qword ptr [r8 + 0x20] 
+000216d0 4889442420               mov      qword ptr [rsp + 0x20], rax 
+000216d5 498bc2                   mov      rax, r10 
+000216d8 e83350feff               call     0x140006710 
+000216dd c7434801000000           mov      dword ptr [rbx + 0x48], 1 
+000216e4 4883c440                 add      rsp, 0x40 
+000216e8 5b                       pop      rbx 
+000216e9 c3                       ret       
+000216ea cc                       int3      
+FUNCTION RVA 0x6710:
+00006710 ff2522600100             jmp      qword ptr [rip + 0x16022] CFG guard dispatch/check slot; RVA 0x1c738 b'.idata\x00\x00' writable=False

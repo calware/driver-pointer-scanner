@@ -1,0 +1,2620 @@
+{
+  "schema_version": 1,
+  "summary": {
+    "images": 6,
+    "attempt_statuses": {
+      "EMU_ERROR": 66,
+      "RETURNED_BEFORE_CALLSITE": 23,
+      "CALLSITE_HIT": 3
+    }
+  },
+  "results": [
+    {
+      "schema_version": 1,
+      "engine": "Unicorn synthetic WDM request replay",
+      "image_sha256": "03e0f9fa171608f25c05c7df9bc8ab717b02f037630efa10ff53113f88afe468",
+      "sites_total": 5,
+      "sites_selected": 5,
+      "site_limit": 5,
+      "sites": [
+        {
+          "event": "DeviceIoControl",
+          "entry_model": "WDM",
+          "pointer_kind": "READ_ONLY_IMAGE_POINTER",
+          "dispatch_rva": "0x35980",
+          "call_rva": "0x21eb",
+          "slot_rva": "0x3dae0",
+          "input_buffer_variant_candidate": false,
+          "path_evidence": null,
+          "attempts": [
+            {
+              "scenario": {
+                "name": "ioctl_00226000_len4",
+                "file_name": "",
+                "ioctl": 2252800,
+                "input_length": 4,
+                "output_length": 64
+              },
+              "status": "EMU_ERROR",
+              "instructions": 62,
+              "modeled_import_calls": {},
+              "unmodeled_import_calls": {},
+              "synthetic_request": true,
+              "error": "Unhandled CPU exception (UC_ERR_EXCEPTION)",
+              "fault_rva": "0x3a777"
+            },
+            {
+              "scenario": {
+                "name": "ioctl_00226000_len64",
+                "file_name": "",
+                "ioctl": 2252800,
+                "input_length": 64,
+                "output_length": 64
+              },
+              "status": "EMU_ERROR",
+              "instructions": 62,
+              "modeled_import_calls": {},
+              "unmodeled_import_calls": {},
+              "synthetic_request": true,
+              "error": "Unhandled CPU exception (UC_ERR_EXCEPTION)",
+              "fault_rva": "0x3a777"
+            },
+            {
+              "scenario": {
+                "name": "ioctl_00222000_len4",
+                "file_name": "",
+                "ioctl": 2236416,
+                "input_length": 4,
+                "output_length": 64
+              },
+              "status": "EMU_ERROR",
+              "instructions": 62,
+              "modeled_import_calls": {},
+              "unmodeled_import_calls": {},
+              "synthetic_request": true,
+              "error": "Unhandled CPU exception (UC_ERR_EXCEPTION)",
+              "fault_rva": "0x3a777"
+            },
+            {
+              "scenario": {
+                "name": "ioctl_00222000_len64",
+                "file_name": "",
+                "ioctl": 2236416,
+                "input_length": 64,
+                "output_length": 64
+              },
+              "status": "EMU_ERROR",
+              "instructions": 62,
+              "modeled_import_calls": {},
+              "unmodeled_import_calls": {},
+              "synthetic_request": true,
+              "error": "Unhandled CPU exception (UC_ERR_EXCEPTION)",
+              "fault_rva": "0x3a777"
+            }
+          ],
+          "offline_evidence_score": {
+            "value": 45,
+            "tier": "STATIC_LEAD_ONLY",
+            "scale": "0-85 OFFLINE_EVIDENCE_ONLY",
+            "components": {
+              "rooted_may_flow": 15,
+              "storage_evidence": 20,
+              "initial_local_target": 10
+            },
+            "not_a_probability": true,
+            "live_user_openability": "UNVERIFIED",
+            "interpretation": "Ranking evidence within the synthetic/static model; not a vulnerability or live-reachability probability."
+          }
+        },
+        {
+          "event": "DeviceIoControl",
+          "entry_model": "WDM",
+          "pointer_kind": "WRITABLE_IMAGE_SLOT",
+          "dispatch_rva": "0x35980",
+          "call_rva": "0x272108",
+          "slot_rva": "0x2626a0",
+          "input_buffer_variant_candidate": false,
+          "path_evidence": null,
+          "attempts": [
+            {
+              "scenario": {
+                "name": "ioctl_00226000_len4",
+                "file_name": "",
+                "ioctl": 2252800,
+                "input_length": 4,
+                "output_length": 64
+              },
+              "status": "EMU_ERROR",
+              "instructions": 62,
+              "modeled_import_calls": {},
+              "unmodeled_import_calls": {},
+              "synthetic_request": true,
+              "error": "Unhandled CPU exception (UC_ERR_EXCEPTION)",
+              "fault_rva": "0x3a777"
+            },
+            {
+              "scenario": {
+                "name": "ioctl_00226000_len64",
+                "file_name": "",
+                "ioctl": 2252800,
+                "input_length": 64,
+                "output_length": 64
+              },
+              "status": "EMU_ERROR",
+              "instructions": 62,
+              "modeled_import_calls": {},
+              "unmodeled_import_calls": {},
+              "synthetic_request": true,
+              "error": "Unhandled CPU exception (UC_ERR_EXCEPTION)",
+              "fault_rva": "0x3a777"
+            },
+            {
+              "scenario": {
+                "name": "ioctl_00222000_len4",
+                "file_name": "",
+                "ioctl": 2236416,
+                "input_length": 4,
+                "output_length": 64
+              },
+              "status": "EMU_ERROR",
+              "instructions": 62,
+              "modeled_import_calls": {},
+              "unmodeled_import_calls": {},
+              "synthetic_request": true,
+              "error": "Unhandled CPU exception (UC_ERR_EXCEPTION)",
+              "fault_rva": "0x3a777"
+            },
+            {
+              "scenario": {
+                "name": "ioctl_00222000_len64",
+                "file_name": "",
+                "ioctl": 2236416,
+                "input_length": 64,
+                "output_length": 64
+              },
+              "status": "EMU_ERROR",
+              "instructions": 62,
+              "modeled_import_calls": {},
+              "unmodeled_import_calls": {},
+              "synthetic_request": true,
+              "error": "Unhandled CPU exception (UC_ERR_EXCEPTION)",
+              "fault_rva": "0x3a777"
+            }
+          ],
+          "offline_evidence_score": {
+            "value": 35,
+            "tier": "STATIC_LEAD_ONLY",
+            "scale": "0-85 OFFLINE_EVIDENCE_ONLY",
+            "components": {
+              "rooted_may_flow": 15,
+              "storage_evidence": 20
+            },
+            "not_a_probability": true,
+            "live_user_openability": "UNVERIFIED",
+            "interpretation": "Ranking evidence within the synthetic/static model; not a vulnerability or live-reachability probability."
+          }
+        },
+        {
+          "event": "DeviceIoControl",
+          "entry_model": "WDM",
+          "pointer_kind": "WRITABLE_IMAGE_SLOT",
+          "dispatch_rva": "0x35980",
+          "call_rva": "0x36a35",
+          "slot_rva": "0x26d6d0",
+          "input_buffer_variant_candidate": false,
+          "path_evidence": null,
+          "attempts": [
+            {
+              "scenario": {
+                "name": "ioctl_00226000_len4",
+                "file_name": "",
+                "ioctl": 2252800,
+                "input_length": 4,
+                "output_length": 64
+              },
+              "status": "EMU_ERROR",
+              "instructions": 62,
+              "modeled_import_calls": {},
+              "unmodeled_import_calls": {},
+              "synthetic_request": true,
+              "error": "Unhandled CPU exception (UC_ERR_EXCEPTION)",
+              "fault_rva": "0x3a777"
+            },
+            {
+              "scenario": {
+                "name": "ioctl_00226000_len64",
+                "file_name": "",
+                "ioctl": 2252800,
+                "input_length": 64,
+                "output_length": 64
+              },
+              "status": "EMU_ERROR",
+              "instructions": 62,
+              "modeled_import_calls": {},
+              "unmodeled_import_calls": {},
+              "synthetic_request": true,
+              "error": "Unhandled CPU exception (UC_ERR_EXCEPTION)",
+              "fault_rva": "0x3a777"
+            },
+            {
+              "scenario": {
+                "name": "ioctl_00222000_len4",
+                "file_name": "",
+                "ioctl": 2236416,
+                "input_length": 4,
+                "output_length": 64
+              },
+              "status": "EMU_ERROR",
+              "instructions": 62,
+              "modeled_import_calls": {},
+              "unmodeled_import_calls": {},
+              "synthetic_request": true,
+              "error": "Unhandled CPU exception (UC_ERR_EXCEPTION)",
+              "fault_rva": "0x3a777"
+            },
+            {
+              "scenario": {
+                "name": "ioctl_00222000_len64",
+                "file_name": "",
+                "ioctl": 2236416,
+                "input_length": 64,
+                "output_length": 64
+              },
+              "status": "EMU_ERROR",
+              "instructions": 62,
+              "modeled_import_calls": {},
+              "unmodeled_import_calls": {},
+              "synthetic_request": true,
+              "error": "Unhandled CPU exception (UC_ERR_EXCEPTION)",
+              "fault_rva": "0x3a777"
+            }
+          ],
+          "offline_evidence_score": {
+            "value": 35,
+            "tier": "STATIC_LEAD_ONLY",
+            "scale": "0-85 OFFLINE_EVIDENCE_ONLY",
+            "components": {
+              "rooted_may_flow": 15,
+              "storage_evidence": 20
+            },
+            "not_a_probability": true,
+            "live_user_openability": "UNVERIFIED",
+            "interpretation": "Ranking evidence within the synthetic/static model; not a vulnerability or live-reachability probability."
+          }
+        },
+        {
+          "event": "DeviceIoControl",
+          "entry_model": "WDM",
+          "pointer_kind": "WRITABLE_IMAGE_SLOT",
+          "dispatch_rva": "0x35980",
+          "call_rva": "0x36a49",
+          "slot_rva": "0x26d6c8",
+          "input_buffer_variant_candidate": false,
+          "path_evidence": null,
+          "attempts": [
+            {
+              "scenario": {
+                "name": "ioctl_00226000_len4",
+                "file_name": "",
+                "ioctl": 2252800,
+                "input_length": 4,
+                "output_length": 64
+              },
+              "status": "EMU_ERROR",
+              "instructions": 62,
+              "modeled_import_calls": {},
+              "unmodeled_import_calls": {},
+              "synthetic_request": true,
+              "error": "Unhandled CPU exception (UC_ERR_EXCEPTION)",
+              "fault_rva": "0x3a777"
+            },
+            {
+              "scenario": {
+                "name": "ioctl_00226000_len64",
+                "file_name": "",
+                "ioctl": 2252800,
+                "input_length": 64,
+                "output_length": 64
+              },
+              "status": "EMU_ERROR",
+              "instructions": 62,
+              "modeled_import_calls": {},
+              "unmodeled_import_calls": {},
+              "synthetic_request": true,
+              "error": "Unhandled CPU exception (UC_ERR_EXCEPTION)",
+              "fault_rva": "0x3a777"
+            },
+            {
+              "scenario": {
+                "name": "ioctl_00222000_len4",
+                "file_name": "",
+                "ioctl": 2236416,
+                "input_length": 4,
+                "output_length": 64
+              },
+              "status": "EMU_ERROR",
+              "instructions": 62,
+              "modeled_import_calls": {},
+              "unmodeled_import_calls": {},
+              "synthetic_request": true,
+              "error": "Unhandled CPU exception (UC_ERR_EXCEPTION)",
+              "fault_rva": "0x3a777"
+            },
+            {
+              "scenario": {
+                "name": "ioctl_00222000_len64",
+                "file_name": "",
+                "ioctl": 2236416,
+                "input_length": 64,
+                "output_length": 64
+              },
+              "status": "EMU_ERROR",
+              "instructions": 62,
+              "modeled_import_calls": {},
+              "unmodeled_import_calls": {},
+              "synthetic_request": true,
+              "error": "Unhandled CPU exception (UC_ERR_EXCEPTION)",
+              "fault_rva": "0x3a777"
+            }
+          ],
+          "offline_evidence_score": {
+            "value": 35,
+            "tier": "STATIC_LEAD_ONLY",
+            "scale": "0-85 OFFLINE_EVIDENCE_ONLY",
+            "components": {
+              "rooted_may_flow": 15,
+              "storage_evidence": 20
+            },
+            "not_a_probability": true,
+            "live_user_openability": "UNVERIFIED",
+            "interpretation": "Ranking evidence within the synthetic/static model; not a vulnerability or live-reachability probability."
+          }
+        },
+        {
+          "event": "DeviceIoControl",
+          "entry_model": "WDM",
+          "pointer_kind": "WRITABLE_IMAGE_SLOT",
+          "dispatch_rva": "0x35980",
+          "call_rva": "0x36a5d",
+          "slot_rva": "0x26d6d8",
+          "input_buffer_variant_candidate": false,
+          "path_evidence": null,
+          "attempts": [
+            {
+              "scenario": {
+                "name": "ioctl_00226000_len4",
+                "file_name": "",
+                "ioctl": 2252800,
+                "input_length": 4,
+                "output_length": 64
+              },
+              "status": "EMU_ERROR",
+              "instructions": 62,
+              "modeled_import_calls": {},
+              "unmodeled_import_calls": {},
+              "synthetic_request": true,
+              "error": "Unhandled CPU exception (UC_ERR_EXCEPTION)",
+              "fault_rva": "0x3a777"
+            },
+            {
+              "scenario": {
+                "name": "ioctl_00226000_len64",
+                "file_name": "",
+                "ioctl": 2252800,
+                "input_length": 64,
+                "output_length": 64
+              },
+              "status": "EMU_ERROR",
+              "instructions": 62,
+              "modeled_import_calls": {},
+              "unmodeled_import_calls": {},
+              "synthetic_request": true,
+              "error": "Unhandled CPU exception (UC_ERR_EXCEPTION)",
+              "fault_rva": "0x3a777"
+            },
+            {
+              "scenario": {
+                "name": "ioctl_00222000_len4",
+                "file_name": "",
+                "ioctl": 2236416,
+                "input_length": 4,
+                "output_length": 64
+              },
+              "status": "EMU_ERROR",
+              "instructions": 62,
+              "modeled_import_calls": {},
+              "unmodeled_import_calls": {},
+              "synthetic_request": true,
+              "error": "Unhandled CPU exception (UC_ERR_EXCEPTION)",
+              "fault_rva": "0x3a777"
+            },
+            {
+              "scenario": {
+                "name": "ioctl_00222000_len64",
+                "file_name": "",
+                "ioctl": 2236416,
+                "input_length": 64,
+                "output_length": 64
+              },
+              "status": "EMU_ERROR",
+              "instructions": 62,
+              "modeled_import_calls": {},
+              "unmodeled_import_calls": {},
+              "synthetic_request": true,
+              "error": "Unhandled CPU exception (UC_ERR_EXCEPTION)",
+              "fault_rva": "0x3a777"
+            }
+          ],
+          "offline_evidence_score": {
+            "value": 35,
+            "tier": "STATIC_LEAD_ONLY",
+            "scale": "0-85 OFFLINE_EVIDENCE_ONLY",
+            "components": {
+              "rooted_may_flow": 15,
+              "storage_evidence": 20
+            },
+            "not_a_probability": true,
+            "live_user_openability": "UNVERIFIED",
+            "interpretation": "Ranking evidence within the synthetic/static model; not a vulnerability or live-reachability probability."
+          }
+        }
+      ],
+      "installed_image_unchanged": true,
+      "evidence_scope": "Synthetic model only. No live device, OS I/O manager, real KMDF queue, handle ACL, or user request was exercised.",
+      "no_live_reachability_claim": true,
+      "file": "C:\\Windows\\System32\\drivers\\aehd.sys"
+    },
+    {
+      "schema_version": 1,
+      "engine": "Unicorn synthetic WDM request replay",
+      "image_sha256": "b10ba6b69397acd95f9679f15d3ec1e201f0fc329d867d4f49c20b9a4257bb2d",
+      "sites_total": 4,
+      "sites_selected": 4,
+      "site_limit": 5,
+      "sites": [
+        {
+          "event": "DeviceIoControl",
+          "entry_model": "WDM",
+          "pointer_kind": "WRITABLE_IMAGE_SLOT",
+          "dispatch_rva": "0x5aa0",
+          "call_rva": "0x7241",
+          "slot_rva": "0x1e180",
+          "input_buffer_variant_candidate": false,
+          "path_evidence": null,
+          "attempts": [
+            {
+              "scenario": {
+                "name": "ioctl_00226000_len4",
+                "file_name": "",
+                "ioctl": 2252800,
+                "input_length": 4,
+                "output_length": 64
+              },
+              "status": "EMU_ERROR",
+              "instructions": 45,
+              "modeled_import_calls": {
+                "KeEnterCriticalRegion": 1,
+                "ExAcquireRundownProtection": 1,
+                "KeLeaveCriticalRegion": 1,
+                "IofCompleteRequest": 1
+              },
+              "unmodeled_import_calls": {
+                "KeEnterCriticalRegion": 1,
+                "ExAcquireRundownProtection": 1,
+                "KeLeaveCriticalRegion": 1
+              },
+              "synthetic_request": true,
+              "error": "Unhandled CPU exception (UC_ERR_EXCEPTION)",
+              "fault_rva": "0x5a57"
+            },
+            {
+              "scenario": {
+                "name": "ioctl_00226000_len64",
+                "file_name": "",
+                "ioctl": 2252800,
+                "input_length": 64,
+                "output_length": 64
+              },
+              "status": "EMU_ERROR",
+              "instructions": 45,
+              "modeled_import_calls": {
+                "KeEnterCriticalRegion": 1,
+                "ExAcquireRundownProtection": 1,
+                "KeLeaveCriticalRegion": 1,
+                "IofCompleteRequest": 1
+              },
+              "unmodeled_import_calls": {
+                "KeEnterCriticalRegion": 1,
+                "ExAcquireRundownProtection": 1,
+                "KeLeaveCriticalRegion": 1
+              },
+              "synthetic_request": true,
+              "error": "Unhandled CPU exception (UC_ERR_EXCEPTION)",
+              "fault_rva": "0x5a57"
+            },
+            {
+              "scenario": {
+                "name": "ioctl_00222000_len4",
+                "file_name": "",
+                "ioctl": 2236416,
+                "input_length": 4,
+                "output_length": 64
+              },
+              "status": "EMU_ERROR",
+              "instructions": 45,
+              "modeled_import_calls": {
+                "KeEnterCriticalRegion": 1,
+                "ExAcquireRundownProtection": 1,
+                "KeLeaveCriticalRegion": 1,
+                "IofCompleteRequest": 1
+              },
+              "unmodeled_import_calls": {
+                "KeEnterCriticalRegion": 1,
+                "ExAcquireRundownProtection": 1,
+                "KeLeaveCriticalRegion": 1
+              },
+              "synthetic_request": true,
+              "error": "Unhandled CPU exception (UC_ERR_EXCEPTION)",
+              "fault_rva": "0x5a57"
+            },
+            {
+              "scenario": {
+                "name": "ioctl_00222000_len64",
+                "file_name": "",
+                "ioctl": 2236416,
+                "input_length": 64,
+                "output_length": 64
+              },
+              "status": "EMU_ERROR",
+              "instructions": 45,
+              "modeled_import_calls": {
+                "KeEnterCriticalRegion": 1,
+                "ExAcquireRundownProtection": 1,
+                "KeLeaveCriticalRegion": 1,
+                "IofCompleteRequest": 1
+              },
+              "unmodeled_import_calls": {
+                "KeEnterCriticalRegion": 1,
+                "ExAcquireRundownProtection": 1,
+                "KeLeaveCriticalRegion": 1
+              },
+              "synthetic_request": true,
+              "error": "Unhandled CPU exception (UC_ERR_EXCEPTION)",
+              "fault_rva": "0x5a57"
+            }
+          ],
+          "offline_evidence_score": {
+            "value": 35,
+            "tier": "STATIC_LEAD_ONLY",
+            "scale": "0-85 OFFLINE_EVIDENCE_ONLY",
+            "components": {
+              "rooted_may_flow": 15,
+              "storage_evidence": 20
+            },
+            "not_a_probability": true,
+            "live_user_openability": "UNVERIFIED",
+            "interpretation": "Ranking evidence within the synthetic/static model; not a vulnerability or live-reachability probability."
+          }
+        },
+        {
+          "event": "DeviceIoControl",
+          "entry_model": "WDM",
+          "pointer_kind": "WRITABLE_IMAGE_SLOT",
+          "dispatch_rva": "0x5aa0",
+          "call_rva": "0x72d3",
+          "slot_rva": "0x1e128",
+          "input_buffer_variant_candidate": false,
+          "path_evidence": {
+            "status": "SAT_PARTIAL_MODEL",
+            "modeled_predicates": 0,
+            "witness": {
+              "ioctl_0_32": "0x0"
+            },
+            "scope": "Only tracked integer predicates; not proof of runtime reachability, handle access, or full buffer validity."
+          },
+          "attempts": [
+            {
+              "scenario": {
+                "name": "ioctl_00000000_len4",
+                "file_name": "",
+                "ioctl": 0,
+                "input_length": 4,
+                "output_length": 64
+              },
+              "status": "EMU_ERROR",
+              "instructions": 45,
+              "modeled_import_calls": {
+                "KeEnterCriticalRegion": 1,
+                "ExAcquireRundownProtection": 1,
+                "KeLeaveCriticalRegion": 1,
+                "IofCompleteRequest": 1
+              },
+              "unmodeled_import_calls": {
+                "KeEnterCriticalRegion": 1,
+                "ExAcquireRundownProtection": 1,
+                "KeLeaveCriticalRegion": 1
+              },
+              "synthetic_request": true,
+              "error": "Unhandled CPU exception (UC_ERR_EXCEPTION)",
+              "fault_rva": "0x5a57"
+            },
+            {
+              "scenario": {
+                "name": "ioctl_00000000_len64",
+                "file_name": "",
+                "ioctl": 0,
+                "input_length": 64,
+                "output_length": 64
+              },
+              "status": "EMU_ERROR",
+              "instructions": 45,
+              "modeled_import_calls": {
+                "KeEnterCriticalRegion": 1,
+                "ExAcquireRundownProtection": 1,
+                "KeLeaveCriticalRegion": 1,
+                "IofCompleteRequest": 1
+              },
+              "unmodeled_import_calls": {
+                "KeEnterCriticalRegion": 1,
+                "ExAcquireRundownProtection": 1,
+                "KeLeaveCriticalRegion": 1
+              },
+              "synthetic_request": true,
+              "error": "Unhandled CPU exception (UC_ERR_EXCEPTION)",
+              "fault_rva": "0x5a57"
+            },
+            {
+              "scenario": {
+                "name": "ioctl_00226000_len4",
+                "file_name": "",
+                "ioctl": 2252800,
+                "input_length": 4,
+                "output_length": 64
+              },
+              "status": "EMU_ERROR",
+              "instructions": 45,
+              "modeled_import_calls": {
+                "KeEnterCriticalRegion": 1,
+                "ExAcquireRundownProtection": 1,
+                "KeLeaveCriticalRegion": 1,
+                "IofCompleteRequest": 1
+              },
+              "unmodeled_import_calls": {
+                "KeEnterCriticalRegion": 1,
+                "ExAcquireRundownProtection": 1,
+                "KeLeaveCriticalRegion": 1
+              },
+              "synthetic_request": true,
+              "error": "Unhandled CPU exception (UC_ERR_EXCEPTION)",
+              "fault_rva": "0x5a57"
+            },
+            {
+              "scenario": {
+                "name": "ioctl_00226000_len64",
+                "file_name": "",
+                "ioctl": 2252800,
+                "input_length": 64,
+                "output_length": 64
+              },
+              "status": "EMU_ERROR",
+              "instructions": 45,
+              "modeled_import_calls": {
+                "KeEnterCriticalRegion": 1,
+                "ExAcquireRundownProtection": 1,
+                "KeLeaveCriticalRegion": 1,
+                "IofCompleteRequest": 1
+              },
+              "unmodeled_import_calls": {
+                "KeEnterCriticalRegion": 1,
+                "ExAcquireRundownProtection": 1,
+                "KeLeaveCriticalRegion": 1
+              },
+              "synthetic_request": true,
+              "error": "Unhandled CPU exception (UC_ERR_EXCEPTION)",
+              "fault_rva": "0x5a57"
+            },
+            {
+              "scenario": {
+                "name": "ioctl_00222000_len4",
+                "file_name": "",
+                "ioctl": 2236416,
+                "input_length": 4,
+                "output_length": 64
+              },
+              "status": "EMU_ERROR",
+              "instructions": 45,
+              "modeled_import_calls": {
+                "KeEnterCriticalRegion": 1,
+                "ExAcquireRundownProtection": 1,
+                "KeLeaveCriticalRegion": 1,
+                "IofCompleteRequest": 1
+              },
+              "unmodeled_import_calls": {
+                "KeEnterCriticalRegion": 1,
+                "ExAcquireRundownProtection": 1,
+                "KeLeaveCriticalRegion": 1
+              },
+              "synthetic_request": true,
+              "error": "Unhandled CPU exception (UC_ERR_EXCEPTION)",
+              "fault_rva": "0x5a57"
+            },
+            {
+              "scenario": {
+                "name": "ioctl_00222000_len64",
+                "file_name": "",
+                "ioctl": 2236416,
+                "input_length": 64,
+                "output_length": 64
+              },
+              "status": "EMU_ERROR",
+              "instructions": 45,
+              "modeled_import_calls": {
+                "KeEnterCriticalRegion": 1,
+                "ExAcquireRundownProtection": 1,
+                "KeLeaveCriticalRegion": 1,
+                "IofCompleteRequest": 1
+              },
+              "unmodeled_import_calls": {
+                "KeEnterCriticalRegion": 1,
+                "ExAcquireRundownProtection": 1,
+                "KeLeaveCriticalRegion": 1
+              },
+              "synthetic_request": true,
+              "error": "Unhandled CPU exception (UC_ERR_EXCEPTION)",
+              "fault_rva": "0x5a57"
+            }
+          ],
+          "offline_evidence_score": {
+            "value": 35,
+            "tier": "STATIC_LEAD_ONLY",
+            "scale": "0-85 OFFLINE_EVIDENCE_ONLY",
+            "components": {
+              "rooted_may_flow": 15,
+              "storage_evidence": 20
+            },
+            "not_a_probability": true,
+            "live_user_openability": "UNVERIFIED",
+            "interpretation": "Ranking evidence within the synthetic/static model; not a vulnerability or live-reachability probability."
+          }
+        },
+        {
+          "event": "DeviceIoControl",
+          "entry_model": "WDM",
+          "pointer_kind": "WRITABLE_IMAGE_SLOT",
+          "dispatch_rva": "0x5aa0",
+          "call_rva": "0x7378",
+          "slot_rva": "0x1e140",
+          "input_buffer_variant_candidate": false,
+          "path_evidence": {
+            "status": "SAT_PARTIAL_MODEL",
+            "modeled_predicates": 0,
+            "witness": {
+              "ioctl_0_32": "0x0"
+            },
+            "scope": "Only tracked integer predicates; not proof of runtime reachability, handle access, or full buffer validity."
+          },
+          "attempts": [
+            {
+              "scenario": {
+                "name": "ioctl_00000000_len4",
+                "file_name": "",
+                "ioctl": 0,
+                "input_length": 4,
+                "output_length": 64
+              },
+              "status": "EMU_ERROR",
+              "instructions": 45,
+              "modeled_import_calls": {
+                "KeEnterCriticalRegion": 1,
+                "ExAcquireRundownProtection": 1,
+                "KeLeaveCriticalRegion": 1,
+                "IofCompleteRequest": 1
+              },
+              "unmodeled_import_calls": {
+                "KeEnterCriticalRegion": 1,
+                "ExAcquireRundownProtection": 1,
+                "KeLeaveCriticalRegion": 1
+              },
+              "synthetic_request": true,
+              "error": "Unhandled CPU exception (UC_ERR_EXCEPTION)",
+              "fault_rva": "0x5a57"
+            },
+            {
+              "scenario": {
+                "name": "ioctl_00000000_len64",
+                "file_name": "",
+                "ioctl": 0,
+                "input_length": 64,
+                "output_length": 64
+              },
+              "status": "EMU_ERROR",
+              "instructions": 45,
+              "modeled_import_calls": {
+                "KeEnterCriticalRegion": 1,
+                "ExAcquireRundownProtection": 1,
+                "KeLeaveCriticalRegion": 1,
+                "IofCompleteRequest": 1
+              },
+              "unmodeled_import_calls": {
+                "KeEnterCriticalRegion": 1,
+                "ExAcquireRundownProtection": 1,
+                "KeLeaveCriticalRegion": 1
+              },
+              "synthetic_request": true,
+              "error": "Unhandled CPU exception (UC_ERR_EXCEPTION)",
+              "fault_rva": "0x5a57"
+            },
+            {
+              "scenario": {
+                "name": "ioctl_00226000_len4",
+                "file_name": "",
+                "ioctl": 2252800,
+                "input_length": 4,
+                "output_length": 64
+              },
+              "status": "EMU_ERROR",
+              "instructions": 45,
+              "modeled_import_calls": {
+                "KeEnterCriticalRegion": 1,
+                "ExAcquireRundownProtection": 1,
+                "KeLeaveCriticalRegion": 1,
+                "IofCompleteRequest": 1
+              },
+              "unmodeled_import_calls": {
+                "KeEnterCriticalRegion": 1,
+                "ExAcquireRundownProtection": 1,
+                "KeLeaveCriticalRegion": 1
+              },
+              "synthetic_request": true,
+              "error": "Unhandled CPU exception (UC_ERR_EXCEPTION)",
+              "fault_rva": "0x5a57"
+            },
+            {
+              "scenario": {
+                "name": "ioctl_00226000_len64",
+                "file_name": "",
+                "ioctl": 2252800,
+                "input_length": 64,
+                "output_length": 64
+              },
+              "status": "EMU_ERROR",
+              "instructions": 45,
+              "modeled_import_calls": {
+                "KeEnterCriticalRegion": 1,
+                "ExAcquireRundownProtection": 1,
+                "KeLeaveCriticalRegion": 1,
+                "IofCompleteRequest": 1
+              },
+              "unmodeled_import_calls": {
+                "KeEnterCriticalRegion": 1,
+                "ExAcquireRundownProtection": 1,
+                "KeLeaveCriticalRegion": 1
+              },
+              "synthetic_request": true,
+              "error": "Unhandled CPU exception (UC_ERR_EXCEPTION)",
+              "fault_rva": "0x5a57"
+            },
+            {
+              "scenario": {
+                "name": "ioctl_00222000_len4",
+                "file_name": "",
+                "ioctl": 2236416,
+                "input_length": 4,
+                "output_length": 64
+              },
+              "status": "EMU_ERROR",
+              "instructions": 45,
+              "modeled_import_calls": {
+                "KeEnterCriticalRegion": 1,
+                "ExAcquireRundownProtection": 1,
+                "KeLeaveCriticalRegion": 1,
+                "IofCompleteRequest": 1
+              },
+              "unmodeled_import_calls": {
+                "KeEnterCriticalRegion": 1,
+                "ExAcquireRundownProtection": 1,
+                "KeLeaveCriticalRegion": 1
+              },
+              "synthetic_request": true,
+              "error": "Unhandled CPU exception (UC_ERR_EXCEPTION)",
+              "fault_rva": "0x5a57"
+            },
+            {
+              "scenario": {
+                "name": "ioctl_00222000_len64",
+                "file_name": "",
+                "ioctl": 2236416,
+                "input_length": 64,
+                "output_length": 64
+              },
+              "status": "EMU_ERROR",
+              "instructions": 45,
+              "modeled_import_calls": {
+                "KeEnterCriticalRegion": 1,
+                "ExAcquireRundownProtection": 1,
+                "KeLeaveCriticalRegion": 1,
+                "IofCompleteRequest": 1
+              },
+              "unmodeled_import_calls": {
+                "KeEnterCriticalRegion": 1,
+                "ExAcquireRundownProtection": 1,
+                "KeLeaveCriticalRegion": 1
+              },
+              "synthetic_request": true,
+              "error": "Unhandled CPU exception (UC_ERR_EXCEPTION)",
+              "fault_rva": "0x5a57"
+            }
+          ],
+          "offline_evidence_score": {
+            "value": 35,
+            "tier": "STATIC_LEAD_ONLY",
+            "scale": "0-85 OFFLINE_EVIDENCE_ONLY",
+            "components": {
+              "rooted_may_flow": 15,
+              "storage_evidence": 20
+            },
+            "not_a_probability": true,
+            "live_user_openability": "UNVERIFIED",
+            "interpretation": "Ranking evidence within the synthetic/static model; not a vulnerability or live-reachability probability."
+          }
+        },
+        {
+          "event": "DeviceIoControl",
+          "entry_model": "WDM",
+          "pointer_kind": "WRITABLE_IMAGE_SLOT",
+          "dispatch_rva": "0x5aa0",
+          "call_rva": "0x741b",
+          "slot_rva": "0x1e1c0",
+          "input_buffer_variant_candidate": false,
+          "path_evidence": {
+            "status": "SAT_PARTIAL_MODEL",
+            "modeled_predicates": 0,
+            "witness": {
+              "ioctl_0_32": "0x0"
+            },
+            "scope": "Only tracked integer predicates; not proof of runtime reachability, handle access, or full buffer validity."
+          },
+          "attempts": [
+            {
+              "scenario": {
+                "name": "ioctl_00000000_len4",
+                "file_name": "",
+                "ioctl": 0,
+                "input_length": 4,
+                "output_length": 64
+              },
+              "status": "EMU_ERROR",
+              "instructions": 45,
+              "modeled_import_calls": {
+                "KeEnterCriticalRegion": 1,
+                "ExAcquireRundownProtection": 1,
+                "KeLeaveCriticalRegion": 1,
+                "IofCompleteRequest": 1
+              },
+              "unmodeled_import_calls": {
+                "KeEnterCriticalRegion": 1,
+                "ExAcquireRundownProtection": 1,
+                "KeLeaveCriticalRegion": 1
+              },
+              "synthetic_request": true,
+              "error": "Unhandled CPU exception (UC_ERR_EXCEPTION)",
+              "fault_rva": "0x5a57"
+            },
+            {
+              "scenario": {
+                "name": "ioctl_00000000_len64",
+                "file_name": "",
+                "ioctl": 0,
+                "input_length": 64,
+                "output_length": 64
+              },
+              "status": "EMU_ERROR",
+              "instructions": 45,
+              "modeled_import_calls": {
+                "KeEnterCriticalRegion": 1,
+                "ExAcquireRundownProtection": 1,
+                "KeLeaveCriticalRegion": 1,
+                "IofCompleteRequest": 1
+              },
+              "unmodeled_import_calls": {
+                "KeEnterCriticalRegion": 1,
+                "ExAcquireRundownProtection": 1,
+                "KeLeaveCriticalRegion": 1
+              },
+              "synthetic_request": true,
+              "error": "Unhandled CPU exception (UC_ERR_EXCEPTION)",
+              "fault_rva": "0x5a57"
+            },
+            {
+              "scenario": {
+                "name": "ioctl_00226000_len4",
+                "file_name": "",
+                "ioctl": 2252800,
+                "input_length": 4,
+                "output_length": 64
+              },
+              "status": "EMU_ERROR",
+              "instructions": 45,
+              "modeled_import_calls": {
+                "KeEnterCriticalRegion": 1,
+                "ExAcquireRundownProtection": 1,
+                "KeLeaveCriticalRegion": 1,
+                "IofCompleteRequest": 1
+              },
+              "unmodeled_import_calls": {
+                "KeEnterCriticalRegion": 1,
+                "ExAcquireRundownProtection": 1,
+                "KeLeaveCriticalRegion": 1
+              },
+              "synthetic_request": true,
+              "error": "Unhandled CPU exception (UC_ERR_EXCEPTION)",
+              "fault_rva": "0x5a57"
+            },
+            {
+              "scenario": {
+                "name": "ioctl_00226000_len64",
+                "file_name": "",
+                "ioctl": 2252800,
+                "input_length": 64,
+                "output_length": 64
+              },
+              "status": "EMU_ERROR",
+              "instructions": 45,
+              "modeled_import_calls": {
+                "KeEnterCriticalRegion": 1,
+                "ExAcquireRundownProtection": 1,
+                "KeLeaveCriticalRegion": 1,
+                "IofCompleteRequest": 1
+              },
+              "unmodeled_import_calls": {
+                "KeEnterCriticalRegion": 1,
+                "ExAcquireRundownProtection": 1,
+                "KeLeaveCriticalRegion": 1
+              },
+              "synthetic_request": true,
+              "error": "Unhandled CPU exception (UC_ERR_EXCEPTION)",
+              "fault_rva": "0x5a57"
+            },
+            {
+              "scenario": {
+                "name": "ioctl_00222000_len4",
+                "file_name": "",
+                "ioctl": 2236416,
+                "input_length": 4,
+                "output_length": 64
+              },
+              "status": "EMU_ERROR",
+              "instructions": 45,
+              "modeled_import_calls": {
+                "KeEnterCriticalRegion": 1,
+                "ExAcquireRundownProtection": 1,
+                "KeLeaveCriticalRegion": 1,
+                "IofCompleteRequest": 1
+              },
+              "unmodeled_import_calls": {
+                "KeEnterCriticalRegion": 1,
+                "ExAcquireRundownProtection": 1,
+                "KeLeaveCriticalRegion": 1
+              },
+              "synthetic_request": true,
+              "error": "Unhandled CPU exception (UC_ERR_EXCEPTION)",
+              "fault_rva": "0x5a57"
+            },
+            {
+              "scenario": {
+                "name": "ioctl_00222000_len64",
+                "file_name": "",
+                "ioctl": 2236416,
+                "input_length": 64,
+                "output_length": 64
+              },
+              "status": "EMU_ERROR",
+              "instructions": 45,
+              "modeled_import_calls": {
+                "KeEnterCriticalRegion": 1,
+                "ExAcquireRundownProtection": 1,
+                "KeLeaveCriticalRegion": 1,
+                "IofCompleteRequest": 1
+              },
+              "unmodeled_import_calls": {
+                "KeEnterCriticalRegion": 1,
+                "ExAcquireRundownProtection": 1,
+                "KeLeaveCriticalRegion": 1
+              },
+              "synthetic_request": true,
+              "error": "Unhandled CPU exception (UC_ERR_EXCEPTION)",
+              "fault_rva": "0x5a57"
+            }
+          ],
+          "offline_evidence_score": {
+            "value": 35,
+            "tier": "STATIC_LEAD_ONLY",
+            "scale": "0-85 OFFLINE_EVIDENCE_ONLY",
+            "components": {
+              "rooted_may_flow": 15,
+              "storage_evidence": 20
+            },
+            "not_a_probability": true,
+            "live_user_openability": "UNVERIFIED",
+            "interpretation": "Ranking evidence within the synthetic/static model; not a vulnerability or live-reachability probability."
+          }
+        }
+      ],
+      "installed_image_unchanged": true,
+      "evidence_scope": "Synthetic model only. No live device, OS I/O manager, real KMDF queue, handle ACL, or user request was exercised.",
+      "no_live_reachability_claim": true,
+      "file": "C:\\Windows\\System32\\drivers\\bfs.sys"
+    },
+    {
+      "schema_version": 1,
+      "engine": "Unicorn synthetic WDM request replay",
+      "image_sha256": "4e3e15071f4a0b924a67b0f6f1507834bde7286985ab48abe2f379bdd272f210",
+      "sites_total": 8,
+      "sites_selected": 5,
+      "site_limit": 5,
+      "sites": [
+        {
+          "event": "CreateFile",
+          "entry_model": "WDM",
+          "pointer_kind": "WRITABLE_IMAGE_SLOT",
+          "dispatch_rva": "0x1c150",
+          "call_rva": "0x13ef",
+          "slot_rva": "0x151d8",
+          "input_buffer_variant_candidate": false,
+          "path_evidence": {
+            "status": "SAT_PARTIAL_MODEL",
+            "modeled_predicates": 0,
+            "witness": {
+              "ioctl_0_32": "0x0"
+            },
+            "scope": "Only tracked integer predicates; not proof of runtime reachability, handle access, or full buffer validity."
+          },
+          "attempts": [
+            {
+              "scenario": {
+                "name": "empty_name",
+                "file_name": "",
+                "ioctl": 0,
+                "input_length": 0,
+                "output_length": 0
+              },
+              "status": "RETURNED_BEFORE_CALLSITE",
+              "instructions": 33,
+              "modeled_import_calls": {
+                "IofCompleteRequest": 1
+              },
+              "unmodeled_import_calls": {},
+              "synthetic_request": true
+            }
+          ],
+          "offline_evidence_score": {
+            "value": 35,
+            "tier": "STATIC_LEAD_ONLY",
+            "scale": "0-85 OFFLINE_EVIDENCE_ONLY",
+            "components": {
+              "rooted_may_flow": 15,
+              "storage_evidence": 20
+            },
+            "not_a_probability": true,
+            "live_user_openability": "UNVERIFIED",
+            "interpretation": "Ranking evidence within the synthetic/static model; not a vulnerability or live-reachability probability."
+          }
+        },
+        {
+          "event": "CreateFile",
+          "entry_model": "WDM",
+          "pointer_kind": "WRITABLE_IMAGE_SLOT",
+          "dispatch_rva": "0x1c150",
+          "call_rva": "0x14ba",
+          "slot_rva": "0x151d8",
+          "input_buffer_variant_candidate": false,
+          "path_evidence": {
+            "status": "SAT_PARTIAL_MODEL",
+            "modeled_predicates": 0,
+            "witness": {
+              "ioctl_0_32": "0x0"
+            },
+            "scope": "Only tracked integer predicates; not proof of runtime reachability, handle access, or full buffer validity."
+          },
+          "attempts": [
+            {
+              "scenario": {
+                "name": "empty_name",
+                "file_name": "",
+                "ioctl": 0,
+                "input_length": 0,
+                "output_length": 0
+              },
+              "status": "RETURNED_BEFORE_CALLSITE",
+              "instructions": 33,
+              "modeled_import_calls": {
+                "IofCompleteRequest": 1
+              },
+              "unmodeled_import_calls": {},
+              "synthetic_request": true
+            }
+          ],
+          "offline_evidence_score": {
+            "value": 35,
+            "tier": "STATIC_LEAD_ONLY",
+            "scale": "0-85 OFFLINE_EVIDENCE_ONLY",
+            "components": {
+              "rooted_may_flow": 15,
+              "storage_evidence": 20
+            },
+            "not_a_probability": true,
+            "live_user_openability": "UNVERIFIED",
+            "interpretation": "Ranking evidence within the synthetic/static model; not a vulnerability or live-reachability probability."
+          }
+        },
+        {
+          "event": "DeviceIoControl",
+          "entry_model": "WDM",
+          "pointer_kind": "WRITABLE_IMAGE_SLOT",
+          "dispatch_rva": "0x1c150",
+          "call_rva": "0x13ef",
+          "slot_rva": "0x151d8",
+          "input_buffer_variant_candidate": false,
+          "path_evidence": {
+            "status": "SAT_PARTIAL_MODEL",
+            "modeled_predicates": 0,
+            "witness": {
+              "ioctl_0_32": "0x0"
+            },
+            "scope": "Only tracked integer predicates; not proof of runtime reachability, handle access, or full buffer validity."
+          },
+          "attempts": [
+            {
+              "scenario": {
+                "name": "ioctl_00000000_len4",
+                "file_name": "",
+                "ioctl": 0,
+                "input_length": 4,
+                "output_length": 64
+              },
+              "status": "RETURNED_BEFORE_CALLSITE",
+              "instructions": 33,
+              "modeled_import_calls": {
+                "IofCompleteRequest": 1
+              },
+              "unmodeled_import_calls": {},
+              "synthetic_request": true
+            },
+            {
+              "scenario": {
+                "name": "ioctl_00000000_len64",
+                "file_name": "",
+                "ioctl": 0,
+                "input_length": 64,
+                "output_length": 64
+              },
+              "status": "RETURNED_BEFORE_CALLSITE",
+              "instructions": 33,
+              "modeled_import_calls": {
+                "IofCompleteRequest": 1
+              },
+              "unmodeled_import_calls": {},
+              "synthetic_request": true
+            },
+            {
+              "scenario": {
+                "name": "ioctl_204f4446_len4",
+                "file_name": "",
+                "ioctl": 542065734,
+                "input_length": 4,
+                "output_length": 64
+              },
+              "status": "RETURNED_BEFORE_CALLSITE",
+              "instructions": 33,
+              "modeled_import_calls": {
+                "IofCompleteRequest": 1
+              },
+              "unmodeled_import_calls": {},
+              "synthetic_request": true
+            },
+            {
+              "scenario": {
+                "name": "ioctl_204f4446_len64",
+                "file_name": "",
+                "ioctl": 542065734,
+                "input_length": 64,
+                "output_length": 64
+              },
+              "status": "RETURNED_BEFORE_CALLSITE",
+              "instructions": 33,
+              "modeled_import_calls": {
+                "IofCompleteRequest": 1
+              },
+              "unmodeled_import_calls": {},
+              "synthetic_request": true
+            },
+            {
+              "scenario": {
+                "name": "ioctl_00226000_len4",
+                "file_name": "",
+                "ioctl": 2252800,
+                "input_length": 4,
+                "output_length": 64
+              },
+              "status": "RETURNED_BEFORE_CALLSITE",
+              "instructions": 33,
+              "modeled_import_calls": {
+                "IofCompleteRequest": 1
+              },
+              "unmodeled_import_calls": {},
+              "synthetic_request": true
+            },
+            {
+              "scenario": {
+                "name": "ioctl_00226000_len64",
+                "file_name": "",
+                "ioctl": 2252800,
+                "input_length": 64,
+                "output_length": 64
+              },
+              "status": "RETURNED_BEFORE_CALLSITE",
+              "instructions": 33,
+              "modeled_import_calls": {
+                "IofCompleteRequest": 1
+              },
+              "unmodeled_import_calls": {},
+              "synthetic_request": true
+            }
+          ],
+          "offline_evidence_score": {
+            "value": 35,
+            "tier": "STATIC_LEAD_ONLY",
+            "scale": "0-85 OFFLINE_EVIDENCE_ONLY",
+            "components": {
+              "rooted_may_flow": 15,
+              "storage_evidence": 20
+            },
+            "not_a_probability": true,
+            "live_user_openability": "UNVERIFIED",
+            "interpretation": "Ranking evidence within the synthetic/static model; not a vulnerability or live-reachability probability."
+          }
+        },
+        {
+          "event": "DeviceIoControl",
+          "entry_model": "WDM",
+          "pointer_kind": "WRITABLE_IMAGE_SLOT",
+          "dispatch_rva": "0x1c150",
+          "call_rva": "0x14ba",
+          "slot_rva": "0x151d8",
+          "input_buffer_variant_candidate": false,
+          "path_evidence": {
+            "status": "SAT_PARTIAL_MODEL",
+            "modeled_predicates": 0,
+            "witness": {
+              "ioctl_0_32": "0x0"
+            },
+            "scope": "Only tracked integer predicates; not proof of runtime reachability, handle access, or full buffer validity."
+          },
+          "attempts": [
+            {
+              "scenario": {
+                "name": "ioctl_00000000_len4",
+                "file_name": "",
+                "ioctl": 0,
+                "input_length": 4,
+                "output_length": 64
+              },
+              "status": "RETURNED_BEFORE_CALLSITE",
+              "instructions": 33,
+              "modeled_import_calls": {
+                "IofCompleteRequest": 1
+              },
+              "unmodeled_import_calls": {},
+              "synthetic_request": true
+            },
+            {
+              "scenario": {
+                "name": "ioctl_00000000_len64",
+                "file_name": "",
+                "ioctl": 0,
+                "input_length": 64,
+                "output_length": 64
+              },
+              "status": "RETURNED_BEFORE_CALLSITE",
+              "instructions": 33,
+              "modeled_import_calls": {
+                "IofCompleteRequest": 1
+              },
+              "unmodeled_import_calls": {},
+              "synthetic_request": true
+            },
+            {
+              "scenario": {
+                "name": "ioctl_204f4446_len4",
+                "file_name": "",
+                "ioctl": 542065734,
+                "input_length": 4,
+                "output_length": 64
+              },
+              "status": "RETURNED_BEFORE_CALLSITE",
+              "instructions": 33,
+              "modeled_import_calls": {
+                "IofCompleteRequest": 1
+              },
+              "unmodeled_import_calls": {},
+              "synthetic_request": true
+            },
+            {
+              "scenario": {
+                "name": "ioctl_204f4446_len64",
+                "file_name": "",
+                "ioctl": 542065734,
+                "input_length": 64,
+                "output_length": 64
+              },
+              "status": "RETURNED_BEFORE_CALLSITE",
+              "instructions": 33,
+              "modeled_import_calls": {
+                "IofCompleteRequest": 1
+              },
+              "unmodeled_import_calls": {},
+              "synthetic_request": true
+            },
+            {
+              "scenario": {
+                "name": "ioctl_00226000_len4",
+                "file_name": "",
+                "ioctl": 2252800,
+                "input_length": 4,
+                "output_length": 64
+              },
+              "status": "RETURNED_BEFORE_CALLSITE",
+              "instructions": 33,
+              "modeled_import_calls": {
+                "IofCompleteRequest": 1
+              },
+              "unmodeled_import_calls": {},
+              "synthetic_request": true
+            },
+            {
+              "scenario": {
+                "name": "ioctl_00226000_len64",
+                "file_name": "",
+                "ioctl": 2252800,
+                "input_length": 64,
+                "output_length": 64
+              },
+              "status": "RETURNED_BEFORE_CALLSITE",
+              "instructions": 33,
+              "modeled_import_calls": {
+                "IofCompleteRequest": 1
+              },
+              "unmodeled_import_calls": {},
+              "synthetic_request": true
+            }
+          ],
+          "offline_evidence_score": {
+            "value": 35,
+            "tier": "STATIC_LEAD_ONLY",
+            "scale": "0-85 OFFLINE_EVIDENCE_ONLY",
+            "components": {
+              "rooted_may_flow": 15,
+              "storage_evidence": 20
+            },
+            "not_a_probability": true,
+            "live_user_openability": "UNVERIFIED",
+            "interpretation": "Ranking evidence within the synthetic/static model; not a vulnerability or live-reachability probability."
+          }
+        },
+        {
+          "event": "ReadFile",
+          "entry_model": "WDM",
+          "pointer_kind": "WRITABLE_IMAGE_SLOT",
+          "dispatch_rva": "0x1c150",
+          "call_rva": "0x13ef",
+          "slot_rva": "0x151d8",
+          "input_buffer_variant_candidate": false,
+          "path_evidence": {
+            "status": "SAT_PARTIAL_MODEL",
+            "modeled_predicates": 0,
+            "witness": {
+              "ioctl_0_32": "0x0"
+            },
+            "scope": "Only tracked integer predicates; not proof of runtime reachability, handle access, or full buffer validity."
+          },
+          "attempts": [
+            {
+              "scenario": {
+                "name": "readfile_64",
+                "file_name": "",
+                "ioctl": 0,
+                "input_length": 64,
+                "output_length": 64
+              },
+              "status": "RETURNED_BEFORE_CALLSITE",
+              "instructions": 33,
+              "modeled_import_calls": {
+                "IofCompleteRequest": 1
+              },
+              "unmodeled_import_calls": {},
+              "synthetic_request": true
+            }
+          ],
+          "offline_evidence_score": {
+            "value": 35,
+            "tier": "STATIC_LEAD_ONLY",
+            "scale": "0-85 OFFLINE_EVIDENCE_ONLY",
+            "components": {
+              "rooted_may_flow": 15,
+              "storage_evidence": 20
+            },
+            "not_a_probability": true,
+            "live_user_openability": "UNVERIFIED",
+            "interpretation": "Ranking evidence within the synthetic/static model; not a vulnerability or live-reachability probability."
+          }
+        }
+      ],
+      "installed_image_unchanged": true,
+      "evidence_scope": "Synthetic model only. No live device, OS I/O manager, real KMDF queue, handle ACL, or user request was exercised.",
+      "no_live_reachability_claim": true,
+      "file": "C:\\Windows\\System32\\drivers\\bthenum.sys"
+    },
+    {
+      "schema_version": 1,
+      "engine": "Unicorn synthetic WDM request replay",
+      "image_sha256": "520f7e4649fe6c3432fc6c89889a58cf8ed1f10032a231e63dfb2b39f2fc11ca",
+      "sites_total": 11,
+      "sites_selected": 5,
+      "site_limit": 5,
+      "sites": [
+        {
+          "event": "CreateFile",
+          "entry_model": "WDM",
+          "pointer_kind": "IMAGE_POINTER_TABLE",
+          "dispatch_rva": "0x13eb0",
+          "call_rva": "0x1411c",
+          "slot_rva": "0xd0f0",
+          "input_buffer_variant_candidate": false,
+          "path_evidence": null,
+          "attempts": [
+            {
+              "scenario": {
+                "name": "empty_name",
+                "file_name": "",
+                "ioctl": 0,
+                "input_length": 0,
+                "output_length": 0
+              },
+              "status": "RETURNED_BEFORE_CALLSITE",
+              "instructions": 42,
+              "modeled_import_calls": {
+                "IofCompleteRequest": 1
+              },
+              "unmodeled_import_calls": {},
+              "synthetic_request": true
+            }
+          ],
+          "offline_evidence_score": {
+            "value": 45,
+            "tier": "STATIC_LEAD_ONLY",
+            "scale": "0-85 OFFLINE_EVIDENCE_ONLY",
+            "components": {
+              "rooted_may_flow": 15,
+              "storage_evidence": 20,
+              "initial_local_target": 10
+            },
+            "not_a_probability": true,
+            "live_user_openability": "UNVERIFIED",
+            "interpretation": "Ranking evidence within the synthetic/static model; not a vulnerability or live-reachability probability."
+          }
+        },
+        {
+          "event": "CreateFile",
+          "entry_model": "WDM",
+          "pointer_kind": "WRITABLE_IMAGE_SLOT",
+          "dispatch_rva": "0x13eb0",
+          "call_rva": "0x3a0a",
+          "slot_rva": "0xf260",
+          "input_buffer_variant_candidate": false,
+          "path_evidence": {
+            "status": "SAT_PARTIAL_MODEL",
+            "modeled_predicates": 0,
+            "witness": {
+              "ioctl_0_32": "0x0"
+            },
+            "scope": "Only tracked integer predicates; not proof of runtime reachability, handle access, or full buffer validity."
+          },
+          "attempts": [
+            {
+              "scenario": {
+                "name": "empty_name",
+                "file_name": "",
+                "ioctl": 0,
+                "input_length": 0,
+                "output_length": 0
+              },
+              "status": "RETURNED_BEFORE_CALLSITE",
+              "instructions": 42,
+              "modeled_import_calls": {
+                "IofCompleteRequest": 1
+              },
+              "unmodeled_import_calls": {},
+              "synthetic_request": true
+            }
+          ],
+          "offline_evidence_score": {
+            "value": 35,
+            "tier": "STATIC_LEAD_ONLY",
+            "scale": "0-85 OFFLINE_EVIDENCE_ONLY",
+            "components": {
+              "rooted_may_flow": 15,
+              "storage_evidence": 20
+            },
+            "not_a_probability": true,
+            "live_user_openability": "UNVERIFIED",
+            "interpretation": "Ranking evidence within the synthetic/static model; not a vulnerability or live-reachability probability."
+          }
+        },
+        {
+          "event": "CreateFile",
+          "entry_model": "WDM",
+          "pointer_kind": "WRITABLE_IMAGE_SLOT",
+          "dispatch_rva": "0x13eb0",
+          "call_rva": "0x3a59",
+          "slot_rva": "0xf260",
+          "input_buffer_variant_candidate": false,
+          "path_evidence": null,
+          "attempts": [
+            {
+              "scenario": {
+                "name": "empty_name",
+                "file_name": "",
+                "ioctl": 0,
+                "input_length": 0,
+                "output_length": 0
+              },
+              "status": "RETURNED_BEFORE_CALLSITE",
+              "instructions": 42,
+              "modeled_import_calls": {
+                "IofCompleteRequest": 1
+              },
+              "unmodeled_import_calls": {},
+              "synthetic_request": true
+            }
+          ],
+          "offline_evidence_score": {
+            "value": 35,
+            "tier": "STATIC_LEAD_ONLY",
+            "scale": "0-85 OFFLINE_EVIDENCE_ONLY",
+            "components": {
+              "rooted_may_flow": 15,
+              "storage_evidence": 20
+            },
+            "not_a_probability": true,
+            "live_user_openability": "UNVERIFIED",
+            "interpretation": "Ranking evidence within the synthetic/static model; not a vulnerability or live-reachability probability."
+          }
+        },
+        {
+          "event": "CreateFile",
+          "entry_model": "WDM",
+          "pointer_kind": "WRITABLE_IMAGE_SLOT",
+          "dispatch_rva": "0x13eb0",
+          "call_rva": "0x3a9c",
+          "slot_rva": "0xf260",
+          "input_buffer_variant_candidate": false,
+          "path_evidence": null,
+          "attempts": [
+            {
+              "scenario": {
+                "name": "empty_name",
+                "file_name": "",
+                "ioctl": 0,
+                "input_length": 0,
+                "output_length": 0
+              },
+              "status": "RETURNED_BEFORE_CALLSITE",
+              "instructions": 42,
+              "modeled_import_calls": {
+                "IofCompleteRequest": 1
+              },
+              "unmodeled_import_calls": {},
+              "synthetic_request": true
+            }
+          ],
+          "offline_evidence_score": {
+            "value": 35,
+            "tier": "STATIC_LEAD_ONLY",
+            "scale": "0-85 OFFLINE_EVIDENCE_ONLY",
+            "components": {
+              "rooted_may_flow": 15,
+              "storage_evidence": 20
+            },
+            "not_a_probability": true,
+            "live_user_openability": "UNVERIFIED",
+            "interpretation": "Ranking evidence within the synthetic/static model; not a vulnerability or live-reachability probability."
+          }
+        },
+        {
+          "event": "CreateFile",
+          "entry_model": "WDM",
+          "pointer_kind": "WRITABLE_IMAGE_SLOT",
+          "dispatch_rva": "0x13eb0",
+          "call_rva": "0x3d31",
+          "slot_rva": "0xf260",
+          "input_buffer_variant_candidate": false,
+          "path_evidence": {
+            "status": "SAT_PARTIAL_MODEL",
+            "modeled_predicates": 1,
+            "witness": {
+              "systembuffer_pointer_64": "0xffffffffffffffff",
+              "ioctl_0_32": "0x0"
+            },
+            "scope": "Only tracked integer predicates; not proof of runtime reachability, handle access, or full buffer validity."
+          },
+          "attempts": [
+            {
+              "scenario": {
+                "name": "empty_name",
+                "file_name": "",
+                "ioctl": 0,
+                "input_length": 0,
+                "output_length": 0
+              },
+              "status": "RETURNED_BEFORE_CALLSITE",
+              "instructions": 42,
+              "modeled_import_calls": {
+                "IofCompleteRequest": 1
+              },
+              "unmodeled_import_calls": {},
+              "synthetic_request": true
+            }
+          ],
+          "offline_evidence_score": {
+            "value": 45,
+            "tier": "STATIC_LEAD_ONLY",
+            "scale": "0-85 OFFLINE_EVIDENCE_ONLY",
+            "components": {
+              "rooted_may_flow": 15,
+              "storage_evidence": 20,
+              "tracked_path_predicates_sat": 10
+            },
+            "not_a_probability": true,
+            "live_user_openability": "UNVERIFIED",
+            "interpretation": "Ranking evidence within the synthetic/static model; not a vulnerability or live-reachability probability."
+          }
+        }
+      ],
+      "installed_image_unchanged": true,
+      "evidence_scope": "Synthetic model only. No live device, OS I/O manager, real KMDF queue, handle ACL, or user request was exercised.",
+      "no_live_reachability_claim": true,
+      "file": "C:\\Windows\\System32\\drivers\\lltdio.sys"
+    },
+    {
+      "schema_version": 1,
+      "engine": "Unicorn synthetic WDM request replay",
+      "image_sha256": "ac39cd989946c2bb1f3d5619467b10fbc4395aa69988fed7f08e171da96363df",
+      "sites_total": 10,
+      "sites_selected": 5,
+      "site_limit": 5,
+      "sites": [
+        {
+          "event": "CreateFile",
+          "entry_model": "WDM",
+          "pointer_kind": "READ_ONLY_IMAGE_POINTER",
+          "dispatch_rva": "0xeac0",
+          "call_rva": "0xeb1f",
+          "slot_rva": "0x8700",
+          "input_buffer_variant_candidate": false,
+          "path_evidence": null,
+          "attempts": [
+            {
+              "scenario": {
+                "name": "matching_name",
+                "file_name": "\\MmThread",
+                "ioctl": 0,
+                "input_length": 0,
+                "output_length": 0
+              },
+              "status": "CALLSITE_HIT",
+              "instructions": 28,
+              "modeled_import_calls": {
+                "RtlCompareUnicodeString": 1
+              },
+              "unmodeled_import_calls": {},
+              "synthetic_request": true,
+              "actual_target_rva": "0xd7e0",
+              "actual_target_in_image": true,
+              "slot_rva": "0x8700",
+              "observed_storage_address": null,
+              "observed_storage_region": "UNRESOLVED_OR_REGISTER",
+              "target_matches_image_pointer": true
+            }
+          ],
+          "offline_evidence_score": {
+            "value": 75,
+            "tier": "STRONG_SYNTHETIC_EVIDENCE",
+            "scale": "0-85 OFFLINE_EVIDENCE_ONLY",
+            "components": {
+              "rooted_may_flow": 15,
+              "storage_evidence": 20,
+              "initial_local_target": 10,
+              "synthetic_callsite_hit": 20,
+              "synthetic_target_match": 10
+            },
+            "not_a_probability": true,
+            "live_user_openability": "UNVERIFIED",
+            "interpretation": "Ranking evidence within the synthetic/static model; not a vulnerability or live-reachability probability."
+          }
+        },
+        {
+          "event": "CreateFile",
+          "entry_model": "WDM",
+          "pointer_kind": "READ_ONLY_IMAGE_POINTER",
+          "dispatch_rva": "0xeac0",
+          "call_rva": "0xeb1f",
+          "slot_rva": "0x8718",
+          "input_buffer_variant_candidate": false,
+          "path_evidence": null,
+          "attempts": [
+            {
+              "scenario": {
+                "name": "matching_name",
+                "file_name": "\\Notification",
+                "ioctl": 0,
+                "input_length": 0,
+                "output_length": 0
+              },
+              "status": "CALLSITE_HIT",
+              "instructions": 42,
+              "modeled_import_calls": {
+                "RtlCompareUnicodeString": 2
+              },
+              "unmodeled_import_calls": {},
+              "synthetic_request": true,
+              "actual_target_rva": "0xc240",
+              "actual_target_in_image": true,
+              "slot_rva": "0x8718",
+              "observed_storage_address": null,
+              "observed_storage_region": "UNRESOLVED_OR_REGISTER",
+              "target_matches_image_pointer": true
+            }
+          ],
+          "offline_evidence_score": {
+            "value": 75,
+            "tier": "STRONG_SYNTHETIC_EVIDENCE",
+            "scale": "0-85 OFFLINE_EVIDENCE_ONLY",
+            "components": {
+              "rooted_may_flow": 15,
+              "storage_evidence": 20,
+              "initial_local_target": 10,
+              "synthetic_callsite_hit": 20,
+              "synthetic_target_match": 10
+            },
+            "not_a_probability": true,
+            "live_user_openability": "UNVERIFIED",
+            "interpretation": "Ranking evidence within the synthetic/static model; not a vulnerability or live-reachability probability."
+          }
+        },
+        {
+          "event": "CreateFile",
+          "entry_model": "WDM",
+          "pointer_kind": "READ_ONLY_IMAGE_POINTER",
+          "dispatch_rva": "0xeac0",
+          "call_rva": "0xeb1f",
+          "slot_rva": "0x8730",
+          "input_buffer_variant_candidate": false,
+          "path_evidence": null,
+          "attempts": [
+            {
+              "scenario": {
+                "name": "matching_name",
+                "file_name": "\\TaskIndex",
+                "ioctl": 0,
+                "input_length": 0,
+                "output_length": 0
+              },
+              "status": "CALLSITE_HIT",
+              "instructions": 56,
+              "modeled_import_calls": {
+                "RtlCompareUnicodeString": 3
+              },
+              "unmodeled_import_calls": {},
+              "synthetic_request": true,
+              "actual_target_rva": "0xd400",
+              "actual_target_in_image": true,
+              "slot_rva": "0x8730",
+              "observed_storage_address": null,
+              "observed_storage_region": "UNRESOLVED_OR_REGISTER",
+              "target_matches_image_pointer": true
+            }
+          ],
+          "offline_evidence_score": {
+            "value": 75,
+            "tier": "STRONG_SYNTHETIC_EVIDENCE",
+            "scale": "0-85 OFFLINE_EVIDENCE_ONLY",
+            "components": {
+              "rooted_may_flow": 15,
+              "storage_evidence": 20,
+              "initial_local_target": 10,
+              "synthetic_callsite_hit": 20,
+              "synthetic_target_match": 10
+            },
+            "not_a_probability": true,
+            "live_user_openability": "UNVERIFIED",
+            "interpretation": "Ranking evidence within the synthetic/static model; not a vulnerability or live-reachability probability."
+          }
+        },
+        {
+          "event": "CreateFile",
+          "entry_model": "WDM",
+          "pointer_kind": "WRITABLE_IMAGE_SLOT",
+          "dispatch_rva": "0xeac0",
+          "call_rva": "0x463d",
+          "slot_rva": "0x90f8",
+          "input_buffer_variant_candidate": false,
+          "path_evidence": null,
+          "attempts": [
+            {
+              "scenario": {
+                "name": "empty_name",
+                "file_name": "",
+                "ioctl": 0,
+                "input_length": 0,
+                "output_length": 0
+              },
+              "status": "RETURNED_BEFORE_CALLSITE",
+              "instructions": 77,
+              "modeled_import_calls": {
+                "RtlCompareUnicodeString": 3,
+                "IofCompleteRequest": 1
+              },
+              "unmodeled_import_calls": {},
+              "synthetic_request": true
+            }
+          ],
+          "offline_evidence_score": {
+            "value": 35,
+            "tier": "STATIC_LEAD_ONLY",
+            "scale": "0-85 OFFLINE_EVIDENCE_ONLY",
+            "components": {
+              "rooted_may_flow": 15,
+              "storage_evidence": 20
+            },
+            "not_a_probability": true,
+            "live_user_openability": "UNVERIFIED",
+            "interpretation": "Ranking evidence within the synthetic/static model; not a vulnerability or live-reachability probability."
+          }
+        },
+        {
+          "event": "CreateFile",
+          "entry_model": "WDM",
+          "pointer_kind": "WRITABLE_IMAGE_SLOT",
+          "dispatch_rva": "0xeac0",
+          "call_rva": "0x47c2",
+          "slot_rva": "0x90f8",
+          "input_buffer_variant_candidate": false,
+          "path_evidence": {
+            "status": "SAT_PARTIAL_MODEL",
+            "modeled_predicates": 3,
+            "witness": {
+              "buffer_data_11_8": "0x0",
+              "buffer_data_0_32": "0x0",
+              "buffer_data_4_8": "0x0",
+              "buffer_data_5_8": "0x0",
+              "buffer_data_6_16": "0x107",
+              "buffer_data_8_8": "0x0",
+              "buffer_data_9_8": "0x0",
+              "buffer_data_10_8": "0x0",
+              "ioctl_0_32": "0x0"
+            },
+            "scope": "Only tracked integer predicates; not proof of runtime reachability, handle access, or full buffer validity."
+          },
+          "attempts": [
+            {
+              "scenario": {
+                "name": "empty_name",
+                "file_name": "",
+                "ioctl": 0,
+                "input_length": 0,
+                "output_length": 0
+              },
+              "status": "RETURNED_BEFORE_CALLSITE",
+              "instructions": 77,
+              "modeled_import_calls": {
+                "RtlCompareUnicodeString": 3,
+                "IofCompleteRequest": 1
+              },
+              "unmodeled_import_calls": {},
+              "synthetic_request": true
+            }
+          ],
+          "offline_evidence_score": {
+            "value": 45,
+            "tier": "STATIC_LEAD_ONLY",
+            "scale": "0-85 OFFLINE_EVIDENCE_ONLY",
+            "components": {
+              "rooted_may_flow": 15,
+              "storage_evidence": 20,
+              "tracked_path_predicates_sat": 10
+            },
+            "not_a_probability": true,
+            "live_user_openability": "UNVERIFIED",
+            "interpretation": "Ranking evidence within the synthetic/static model; not a vulnerability or live-reachability probability."
+          }
+        }
+      ],
+      "installed_image_unchanged": true,
+      "evidence_scope": "Synthetic model only. No live device, OS I/O manager, real KMDF queue, handle ACL, or user request was exercised.",
+      "no_live_reachability_claim": true,
+      "file": "C:\\Windows\\System32\\drivers\\mmcss.sys"
+    },
+    {
+      "schema_version": 1,
+      "engine": "Unicorn synthetic WDM request replay",
+      "image_sha256": "cf27339f9e549fb455cd54b3fd4c5f030500ab47a7929f23b909195ac9a91910",
+      "sites_total": 10,
+      "sites_selected": 5,
+      "site_limit": 5,
+      "sites": [
+        {
+          "event": "DeviceIoControl",
+          "entry_model": "WDM",
+          "pointer_kind": "IMAGE_POINTER_TABLE",
+          "dispatch_rva": "0x5450",
+          "call_rva": "0x5b24",
+          "slot_rva": "0xd008",
+          "input_buffer_variant_candidate": false,
+          "path_evidence": null,
+          "attempts": [
+            {
+              "scenario": {
+                "name": "ioctl_8fff23dc_len4",
+                "file_name": "",
+                "ioctl": 2415862748,
+                "input_length": 4,
+                "output_length": 64
+              },
+              "status": "EMU_ERROR",
+              "instructions": 21,
+              "modeled_import_calls": {},
+              "unmodeled_import_calls": {},
+              "synthetic_request": true,
+              "error": "Invalid memory read (UC_ERR_READ_UNMAPPED)",
+              "fault_rva": "0x5499"
+            },
+            {
+              "scenario": {
+                "name": "ioctl_8fff23dc_len64",
+                "file_name": "",
+                "ioctl": 2415862748,
+                "input_length": 64,
+                "output_length": 64
+              },
+              "status": "EMU_ERROR",
+              "instructions": 21,
+              "modeled_import_calls": {},
+              "unmodeled_import_calls": {},
+              "synthetic_request": true,
+              "error": "Invalid memory read (UC_ERR_READ_UNMAPPED)",
+              "fault_rva": "0x5499"
+            },
+            {
+              "scenario": {
+                "name": "ioctl_8fff23d8_len4",
+                "file_name": "",
+                "ioctl": 2415862744,
+                "input_length": 4,
+                "output_length": 64
+              },
+              "status": "EMU_ERROR",
+              "instructions": 21,
+              "modeled_import_calls": {},
+              "unmodeled_import_calls": {},
+              "synthetic_request": true,
+              "error": "Invalid memory read (UC_ERR_READ_UNMAPPED)",
+              "fault_rva": "0x5499"
+            },
+            {
+              "scenario": {
+                "name": "ioctl_8fff23d8_len64",
+                "file_name": "",
+                "ioctl": 2415862744,
+                "input_length": 64,
+                "output_length": 64
+              },
+              "status": "EMU_ERROR",
+              "instructions": 21,
+              "modeled_import_calls": {},
+              "unmodeled_import_calls": {},
+              "synthetic_request": true,
+              "error": "Invalid memory read (UC_ERR_READ_UNMAPPED)",
+              "fault_rva": "0x5499"
+            },
+            {
+              "scenario": {
+                "name": "ioctl_8fff23d4_len4",
+                "file_name": "",
+                "ioctl": 2415862740,
+                "input_length": 4,
+                "output_length": 64
+              },
+              "status": "EMU_ERROR",
+              "instructions": 21,
+              "modeled_import_calls": {},
+              "unmodeled_import_calls": {},
+              "synthetic_request": true,
+              "error": "Invalid memory read (UC_ERR_READ_UNMAPPED)",
+              "fault_rva": "0x5499"
+            },
+            {
+              "scenario": {
+                "name": "ioctl_8fff23d4_len64",
+                "file_name": "",
+                "ioctl": 2415862740,
+                "input_length": 64,
+                "output_length": 64
+              },
+              "status": "EMU_ERROR",
+              "instructions": 21,
+              "modeled_import_calls": {},
+              "unmodeled_import_calls": {},
+              "synthetic_request": true,
+              "error": "Invalid memory read (UC_ERR_READ_UNMAPPED)",
+              "fault_rva": "0x5499"
+            }
+          ],
+          "offline_evidence_score": {
+            "value": 45,
+            "tier": "STATIC_LEAD_ONLY",
+            "scale": "0-85 OFFLINE_EVIDENCE_ONLY",
+            "components": {
+              "rooted_may_flow": 15,
+              "storage_evidence": 20,
+              "initial_local_target": 10
+            },
+            "not_a_probability": true,
+            "live_user_openability": "UNVERIFIED",
+            "interpretation": "Ranking evidence within the synthetic/static model; not a vulnerability or live-reachability probability."
+          }
+        },
+        {
+          "event": "CreateFile",
+          "entry_model": "WDM",
+          "pointer_kind": "WRITABLE_IMAGE_SLOT",
+          "dispatch_rva": "0x53c0",
+          "call_rva": "0x1c64",
+          "slot_rva": "0xd5d8",
+          "input_buffer_variant_candidate": false,
+          "path_evidence": {
+            "status": "SAT_PARTIAL_MODEL",
+            "modeled_predicates": 0,
+            "witness": {
+              "ioctl_0_32": "0x0"
+            },
+            "scope": "Only tracked integer predicates; not proof of runtime reachability, handle access, or full buffer validity."
+          },
+          "attempts": [
+            {
+              "scenario": {
+                "name": "empty_name",
+                "file_name": "",
+                "ioctl": 0,
+                "input_length": 0,
+                "output_length": 0
+              },
+              "status": "RETURNED_BEFORE_CALLSITE",
+              "instructions": 25,
+              "modeled_import_calls": {
+                "MmLockPagableDataSection": 1,
+                "IofCompleteRequest": 1
+              },
+              "unmodeled_import_calls": {
+                "MmLockPagableDataSection": 1
+              },
+              "synthetic_request": true
+            }
+          ],
+          "offline_evidence_score": {
+            "value": 35,
+            "tier": "STATIC_LEAD_ONLY",
+            "scale": "0-85 OFFLINE_EVIDENCE_ONLY",
+            "components": {
+              "rooted_may_flow": 15,
+              "storage_evidence": 20
+            },
+            "not_a_probability": true,
+            "live_user_openability": "UNVERIFIED",
+            "interpretation": "Ranking evidence within the synthetic/static model; not a vulnerability or live-reachability probability."
+          }
+        },
+        {
+          "event": "DeviceIoControl",
+          "entry_model": "WDM",
+          "pointer_kind": "WRITABLE_IMAGE_SLOT",
+          "dispatch_rva": "0x5450",
+          "call_rva": "0x1bde",
+          "slot_rva": "0xd5d8",
+          "input_buffer_variant_candidate": false,
+          "path_evidence": {
+            "status": "SAT_PARTIAL_MODEL",
+            "modeled_predicates": 4,
+            "witness": {
+              "input_length_0_32": "0xc",
+              "buffer_data_0_64": "0x0",
+              "ioctl_0_32": "0x8fff23d0"
+            },
+            "scope": "Only tracked integer predicates; not proof of runtime reachability, handle access, or full buffer validity."
+          },
+          "attempts": [
+            {
+              "scenario": {
+                "name": "ioctl_8fff23d0_len12",
+                "file_name": "",
+                "ioctl": 2415862736,
+                "input_length": 12,
+                "output_length": 64
+              },
+              "status": "EMU_ERROR",
+              "instructions": 21,
+              "modeled_import_calls": {},
+              "unmodeled_import_calls": {},
+              "synthetic_request": true,
+              "error": "Invalid memory read (UC_ERR_READ_UNMAPPED)",
+              "fault_rva": "0x5499"
+            },
+            {
+              "scenario": {
+                "name": "ioctl_8fff23d0_len4",
+                "file_name": "",
+                "ioctl": 2415862736,
+                "input_length": 4,
+                "output_length": 64
+              },
+              "status": "EMU_ERROR",
+              "instructions": 21,
+              "modeled_import_calls": {},
+              "unmodeled_import_calls": {},
+              "synthetic_request": true,
+              "error": "Invalid memory read (UC_ERR_READ_UNMAPPED)",
+              "fault_rva": "0x5499"
+            },
+            {
+              "scenario": {
+                "name": "ioctl_8fff23dc_len12",
+                "file_name": "",
+                "ioctl": 2415862748,
+                "input_length": 12,
+                "output_length": 64
+              },
+              "status": "EMU_ERROR",
+              "instructions": 21,
+              "modeled_import_calls": {},
+              "unmodeled_import_calls": {},
+              "synthetic_request": true,
+              "error": "Invalid memory read (UC_ERR_READ_UNMAPPED)",
+              "fault_rva": "0x5499"
+            },
+            {
+              "scenario": {
+                "name": "ioctl_8fff23dc_len4",
+                "file_name": "",
+                "ioctl": 2415862748,
+                "input_length": 4,
+                "output_length": 64
+              },
+              "status": "EMU_ERROR",
+              "instructions": 21,
+              "modeled_import_calls": {},
+              "unmodeled_import_calls": {},
+              "synthetic_request": true,
+              "error": "Invalid memory read (UC_ERR_READ_UNMAPPED)",
+              "fault_rva": "0x5499"
+            },
+            {
+              "scenario": {
+                "name": "ioctl_8fff23d8_len12",
+                "file_name": "",
+                "ioctl": 2415862744,
+                "input_length": 12,
+                "output_length": 64
+              },
+              "status": "EMU_ERROR",
+              "instructions": 21,
+              "modeled_import_calls": {},
+              "unmodeled_import_calls": {},
+              "synthetic_request": true,
+              "error": "Invalid memory read (UC_ERR_READ_UNMAPPED)",
+              "fault_rva": "0x5499"
+            },
+            {
+              "scenario": {
+                "name": "ioctl_8fff23d8_len4",
+                "file_name": "",
+                "ioctl": 2415862744,
+                "input_length": 4,
+                "output_length": 64
+              },
+              "status": "EMU_ERROR",
+              "instructions": 21,
+              "modeled_import_calls": {},
+              "unmodeled_import_calls": {},
+              "synthetic_request": true,
+              "error": "Invalid memory read (UC_ERR_READ_UNMAPPED)",
+              "fault_rva": "0x5499"
+            }
+          ],
+          "offline_evidence_score": {
+            "value": 45,
+            "tier": "STATIC_LEAD_ONLY",
+            "scale": "0-85 OFFLINE_EVIDENCE_ONLY",
+            "components": {
+              "rooted_may_flow": 15,
+              "storage_evidence": 20,
+              "tracked_path_predicates_sat": 10
+            },
+            "not_a_probability": true,
+            "live_user_openability": "UNVERIFIED",
+            "interpretation": "Ranking evidence within the synthetic/static model; not a vulnerability or live-reachability probability."
+          }
+        },
+        {
+          "event": "DeviceIoControl",
+          "entry_model": "WDM",
+          "pointer_kind": "WRITABLE_IMAGE_SLOT",
+          "dispatch_rva": "0x5450",
+          "call_rva": "0x1c20",
+          "slot_rva": "0xd5d8",
+          "input_buffer_variant_candidate": false,
+          "path_evidence": {
+            "status": "SAT_PARTIAL_MODEL",
+            "modeled_predicates": 6,
+            "witness": {
+              "input_length_0_32": "0x8",
+              "ioctl_0_32": "0x8fff23d8"
+            },
+            "scope": "Only tracked integer predicates; not proof of runtime reachability, handle access, or full buffer validity."
+          },
+          "attempts": [
+            {
+              "scenario": {
+                "name": "ioctl_8fff23d8_len8",
+                "file_name": "",
+                "ioctl": 2415862744,
+                "input_length": 8,
+                "output_length": 64
+              },
+              "status": "EMU_ERROR",
+              "instructions": 21,
+              "modeled_import_calls": {},
+              "unmodeled_import_calls": {},
+              "synthetic_request": true,
+              "error": "Invalid memory read (UC_ERR_READ_UNMAPPED)",
+              "fault_rva": "0x5499"
+            },
+            {
+              "scenario": {
+                "name": "ioctl_8fff23d8_len4",
+                "file_name": "",
+                "ioctl": 2415862744,
+                "input_length": 4,
+                "output_length": 64
+              },
+              "status": "EMU_ERROR",
+              "instructions": 21,
+              "modeled_import_calls": {},
+              "unmodeled_import_calls": {},
+              "synthetic_request": true,
+              "error": "Invalid memory read (UC_ERR_READ_UNMAPPED)",
+              "fault_rva": "0x5499"
+            },
+            {
+              "scenario": {
+                "name": "ioctl_8fff23dc_len8",
+                "file_name": "",
+                "ioctl": 2415862748,
+                "input_length": 8,
+                "output_length": 64
+              },
+              "status": "EMU_ERROR",
+              "instructions": 21,
+              "modeled_import_calls": {},
+              "unmodeled_import_calls": {},
+              "synthetic_request": true,
+              "error": "Invalid memory read (UC_ERR_READ_UNMAPPED)",
+              "fault_rva": "0x5499"
+            },
+            {
+              "scenario": {
+                "name": "ioctl_8fff23dc_len4",
+                "file_name": "",
+                "ioctl": 2415862748,
+                "input_length": 4,
+                "output_length": 64
+              },
+              "status": "EMU_ERROR",
+              "instructions": 21,
+              "modeled_import_calls": {},
+              "unmodeled_import_calls": {},
+              "synthetic_request": true,
+              "error": "Invalid memory read (UC_ERR_READ_UNMAPPED)",
+              "fault_rva": "0x5499"
+            },
+            {
+              "scenario": {
+                "name": "ioctl_8fff23d4_len8",
+                "file_name": "",
+                "ioctl": 2415862740,
+                "input_length": 8,
+                "output_length": 64
+              },
+              "status": "EMU_ERROR",
+              "instructions": 21,
+              "modeled_import_calls": {},
+              "unmodeled_import_calls": {},
+              "synthetic_request": true,
+              "error": "Invalid memory read (UC_ERR_READ_UNMAPPED)",
+              "fault_rva": "0x5499"
+            },
+            {
+              "scenario": {
+                "name": "ioctl_8fff23d4_len4",
+                "file_name": "",
+                "ioctl": 2415862740,
+                "input_length": 4,
+                "output_length": 64
+              },
+              "status": "EMU_ERROR",
+              "instructions": 21,
+              "modeled_import_calls": {},
+              "unmodeled_import_calls": {},
+              "synthetic_request": true,
+              "error": "Invalid memory read (UC_ERR_READ_UNMAPPED)",
+              "fault_rva": "0x5499"
+            }
+          ],
+          "offline_evidence_score": {
+            "value": 45,
+            "tier": "STATIC_LEAD_ONLY",
+            "scale": "0-85 OFFLINE_EVIDENCE_ONLY",
+            "components": {
+              "rooted_may_flow": 15,
+              "storage_evidence": 20,
+              "tracked_path_predicates_sat": 10
+            },
+            "not_a_probability": true,
+            "live_user_openability": "UNVERIFIED",
+            "interpretation": "Ranking evidence within the synthetic/static model; not a vulnerability or live-reachability probability."
+          }
+        },
+        {
+          "event": "DeviceIoControl",
+          "entry_model": "WDM",
+          "pointer_kind": "WRITABLE_IMAGE_SLOT",
+          "dispatch_rva": "0x5450",
+          "call_rva": "0x1c64",
+          "slot_rva": "0xd5d8",
+          "input_buffer_variant_candidate": false,
+          "path_evidence": {
+            "status": "SAT_PARTIAL_MODEL",
+            "modeled_predicates": 6,
+            "witness": {
+              "ioctl_0_32": "0x8fff23dc"
+            },
+            "scope": "Only tracked integer predicates; not proof of runtime reachability, handle access, or full buffer validity."
+          },
+          "attempts": [
+            {
+              "scenario": {
+                "name": "ioctl_8fff23dc_len4",
+                "file_name": "",
+                "ioctl": 2415862748,
+                "input_length": 4,
+                "output_length": 64
+              },
+              "status": "EMU_ERROR",
+              "instructions": 21,
+              "modeled_import_calls": {},
+              "unmodeled_import_calls": {},
+              "synthetic_request": true,
+              "error": "Invalid memory read (UC_ERR_READ_UNMAPPED)",
+              "fault_rva": "0x5499"
+            },
+            {
+              "scenario": {
+                "name": "ioctl_8fff23dc_len64",
+                "file_name": "",
+                "ioctl": 2415862748,
+                "input_length": 64,
+                "output_length": 64
+              },
+              "status": "EMU_ERROR",
+              "instructions": 21,
+              "modeled_import_calls": {},
+              "unmodeled_import_calls": {},
+              "synthetic_request": true,
+              "error": "Invalid memory read (UC_ERR_READ_UNMAPPED)",
+              "fault_rva": "0x5499"
+            },
+            {
+              "scenario": {
+                "name": "ioctl_8fff23d8_len4",
+                "file_name": "",
+                "ioctl": 2415862744,
+                "input_length": 4,
+                "output_length": 64
+              },
+              "status": "EMU_ERROR",
+              "instructions": 21,
+              "modeled_import_calls": {},
+              "unmodeled_import_calls": {},
+              "synthetic_request": true,
+              "error": "Invalid memory read (UC_ERR_READ_UNMAPPED)",
+              "fault_rva": "0x5499"
+            },
+            {
+              "scenario": {
+                "name": "ioctl_8fff23d8_len64",
+                "file_name": "",
+                "ioctl": 2415862744,
+                "input_length": 64,
+                "output_length": 64
+              },
+              "status": "EMU_ERROR",
+              "instructions": 21,
+              "modeled_import_calls": {},
+              "unmodeled_import_calls": {},
+              "synthetic_request": true,
+              "error": "Invalid memory read (UC_ERR_READ_UNMAPPED)",
+              "fault_rva": "0x5499"
+            },
+            {
+              "scenario": {
+                "name": "ioctl_8fff23d4_len4",
+                "file_name": "",
+                "ioctl": 2415862740,
+                "input_length": 4,
+                "output_length": 64
+              },
+              "status": "EMU_ERROR",
+              "instructions": 21,
+              "modeled_import_calls": {},
+              "unmodeled_import_calls": {},
+              "synthetic_request": true,
+              "error": "Invalid memory read (UC_ERR_READ_UNMAPPED)",
+              "fault_rva": "0x5499"
+            },
+            {
+              "scenario": {
+                "name": "ioctl_8fff23d4_len64",
+                "file_name": "",
+                "ioctl": 2415862740,
+                "input_length": 64,
+                "output_length": 64
+              },
+              "status": "EMU_ERROR",
+              "instructions": 21,
+              "modeled_import_calls": {},
+              "unmodeled_import_calls": {},
+              "synthetic_request": true,
+              "error": "Invalid memory read (UC_ERR_READ_UNMAPPED)",
+              "fault_rva": "0x5499"
+            }
+          ],
+          "offline_evidence_score": {
+            "value": 45,
+            "tier": "STATIC_LEAD_ONLY",
+            "scale": "0-85 OFFLINE_EVIDENCE_ONLY",
+            "components": {
+              "rooted_may_flow": 15,
+              "storage_evidence": 20,
+              "tracked_path_predicates_sat": 10
+            },
+            "not_a_probability": true,
+            "live_user_openability": "UNVERIFIED",
+            "interpretation": "Ranking evidence within the synthetic/static model; not a vulnerability or live-reachability probability."
+          }
+        }
+      ],
+      "installed_image_unchanged": true,
+      "evidence_scope": "Synthetic model only. No live device, OS I/O manager, real KMDF queue, handle ACL, or user request was exercised.",
+      "no_live_reachability_claim": true,
+      "file": "C:\\Windows\\System32\\drivers\\ndproxy.sys"
+    }
+  ]
+}

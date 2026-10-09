@@ -1,0 +1,694 @@
+IMAGE: C:\Windows\System32\drivers\ndproxy.sys
+BASE: 0x140000000
+ENTRY RVA: 0x1c010
+SECTIONS:
+b'.text\x00\x00\x00' RVA=0x1000 size=0x8537 flags=0x68000020
+b'fothk\x00\x00\x00' RVA=0xa000 size=0x1000 flags=0x68000020
+b'.rdata\x00\x00' RVA=0xb000 size=0x1690 flags=0x48000040
+b'.data\x00\x00\x00' RVA=0xd000 size=0x8f4 flags=0xc8000040
+b'.pdata\x00\x00' RVA=0xe000 size=0xaec flags=0x48000040
+b'.idata\x00\x00' RVA=0xf000 size=0x11d4 flags=0x48000040
+b'PAGENDPx' RVA=0x11000 size=0x7a69 flags=0x60000020
+b'PAGE\x00\x00\x00\x00' RVA=0x19000 size=0x2484 flags=0x60000020
+b'INIT\x00\x00\x00\x00' RVA=0x1c000 size=0xaaf flags=0x62000020
+b'GFIDS\x00\x00\x00' RVA=0x1d000 size=0x194 flags=0x42000040
+b'.rsrc\x00\x00\x00' RVA=0x1e000 size=0x588 flags=0x42000040
+b'.reloc\x00\x00' RVA=0x1f000 size=0xf50 flags=0x42000040
+IMPORTS:
+0xf000 NdisReturnNetBufferLists
+0xf008 NdisCmCloseAddressFamilyComplete
+0xf010 NdisCmDispatchIncomingCloseCall
+0xf018 NdisClCloseCall
+0xf020 NdisAcquireRWLockWrite
+0xf028 NdisInitializeTimer
+0xf030 NdisMSleep
+0xf038 NdisClRegisterSap
+0xf040 NdisCoGetTapiCallId
+0xf048 NdisCmDispatchCallConnected
+0xf050 NdisCmDispatchIncomingCall
+0xf058 NdisClIncomingCallComplete
+0xf060 NdisClMakeCall
+0xf068 NdisCoDeleteVc
+0xf070 NdisCoCreateVc
+0xf078 NdisReleaseRWLock
+0xf080 NdisAcquireRWLockRead
+0xf088 NdisFreeRWLock
+0xf090 NdisReadConfiguration
+0xf098 NdisCloseConfiguration
+0xf0a0 NdisOpenConfigurationKeyByName
+0xf0a8 NdisOpenConfigurationEx
+0xf0b0 NdisRegisterProtocolDriver
+0xf0b8 NdisSetTimer
+0xf0c0 NdisCancelTimer
+0xf0c8 NdisDeregisterProtocolDriver
+0xf0d0 NdisClCloseAddressFamily
+0xf0d8 NdisCmRegisterAddressFamilyEx
+0xf0e0 NdisClOpenAddressFamilyEx
+0xf0e8 NdisCloseAdapterEx
+0xf0f0 NdisOidRequest
+0xf0f8 NdisInitializeEvent
+0xf100 NdisCoOidRequest
+0xf108 NdisWaitEvent
+0xf110 NdisSetEvent
+0xf118 NdisClNotifyCloseAddressFamilyComplete
+0xf120 NdisClDeregisterSap
+0xf128 NdisCmNotifyCloseAddressFamily
+0xf130 NdisCmCloseCallComplete
+0xf138 NdisAllocateRWLock
+0xf140 NdisSetOptionalHandlers
+0xf148 NdisOpenAdapterEx
+0xf158 _wcsnicmp
+0xf160 ExAllocateFromNPagedLookasideList
+0xf168 IoReleaseCancelSpinLock
+0xf170 MmLockPagableDataSection
+0xf178 IoDeleteDevice
+0xf180 ExDeleteNPagedLookasideList
+0xf188 ExFreeToNPagedLookasideList
+0xf190 RtlQueryFeatureConfiguration
+0xf198 KeInitializeSpinLock
+0xf1a0 ExInitializeNPagedLookasideList
+0xf1a8 RtlUnregisterFeatureUsageProvider
+0xf1b0 RtlRegisterFeatureUsageProvider
+0xf1b8 RtlUnregisterFeatureConfigurationChangeNotification
+0xf1c0 RtlRegisterFeatureConfigurationChangeNotification
+0xf1c8 RtlQueryFeatureConfigurationChangeStamp
+0xf1d0 RtlArmFeatureUsageProviderFlushNotification
+0xf1d8 RtlRecordFeatureUsage
+0xf1e0 IoWMIRegistrationControl
+0xf1e8 MmGetSystemRoutineAddress
+0xf1f0 IofCompleteRequest
+0xf1f8 KeQueryTimeIncrement
+0xf200 KeReleaseSpinLockFromDpcLevel
+0xf208 KeAcquireSpinLockAtDpcLevel
+0xf210 RtlGUIDFromString
+0xf218 ExAllocatePool2
+0xf220 RtlInitUnicodeString
+0xf228 ExFreePoolWithTag
+0xf230 KeReleaseSpinLock
+0xf238 KeAcquireSpinLockRaiseToDpc
+0xf240 RtlNotifyFeatureUsage
+0xf248 ZwSetValueKey
+0xf250 ObOpenObjectByPointer
+0xf258 IoCreateDevice
+0xf260 IoDeviceObjectType
+0xf268 ZwSetSecurityObject
+0xf270 ZwClose
+0xf278 RtlSetDaclSecurityDescriptor
+0xf280 IoIsWdmVersionAvailable
+0xf288 RtlLengthSid
+0xf290 RtlAddAccessAllowedAce
+0xf298 RtlAbsoluteToSelfRelativeSD
+0xf2a0 wcschr
+0xf2a8 ExAllocatePoolWithTag
+0xf2b0 RtlCreateSecurityDescriptor
+0xf2b8 SeExports
+0xf2c0 RtlLengthSecurityDescriptor
+0xf2c8 _snwprintf
+0xf2d0 SeCaptureSecurityDescriptor
+0xf2d8 RtlGetSaclSecurityDescriptor
+0xf2e0 RtlGetOwnerSecurityDescriptor
+0xf2e8 RtlGetGroupSecurityDescriptor
+0xf2f0 RtlGetDaclSecurityDescriptor
+0xf2f8 RtlFreeUnicodeString
+0xf300 ZwCreateKey
+0xf308 ZwQueryValueKey
+0xf310 ZwOpenKey
+FUNCTION RVA 0x5450:
+00005450 48895c2408               mov      qword ptr [rsp + 8], rbx 
+00005455 48896c2418               mov      qword ptr [rsp + 0x18], rbp 
+0000545a 4889742420               mov      qword ptr [rsp + 0x20], rsi 
+0000545f 57                       push     rdi 
+00005460 4154                     push     r12 
+00005462 4155                     push     r13 
+00005464 4156                     push     r14 
+00005466 4157                     push     r15 
+00005468 4883ec40                 sub      rsp, 0x40 
+0000546c 4c8bf2                   mov      r14, rdx 
+0000546f 33db                     xor      ebx, ebx 
+00005471 488bd1                   mov      rdx, rcx 
+00005474 448bfb                   mov      r15d, ebx 
+00005477 498b8eb8000000           mov      rcx, qword ptr [r14 + 0xb8] 
+0000547e 498b7e18                 mov      rdi, qword ptr [r14 + 0x18] 
+00005482 80390e                   cmp      byte ptr [rcx], 0xe 
+00005485 8b6910                   mov      ebp, dword ptr [rcx + 0x10] 
+00005488 448b6108                 mov      r12d, dword ptr [rcx + 8] 
+0000548c 0f853d090000             jne      0x140005dcf 
+00005492 488b0567830000           mov      rax, qword ptr [rip + 0x8367] RVA 0xd800 b'.data\x00\x00\x00' writable=True
+00005499 483b5010                 cmp      rdx, qword ptr [rax + 0x10] 
+0000549d 0f852c090000             jne      0x140005dcf 
+000054a3 8b4918                   mov      ecx, dword ptr [rcx + 0x18] 
+000054a6 488d35835f0000           lea      rsi, [rip + 0x5f83] RVA 0xb430 b'.rdata\x00\x00' writable=False
+000054ad 4c8d2d8c7d0000           lea      r13, [rip + 0x7d8c] RVA 0xd240 b'.data\x00\x00\x00' writable=True
+000054b4 81f9c023ff8f             cmp      ecx, 0x8fff23c0 
+000054ba 0f84d4070000             je       0x140005c94 
+000054c0 81f9c423ff8f             cmp      ecx, 0x8fff23c4 
+000054c6 0f842f070000             je       0x140005bfb 
+000054cc 8d8138dc0070             lea      eax, [rcx + 0x7000dc38] 
+000054d2 a9fbffffff               test     eax, 0xfffffffb 
+000054d7 0f849d040000             je       0x14000597a 
+000054dd 81f9d023ff8f             cmp      ecx, 0x8fff23d0 
+000054e3 0f84e9020000             je       0x1400057d2 
+000054e9 81f9d423ff8f             cmp      ecx, 0x8fff23d4 
+000054ef 0f848d010000             je       0x140005682 
+000054f5 81f9d823ff8f             cmp      ecx, 0x8fff23d8 
+000054fb 0f84d6000000             je       0x1400055d7 
+00005501 81f9dc23ff8f             cmp      ecx, 0x8fff23dc 
+00005507 7435                     je       0x14000553e 
+00005509 bb0d0000c0               mov      ebx, 0xc000000d 
+0000550e 488b0d2b7d0000           mov      rcx, qword ptr [rip + 0x7d2b] RVA 0xd240 b'.data\x00\x00\x00' writable=True
+00005515 493bcd                   cmp      rcx, r13 
+00005518 0f845c080000             je       0x140005d7a 
+0000551e 80792903                 cmp      byte ptr [rcx + 0x29], 3 
+00005522 0f8252080000             jb       0x140005d7a 
+00005528 ba26000000               mov      edx, 0x26 
+0000552d 488b4918                 mov      rcx, qword ptr [rcx + 0x18] 
+00005531 4c8bc6                   mov      r8, rsi 
+00005534 e88bc6ffff               call     0x140001bc4 
+00005539 e93c080000               jmp      0x140005d7a 
+0000553e 488b0dfb7c0000           mov      rcx, qword ptr [rip + 0x7cfb] RVA 0xd240 b'.data\x00\x00\x00' writable=True
+00005545 493bcd                   cmp      rcx, r13 
+00005548 741a                     je       0x140005564 
+0000554a 80792904                 cmp      byte ptr [rcx + 0x29], 4 
+0000554e 7214                     jb       0x140005564 
+00005550 488b4918                 mov      rcx, qword ptr [rcx + 0x18] 
+00005554 ba24000000               mov      edx, 0x24 
+00005559 4d8bce                   mov      r9, r14 
+0000555c 4c8bc6                   mov      r8, rsi 
+0000555f e8d0c6ffff               call     0x140001c34 
+00005564 83fd08                   cmp      ebp, 8 
+00005567 724a                     jb       0x1400055b3 
+00005569 4183fc04                 cmp      r12d, 4 
+0000556d 7244                     jb       0x1400055b3 
+0000556f 488d2dd2820000           lea      rbp, [rip + 0x82d2] RVA 0xd848 b'.data\x00\x00\x00' writable=True
+00005576 488bcd                   mov      rcx, rbp 
+00005579 48ff15b89c0000           call     qword ptr [rip + 0x9cb8] KeAcquireSpinLockRaiseToDpc; RVA 0xf238 b'.idata\x00\x00' writable=False
+00005580 0f1f440000               nop      dword ptr [rax + rax] 
+00005585 8805c5820000             mov      byte ptr [rip + 0x82c5], al RVA 0xd850 b'.data\x00\x00\x00' writable=True
+0000558b 8b05a7820000             mov      eax, dword ptr [rip + 0x82a7] RVA 0xd838 b'.data\x00\x00\x00' writable=True
+00005591 8907                     mov      dword ptr [rdi], eax 
+00005593 41bf04000000             mov      r15d, 4 
+00005599 8a15b1820000             mov      dl, byte ptr [rip + 0x82b1] RVA 0xd850 b'.data\x00\x00\x00' writable=True
+0000559f 488bcd                   mov      rcx, rbp 
+000055a2 48ff15879c0000           call     qword ptr [rip + 0x9c87] KeReleaseSpinLock; RVA 0xf230 b'.idata\x00\x00' writable=False
+000055a9 0f1f440000               nop      dword ptr [rax + rax] 
+000055ae e9c7070000               jmp      0x140005d7a 
+000055b3 488b0d867c0000           mov      rcx, qword ptr [rip + 0x7c86] RVA 0xd240 b'.data\x00\x00\x00' writable=True
+000055ba 493bcd                   cmp      rcx, r13 
+000055bd 0f84b2070000             je       0x140005d75 
+000055c3 80792903                 cmp      byte ptr [rcx + 0x29], 3 
+000055c7 0f82a8070000             jb       0x140005d75 
+000055cd ba25000000               mov      edx, 0x25 
+000055d2 e992070000               jmp      0x140005d69 
+000055d7 48895c2478               mov      qword ptr [rsp + 0x78], rbx 
+000055dc 83fd08                   cmp      ebp, 8 
+000055df 7324                     jae      0x140005605 
+000055e1 488b0d587c0000           mov      rcx, qword ptr [rip + 0x7c58] RVA 0xd240 b'.data\x00\x00\x00' writable=True
+000055e8 493bcd                   cmp      rcx, r13 
+000055eb 0f8484070000             je       0x140005d75 
+000055f1 80792903                 cmp      byte ptr [rcx + 0x29], 3 
+000055f5 0f827a070000             jb       0x140005d75 
+000055fb ba21000000               mov      edx, 0x21 
+00005600 e964070000               jmp      0x140005d69 
+00005605 8b0f                     mov      ecx, dword ptr [rdi] 
+00005607 488d542478               lea      rdx, [rsp + 0x78] 
+0000560c e8e3dd0000               call     0x1400133f4 
+00005611 84c0                     test     al, al 
+00005613 7530                     jne      0x140005645 
+00005615 488b0d247c0000           mov      rcx, qword ptr [rip + 0x7c24] RVA 0xd240 b'.data\x00\x00\x00' writable=True
+0000561c 493bcd                   cmp      rcx, r13 
+0000561f 741a                     je       0x14000563b 
+00005621 80792903                 cmp      byte ptr [rcx + 0x29], 3 
+00005625 7214                     jb       0x14000563b 
+00005627 448b0f                   mov      r9d, dword ptr [rdi] 
+0000562a ba22000000               mov      edx, 0x22 
+0000562f 488b4918                 mov      rcx, qword ptr [rcx + 0x18] 
+00005633 4c8bc6                   mov      r8, rsi 
+00005636 e8b5c5ffff               call     0x140001bf0 
+0000563b bb0d0000c0               mov      ebx, 0xc000000d 
+00005640 e935070000               jmp      0x140005d7a 
+00005645 488b0df47b0000           mov      rcx, qword ptr [rip + 0x7bf4] RVA 0xd240 b'.data\x00\x00\x00' writable=True
+0000564c 488b6c2478               mov      rbp, qword ptr [rsp + 0x78] 
+00005651 493bcd                   cmp      rcx, r13 
+00005654 7421                     je       0x140005677 
+00005656 80792905                 cmp      byte ptr [rcx + 0x29], 5 
+0000565a 721b                     jb       0x140005677 
+0000565c 8b4704                   mov      eax, dword ptr [rdi + 4] 
+0000565f ba23000000               mov      edx, 0x23 
+00005664 488b4918                 mov      rcx, qword ptr [rcx + 0x18] 
+00005668 4c8bcd                   mov      r9, rbp 
+0000566b 4c8bc6                   mov      r8, rsi 
+0000566e 89442420                 mov      dword ptr [rsp + 0x20], eax 
+00005672 e801c6ffff               call     0x140001c78 
+00005677 8b4704                   mov      eax, dword ptr [rdi + 4] 
+0000567a 894520                   mov      dword ptr [rbp + 0x20], eax 
+0000567d e9f8060000               jmp      0x140005d7a 
+00005682 488b0db77b0000           mov      rcx, qword ptr [rip + 0x7bb7] RVA 0xd240 b'.data\x00\x00\x00' writable=True
+00005689 493bcd                   cmp      rcx, r13 
+0000568c 741e                     je       0x1400056ac 
+0000568e 80792904                 cmp      byte ptr [rcx + 0x29], 4 
+00005692 7218                     jb       0x1400056ac 
+00005694 488b4918                 mov      rcx, qword ptr [rcx + 0x18] 
+00005698 ba1d000000               mov      edx, 0x1d 
+0000569d 4d8bce                   mov      r9, r14 
+000056a0 896c2420                 mov      dword ptr [rsp + 0x20], ebp 
+000056a4 4c8bc6                   mov      r8, rsi 
+000056a7 e8ccc5ffff               call     0x140001c78 
+000056ac 83fd04                   cmp      ebp, 4 
+000056af 7324                     jae      0x1400056d5 
+000056b1 488b0d887b0000           mov      rcx, qword ptr [rip + 0x7b88] RVA 0xd240 b'.data\x00\x00\x00' writable=True
+000056b8 493bcd                   cmp      rcx, r13 
+000056bb 0f84b4060000             je       0x140005d75 
+000056c1 80792903                 cmp      byte ptr [rcx + 0x29], 3 
+000056c5 0f82aa060000             jb       0x140005d75 
+000056cb ba1e000000               mov      edx, 0x1e 
+000056d0 e994060000               jmp      0x140005d69 
+000056d5 488d2d6c810000           lea      rbp, [rip + 0x816c] RVA 0xd848 b'.data\x00\x00\x00' writable=True
+000056dc 488bcd                   mov      rcx, rbp 
+000056df 48ff15529b0000           call     qword ptr [rip + 0x9b52] KeAcquireSpinLockRaiseToDpc; RVA 0xf238 b'.idata\x00\x00' writable=False
+000056e6 0f1f440000               nop      dword ptr [rax + rax] 
+000056eb 391d2f810000             cmp      dword ptr [rip + 0x812f], ebx RVA 0xd820 b'.data\x00\x00\x00' writable=True
+000056f1 880559810000             mov      byte ptr [rip + 0x8159], al RVA 0xd850 b'.data\x00\x00\x00' writable=True
+000056f7 742d                     je       0x140005726 
+000056f9 488b0d407b0000           mov      rcx, qword ptr [rip + 0x7b40] RVA 0xd240 b'.data\x00\x00\x00' writable=True
+00005700 493bcd                   cmp      rcx, r13 
+00005703 7417                     je       0x14000571c 
+00005705 80792903                 cmp      byte ptr [rcx + 0x29], 3 
+00005709 7211                     jb       0x14000571c 
+0000570b 488b4918                 mov      rcx, qword ptr [rcx + 0x18] 
+0000570f ba1f000000               mov      edx, 0x1f 
+00005714 4c8bc6                   mov      r8, rsi 
+00005717 e8a8c4ffff               call     0x140001bc4 
+0000571c bb010000c0               mov      ebx, 0xc0000001 
+00005721 e973feffff               jmp      0x140005599 
+00005726 8b3f                     mov      edi, dword ptr [rdi] 
+00005728 488b0d117b0000           mov      rcx, qword ptr [rip + 0x7b11] RVA 0xd240 b'.data\x00\x00\x00' writable=True
+0000572f 493bcd                   cmp      rcx, r13 
+00005732 741a                     je       0x14000574e 
+00005734 80792905                 cmp      byte ptr [rcx + 0x29], 5 
+00005738 7214                     jb       0x14000574e 
+0000573a 488b4918                 mov      rcx, qword ptr [rcx + 0x18] 
+0000573e ba20000000               mov      edx, 0x20 
+00005743 448bcf                   mov      r9d, edi 
+00005746 4c8bc6                   mov      r8, rsi 
+00005749 e8a2c4ffff               call     0x140001bf0 
+0000574e 8a15fc800000             mov      dl, byte ptr [rip + 0x80fc] RVA 0xd850 b'.data\x00\x00\x00' writable=True
+00005754 488bcd                   mov      rcx, rbp 
+00005757 48ff15d29a0000           call     qword ptr [rip + 0x9ad2] KeReleaseSpinLock; RVA 0xf230 b'.idata\x00\x00' writable=False
+0000575e 0f1f440000               nop      dword ptr [rax + rax] 
+00005763 488b0d8e800000           mov      rcx, qword ptr [rip + 0x808e] RVA 0xd7f8 b'.data\x00\x00\x00' writable=True
+0000576a 488d542478               lea      rdx, [rsp + 0x78] 
+0000576f 33c0                     xor      eax, eax 
+00005771 4533c0                   xor      r8d, r8d 
+00005774 6689442478               mov      word ptr [rsp + 0x78], ax 
+00005779 8844247a                 mov      byte ptr [rsp + 0x7a], al 
+0000577d 48ff15fc980000           call     qword ptr [rip + 0x98fc] NdisAcquireRWLockRead; RVA 0xf080 b'.idata\x00\x00' writable=False
+00005784 0f1f440000               nop      dword ptr [rax + rax] 
+00005789 391d55800000             cmp      dword ptr [rip + 0x8055], ebx RVA 0xd7e4 b'.data\x00\x00\x00' writable=True
+0000578f 8bd3                     mov      edx, ebx 
+00005791 7422                     je       0x1400057b5 
+00005793 488b0556800000           mov      rax, qword ptr [rip + 0x8056] RVA 0xd7f0 b'.data\x00\x00\x00' writable=True
+0000579a 8bca                     mov      ecx, edx 
+0000579c 4c8b04c8                 mov      r8, qword ptr [rax + rcx*8] 
+000057a0 4d85c0                   test     r8, r8 
+000057a3 7406                     je       0x1400057ab 
+000057a5 41897820                 mov      dword ptr [r8 + 0x20], edi 
+000057a9 ffc7                     inc      edi 
+000057ab ffc2                     inc      edx 
+000057ad 3b1531800000             cmp      edx, dword ptr [rip + 0x8031] RVA 0xd7e4 b'.data\x00\x00\x00' writable=True
+000057b3 72de                     jb       0x140005793 
+000057b5 488b0d3c800000           mov      rcx, qword ptr [rip + 0x803c] RVA 0xd7f8 b'.data\x00\x00\x00' writable=True
+000057bc 488d542478               lea      rdx, [rsp + 0x78] 
+000057c1 48ff15b0980000           call     qword ptr [rip + 0x98b0] NdisReleaseRWLock; RVA 0xf078 b'.idata\x00\x00' writable=False
+000057c8 0f1f440000               nop      dword ptr [rax + rax] 
+000057cd e9a8050000               jmp      0x140005d7a 
+000057d2 488b0d677a0000           mov      rcx, qword ptr [rip + 0x7a67] RVA 0xd240 b'.data\x00\x00\x00' writable=True
+000057d9 493bcd                   cmp      rcx, r13 
+000057dc 7417                     je       0x1400057f5 
+000057de 80792905                 cmp      byte ptr [rcx + 0x29], 5 
+000057e2 7211                     jb       0x1400057f5 
+000057e4 488b4918                 mov      rcx, qword ptr [rcx + 0x18] 
+000057e8 ba18000000               mov      edx, 0x18 
+000057ed 4c8bc6                   mov      r8, rsi 
+000057f0 e8cfc3ffff               call     0x140001bc4 
+000057f5 83fd0c                   cmp      ebp, 0xc 
+000057f8 732e                     jae      0x140005828 
+000057fa bb230000c0               mov      ebx, 0xc0000023 
+000057ff 41bf04000000             mov      r15d, 4 
+00005805 488b0d347a0000           mov      rcx, qword ptr [rip + 0x7a34] RVA 0xd240 b'.data\x00\x00\x00' writable=True
+0000580c 493bcd                   cmp      rcx, r13 
+0000580f 0f8465050000             je       0x140005d7a 
+00005815 80792903                 cmp      byte ptr [rcx + 0x29], 3 
+00005819 0f825b050000             jb       0x140005d7a 
+0000581f 418d5715                 lea      edx, [r15 + 0x15] 
+00005823 e905fdffff               jmp      0x14000552d 
+00005828 8b07                     mov      eax, dword ptr [rdi] 
+0000582a 498d4c24f5               lea      rcx, [r12 - 0xb] 
+0000582f 483bc8                   cmp      rcx, rax 
+00005832 7335                     jae      0x140005869 
+00005834 bb230000c0               mov      ebx, 0xc0000023 
+00005839 41bf04000000             mov      r15d, 4 
+0000583f 488b0dfa790000           mov      rcx, qword ptr [rip + 0x79fa] RVA 0xd240 b'.data\x00\x00\x00' writable=True
+00005846 4c8d2df3790000           lea      r13, [rip + 0x79f3] RVA 0xd240 b'.data\x00\x00\x00' writable=True
+0000584d 493bcd                   cmp      rcx, r13 
+00005850 0f8424050000             je       0x140005d7a 
+00005856 80792903                 cmp      byte ptr [rcx + 0x29], 3 
+0000585a 0f821a050000             jb       0x140005d7a 
+00005860 418d5716                 lea      edx, [r15 + 0x16] 
+00005864 e9c4fcffff               jmp      0x14000552d 
+00005869 488d0d107f0000           lea      rcx, [rip + 0x7f10] RVA 0xd780 b'.data\x00\x00\x00' writable=True
+00005870 48ff15c1990000           call     qword ptr [rip + 0x99c1] KeAcquireSpinLockRaiseToDpc; RVA 0xf238 b'.idata\x00\x00' writable=False
+00005877 0f1f440000               nop      dword ptr [rax + rax] 
+0000587c 448b0ded7e0000           mov      r9d, dword ptr [rip + 0x7eed] RVA 0xd770 b'.data\x00\x00\x00' writable=True
+00005883 bd03010000               mov      ebp, 0x103 
+00005888 8805fa7e0000             mov      byte ptr [rip + 0x7efa], al RVA 0xd788 b'.data\x00\x00\x00' writable=True
+0000588e 4585c9                   test     r9d, r9d 
+00005891 745a                     je       0x1400058ed 
+00005893 488b0da6790000           mov      rcx, qword ptr [rip + 0x79a6] RVA 0xd240 b'.data\x00\x00\x00' writable=True
+0000589a 488d059f790000           lea      rax, [rip + 0x799f] RVA 0xd240 b'.data\x00\x00\x00' writable=True
+000058a1 483bc8                   cmp      rcx, rax 
+000058a4 741d                     je       0x1400058c3 
+000058a6 80792905                 cmp      byte ptr [rcx + 0x29], 5 
+000058aa 7217                     jb       0x1400058c3 
+000058ac 8b07                     mov      eax, dword ptr [rdi] 
+000058ae ba1b000000               mov      edx, 0x1b 
+000058b3 488b4918                 mov      rcx, qword ptr [rcx + 0x18] 
+000058b7 4c8bc6                   mov      r8, rsi 
+000058ba 89442420                 mov      dword ptr [rsp + 0x20], eax 
+000058be e82d080000               call     0x1400060f0 
+000058c3 8b17                     mov      edx, dword ptr [rdi] 
+000058c5 488d4f08                 lea      rcx, [rdi + 8] 
+000058c9 e8ead60000               call     0x140012fb8 
+000058ce 8bc0                     mov      eax, eax 
+000058d0 4c8d2d69790000           lea      r13, [rip + 0x7969] RVA 0xd240 b'.data\x00\x00\x00' writable=True
+000058d7 894704                   mov      dword ptr [rdi + 4], eax 
+000058da 458bfc                   mov      r15d, r12d 
+000058dd 488d480b                 lea      rcx, [rax + 0xb] 
+000058e1 83c00b                   add      eax, 0xb 
+000058e4 4c3be1                   cmp      r12, rcx 
+000058e7 440f43f8                 cmovae   r15d, eax 
+000058eb eb67                     jmp      0x140005954 
+000058ed 488b0d4c790000           mov      rcx, qword ptr [rip + 0x794c] RVA 0xd240 b'.data\x00\x00\x00' writable=True
+000058f4 4c8d2d45790000           lea      r13, [rip + 0x7945] RVA 0xd240 b'.data\x00\x00\x00' writable=True
+000058fb 493bcd                   cmp      rcx, r13 
+000058fe 7417                     je       0x140005917 
+00005900 80792905                 cmp      byte ptr [rcx + 0x29], 5 
+00005904 7211                     jb       0x140005917 
+00005906 488b4918                 mov      rcx, qword ptr [rcx + 0x18] 
+0000590a ba1c000000               mov      edx, 0x1c 
+0000590f 4c8bc6                   mov      r8, rsi 
+00005912 e8adc2ffff               call     0x140001bc4 
+00005917 48391d5a7e0000           cmp      qword ptr [rip + 0x7e5a], rbx RVA 0xd778 b'.data\x00\x00\x00' writable=True
+0000591e 7529                     jne      0x140005949 
+00005920 488d0529d30000           lea      rax, [rip + 0xd329] RVA 0x12c50 b'PAGENDPx' writable=False
+00005927 49874668                 xchg     qword ptr [r14 + 0x68], rax 
+0000592b 498b8eb8000000           mov      rcx, qword ptr [r14 + 0xb8] 
+00005932 80490301                 or       byte ptr [rcx + 3], 1 
+00005936 49895e38                 mov      qword ptr [r14 + 0x38], rbx 
+0000593a 8bdd                     mov      ebx, ebp 
+0000593c 41896e30                 mov      dword ptr [r14 + 0x30], ebp 
+00005940 4c8935317e0000           mov      qword ptr [rip + 0x7e31], r14 RVA 0xd778 b'.data\x00\x00\x00' writable=True
+00005947 eb0b                     jmp      0x140005954 
+00005949 bb010000c0               mov      ebx, 0xc0000001 
+0000594e 41bf04000000             mov      r15d, 4 
+00005954 8a152e7e0000             mov      dl, byte ptr [rip + 0x7e2e] RVA 0xd788 b'.data\x00\x00\x00' writable=True
+0000595a 488d0d1f7e0000           lea      rcx, [rip + 0x7e1f] RVA 0xd780 b'.data\x00\x00\x00' writable=True
+00005961 48ff15c8980000           call     qword ptr [rip + 0x98c8] KeReleaseSpinLock; RVA 0xf230 b'.idata\x00\x00' writable=False
+00005968 0f1f440000               nop      dword ptr [rax + rax] 
+0000596d 3bdd                     cmp      ebx, ebp 
+0000596f 0f842c040000             je       0x140005da1 
+00005975 e900040000               jmp      0x140005d7a 
+0000597a 83fd38                   cmp      ebp, 0x38 
+0000597d 0f8240020000             jb       0x140005bc3 
+00005983 4183fc38                 cmp      r12d, 0x38 
+00005987 0f8236020000             jb       0x140005bc3 
+0000598d 41bf38000000             mov      r15d, 0x38 
+00005993 488b0da6780000           mov      rcx, qword ptr [rip + 0x78a6] RVA 0xd240 b'.data\x00\x00\x00' writable=True
+0000599a 493bcd                   cmp      rcx, r13 
+0000599d 7427                     je       0x1400059c6 
+0000599f 80792905                 cmp      byte ptr [rcx + 0x29], 5 
+000059a3 7221                     jb       0x1400059c6 
+000059a5 8b4730                   mov      eax, dword ptr [rdi + 0x30] 
+000059a8 4d8bce                   mov      r9, r14 
+000059ab 488b4918                 mov      rcx, qword ptr [rcx + 0x18] 
+000059af 89442430                 mov      dword ptr [rsp + 0x30], eax 
+000059b3 8b4724                   mov      eax, dword ptr [rdi + 0x24] 
+000059b6 89442428                 mov      dword ptr [rsp + 0x28], eax 
+000059ba 8b4720                   mov      eax, dword ptr [rdi + 0x20] 
+000059bd 89442420                 mov      dword ptr [rsp + 0x20], eax 
+000059c1 e82a080000               call     0x1400061f0 
+000059c6 448b4f20                 mov      r9d, dword ptr [rdi + 0x20] 
+000059ca 418d81fffefcf8           lea      eax, [r9 - 0x7030101] 
+000059d1 85c0                     test     eax, eax 
+000059d3 0f88bf010000             js       0x140005b98 
+000059d9 4c63e8                   movsxd   r13, eax 
+000059dc 4983fd24                 cmp      r13, 0x24 
+000059e0 0f83ab010000             jae      0x140005b91 
+000059e6 448b4f28                 mov      r9d, dword ptr [rdi + 0x28] 
+000059ea 488d050f760000           lea      rax, [rip + 0x760f] RVA 0xd000 b'.data\x00\x00\x00' writable=True
+000059f1 4d03ed                   add      r13, r13 
+000059f4 428b44e804               mov      eax, dword ptr [rax + r13*8 + 4] 
+000059f9 443bc8                   cmp      r9d, eax 
+000059fc 7337                     jae      0x140005a35 
+000059fe 488b0d3b780000           mov      rcx, qword ptr [rip + 0x783b] RVA 0xd240 b'.data\x00\x00\x00' writable=True
+00005a05 4c8d2d34780000           lea      r13, [rip + 0x7834] RVA 0xd240 b'.data\x00\x00\x00' writable=True
+00005a0c 493bcd                   cmp      rcx, r13 
+00005a0f 7418                     je       0x140005a29 
+00005a11 80792903                 cmp      byte ptr [rcx + 0x29], 3 
+00005a15 7212                     jb       0x140005a29 
+00005a17 ba14000000               mov      edx, 0x14 
+00005a1c 89442420                 mov      dword ptr [rsp + 0x20], eax 
+00005a20 488b4918                 mov      rcx, qword ptr [rcx + 0x18] 
+00005a24 e86f070000               call     0x140006198 
+00005a29 c7471c192001c0           mov      dword ptr [rdi + 0x1c], 0xc0012019 
+00005a30 e945030000               jmp      0x140005d7a 
+00005a35 83c5d0                   add      ebp, -0x30 
+00005a38 443bcd                   cmp      r9d, ebp 
+00005a3b 7624                     jbe      0x140005a61 
+00005a3d 488b0dfc770000           mov      rcx, qword ptr [rip + 0x77fc] RVA 0xd240 b'.data\x00\x00\x00' writable=True
+00005a44 4c8d2df5770000           lea      r13, [rip + 0x77f5] RVA 0xd240 b'.data\x00\x00\x00' writable=True
+00005a4b 493bcd                   cmp      rcx, r13 
+00005a4e 74d9                     je       0x140005a29 
+00005a50 80792903                 cmp      byte ptr [rcx + 0x29], 3 
+00005a54 72d3                     jb       0x140005a29 
+00005a56 ba15000000               mov      edx, 0x15 
+00005a5b 896c2420                 mov      dword ptr [rsp + 0x20], ebp 
+00005a5f ebbf                     jmp      0x140005a20 
+00005a61 488d2de07d0000           lea      rbp, [rip + 0x7de0] RVA 0xd848 b'.data\x00\x00\x00' writable=True
+00005a68 488bcd                   mov      rcx, rbp 
+00005a6b 48ff15c6970000           call     qword ptr [rip + 0x97c6] KeAcquireSpinLockRaiseToDpc; RVA 0xf238 b'.idata\x00\x00' writable=False
+00005a72 0f1f440000               nop      dword ptr [rax + rax] 
+00005a77 391da37d0000             cmp      dword ptr [rip + 0x7da3], ebx RVA 0xd820 b'.data\x00\x00\x00' writable=True
+00005a7d 8805cd7d0000             mov      byte ptr [rip + 0x7dcd], al RVA 0xd850 b'.data\x00\x00\x00' writable=True
+00005a83 744b                     je       0x140005ad0 
+00005a85 488b0db4770000           mov      rcx, qword ptr [rip + 0x77b4] RVA 0xd240 b'.data\x00\x00\x00' writable=True
+00005a8c 4c8d2dad770000           lea      r13, [rip + 0x77ad] RVA 0xd240 b'.data\x00\x00\x00' writable=True
+00005a93 493bcd                   cmp      rcx, r13 
+00005a96 7417                     je       0x140005aaf 
+00005a98 80792903                 cmp      byte ptr [rcx + 0x29], 3 
+00005a9c 7211                     jb       0x140005aaf 
+00005a9e 488b4918                 mov      rcx, qword ptr [rcx + 0x18] 
+00005aa2 ba16000000               mov      edx, 0x16 
+00005aa7 4c8bc6                   mov      r8, rsi 
+00005aaa e815c1ffff               call     0x140001bc4 
+00005aaf 8a159b7d0000             mov      dl, byte ptr [rip + 0x7d9b] RVA 0xd850 b'.data\x00\x00\x00' writable=True
+00005ab5 488bcd                   mov      rcx, rbp 
+00005ab8 48ff1571970000           call     qword ptr [rip + 0x9771] KeReleaseSpinLock; RVA 0xf230 b'.idata\x00\x00' writable=False
+00005abf 0f1f440000               nop      dword ptr [rax + rax] 
+00005ac4 c7471c01100000           mov      dword ptr [rdi + 0x1c], 0x1001 
+00005acb e9aa020000               jmp      0x140005d7a 
+00005ad0 8b05667d0000             mov      eax, dword ptr [rip + 0x7d66] RVA 0xd83c b'.data\x00\x00\x00' writable=True
+00005ad6 ffc0                     inc      eax 
+00005ad8 89055e7d0000             mov      dword ptr [rip + 0x7d5e], eax RVA 0xd83c b'.data\x00\x00\x00' writable=True
+00005ade 83f8fe                   cmp      eax, -2 
+00005ae1 760b                     jbe      0x140005aee 
+00005ae3 b801000080               mov      eax, 0x80000001 
+00005ae8 89054e7d0000             mov      dword ptr [rip + 0x7d4e], eax RVA 0xd83c b'.data\x00\x00\x00' writable=True
+00005aee 894718                   mov      dword ptr [rdi + 0x18], eax 
+00005af1 488bcd                   mov      rcx, rbp 
+00005af4 4c897710                 mov      qword ptr [rdi + 0x10], r14 
+00005af8 8a15527d0000             mov      dl, byte ptr [rip + 0x7d52] RVA 0xd850 b'.data\x00\x00\x00' writable=True
+00005afe 48ff152b970000           call     qword ptr [rip + 0x972b] KeReleaseSpinLock; RVA 0xf230 b'.idata\x00\x00' writable=False
+00005b05 0f1f440000               nop      dword ptr [rax + rax] 
+00005b0a 498b86b8000000           mov      rax, qword ptr [r14 + 0xb8] 
+00005b11 488bcf                   mov      rcx, rdi 
+00005b14 80480301                 or       byte ptr [rax + 3], 1 
+00005b18 488d05e1740000           lea      rax, [rip + 0x74e1] RVA 0xd000 b'.data\x00\x00\x00' writable=True
+00005b1f 4a8b44e808               mov      rax, qword ptr [rax + r13*8 + 8] 
+00005b24 e847300000               call     0x140008b70 
+00005b29 bd03010000               mov      ebp, 0x103 
+00005b2e 3bc5                     cmp      eax, ebp 
+00005b30 7535                     jne      0x140005b67 
+00005b32 488b0d07770000           mov      rcx, qword ptr [rip + 0x7707] RVA 0xd240 b'.data\x00\x00\x00' writable=True
+00005b39 488d0500770000           lea      rax, [rip + 0x7700] RVA 0xd240 b'.data\x00\x00\x00' writable=True
+00005b40 483bc8                   cmp      rcx, rax 
+00005b43 741b                     je       0x140005b60 
+00005b45 80792905                 cmp      byte ptr [rcx + 0x29], 5 
+00005b49 7215                     jb       0x140005b60 
+00005b4b 488b4918                 mov      rcx, qword ptr [rcx + 0x18] 
+00005b4f 4c8d05da580000           lea      r8, [rip + 0x58da] RVA 0xb430 b'.rdata\x00\x00' writable=False
+00005b56 ba17000000               mov      edx, 0x17 
+00005b5b e864c0ffff               call     0x140001bc4 
+00005b60 8bc5                     mov      eax, ebp 
+00005b62 e988020000               jmp      0x140005def 
+00005b67 8b5728                   mov      edx, dword ptr [rdi + 0x28] 
+00005b6a 4c8d2dcf760000           lea      r13, [rip + 0x76cf] RVA 0xd240 b'.data\x00\x00\x00' writable=True
+00005b71 89471c                   mov      dword ptr [rdi + 0x1c], eax 
+00005b74 458bfc                   mov      r15d, r12d 
+00005b77 488bc3                   mov      rax, rbx 
+00005b7a 49874668                 xchg     qword ptr [r14 + 0x68], rax 
+00005b7e 4c8d4238                 lea      r8, [rdx + 0x38] 
+00005b82 4d3be0                   cmp      r12, r8 
+00005b85 8d4238                   lea      eax, [rdx + 0x38] 
+00005b88 440f43f8                 cmovae   r15d, eax 
+00005b8c e9e9010000               jmp      0x140005d7a 
+00005b91 4c8d2da8760000           lea      r13, [rip + 0x76a8] RVA 0xd240 b'.data\x00\x00\x00' writable=True
+00005b98 488b0da1760000           mov      rcx, qword ptr [rip + 0x76a1] RVA 0xd240 b'.data\x00\x00\x00' writable=True
+00005b9f 493bcd                   cmp      rcx, r13 
+00005ba2 7413                     je       0x140005bb7 
+00005ba4 80792903                 cmp      byte ptr [rcx + 0x29], 3 
+00005ba8 720d                     jb       0x140005bb7 
+00005baa 488b4918                 mov      rcx, qword ptr [rcx + 0x18] 
+00005bae 89442420                 mov      dword ptr [rsp + 0x20], eax 
+00005bb2 e889050000               call     0x140006140 
+00005bb7 c7471c1d2001c0           mov      dword ptr [rdi + 0x1c], 0xc001201d 
+00005bbe e9b7010000               jmp      0x140005d7a 
+00005bc3 488b0d76760000           mov      rcx, qword ptr [rip + 0x7676] RVA 0xd240 b'.data\x00\x00\x00' writable=True
+00005bca 493bcd                   cmp      rcx, r13 
+00005bcd 7422                     je       0x140005bf1 
+00005bcf 80792903                 cmp      byte ptr [rcx + 0x29], 3 
+00005bd3 721c                     jb       0x140005bf1 
+00005bd5 488b4918                 mov      rcx, qword ptr [rcx + 0x18] 
+00005bd9 ba11000000               mov      edx, 0x11 
+00005bde 448bcd                   mov      r9d, ebp 
+00005be1 c744242038000000         mov      dword ptr [rsp + 0x20], 0x38 
+00005be9 4c8bc6                   mov      r8, rsi 
+00005bec e8ff040000               call     0x1400060f0 
+00005bf1 bb040000c0               mov      ebx, 0xc0000004 
+00005bf6 e97f010000               jmp      0x140005d7a 
+00005bfb 488d2d467c0000           lea      rbp, [rip + 0x7c46] RVA 0xd848 b'.data\x00\x00\x00' writable=True
+00005c02 488bcd                   mov      rcx, rbp 
+00005c05 48ff152c960000           call     qword ptr [rip + 0x962c] KeAcquireSpinLockRaiseToDpc; RVA 0xf238 b'.idata\x00\x00' writable=False
+00005c0c 0f1f440000               nop      dword ptr [rax + rax] 
+00005c11 488b3d107c0000           mov      rdi, qword ptr [rip + 0x7c10] RVA 0xd828 b'.data\x00\x00\x00' writable=True
+00005c18 4c8d3d097c0000           lea      r15, [rip + 0x7c09] RVA 0xd828 b'.data\x00\x00\x00' writable=True
+00005c1f 88052b7c0000             mov      byte ptr [rip + 0x7c2b], al RVA 0xd850 b'.data\x00\x00\x00' writable=True
+00005c25 c705f17b000003000000     mov      dword ptr [rip + 0x7bf1], 3 RVA 0xd820 b'.data\x00\x00\x00' writable=True
+00005c2f eb41                     jmp      0x140005c72 
+00005c31 4c8da788000000           lea      r12, [rdi + 0x88] 
+00005c38 498bcc                   mov      rcx, r12 
+00005c3b 48ff15f6950000           call     qword ptr [rip + 0x95f6] KeAcquireSpinLockRaiseToDpc; RVA 0xf238 b'.idata\x00\x00' writable=False
+00005c42 0f1f440000               nop      dword ptr [rax + rax] 
+00005c47 888790000000             mov      byte ptr [rdi + 0x90], al 
+00005c4d 395f10                   cmp      dword ptr [rdi + 0x10], ebx 
+00005c50 7508                     jne      0x140005c5a 
+00005c52 488bcf                   mov      rcx, rdi 
+00005c55 e806da0000               call     0x140013660 
+00005c5a 8a9790000000             mov      dl, byte ptr [rdi + 0x90] 
+00005c60 498bcc                   mov      rcx, r12 
+00005c63 48ff15c6950000           call     qword ptr [rip + 0x95c6] KeReleaseSpinLock; RVA 0xf230 b'.idata\x00\x00' writable=False
+00005c6a 0f1f440000               nop      dword ptr [rax + rax] 
+00005c6f 488b3f                   mov      rdi, qword ptr [rdi] 
+00005c72 493bff                   cmp      rdi, r15 
+00005c75 75ba                     jne      0x140005c31 
+00005c77 8a15d37b0000             mov      dl, byte ptr [rip + 0x7bd3] RVA 0xd850 b'.data\x00\x00\x00' writable=True
+00005c7d 488bcd                   mov      rcx, rbp 
+00005c80 48ff15a9950000           call     qword ptr [rip + 0x95a9] KeReleaseSpinLock; RVA 0xf230 b'.idata\x00\x00' writable=False
+00005c87 0f1f440000               nop      dword ptr [rax + rax] 
+00005c8c 448bfb                   mov      r15d, ebx 
+00005c8f e9e6000000               jmp      0x140005d7a 
+00005c94 488b0da5750000           mov      rcx, qword ptr [rip + 0x75a5] RVA 0xd240 b'.data\x00\x00\x00' writable=True
+00005c9b 493bcd                   cmp      rcx, r13 
+00005c9e 741a                     je       0x140005cba 
+00005ca0 80792904                 cmp      byte ptr [rcx + 0x29], 4 
+00005ca4 7214                     jb       0x140005cba 
+00005ca6 488b4918                 mov      rcx, qword ptr [rcx + 0x18] 
+00005caa ba0f000000               mov      edx, 0xf 
+00005caf 4d8bce                   mov      r9, r14 
+00005cb2 4c8bc6                   mov      r8, rsi 
+00005cb5 e87abfffff               call     0x140001c34 
+00005cba 83fd08                   cmp      ebp, 8 
+00005cbd 0f828f000000             jb       0x140005d52 
+00005cc3 4183fc04                 cmp      r12d, 4 
+00005cc7 0f8285000000             jb       0x140005d52 
+00005ccd 488d2d747b0000           lea      rbp, [rip + 0x7b74] RVA 0xd848 b'.data\x00\x00\x00' writable=True
+00005cd4 488bcd                   mov      rcx, rbp 
+00005cd7 48ff155a950000           call     qword ptr [rip + 0x955a] KeAcquireSpinLockRaiseToDpc; RVA 0xf238 b'.idata\x00\x00' writable=False
+00005cde 0f1f440000               nop      dword ptr [rax + rax] 
+00005ce3 8805677b0000             mov      byte ptr [rip + 0x7b67], al RVA 0xd850 b'.data\x00\x00\x00' writable=True
+00005ce9 4c8d3d387b0000           lea      r15, [rip + 0x7b38] RVA 0xd828 b'.data\x00\x00\x00' writable=True
+00005cf0 8b05427b0000             mov      eax, dword ptr [rip + 0x7b42] RVA 0xd838 b'.data\x00\x00\x00' writable=True
+00005cf6 8907                     mov      dword ptr [rdi], eax 
+00005cf8 488b3d297b0000           mov      rdi, qword ptr [rip + 0x7b29] RVA 0xd828 b'.data\x00\x00\x00' writable=True
+00005cff 891d1b7b0000             mov      dword ptr [rip + 0x7b1b], ebx RVA 0xd820 b'.data\x00\x00\x00' writable=True
+00005d05 eb41                     jmp      0x140005d48 
+00005d07 4c8da788000000           lea      r12, [rdi + 0x88] 
+00005d0e 498bcc                   mov      rcx, r12 
+00005d11 48ff1520950000           call     qword ptr [rip + 0x9520] KeAcquireSpinLockRaiseToDpc; RVA 0xf238 b'.idata\x00\x00' writable=False
+00005d18 0f1f440000               nop      dword ptr [rax + rax] 
+00005d1d 888790000000             mov      byte ptr [rdi + 0x90], al 
+00005d23 395f10                   cmp      dword ptr [rdi + 0x10], ebx 
+00005d26 7508                     jne      0x140005d30 
+00005d28 488bcf                   mov      rcx, rdi 
+00005d2b e860d80000               call     0x140013590 
+00005d30 8a9790000000             mov      dl, byte ptr [rdi + 0x90] 
+00005d36 498bcc                   mov      rcx, r12 
+00005d39 48ff15f0940000           call     qword ptr [rip + 0x94f0] KeReleaseSpinLock; RVA 0xf230 b'.idata\x00\x00' writable=False
+00005d40 0f1f440000               nop      dword ptr [rax + rax] 
+00005d45 488b3f                   mov      rdi, qword ptr [rdi] 
+00005d48 493bff                   cmp      rdi, r15 
+00005d4b 75ba                     jne      0x140005d07 
+00005d4d e941f8ffff               jmp      0x140005593 
+00005d52 488b0de7740000           mov      rcx, qword ptr [rip + 0x74e7] RVA 0xd240 b'.data\x00\x00\x00' writable=True
+00005d59 493bcd                   cmp      rcx, r13 
+00005d5c 7417                     je       0x140005d75 
+00005d5e 80792903                 cmp      byte ptr [rcx + 0x29], 3 
+00005d62 7211                     jb       0x140005d75 
+00005d64 ba10000000               mov      edx, 0x10 
+00005d69 488b4918                 mov      rcx, qword ptr [rcx + 0x18] 
+00005d6d 4c8bc6                   mov      r8, rsi 
+00005d70 e84fbeffff               call     0x140001bc4 
+00005d75 bb230000c0               mov      ebx, 0xc0000023 
+00005d7a 418bc7                   mov      eax, r15d 
+00005d7d 33d2                     xor      edx, edx 
+00005d7f 49894638                 mov      qword ptr [r14 + 0x38], rax 
+00005d83 498bce                   mov      rcx, r14 
+00005d86 498b86b8000000           mov      rax, qword ptr [r14 + 0xb8] 
+00005d8d 41895e30                 mov      dword ptr [r14 + 0x30], ebx 
+00005d91 806003fe                 and      byte ptr [rax + 3], 0xfe 
+00005d95 48ff1554940000           call     qword ptr [rip + 0x9454] IofCompleteRequest; RVA 0xf1f0 b'.idata\x00\x00' writable=False
+00005d9c 0f1f440000               nop      dword ptr [rax + rax] 
+00005da1 488b0d98740000           mov      rcx, qword ptr [rip + 0x7498] RVA 0xd240 b'.data\x00\x00\x00' writable=True
+00005da8 493bcd                   cmp      rcx, r13 
+00005dab 741e                     je       0x140005dcb 
+00005dad 80792905                 cmp      byte ptr [rcx + 0x29], 5 
+00005db1 7218                     jb       0x140005dcb 
+00005db3 488b4918                 mov      rcx, qword ptr [rcx + 0x18] 
+00005db7 ba27000000               mov      edx, 0x27 
+00005dbc 4d8bce                   mov      r9, r14 
+00005dbf 895c2420                 mov      dword ptr [rsp + 0x20], ebx 
+00005dc3 4c8bc6                   mov      r8, rsi 
+00005dc6 e8adbeffff               call     0x140001c78 
+00005dcb 8bc3                     mov      eax, ebx 
+00005dcd eb20                     jmp      0x140005def 
+00005dcf bfbb0000c0               mov      edi, 0xc00000bb 
+00005dd4 49895e38                 mov      qword ptr [r14 + 0x38], rbx 
+00005dd8 33d2                     xor      edx, edx 
+00005dda 41897e30                 mov      dword ptr [r14 + 0x30], edi 
+00005dde 498bce                   mov      rcx, r14 
+00005de1 48ff1508940000           call     qword ptr [rip + 0x9408] IofCompleteRequest; RVA 0xf1f0 b'.idata\x00\x00' writable=False
+00005de8 0f1f440000               nop      dword ptr [rax + rax] 
+00005ded 8bc7                     mov      eax, edi 
+00005def 4c8d5c2440               lea      r11, [rsp + 0x40] 
+00005df4 498b5b30                 mov      rbx, qword ptr [r11 + 0x30] 
+00005df8 498b6b40                 mov      rbp, qword ptr [r11 + 0x40] 
+00005dfc 498b7348                 mov      rsi, qword ptr [r11 + 0x48] 
+00005e00 498be3                   mov      rsp, r11 
+00005e03 415f                     pop      r15 
+00005e05 415e                     pop      r14 
+00005e07 415d                     pop      r13 
+00005e09 415c                     pop      r12 
+00005e0b 5f                       pop      rdi 
+00005e0c c3                       ret       
+00005e0d cc                       int3      
+FUNCTION RVA 0x8b70:
+00008b70 ff25b2670000             jmp      qword ptr [rip + 0x67b2] CFG guard dispatch/check slot; RVA 0xf328 b'.idata\x00\x00' writable=False

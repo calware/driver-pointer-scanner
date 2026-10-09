@@ -1,0 +1,303 @@
+IMAGE: C:\Windows\System32\drivers\amdsbs.sys
+BASE: 0x10000
+ENTRY RVA: 0x37348
+SECTIONS:
+b'.text\x00\x00\x00' RVA=0x1000 size=0x3745a flags=0x68000020
+b'.rdata\x00\x00' RVA=0x39000 size=0x23d4 flags=0x48000040
+b'.data\x00\x00\x00' RVA=0x3c000 size=0x25710 flags=0xc8000040
+b'.pdata\x00\x00' RVA=0x62000 size=0x1c14 flags=0x48000040
+b'INIT\x00\x00\x00\x00' RVA=0x64000 size=0x5e0 flags=0xe2000020
+b'.rsrc\x00\x00\x00' RVA=0x65000 size=0x8a0 flags=0x42000040
+b'.reloc\x00\x00' RVA=0x66000 size=0xcc flags=0x42000040
+IMPORTS:
+0x39000 DbgPrint
+0x39008 ExSystemTimeToLocalTime
+0x39010 MmUnmapIoSpace
+0x39018 KfRaiseIrql
+0x39020 MmMapIoSpace
+0x39028 KeLowerIrql
+0x39030 ExAllocatePoolWithTag
+0x39038 IoBuildDeviceIoControlRequest
+0x39040 ExFreePoolWithTag
+0x39048 RtlInitUnicodeString
+0x39050 MmGetSystemRoutineAddress
+0x39058 RtlAppendUnicodeToString
+0x39060 KeInitializeEvent
+0x39068 RtlQueryRegistryValues
+0x39070 RtlAppendUnicodeStringToString
+0x39078 IofCompleteRequest
+0x39080 RtlWriteRegistryValue
+0x39088 IoEnumerateDeviceObjectList
+0x39090 RtlCreateRegistryKey
+0x39098 IofCallDriver
+0x390a0 IoGetAttachedDevice
+0x390a8 KeQueryTimeIncrement
+0x390b0 __chkstk
+0x390b8 strcmp
+0x390c8 StorPortResumeDevice
+0x390d0 StorPortSetBusDataByOffset
+0x390d8 StorPortStallExecution
+0x390e0 StorPortGetPhysicalAddress
+0x390e8 StorPortDeviceReady
+0x390f0 StorPortBusy
+0x390f8 StorPortResume
+0x39100 StorPortReady
+0x39108 StorPortDeviceBusy
+0x39110 StorPortPauseDevice
+0x39118 StorPortGetDeviceBase
+0x39120 StorPortSetDeviceQueueDepth
+0x39128 StorPortLogError
+0x39130 StorPortPause
+0x39138 StorPortInitialize
+0x39140 StorPortGetUncachedExtension
+0x39148 StorPortExtendedFunction
+0x39150 ScsiPortNotification
+0x39158 StorPortNotification
+0x39160 StorPortGetBusData
+FUNCTION RVA 0x30f8c:
+00030f8c 48895c2418               mov      qword ptr [rsp + 0x18], rbx 
+00030f91 55                       push     rbp 
+00030f92 56                       push     rsi 
+00030f93 57                       push     rdi 
+00030f94 4154                     push     r12 
+00030f96 4155                     push     r13 
+00030f98 4156                     push     r14 
+00030f9a 4157                     push     r15 
+00030f9c 488dac2450ffffff         lea      rbp, [rsp - 0xb0] 
+00030fa4 4881ecb0010000           sub      rsp, 0x1b0 
+00030fab 488b0556b10000           mov      rax, qword ptr [rip + 0xb156] RVA 0x3c108 b'.data\x00\x00\x00' writable=True
+00030fb2 4833c4                   xor      rax, rsp 
+00030fb5 488985a0000000           mov      qword ptr [rbp + 0xa0], rax 
+00030fbc 488b82b8000000           mov      rax, qword ptr [rdx + 0xb8] 
+00030fc3 488bf2                   mov      rsi, rdx 
+00030fc6 4c8bf1                   mov      r14, rcx 
+00030fc9 81781804942d00           cmp      dword ptr [rax + 0x18], 0x2d9404 
+00030fd0 0f85cc000000             jne      0x410a2 
+00030fd6 4c8b7a18                 mov      r15, qword ptr [rdx + 0x18] 
+00030fda 41837f0401               cmp      dword ptr [r15 + 4], 1 
+00030fdf 0f85bd000000             jne      0x410a2 
+00030fe5 488b0d3c050300           mov      rcx, qword ptr [rip + 0x3053c] RVA 0x61528 b'.data\x00\x00\x00' writable=True
+00030fec 33c0                     xor      eax, eax 
+00030fee 4533ed                   xor      r13d, r13d 
+00030ff1 8d5003                   lea      edx, [rax + 3] 
+00030ff4 4889442478               mov      qword ptr [rsp + 0x78], rax 
+00030ff9 488b05f8c00100           mov      rax, qword ptr [rip + 0x1c0f8] RVA 0x4d0f8 b'.data\x00\x00\x00' writable=True
+00031000 4c896c2470               mov      qword ptr [rsp + 0x70], r13 
+00031005 ff10                     call     qword ptr [rax] 
+00031007 458d457c                 lea      r8d, [r13 + 0x7c] 
+0003100b 488d4d24                 lea      rcx, [rbp + 0x24] 
+0003100f 33d2                     xor      edx, edx 
+00031011 44896d20                 mov      dword ptr [rbp + 0x20], r13d 
+00031015 488bd8                   mov      rbx, rax 
+00031018 e863640000               call     0x47480 
+0003101d 488d4d88                 lea      rcx, [rbp - 0x78] 
+00031021 4533c0                   xor      r8d, r8d 
+00031024 33d2                     xor      edx, edx 
+00031026 ff1534800000             call     qword ptr [rip + 0x8034] KeInitializeEvent; RVA 0x39060 b'.rdata\x00\x00' writable=False
+0003102c 33c0                     xor      eax, eax 
+0003102e 4533c9                   xor      r9d, r9d 
+00031031 4889442458               mov      qword ptr [rsp + 0x58], rax 
+00031036 488d442470               lea      rax, [rsp + 0x70] 
+0003103b 4533c0                   xor      r8d, r8d 
+0003103e 4889442440               mov      qword ptr [rsp + 0x40], rax 
+00031043 488d4588                 lea      rax, [rbp - 0x78] 
+00031047 498bd6                   mov      rdx, r14 
+0003104a 4889442438               mov      qword ptr [rsp + 0x38], rax 
+0003104f 488d442458               lea      rax, [rsp + 0x58] 
+00031054 44886c2430               mov      byte ptr [rsp + 0x30], r13b 
+00031059 b918100400               mov      ecx, 0x41018 
+0003105e c744242808000000         mov      dword ptr [rsp + 0x28], 8 
+00031066 4889442420               mov      qword ptr [rsp + 0x20], rax 
+0003106b ff15c77f0000             call     qword ptr [rip + 0x7fc7] IoBuildDeviceIoControlRequest; RVA 0x39038 b'.rdata\x00\x00' writable=False
+00031071 498bce                   mov      rcx, r14 
+00031074 4885c0                   test     rax, rax 
+00031077 7426                     je       0x4109f 
+00031079 488bd0                   mov      rdx, rax 
+0003107c ff1516800000             call     qword ptr [rip + 0x8016] IofCallDriver; RVA 0x39098 b'.rdata\x00\x00' writable=False
+00031082 85c0                     test     eax, eax 
+00031084 7516                     jne      0x4109c 
+00031086 8a54245e                 mov      dl, byte ptr [rsp + 0x5e] 
+0003108a 4c8d45a0                 lea      r8, [rbp - 0x60] 
+0003108e 488bcb                   mov      rcx, rbx 
+00031091 e8e2b2feff               call     0x2c378 
+00031096 f645a410                 test     byte ptr [rbp - 0x5c], 0x10 
+0003109a 7536                     jne      0x410d2 
+0003109c 498bce                   mov      rcx, r14 
+0003109f 488bd6                   mov      rdx, rsi 
+000310a2 ff1558060300             call     qword ptr [rip + 0x30658] RVA 0x61700 b'.data\x00\x00\x00' writable=True
+000310a8 488b8da0000000           mov      rcx, qword ptr [rbp + 0xa0] 
+000310af 4833cc                   xor      rcx, rsp 
+000310b2 e8d9620000               call     0x47390 
+000310b7 488b9c2400020000         mov      rbx, qword ptr [rsp + 0x200] 
+000310bf 4881c4b0010000           add      rsp, 0x1b0 
+000310c6 415f                     pop      r15 
+000310c8 415e                     pop      r14 
+000310ca 415d                     pop      r13 
+000310cc 415c                     pop      r12 
+000310ce 5f                       pop      rdi 
+000310cf 5e                       pop      rsi 
+000310d0 5d                       pop      rbp 
+000310d1 c3                       ret       
+000310d2 488b0527c00100           mov      rax, qword ptr [rip + 0x1c027] RVA 0x4d100 b'.data\x00\x00\x00' writable=True
+000310d9 8a54245e                 mov      dl, byte ptr [rsp + 0x5e] 
+000310dd 488b8b281b0000           mov      rcx, qword ptr [rbx + 0x1b28] 
+000310e4 4c8d4520                 lea      r8, [rbp + 0x20] 
+000310e8 ff5068                   call     qword ptr [rax + 0x68] 
+000310eb f6454420                 test     byte ptr [rbp + 0x44], 0x20 
+000310ef 74ab                     je       0x4109c 
+000310f1 8a54245e                 mov      dl, byte ptr [rsp + 0x5e] 
+000310f5 488b8b281b0000           mov      rcx, qword ptr [rbx + 0x1b28] 
+000310fc 4c8d442454               lea      r8, [rsp + 0x54] 
+00031101 41b101                   mov      r9b, 1 
+00031104 e8b3d1fdff               call     0x1e2bc 
+00031109 8b5c2454                 mov      ebx, dword ptr [rsp + 0x54] 
+0003110d 85db                     test     ebx, ebx 
+0003110f 748b                     je       0x4109c 
+00031111 418b4718                 mov      eax, dword ptr [r15 + 0x18] 
+00031115 488b0d14040300           mov      rcx, qword ptr [rip + 0x30414] RVA 0x61530 b'.data\x00\x00\x00' writable=True
+0003111c 4c8d4c2450               lea      r9, [rsp + 0x50] 
+00031121 c1e804                   shr      eax, 4 
+00031124 c1e309                   shl      ebx, 9 
+00031127 4533c0                   xor      r8d, r8d 
+0003112a 33d2                     xor      edx, edx 
+0003112c 44896c2450               mov      dword ptr [rsp + 0x50], r13d 
+00031131 89442454                 mov      dword ptr [rsp + 0x54], eax 
+00031135 c1eb03                   shr      ebx, 3 
+00031138 ff154a7f0000             call     qword ptr [rip + 0x7f4a] IoEnumerateDeviceObjectList; RVA 0x39088 b'.rdata\x00\x00' writable=False
+0003113e 8b442450                 mov      eax, dword ptr [rsp + 0x50] 
+00031142 85c0                     test     eax, eax 
+00031144 0f8452ffffff             je       0x4109c 
+0003114a 8bd0                     mov      edx, eax 
+0003114c 33c9                     xor      ecx, ecx 
+0003114e 41b831544f44             mov      r8d, 0x444f5431 
+00031154 48c1e203                 shl      rdx, 3 
+00031158 ff15d27e0000             call     qword ptr [rip + 0x7ed2] ExAllocatePoolWithTag; RVA 0x39030 b'.rdata\x00\x00' writable=False
+0003115e 488bf8                   mov      rdi, rax 
+00031161 4c8be0                   mov      r12, rax 
+00031164 4885c0                   test     rax, rax 
+00031167 0f842fffffff             je       0x4109c 
+0003116d 448b442450               mov      r8d, dword ptr [rsp + 0x50] 
+00031172 33d2                     xor      edx, edx 
+00031174 488bc8                   mov      rcx, rax 
+00031177 49c1e003                 shl      r8, 3 
+0003117b e800630000               call     0x47480 
+00031180 448b442450               mov      r8d, dword ptr [rsp + 0x50] 
+00031185 488b0da4030300           mov      rcx, qword ptr [rip + 0x303a4] RVA 0x61530 b'.data\x00\x00\x00' writable=True
+0003118c 4c8d4c2450               lea      r9, [rsp + 0x50] 
+00031191 41c1e003                 shl      r8d, 3 
+00031195 498bd4                   mov      rdx, r12 
+00031198 ff15ea7e0000             call     qword ptr [rip + 0x7eea] IoEnumerateDeviceObjectList; RVA 0x39088 b'.rdata\x00\x00' writable=False
+0003119e 85c0                     test     eax, eax 
+000311a0 0f85c3010000             jne      0x41369 
+000311a6 448b442450               mov      r8d, dword ptr [rsp + 0x50] 
+000311ab 83c9ff                   or       ecx, 0xffffffff 
+000311ae 4403c1                   add      r8d, ecx 
+000311b1 4489442450               mov      dword ptr [rsp + 0x50], r8d 
+000311b6 740e                     je       0x411c6 
+000311b8 4b8d3cc4                 lea      rdi, [r12 + r8*8] 
+000311bc 4403c1                   add      r8d, ecx 
+000311bf 75fb                     jne      0x411bc 
+000311c1 4489442450               mov      dword ptr [rsp + 0x50], r8d 
+000311c6 488b07                   mov      rax, qword ptr [rdi] 
+000311c9 ba31544f44               mov      edx, 0x444f5431 
+000311ce 498bcc                   mov      rcx, r12 
+000311d1 4889442468               mov      qword ptr [rsp + 0x68], rax 
+000311d6 ff15647e0000             call     qword ptr [rip + 0x7e64] ExFreePoolWithTag; RVA 0x39040 b'.rdata\x00\x00' writable=False
+000311dc 458b6714                 mov      r12d, dword ptr [r15 + 0x14] 
+000311e0 4d03e7                   add      r12, r15 
+000311e3 44396c2454               cmp      dword ptr [rsp + 0x54], r13d 
+000311e8 0f8665010000             jbe      0x41353 
+000311ee 69dbffff0000             imul     ebx, ebx, 0xffff 
+000311f4 8bcb                     mov      ecx, ebx 
+000311f6 48894d80                 mov      qword ptr [rbp - 0x80], rcx 
+000311fa 498b5c2408               mov      rbx, qword ptr [r12 + 8] 
+000311ff 498b3c24                 mov      rdi, qword ptr [r12] 
+00031203 33d2                     xor      edx, edx 
+00031205 48c1eb09                 shr      rbx, 9 
+00031209 48c1ef09                 shr      rdi, 9 
+0003120d 488bc3                   mov      rax, rbx 
+00031210 48f7f1                   div      rcx 
+00031213 4c8bf8                   mov      r15, rax 
+00031216 4885d2                   test     rdx, rdx 
+00031219 7403                     je       0x4121e 
+0003121b 41ffc7                   inc      r15d 
+0003121e 8364246000               and      dword ptr [rsp + 0x60], 0 
+00031223 4585ff                   test     r15d, r15d 
+00031226 0f8415010000             je       0x41341 
+0003122c 33d2                     xor      edx, edx 
+0003122e 488d4da0                 lea      rcx, [rbp - 0x60] 
+00031232 448d4240                 lea      r8d, [rdx + 0x40] 
+00031236 e845620000               call     0x47480 
+0003123b 488d4d88                 lea      rcx, [rbp - 0x78] 
+0003123f 4533c0                   xor      r8d, r8d 
+00031242 33d2                     xor      edx, edx 
+00031244 ff15167e0000             call     qword ptr [rip + 0x7e16] KeInitializeEvent; RVA 0x39060 b'.rdata\x00\x00' writable=False
+0003124a 33d2                     xor      edx, edx 
+0003124c 488d4da0                 lea      rcx, [rbp - 0x60] 
+00031250 448d4240                 lea      r8d, [rdx + 0x40] 
+00031254 e827620000               call     0x47480 
+00031259 488bc7                   mov      rax, rdi 
+0003125c c745b005000000           mov      dword ptr [rbp - 0x50], 5 
+00031263 48c1e820                 shr      rax, 0x20 
+00031267 c745a01c000000           mov      dword ptr [rbp - 0x60], 0x1c 
+0003126e c745b824000000           mov      dword ptr [rbp - 0x48], 0x24 
+00031275 8945d8                   mov      dword ptr [rbp - 0x28], eax 
+00031278 b800feff01               mov      eax, 0x1fffe00 
+0003127d c745ac1e000000           mov      dword ptr [rbp - 0x54], 0x1e 
+00031284 c745a446415354           mov      dword ptr [rbp - 0x5c], 0x54534146 
+0003128b c745a85452414b           mov      dword ptr [rbp - 0x58], 0x4b415254 
+00031292 c745bc00000001           mov      dword ptr [rbp - 0x44], 0x1000000 
+00031299 c745c020000000           mov      dword ptr [rbp - 0x40], 0x20 
+000312a0 c645dc06                 mov      byte ptr [rbp - 0x24], 6 
+000312a4 897dd4                   mov      dword ptr [rbp - 0x2c], edi 
+000312a7 483bd8                   cmp      rbx, rax 
+000312aa 760b                     jbe      0x412b7 
+000312ac 482bd8                   sub      rbx, rax 
+000312af 8945c8                   mov      dword ptr [rbp - 0x38], eax 
+000312b2 4803f8                   add      rdi, rax 
+000312b5 eb03                     jmp      0x412ba 
+000312b7 895dc8                   mov      dword ptr [rbp - 0x38], ebx 
+000312ba 8a44245e                 mov      al, byte ptr [rsp + 0x5e] 
+000312be 488b542468               mov      rdx, qword ptr [rsp + 0x68] 
+000312c3 8365cc00                 and      dword ptr [rbp - 0x34], 0 
+000312c7 8845c4                   mov      byte ptr [rbp - 0x3c], al 
+000312ca 8845c5                   mov      byte ptr [rbp - 0x3b], al 
+000312cd 488d442470               lea      rax, [rsp + 0x70] 
+000312d2 4889442440               mov      qword ptr [rsp + 0x40], rax 
+000312d7 488d4588                 lea      rax, [rbp - 0x78] 
+000312db 4c8d45a0                 lea      r8, [rbp - 0x60] 
+000312df 4889442438               mov      qword ptr [rsp + 0x38], rax 
+000312e4 488d45a0                 lea      rax, [rbp - 0x60] 
+000312e8 c644243000               mov      byte ptr [rsp + 0x30], 0 
+000312ed 41b940000000             mov      r9d, 0x40 
+000312f3 b908d00400               mov      ecx, 0x4d008 
+000312f8 c744242840000000         mov      dword ptr [rsp + 0x28], 0x40 
+00031300 c645d101                 mov      byte ptr [rbp - 0x2f], 1 
+00031304 c645c605                 mov      byte ptr [rbp - 0x3a], 5 
+00031308 4889442420               mov      qword ptr [rsp + 0x20], rax 
+0003130d ff15257d0000             call     qword ptr [rip + 0x7d25] IoBuildDeviceIoControlRequest; RVA 0x39038 b'.rdata\x00\x00' writable=False
+00031313 4885c0                   test     rax, rax 
+00031316 0f8480fdffff             je       0x4109c 
+0003131c 488b4c2468               mov      rcx, qword ptr [rsp + 0x68] 
+00031321 488bd0                   mov      rdx, rax 
+00031324 ff156e7d0000             call     qword ptr [rip + 0x7d6e] IofCallDriver; RVA 0x39098 b'.rdata\x00\x00' writable=False
+0003132a 8b442460                 mov      eax, dword ptr [rsp + 0x60] 
+0003132e ffc0                     inc      eax 
+00031330 89442460                 mov      dword ptr [rsp + 0x60], eax 
+00031334 413bc7                   cmp      eax, r15d 
+00031337 0f82effeffff             jb       0x4122c 
+0003133d 488b4d80                 mov      rcx, qword ptr [rbp - 0x80] 
+00031341 41ffc5                   inc      r13d 
+00031344 4983c410                 add      r12, 0x10 
+00031348 443b6c2454               cmp      r13d, dword ptr [rsp + 0x54] 
+0003134d 0f82a7feffff             jb       0x411fa 
+00031353 83663000                 and      dword ptr [rsi + 0x30], 0 
+00031357 33d2                     xor      edx, edx 
+00031359 488bce                   mov      rcx, rsi 
+0003135c ff15167d0000             call     qword ptr [rip + 0x7d16] IofCompleteRequest; RVA 0x39078 b'.rdata\x00\x00' writable=False
+00031362 33c0                     xor      eax, eax 
+00031364 e93ffdffff               jmp      0x410a8 
+00031369 ba31544f44               mov      edx, 0x444f5431 
+0003136e 488bcf                   mov      rcx, rdi 
+00031371 ff15c97c0000             call     qword ptr [rip + 0x7cc9] ExFreePoolWithTag; RVA 0x39040 b'.rdata\x00\x00' writable=False
+00031377 e920fdffff               jmp      0x4109c 

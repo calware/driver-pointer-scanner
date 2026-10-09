@@ -1,0 +1,13 @@
+test_compiled_variants (test_scanner.ScannerTests.test_compiled_variants) ... ok
+test_guard_check_is_not_callback_invocation (test_scanner.ScannerTests.test_guard_check_is_not_callback_invocation) ... ok
+test_nonreturning_helper_does_not_reach_callback (test_scanner.ScannerTests.test_nonreturning_helper_does_not_reach_callback) ... ok
+test_rebased_image (test_scanner.ScannerTests.test_rebased_image) ... ok
+test_signed_test_predicate (test_scanner.ScannerTests.test_signed_test_predicate) ... ok
+test_truncated_image (test_scanner.ScannerTests.test_truncated_image) ... ok
+test_unresolved_branch_prevents_noreturn_inference (test_scanner.ScannerTests.test_unresolved_branch_prevents_noreturn_inference) ... ok
+test_unsatisfiable_integer_path (test_scanner.ScannerTests.test_unsatisfiable_integer_path) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.117s
+
+OK

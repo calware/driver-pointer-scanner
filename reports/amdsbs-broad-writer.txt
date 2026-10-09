@@ -1,0 +1,258 @@
+IMAGE: C:\Windows\System32\drivers\amdsbs.sys
+BASE: 0x10000
+ENTRY RVA: 0x37348
+SECTIONS:
+b'.text\x00\x00\x00' RVA=0x1000 size=0x3745a flags=0x68000020
+b'.rdata\x00\x00' RVA=0x39000 size=0x23d4 flags=0x48000040
+b'.data\x00\x00\x00' RVA=0x3c000 size=0x25710 flags=0xc8000040
+b'.pdata\x00\x00' RVA=0x62000 size=0x1c14 flags=0x48000040
+b'INIT\x00\x00\x00\x00' RVA=0x64000 size=0x5e0 flags=0xe2000020
+b'.rsrc\x00\x00\x00' RVA=0x65000 size=0x8a0 flags=0x42000040
+b'.reloc\x00\x00' RVA=0x66000 size=0xcc flags=0x42000040
+IMPORTS:
+0x39000 DbgPrint
+0x39008 ExSystemTimeToLocalTime
+0x39010 MmUnmapIoSpace
+0x39018 KfRaiseIrql
+0x39020 MmMapIoSpace
+0x39028 KeLowerIrql
+0x39030 ExAllocatePoolWithTag
+0x39038 IoBuildDeviceIoControlRequest
+0x39040 ExFreePoolWithTag
+0x39048 RtlInitUnicodeString
+0x39050 MmGetSystemRoutineAddress
+0x39058 RtlAppendUnicodeToString
+0x39060 KeInitializeEvent
+0x39068 RtlQueryRegistryValues
+0x39070 RtlAppendUnicodeStringToString
+0x39078 IofCompleteRequest
+0x39080 RtlWriteRegistryValue
+0x39088 IoEnumerateDeviceObjectList
+0x39090 RtlCreateRegistryKey
+0x39098 IofCallDriver
+0x390a0 IoGetAttachedDevice
+0x390a8 KeQueryTimeIncrement
+0x390b0 __chkstk
+0x390b8 strcmp
+0x390c8 StorPortResumeDevice
+0x390d0 StorPortSetBusDataByOffset
+0x390d8 StorPortStallExecution
+0x390e0 StorPortGetPhysicalAddress
+0x390e8 StorPortDeviceReady
+0x390f0 StorPortBusy
+0x390f8 StorPortResume
+0x39100 StorPortReady
+0x39108 StorPortDeviceBusy
+0x39110 StorPortPauseDevice
+0x39118 StorPortGetDeviceBase
+0x39120 StorPortSetDeviceQueueDepth
+0x39128 StorPortLogError
+0x39130 StorPortPause
+0x39138 StorPortInitialize
+0x39140 StorPortGetUncachedExtension
+0x39148 StorPortExtendedFunction
+0x39150 ScsiPortNotification
+0x39158 StorPortNotification
+0x39160 StorPortGetBusData
+FUNCTION RVA 0x3285c:
+0003285c 48895c2418               mov      qword ptr [rsp + 0x18], rbx 
+00032861 4889742420               mov      qword ptr [rsp + 0x20], rsi 
+00032866 55                       push     rbp 
+00032867 57                       push     rdi 
+00032868 4156                     push     r14 
+0003286a 488dac2460fbffff         lea      rbp, [rsp - 0x4a0] 
+00032872 4881eca0050000           sub      rsp, 0x5a0 
+00032879 488b0588980000           mov      rax, qword ptr [rip + 0x9888] RVA 0x3c108 b'.data\x00\x00\x00' writable=True
+00032880 4833c4                   xor      rax, rsp 
+00032883 48898590040000           mov      qword ptr [rbp + 0x490], rax 
+0003288a 488bf9                   mov      rdi, rcx 
+0003288d 488bf2                   mov      rsi, rdx 
+00032890 488d4c2444               lea      rcx, [rsp + 0x44] 
+00032895 4533f6                   xor      r14d, r14d 
+00032898 33d2                     xor      edx, edx 
+0003289a 41b8cc000000             mov      r8d, 0xcc 
+000328a0 4489742440               mov      dword ptr [rsp + 0x40], r14d 
+000328a5 e8d64b0000               call     0x47480 
+000328aa 488d0dcf590000           lea      rcx, [rip + 0x59cf] RVA 0x38280 b'.text\x00\x00\x00' writable=False
+000328b1 4c8bc6                   mov      r8, rsi 
+000328b4 488bd7                   mov      rdx, rdi 
+000328b7 ff1543670000             call     qword ptr [rip + 0x6743] DbgPrint; RVA 0x39000 b'.rdata\x00\x00' writable=False
+000328bd 488d8590000000           lea      rax, [rbp + 0x90] 
+000328c4 c744243000000004         mov      dword ptr [rsp + 0x30], 0x4000000 
+000328cc 4889442438               mov      qword ptr [rsp + 0x38], rax 
+000328d1 4489b590000000           mov      dword ptr [rbp + 0x90], r14d 
+000328d8 4885f6                   test     rsi, rsi 
+000328db 0f849e000000             je       0x4297f 
+000328e1 488d1568570000           lea      rdx, [rip + 0x5768] RVA 0x38050 b'.text\x00\x00\x00' writable=False
+000328e8 488d4c2430               lea      rcx, [rsp + 0x30] 
+000328ed ff1565670000             call     qword ptr [rip + 0x6765] RtlAppendUnicodeToString; RVA 0x39058 b'.rdata\x00\x00' writable=False
+000328f3 0fb7442430               movzx    eax, word ptr [rsp + 0x30] 
+000328f8 458d4670                 lea      r8d, [r14 + 0x70] 
+000328fc 488d4d20                 lea      rcx, [rbp + 0x20] 
+00032900 33d2                     xor      edx, edx 
+00032902 4489b40590000000         mov      dword ptr [rbp + rax + 0x90], r14d 
+0003290a e8714b0000               call     0x47480 
+0003290f 488b5c2438               mov      rbx, qword ptr [rsp + 0x38] 
+00032914 488d0575570000           lea      rax, [rip + 0x5775] RVA 0x38090 b'.text\x00\x00\x00' writable=False
+0003291b 48894530                 mov      qword ptr [rbp + 0x30], rax 
+0003291f 488d05ae9a0000           lea      rax, [rip + 0x9aae] RVA 0x3c3d4 b'.data\x00\x00\x00' writable=True
+00032926 488d15b3530000           lea      rdx, [rip + 0x53b3] RVA 0x37ce0 b'.text\x00\x00\x00' writable=False
+0003292d 488d4d10                 lea      rcx, [rbp + 0x10] 
+00032931 c7452820000000           mov      dword ptr [rbp + 0x28], 0x20 
+00032938 c7454004000000           mov      dword ptr [rbp + 0x40], 4 
+0003293f 48894538                 mov      qword ptr [rbp + 0x38], rax 
+00032943 48894548                 mov      qword ptr [rbp + 0x48], rax 
+00032947 c7455004000000           mov      dword ptr [rbp + 0x50], 4 
+0003294e ff15f4660000             call     qword ptr [rip + 0x66f4] RtlInitUnicodeString; RVA 0x39048 b'.rdata\x00\x00' writable=False
+00032954 488d4d10                 lea      rcx, [rbp + 0x10] 
+00032958 ff15f2660000             call     qword ptr [rip + 0x66f2] MmGetSystemRoutineAddress; RVA 0x39050 b'.rdata\x00\x00' writable=False
+0003295e 4c8d4520                 lea      r8, [rbp + 0x20] 
+00032962 488bd3                   mov      rdx, rbx 
+00032965 4885c0                   test     rax, rax 
+00032968 b900000080               mov      ecx, 0x80000000 
+0003296d 4c89742420               mov      qword ptr [rsp + 0x20], r14 
+00032972 480f4405ee660000         cmove    rax, qword ptr [rip + 0x66ee] RtlQueryRegistryValues; RVA 0x39068 b'.rdata\x00\x00' writable=False
+0003297a 4533c9                   xor      r9d, r9d 
+0003297d ffd0                     call     rax 
+0003297f 488bce                   mov      rcx, rsi 
+00032982 e881f1ffff               call     0x41b08 
+00032987 488bce                   mov      rcx, rsi 
+0003298a e8b5efffff               call     0x41944 
+0003298f 418bc6                   mov      eax, r14d 
+00032992 4885ff                   test     rdi, rdi 
+00032995 0f94c0                   sete     al 
+00032998 8905baeb0200             mov      dword ptr [rip + 0x2ebba], eax RVA 0x61558 b'.data\x00\x00\x00' writable=True
+0003299e e835cdffff               call     0x3f6d8 
+000329a3 488b154ea70100           mov      rdx, qword ptr [rip + 0x1a74e] RVA 0x4d0f8 b'.data\x00\x00\x00' writable=True
+000329aa 488b0d3fa70100           mov      rcx, qword ptr [rip + 0x1a73f] RVA 0x4d0f0 b'.data\x00\x00\x00' writable=True
+000329b1 488d0588520000           lea      rax, [rip + 0x5288] RVA 0x37c40 b'.text\x00\x00\x00' writable=False
+000329b8 48890511aa0100           mov      qword ptr [rip + 0x1aa11], rax RVA 0x4d3d0 b'.data\x00\x00\x00' writable=True
+000329bf 488b4208                 mov      rax, qword ptr [rdx + 8] 
+000329c3 4889050eaa0100           mov      qword ptr [rip + 0x1aa0e], rax RVA 0x4d3d8 b'.data\x00\x00\x00' writable=True
+000329ca 488b4210                 mov      rax, qword ptr [rdx + 0x10] 
+000329ce 4889050baa0100           mov      qword ptr [rip + 0x1aa0b], rax RVA 0x4d3e0 b'.data\x00\x00\x00' writable=True
+000329d5 488b4218                 mov      rax, qword ptr [rdx + 0x18] 
+000329d9 48890508aa0100           mov      qword ptr [rip + 0x1aa08], rax RVA 0x4d3e8 b'.data\x00\x00\x00' writable=True
+000329e0 488b4220                 mov      rax, qword ptr [rdx + 0x20] 
+000329e4 48890505aa0100           mov      qword ptr [rip + 0x1aa05], rax RVA 0x4d3f0 b'.data\x00\x00\x00' writable=True
+000329eb 488b4230                 mov      rax, qword ptr [rdx + 0x30] 
+000329ef 48890502aa0100           mov      qword ptr [rip + 0x1aa02], rax RVA 0x4d3f8 b'.data\x00\x00\x00' writable=True
+000329f6 488b4240                 mov      rax, qword ptr [rdx + 0x40] 
+000329fa 488905ffa90100           mov      qword ptr [rip + 0x1a9ff], rax RVA 0x4d400 b'.data\x00\x00\x00' writable=True
+00032a01 488b4248                 mov      rax, qword ptr [rdx + 0x48] 
+00032a05 488905fca90100           mov      qword ptr [rip + 0x1a9fc], rax RVA 0x4d408 b'.data\x00\x00\x00' writable=True
+00032a0c 488d053d520000           lea      rax, [rip + 0x523d] RVA 0x37c50 b'.text\x00\x00\x00' writable=False
+00032a13 48890576aa0100           mov      qword ptr [rip + 0x1aa76], rax RVA 0x4d490 b'.data\x00\x00\x00' writable=True
+00032a1a 488b01                   mov      rax, qword ptr [rcx] 
+00032a1d 48890574aa0100           mov      qword ptr [rip + 0x1aa74], rax RVA 0x4d498 b'.data\x00\x00\x00' writable=True
+00032a24 488b4108                 mov      rax, qword ptr [rcx + 8] 
+00032a28 48890571aa0100           mov      qword ptr [rip + 0x1aa71], rax RVA 0x4d4a0 b'.data\x00\x00\x00' writable=True
+00032a2f 488b4110                 mov      rax, qword ptr [rcx + 0x10] 
+00032a33 4889056eaa0100           mov      qword ptr [rip + 0x1aa6e], rax RVA 0x4d4a8 b'.data\x00\x00\x00' writable=True
+00032a3a 488b4118                 mov      rax, qword ptr [rcx + 0x18] 
+00032a3e 4889056baa0100           mov      qword ptr [rip + 0x1aa6b], rax RVA 0x4d4b0 b'.data\x00\x00\x00' writable=True
+00032a45 488b4120                 mov      rax, qword ptr [rcx + 0x20] 
+00032a49 48890568aa0100           mov      qword ptr [rip + 0x1aa68], rax RVA 0x4d4b8 b'.data\x00\x00\x00' writable=True
+00032a50 488b4130                 mov      rax, qword ptr [rcx + 0x30] 
+00032a54 48890565aa0100           mov      qword ptr [rip + 0x1aa65], rax RVA 0x4d4c0 b'.data\x00\x00\x00' writable=True
+00032a5b 488b4138                 mov      rax, qword ptr [rcx + 0x38] 
+00032a5f 488b0d9aa60100           mov      rcx, qword ptr [rip + 0x1a69a] RVA 0x4d100 b'.data\x00\x00\x00' writable=True
+00032a66 4889055baa0100           mov      qword ptr [rip + 0x1aa5b], rax RVA 0x4d4c8 b'.data\x00\x00\x00' writable=True
+00032a6d 488d05ec510000           lea      rax, [rip + 0x51ec] RVA 0x37c60 b'.text\x00\x00\x00' writable=False
+00032a74 48890595a90100           mov      qword ptr [rip + 0x1a995], rax RVA 0x4d410 b'.data\x00\x00\x00' writable=True
+00032a7b 488b01                   mov      rax, qword ptr [rcx] 
+00032a7e 48890593a90100           mov      qword ptr [rip + 0x1a993], rax RVA 0x4d418 b'.data\x00\x00\x00' writable=True
+00032a85 488b4108                 mov      rax, qword ptr [rcx + 8] 
+00032a89 48890590a90100           mov      qword ptr [rip + 0x1a990], rax RVA 0x4d420 b'.data\x00\x00\x00' writable=True
+00032a90 488b4110                 mov      rax, qword ptr [rcx + 0x10] 
+00032a94 4889058da90100           mov      qword ptr [rip + 0x1a98d], rax RVA 0x4d428 b'.data\x00\x00\x00' writable=True
+00032a9b 488b4118                 mov      rax, qword ptr [rcx + 0x18] 
+00032a9f 4889058aa90100           mov      qword ptr [rip + 0x1a98a], rax RVA 0x4d430 b'.data\x00\x00\x00' writable=True
+00032aa6 488b4120                 mov      rax, qword ptr [rcx + 0x20] 
+00032aaa 48890587a90100           mov      qword ptr [rip + 0x1a987], rax RVA 0x4d438 b'.data\x00\x00\x00' writable=True
+00032ab1 488b4128                 mov      rax, qword ptr [rcx + 0x28] 
+00032ab5 48890584a90100           mov      qword ptr [rip + 0x1a984], rax RVA 0x4d440 b'.data\x00\x00\x00' writable=True
+00032abc 488b4130                 mov      rax, qword ptr [rcx + 0x30] 
+00032ac0 33c9                     xor      ecx, ecx 
+00032ac2 4889057fa90100           mov      qword ptr [rip + 0x1a97f], rax RVA 0x4d448 b'.data\x00\x00\x00' writable=True
+00032ac9 488d05a0510000           lea      rax, [rip + 0x51a0] RVA 0x37c70 b'.text\x00\x00\x00' writable=False
+00032ad0 488905f9a90100           mov      qword ptr [rip + 0x1a9f9], rax RVA 0x4d4d0 b'.data\x00\x00\x00' writable=True
+00032ad7 ff9298000000             call     qword ptr [rdx + 0x98] 
+00032add 85c0                     test     eax, eax 
+00032adf 7553                     jne      0x42b34 
+00032ae1 488b0d20a60100           mov      rcx, qword ptr [rip + 0x1a620] RVA 0x4d108 b'.data\x00\x00\x00' writable=True
+00032ae8 488b01                   mov      rax, qword ptr [rcx] 
+00032aeb 488905e6a90100           mov      qword ptr [rip + 0x1a9e6], rax RVA 0x4d4d8 b'.data\x00\x00\x00' writable=True
+00032af2 488b4108                 mov      rax, qword ptr [rcx + 8] 
+00032af6 488905e3a90100           mov      qword ptr [rip + 0x1a9e3], rax RVA 0x4d4e0 b'.data\x00\x00\x00' writable=True
+00032afd 488b4110                 mov      rax, qword ptr [rcx + 0x10] 
+00032b01 488905e0a90100           mov      qword ptr [rip + 0x1a9e0], rax RVA 0x4d4e8 b'.data\x00\x00\x00' writable=True
+00032b08 488b4118                 mov      rax, qword ptr [rcx + 0x18] 
+00032b0c 488905dda90100           mov      qword ptr [rip + 0x1a9dd], rax RVA 0x4d4f0 b'.data\x00\x00\x00' writable=True
+00032b13 488b4120                 mov      rax, qword ptr [rcx + 0x20] 
+00032b17 488905daa90100           mov      qword ptr [rip + 0x1a9da], rax RVA 0x4d4f8 b'.data\x00\x00\x00' writable=True
+00032b1e 488b4128                 mov      rax, qword ptr [rcx + 0x28] 
+00032b22 488905d7a90100           mov      qword ptr [rip + 0x1a9d7], rax RVA 0x4d500 b'.data\x00\x00\x00' writable=True
+00032b29 488b4130                 mov      rax, qword ptr [rcx + 0x30] 
+00032b2d 488905d4a90100           mov      qword ptr [rip + 0x1a9d4], rax RVA 0x4d508 b'.data\x00\x00\x00' writable=True
+00032b34 8b0d1eea0200             mov      ecx, dword ptr [rip + 0x2ea1e] RVA 0x61558 b'.data\x00\x00\x00' writable=True
+00032b3a 834df804                 or       dword ptr [rbp - 8], 4 
+00032b3e 488d05030b0000           lea      rax, [rip + 0xb03] RVA 0x33648 b'.text\x00\x00\x00' writable=False
+00032b45 4889442448               mov      qword ptr [rsp + 0x48], rax 
+00032b4a 488d05d7210000           lea      rax, [rip + 0x21d7] RVA 0x34d28 b'.text\x00\x00\x00' writable=False
+00032b51 488d1dac140000           lea      rbx, [rip + 0x14ac] RVA 0x34004 b'.text\x00\x00\x00' writable=False
+00032b58 4889442458               mov      qword ptr [rsp + 0x58], rax 
+00032b5d 488d0514010000           lea      rax, [rip + 0x114] RVA 0x32c78 b'.text\x00\x00\x00' writable=False
+00032b64 c7442440d0000000         mov      dword ptr [rsp + 0x40], 0xd0 
+00032b6c 4889442460               mov      qword ptr [rsp + 0x60], rax 
+00032b71 488d05800b0000           lea      rax, [rip + 0xb80] RVA 0x336f8 b'.text\x00\x00\x00' writable=False
+00032b78 48895c2450               mov      qword ptr [rsp + 0x50], rbx 
+00032b7d 4889442468               mov      qword ptr [rsp + 0x68], rax 
+00032b82 488d05e7280000           lea      rax, [rip + 0x28e7] RVA 0x35470 b'.text\x00\x00\x00' writable=False
+00032b89 4c89742470               mov      qword ptr [rsp + 0x70], r14 
+00032b8e 4889442478               mov      qword ptr [rsp + 0x78], rax 
+00032b93 488d05d6210000           lea      rax, [rip + 0x21d6] RVA 0x34d70 b'.text\x00\x00\x00' writable=False
+00032b9a 488945b8                 mov      qword ptr [rbp - 0x48], rax 
+00032b9e 488d0533220000           lea      rax, [rip + 0x2233] RVA 0x34dd8 b'.text\x00\x00\x00' writable=False
+00032ba5 48894508                 mov      qword ptr [rbp + 8], rax 
+00032ba9 e88ad8ffff               call     0x40438 
+00032bae 4c8d442440               lea      r8, [rsp + 0x40] 
+00032bb3 894580                   mov      dword ptr [rbp - 0x80], eax 
+00032bb6 488d05a3180000           lea      rax, [rip + 0x18a3] RVA 0x34460 b'.text\x00\x00\x00' writable=False
+00032bbd 4533c9                   xor      r9d, r9d 
+00032bc0 488bd6                   mov      rdx, rsi 
+00032bc3 488bcf                   mov      rcx, rdi 
+00032bc6 44897584                 mov      dword ptr [rbp - 0x7c], r14d 
+00032bca 488945c0                 mov      qword ptr [rbp - 0x40], rax 
+00032bce c74588c0070000           mov      dword ptr [rbp - 0x78], 0x7c0 
+00032bd5 c744244405000000         mov      dword ptr [rsp + 0x44], 5 
+00032bdd c7459901010101           mov      dword ptr [rbp - 0x67], 0x1010101 
+00032be4 c7458c06000000           mov      dword ptr [rbp - 0x74], 6 
+00032beb c6459802                 mov      byte ptr [rbp - 0x68], 2 
+00032bef 48895c2450               mov      qword ptr [rsp + 0x50], rbx 
+00032bf4 c745fc02000000           mov      dword ptr [rbp - 4], 2 
+00032bfb c7450001000000           mov      dword ptr [rbp], 1 
+00032c02 ff1530650000             call     qword ptr [rip + 0x6530] StorPortInitialize; RVA 0x39138 b'.rdata\x00\x00' writable=False
+00032c08 4885ff                   test     rdi, rdi 
+00032c0b 743d                     je       0x42c4a 
+00032c0d 488b5730                 mov      rdx, qword ptr [rdi + 0x30] 
+00032c11 48893d18e90200           mov      qword ptr [rip + 0x2e918], rdi RVA 0x61530 b'.data\x00\x00\x00' writable=True
+00032c18 488b4a08                 mov      rcx, qword ptr [rdx + 8] 
+00032c1c 48890de5ea0200           mov      qword ptr [rip + 0x2eae5], rcx RVA 0x61708 b'.data\x00\x00\x00' writable=True
+00032c23 488d0dcefbffff           lea      rcx, [rip - 0x432] RVA 0x327f8 b'.text\x00\x00\x00' writable=False
+00032c2a 48894a08                 mov      qword ptr [rdx + 8], rcx 
+00032c2e 488b8fe0000000           mov      rcx, qword ptr [rdi + 0xe0] 
+00032c35 48890dc4ea0200           mov      qword ptr [rip + 0x2eac4], rcx RVA 0x61700 b'.data\x00\x00\x00' writable=True
+00032c3c 488d0d49e3ffff           lea      rcx, [rip - 0x1cb7] RVA 0x30f8c b'.text\x00\x00\x00' writable=False
+00032c43 48898fe0000000           mov      qword ptr [rdi + 0xe0], rcx 
+00032c4a 488b8d90040000           mov      rcx, qword ptr [rbp + 0x490] 
+00032c51 4833cc                   xor      rcx, rsp 
+00032c54 e837470000               call     0x47390 
+00032c59 4c8d9c24a0050000         lea      r11, [rsp + 0x5a0] 
+00032c61 498b5b30                 mov      rbx, qword ptr [r11 + 0x30] 
+00032c65 498b7338                 mov      rsi, qword ptr [r11 + 0x38] 
+00032c69 498be3                   mov      rsp, r11 
+00032c6c 415e                     pop      r14 
+00032c6e 5f                       pop      rdi 
+00032c6f 5d                       pop      rbp 
+00032c70 c3                       ret       

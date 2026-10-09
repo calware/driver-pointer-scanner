@@ -1,0 +1,450 @@
+In file included from C:\Users\cal\Desktop\example-device-driver-scanner\fixture\driver.c:1:
+In file included from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\ntddk.h:47:
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(18168,32): warning: forward references to 'enum' types are a Microsoft extension [-Wmicrosoft-enum-forward-reference]
+ 18168 | typedef _Enum_is_bitflag_ enum _POOL_TYPE POOL_TYPE;
+       |                                ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25613,18): warning: 'ExAllocatePoolWithTag' is deprecated: ExAllocatePoolWithTag is deprecated, use ExAllocatePool2. [-Wdeprecated-declarations]
+ 25613 |     Allocation = ExAllocatePoolWithTag((POOL_TYPE) (PoolType | POOL_ZERO_ALLOCATION),
+       |                  ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25279,12): note: 'ExAllocatePoolWithTag' has been explicitly marked deprecated here
+ 25279 | __declspec(deprecated("ExAllocatePoolWithTag is deprecated, use ExAllocatePool2."))
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25651,12): warning: 'ExAllocatePoolWithTag' is deprecated: ExAllocatePoolWithTag is deprecated, use ExAllocatePool2. [-Wdeprecated-declarations]
+ 25651 |     return ExAllocatePoolWithTag(PoolType,
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25279,12): note: 'ExAllocatePoolWithTag' has been explicitly marked deprecated here
+ 25279 | __declspec(deprecated("ExAllocatePoolWithTag is deprecated, use ExAllocatePool2."))
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25681,18): warning: 'ExAllocatePoolWithQuotaTag' is deprecated: ExAllocatePoolWithQuotaTag is deprecated, use ExAllocatePool2. [-Wdeprecated-declarations]
+ 25681 |     Allocation = ExAllocatePoolWithQuotaTag((POOL_TYPE) (PoolType | POOL_ZERO_ALLOCATION),
+       |                  ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25549,12): note: 'ExAllocatePoolWithQuotaTag' has been explicitly marked deprecated here
+ 25549 | __declspec(deprecated("ExAllocatePoolWithQuotaTag is deprecated, use ExAllocatePool2."))
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25719,12): warning: 'ExAllocatePoolWithQuotaTag' is deprecated: ExAllocatePoolWithQuotaTag is deprecated, use ExAllocatePool2. [-Wdeprecated-declarations]
+ 25719 |     return ExAllocatePoolWithQuotaTag(PoolType,
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25549,12): note: 'ExAllocatePoolWithQuotaTag' has been explicitly marked deprecated here
+ 25549 | __declspec(deprecated("ExAllocatePoolWithQuotaTag is deprecated, use ExAllocatePool2."))
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25750,18): warning: 'ExAllocatePoolWithTagPriority' is deprecated: ExAllocatePoolWithTagPriority is deprecated, use ExAllocatePool3. [-Wdeprecated-declarations]
+ 25750 |     Allocation = ExAllocatePoolWithTagPriority((POOL_TYPE) (PoolType | POOL_ZERO_ALLOCATION),
+       |                  ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25344,12): note: 'ExAllocatePoolWithTagPriority' has been explicitly marked deprecated here
+ 25344 | __declspec(deprecated("ExAllocatePoolWithTagPriority is deprecated, use ExAllocatePool3."))
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25790,12): warning: 'ExAllocatePoolWithTagPriority' is deprecated: ExAllocatePoolWithTagPriority is deprecated, use ExAllocatePool3. [-Wdeprecated-declarations]
+ 25790 |     return ExAllocatePoolWithTagPriority(PoolType,
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25344,12): note: 'ExAllocatePoolWithTagPriority' has been explicitly marked deprecated here
+ 25344 | __declspec(deprecated("ExAllocatePoolWithTagPriority is deprecated, use ExAllocatePool3."))
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(43694,5): warning: anonymous structs are a Microsoft extension [-Wmicrosoft-anon-tag]
+ 43694 |     PCI_COMMON_HEADER DUMMYSTRUCTNAME;
+       |     ^~~~~~~~~~~~~~~~~
+8 warnings generated.
+In file included from C:\Users\cal\Desktop\example-device-driver-scanner\fixture\driver.c:1:
+In file included from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\ntddk.h:47:
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(18168,32): warning: forward references to 'enum' types are a Microsoft extension [-Wmicrosoft-enum-forward-reference]
+ 18168 | typedef _Enum_is_bitflag_ enum _POOL_TYPE POOL_TYPE;
+       |                                ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25613,18): warning: 'ExAllocatePoolWithTag' is deprecated: ExAllocatePoolWithTag is deprecated, use ExAllocatePool2. [-Wdeprecated-declarations]
+ 25613 |     Allocation = ExAllocatePoolWithTag((POOL_TYPE) (PoolType | POOL_ZERO_ALLOCATION),
+       |                  ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25279,12): note: 'ExAllocatePoolWithTag' has been explicitly marked deprecated here
+ 25279 | __declspec(deprecated("ExAllocatePoolWithTag is deprecated, use ExAllocatePool2."))
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25651,12): warning: 'ExAllocatePoolWithTag' is deprecated: ExAllocatePoolWithTag is deprecated, use ExAllocatePool2. [-Wdeprecated-declarations]
+ 25651 |     return ExAllocatePoolWithTag(PoolType,
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25279,12): note: 'ExAllocatePoolWithTag' has been explicitly marked deprecated here
+ 25279 | __declspec(deprecated("ExAllocatePoolWithTag is deprecated, use ExAllocatePool2."))
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25681,18): warning: 'ExAllocatePoolWithQuotaTag' is deprecated: ExAllocatePoolWithQuotaTag is deprecated, use ExAllocatePool2. [-Wdeprecated-declarations]
+ 25681 |     Allocation = ExAllocatePoolWithQuotaTag((POOL_TYPE) (PoolType | POOL_ZERO_ALLOCATION),
+       |                  ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25549,12): note: 'ExAllocatePoolWithQuotaTag' has been explicitly marked deprecated here
+ 25549 | __declspec(deprecated("ExAllocatePoolWithQuotaTag is deprecated, use ExAllocatePool2."))
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25719,12): warning: 'ExAllocatePoolWithQuotaTag' is deprecated: ExAllocatePoolWithQuotaTag is deprecated, use ExAllocatePool2. [-Wdeprecated-declarations]
+ 25719 |     return ExAllocatePoolWithQuotaTag(PoolType,
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25549,12): note: 'ExAllocatePoolWithQuotaTag' has been explicitly marked deprecated here
+ 25549 | __declspec(deprecated("ExAllocatePoolWithQuotaTag is deprecated, use ExAllocatePool2."))
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25750,18): warning: 'ExAllocatePoolWithTagPriority' is deprecated: ExAllocatePoolWithTagPriority is deprecated, use ExAllocatePool3. [-Wdeprecated-declarations]
+ 25750 |     Allocation = ExAllocatePoolWithTagPriority((POOL_TYPE) (PoolType | POOL_ZERO_ALLOCATION),
+       |                  ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25344,12): note: 'ExAllocatePoolWithTagPriority' has been explicitly marked deprecated here
+ 25344 | __declspec(deprecated("ExAllocatePoolWithTagPriority is deprecated, use ExAllocatePool3."))
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25790,12): warning: 'ExAllocatePoolWithTagPriority' is deprecated: ExAllocatePoolWithTagPriority is deprecated, use ExAllocatePool3. [-Wdeprecated-declarations]
+ 25790 |     return ExAllocatePoolWithTagPriority(PoolType,
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25344,12): note: 'ExAllocatePoolWithTagPriority' has been explicitly marked deprecated here
+ 25344 | __declspec(deprecated("ExAllocatePoolWithTagPriority is deprecated, use ExAllocatePool3."))
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(43694,5): warning: anonymous structs are a Microsoft extension [-Wmicrosoft-anon-tag]
+ 43694 |     PCI_COMMON_HEADER DUMMYSTRUCTNAME;
+       |     ^~~~~~~~~~~~~~~~~
+8 warnings generated.
+In file included from C:\Users\cal\Desktop\example-device-driver-scanner\fixture\driver.c:1:
+In file included from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\ntddk.h:47:
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(18168,32): warning: forward references to 'enum' types are a Microsoft extension [-Wmicrosoft-enum-forward-reference]
+ 18168 | typedef _Enum_is_bitflag_ enum _POOL_TYPE POOL_TYPE;
+       |                                ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25613,18): warning: 'ExAllocatePoolWithTag' is deprecated: ExAllocatePoolWithTag is deprecated, use ExAllocatePool2. [-Wdeprecated-declarations]
+ 25613 |     Allocation = ExAllocatePoolWithTag((POOL_TYPE) (PoolType | POOL_ZERO_ALLOCATION),
+       |                  ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25279,12): note: 'ExAllocatePoolWithTag' has been explicitly marked deprecated here
+ 25279 | __declspec(deprecated("ExAllocatePoolWithTag is deprecated, use ExAllocatePool2."))
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25651,12): warning: 'ExAllocatePoolWithTag' is deprecated: ExAllocatePoolWithTag is deprecated, use ExAllocatePool2. [-Wdeprecated-declarations]
+ 25651 |     return ExAllocatePoolWithTag(PoolType,
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25279,12): note: 'ExAllocatePoolWithTag' has been explicitly marked deprecated here
+ 25279 | __declspec(deprecated("ExAllocatePoolWithTag is deprecated, use ExAllocatePool2."))
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25681,18): warning: 'ExAllocatePoolWithQuotaTag' is deprecated: ExAllocatePoolWithQuotaTag is deprecated, use ExAllocatePool2. [-Wdeprecated-declarations]
+ 25681 |     Allocation = ExAllocatePoolWithQuotaTag((POOL_TYPE) (PoolType | POOL_ZERO_ALLOCATION),
+       |                  ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25549,12): note: 'ExAllocatePoolWithQuotaTag' has been explicitly marked deprecated here
+ 25549 | __declspec(deprecated("ExAllocatePoolWithQuotaTag is deprecated, use ExAllocatePool2."))
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25719,12): warning: 'ExAllocatePoolWithQuotaTag' is deprecated: ExAllocatePoolWithQuotaTag is deprecated, use ExAllocatePool2. [-Wdeprecated-declarations]
+ 25719 |     return ExAllocatePoolWithQuotaTag(PoolType,
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25549,12): note: 'ExAllocatePoolWithQuotaTag' has been explicitly marked deprecated here
+ 25549 | __declspec(deprecated("ExAllocatePoolWithQuotaTag is deprecated, use ExAllocatePool2."))
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25750,18): warning: 'ExAllocatePoolWithTagPriority' is deprecated: ExAllocatePoolWithTagPriority is deprecated, use ExAllocatePool3. [-Wdeprecated-declarations]
+ 25750 |     Allocation = ExAllocatePoolWithTagPriority((POOL_TYPE) (PoolType | POOL_ZERO_ALLOCATION),
+       |                  ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25344,12): note: 'ExAllocatePoolWithTagPriority' has been explicitly marked deprecated here
+ 25344 | __declspec(deprecated("ExAllocatePoolWithTagPriority is deprecated, use ExAllocatePool3."))
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25790,12): warning: 'ExAllocatePoolWithTagPriority' is deprecated: ExAllocatePoolWithTagPriority is deprecated, use ExAllocatePool3. [-Wdeprecated-declarations]
+ 25790 |     return ExAllocatePoolWithTagPriority(PoolType,
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25344,12): note: 'ExAllocatePoolWithTagPriority' has been explicitly marked deprecated here
+ 25344 | __declspec(deprecated("ExAllocatePoolWithTagPriority is deprecated, use ExAllocatePool3."))
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(43694,5): warning: anonymous structs are a Microsoft extension [-Wmicrosoft-anon-tag]
+ 43694 |     PCI_COMMON_HEADER DUMMYSTRUCTNAME;
+       |     ^~~~~~~~~~~~~~~~~
+8 warnings generated.
+In file included from C:\Users\cal\Desktop\example-device-driver-scanner\fixture\driver.c:1:
+In file included from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\ntddk.h:47:
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(18168,32): warning: forward references to 'enum' types are a Microsoft extension [-Wmicrosoft-enum-forward-reference]
+ 18168 | typedef _Enum_is_bitflag_ enum _POOL_TYPE POOL_TYPE;
+       |                                ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25613,18): warning: 'ExAllocatePoolWithTag' is deprecated: ExAllocatePoolWithTag is deprecated, use ExAllocatePool2. [-Wdeprecated-declarations]
+ 25613 |     Allocation = ExAllocatePoolWithTag((POOL_TYPE) (PoolType | POOL_ZERO_ALLOCATION),
+       |                  ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25279,12): note: 'ExAllocatePoolWithTag' has been explicitly marked deprecated here
+ 25279 | __declspec(deprecated("ExAllocatePoolWithTag is deprecated, use ExAllocatePool2."))
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25651,12): warning: 'ExAllocatePoolWithTag' is deprecated: ExAllocatePoolWithTag is deprecated, use ExAllocatePool2. [-Wdeprecated-declarations]
+ 25651 |     return ExAllocatePoolWithTag(PoolType,
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25279,12): note: 'ExAllocatePoolWithTag' has been explicitly marked deprecated here
+ 25279 | __declspec(deprecated("ExAllocatePoolWithTag is deprecated, use ExAllocatePool2."))
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25681,18): warning: 'ExAllocatePoolWithQuotaTag' is deprecated: ExAllocatePoolWithQuotaTag is deprecated, use ExAllocatePool2. [-Wdeprecated-declarations]
+ 25681 |     Allocation = ExAllocatePoolWithQuotaTag((POOL_TYPE) (PoolType | POOL_ZERO_ALLOCATION),
+       |                  ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25549,12): note: 'ExAllocatePoolWithQuotaTag' has been explicitly marked deprecated here
+ 25549 | __declspec(deprecated("ExAllocatePoolWithQuotaTag is deprecated, use ExAllocatePool2."))
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25719,12): warning: 'ExAllocatePoolWithQuotaTag' is deprecated: ExAllocatePoolWithQuotaTag is deprecated, use ExAllocatePool2. [-Wdeprecated-declarations]
+ 25719 |     return ExAllocatePoolWithQuotaTag(PoolType,
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25549,12): note: 'ExAllocatePoolWithQuotaTag' has been explicitly marked deprecated here
+ 25549 | __declspec(deprecated("ExAllocatePoolWithQuotaTag is deprecated, use ExAllocatePool2."))
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25750,18): warning: 'ExAllocatePoolWithTagPriority' is deprecated: ExAllocatePoolWithTagPriority is deprecated, use ExAllocatePool3. [-Wdeprecated-declarations]
+ 25750 |     Allocation = ExAllocatePoolWithTagPriority((POOL_TYPE) (PoolType | POOL_ZERO_ALLOCATION),
+       |                  ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25344,12): note: 'ExAllocatePoolWithTagPriority' has been explicitly marked deprecated here
+ 25344 | __declspec(deprecated("ExAllocatePoolWithTagPriority is deprecated, use ExAllocatePool3."))
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25790,12): warning: 'ExAllocatePoolWithTagPriority' is deprecated: ExAllocatePoolWithTagPriority is deprecated, use ExAllocatePool3. [-Wdeprecated-declarations]
+ 25790 |     return ExAllocatePoolWithTagPriority(PoolType,
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25344,12): note: 'ExAllocatePoolWithTagPriority' has been explicitly marked deprecated here
+ 25344 | __declspec(deprecated("ExAllocatePoolWithTagPriority is deprecated, use ExAllocatePool3."))
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(43694,5): warning: anonymous structs are a Microsoft extension [-Wmicrosoft-anon-tag]
+ 43694 |     PCI_COMMON_HEADER DUMMYSTRUCTNAME;
+       |     ^~~~~~~~~~~~~~~~~
+8 warnings generated.
+In file included from C:\Users\cal\Desktop\example-device-driver-scanner\fixture\driver.c:1:
+In file included from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\ntddk.h:47:
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(18168,32): warning: forward references to 'enum' types are a Microsoft extension [-Wmicrosoft-enum-forward-reference]
+ 18168 | typedef _Enum_is_bitflag_ enum _POOL_TYPE POOL_TYPE;
+       |                                ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25613,18): warning: 'ExAllocatePoolWithTag' is deprecated: ExAllocatePoolWithTag is deprecated, use ExAllocatePool2. [-Wdeprecated-declarations]
+ 25613 |     Allocation = ExAllocatePoolWithTag((POOL_TYPE) (PoolType | POOL_ZERO_ALLOCATION),
+       |                  ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25279,12): note: 'ExAllocatePoolWithTag' has been explicitly marked deprecated here
+ 25279 | __declspec(deprecated("ExAllocatePoolWithTag is deprecated, use ExAllocatePool2."))
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25651,12): warning: 'ExAllocatePoolWithTag' is deprecated: ExAllocatePoolWithTag is deprecated, use ExAllocatePool2. [-Wdeprecated-declarations]
+ 25651 |     return ExAllocatePoolWithTag(PoolType,
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25279,12): note: 'ExAllocatePoolWithTag' has been explicitly marked deprecated here
+ 25279 | __declspec(deprecated("ExAllocatePoolWithTag is deprecated, use ExAllocatePool2."))
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25681,18): warning: 'ExAllocatePoolWithQuotaTag' is deprecated: ExAllocatePoolWithQuotaTag is deprecated, use ExAllocatePool2. [-Wdeprecated-declarations]
+ 25681 |     Allocation = ExAllocatePoolWithQuotaTag((POOL_TYPE) (PoolType | POOL_ZERO_ALLOCATION),
+       |                  ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25549,12): note: 'ExAllocatePoolWithQuotaTag' has been explicitly marked deprecated here
+ 25549 | __declspec(deprecated("ExAllocatePoolWithQuotaTag is deprecated, use ExAllocatePool2."))
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25719,12): warning: 'ExAllocatePoolWithQuotaTag' is deprecated: ExAllocatePoolWithQuotaTag is deprecated, use ExAllocatePool2. [-Wdeprecated-declarations]
+ 25719 |     return ExAllocatePoolWithQuotaTag(PoolType,
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25549,12): note: 'ExAllocatePoolWithQuotaTag' has been explicitly marked deprecated here
+ 25549 | __declspec(deprecated("ExAllocatePoolWithQuotaTag is deprecated, use ExAllocatePool2."))
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25750,18): warning: 'ExAllocatePoolWithTagPriority' is deprecated: ExAllocatePoolWithTagPriority is deprecated, use ExAllocatePool3. [-Wdeprecated-declarations]
+ 25750 |     Allocation = ExAllocatePoolWithTagPriority((POOL_TYPE) (PoolType | POOL_ZERO_ALLOCATION),
+       |                  ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25344,12): note: 'ExAllocatePoolWithTagPriority' has been explicitly marked deprecated here
+ 25344 | __declspec(deprecated("ExAllocatePoolWithTagPriority is deprecated, use ExAllocatePool3."))
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25790,12): warning: 'ExAllocatePoolWithTagPriority' is deprecated: ExAllocatePoolWithTagPriority is deprecated, use ExAllocatePool3. [-Wdeprecated-declarations]
+ 25790 |     return ExAllocatePoolWithTagPriority(PoolType,
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25344,12): note: 'ExAllocatePoolWithTagPriority' has been explicitly marked deprecated here
+ 25344 | __declspec(deprecated("ExAllocatePoolWithTagPriority is deprecated, use ExAllocatePool3."))
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(43694,5): warning: anonymous structs are a Microsoft extension [-Wmicrosoft-anon-tag]
+ 43694 |     PCI_COMMON_HEADER DUMMYSTRUCTNAME;
+       |     ^~~~~~~~~~~~~~~~~
+8 warnings generated.
+In file included from C:\Users\cal\Desktop\example-device-driver-scanner\fixture\driver.c:1:
+In file included from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\ntddk.h:47:
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(18168,32): warning: forward references to 'enum' types are a Microsoft extension [-Wmicrosoft-enum-forward-reference]
+ 18168 | typedef _Enum_is_bitflag_ enum _POOL_TYPE POOL_TYPE;
+       |                                ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25613,18): warning: 'ExAllocatePoolWithTag' is deprecated: ExAllocatePoolWithTag is deprecated, use ExAllocatePool2. [-Wdeprecated-declarations]
+ 25613 |     Allocation = ExAllocatePoolWithTag((POOL_TYPE) (PoolType | POOL_ZERO_ALLOCATION),
+       |                  ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25279,12): note: 'ExAllocatePoolWithTag' has been explicitly marked deprecated here
+ 25279 | __declspec(deprecated("ExAllocatePoolWithTag is deprecated, use ExAllocatePool2."))
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25651,12): warning: 'ExAllocatePoolWithTag' is deprecated: ExAllocatePoolWithTag is deprecated, use ExAllocatePool2. [-Wdeprecated-declarations]
+ 25651 |     return ExAllocatePoolWithTag(PoolType,
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25279,12): note: 'ExAllocatePoolWithTag' has been explicitly marked deprecated here
+ 25279 | __declspec(deprecated("ExAllocatePoolWithTag is deprecated, use ExAllocatePool2."))
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25681,18): warning: 'ExAllocatePoolWithQuotaTag' is deprecated: ExAllocatePoolWithQuotaTag is deprecated, use ExAllocatePool2. [-Wdeprecated-declarations]
+ 25681 |     Allocation = ExAllocatePoolWithQuotaTag((POOL_TYPE) (PoolType | POOL_ZERO_ALLOCATION),
+       |                  ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25549,12): note: 'ExAllocatePoolWithQuotaTag' has been explicitly marked deprecated here
+ 25549 | __declspec(deprecated("ExAllocatePoolWithQuotaTag is deprecated, use ExAllocatePool2."))
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25719,12): warning: 'ExAllocatePoolWithQuotaTag' is deprecated: ExAllocatePoolWithQuotaTag is deprecated, use ExAllocatePool2. [-Wdeprecated-declarations]
+ 25719 |     return ExAllocatePoolWithQuotaTag(PoolType,
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25549,12): note: 'ExAllocatePoolWithQuotaTag' has been explicitly marked deprecated here
+ 25549 | __declspec(deprecated("ExAllocatePoolWithQuotaTag is deprecated, use ExAllocatePool2."))
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25750,18): warning: 'ExAllocatePoolWithTagPriority' is deprecated: ExAllocatePoolWithTagPriority is deprecated, use ExAllocatePool3. [-Wdeprecated-declarations]
+ 25750 |     Allocation = ExAllocatePoolWithTagPriority((POOL_TYPE) (PoolType | POOL_ZERO_ALLOCATION),
+       |                  ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25344,12): note: 'ExAllocatePoolWithTagPriority' has been explicitly marked deprecated here
+ 25344 | __declspec(deprecated("ExAllocatePoolWithTagPriority is deprecated, use ExAllocatePool3."))
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25790,12): warning: 'ExAllocatePoolWithTagPriority' is deprecated: ExAllocatePoolWithTagPriority is deprecated, use ExAllocatePool3. [-Wdeprecated-declarations]
+ 25790 |     return ExAllocatePoolWithTagPriority(PoolType,
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25344,12): note: 'ExAllocatePoolWithTagPriority' has been explicitly marked deprecated here
+ 25344 | __declspec(deprecated("ExAllocatePoolWithTagPriority is deprecated, use ExAllocatePool3."))
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(43694,5): warning: anonymous structs are a Microsoft extension [-Wmicrosoft-anon-tag]
+ 43694 |     PCI_COMMON_HEADER DUMMYSTRUCTNAME;
+       |     ^~~~~~~~~~~~~~~~~
+8 warnings generated.
+In file included from C:\Users\cal\Desktop\example-device-driver-scanner\fixture\driver.c:1:
+In file included from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\ntddk.h:47:
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(18168,32): warning: forward references to 'enum' types are a Microsoft extension [-Wmicrosoft-enum-forward-reference]
+ 18168 | typedef _Enum_is_bitflag_ enum _POOL_TYPE POOL_TYPE;
+       |                                ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25613,18): warning: 'ExAllocatePoolWithTag' is deprecated: ExAllocatePoolWithTag is deprecated, use ExAllocatePool2. [-Wdeprecated-declarations]
+ 25613 |     Allocation = ExAllocatePoolWithTag((POOL_TYPE) (PoolType | POOL_ZERO_ALLOCATION),
+       |                  ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25279,12): note: 'ExAllocatePoolWithTag' has been explicitly marked deprecated here
+ 25279 | __declspec(deprecated("ExAllocatePoolWithTag is deprecated, use ExAllocatePool2."))
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25651,12): warning: 'ExAllocatePoolWithTag' is deprecated: ExAllocatePoolWithTag is deprecated, use ExAllocatePool2. [-Wdeprecated-declarations]
+ 25651 |     return ExAllocatePoolWithTag(PoolType,
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25279,12): note: 'ExAllocatePoolWithTag' has been explicitly marked deprecated here
+ 25279 | __declspec(deprecated("ExAllocatePoolWithTag is deprecated, use ExAllocatePool2."))
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25681,18): warning: 'ExAllocatePoolWithQuotaTag' is deprecated: ExAllocatePoolWithQuotaTag is deprecated, use ExAllocatePool2. [-Wdeprecated-declarations]
+ 25681 |     Allocation = ExAllocatePoolWithQuotaTag((POOL_TYPE) (PoolType | POOL_ZERO_ALLOCATION),
+       |                  ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25549,12): note: 'ExAllocatePoolWithQuotaTag' has been explicitly marked deprecated here
+ 25549 | __declspec(deprecated("ExAllocatePoolWithQuotaTag is deprecated, use ExAllocatePool2."))
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25719,12): warning: 'ExAllocatePoolWithQuotaTag' is deprecated: ExAllocatePoolWithQuotaTag is deprecated, use ExAllocatePool2. [-Wdeprecated-declarations]
+ 25719 |     return ExAllocatePoolWithQuotaTag(PoolType,
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25549,12): note: 'ExAllocatePoolWithQuotaTag' has been explicitly marked deprecated here
+ 25549 | __declspec(deprecated("ExAllocatePoolWithQuotaTag is deprecated, use ExAllocatePool2."))
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25750,18): warning: 'ExAllocatePoolWithTagPriority' is deprecated: ExAllocatePoolWithTagPriority is deprecated, use ExAllocatePool3. [-Wdeprecated-declarations]
+ 25750 |     Allocation = ExAllocatePoolWithTagPriority((POOL_TYPE) (PoolType | POOL_ZERO_ALLOCATION),
+       |                  ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25344,12): note: 'ExAllocatePoolWithTagPriority' has been explicitly marked deprecated here
+ 25344 | __declspec(deprecated("ExAllocatePoolWithTagPriority is deprecated, use ExAllocatePool3."))
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25790,12): warning: 'ExAllocatePoolWithTagPriority' is deprecated: ExAllocatePoolWithTagPriority is deprecated, use ExAllocatePool3. [-Wdeprecated-declarations]
+ 25790 |     return ExAllocatePoolWithTagPriority(PoolType,
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25344,12): note: 'ExAllocatePoolWithTagPriority' has been explicitly marked deprecated here
+ 25344 | __declspec(deprecated("ExAllocatePoolWithTagPriority is deprecated, use ExAllocatePool3."))
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(43694,5): warning: anonymous structs are a Microsoft extension [-Wmicrosoft-anon-tag]
+ 43694 |     PCI_COMMON_HEADER DUMMYSTRUCTNAME;
+       |     ^~~~~~~~~~~~~~~~~
+8 warnings generated.
+In file included from C:\Users\cal\Desktop\example-device-driver-scanner\fixture\driver.c:1:
+In file included from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\ntddk.h:47:
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(18168,32): warning: forward references to 'enum' types are a Microsoft extension [-Wmicrosoft-enum-forward-reference]
+ 18168 | typedef _Enum_is_bitflag_ enum _POOL_TYPE POOL_TYPE;
+       |                                ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25613,18): warning: 'ExAllocatePoolWithTag' is deprecated: ExAllocatePoolWithTag is deprecated, use ExAllocatePool2. [-Wdeprecated-declarations]
+ 25613 |     Allocation = ExAllocatePoolWithTag((POOL_TYPE) (PoolType | POOL_ZERO_ALLOCATION),
+       |                  ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25279,12): note: 'ExAllocatePoolWithTag' has been explicitly marked deprecated here
+ 25279 | __declspec(deprecated("ExAllocatePoolWithTag is deprecated, use ExAllocatePool2."))
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25651,12): warning: 'ExAllocatePoolWithTag' is deprecated: ExAllocatePoolWithTag is deprecated, use ExAllocatePool2. [-Wdeprecated-declarations]
+ 25651 |     return ExAllocatePoolWithTag(PoolType,
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25279,12): note: 'ExAllocatePoolWithTag' has been explicitly marked deprecated here
+ 25279 | __declspec(deprecated("ExAllocatePoolWithTag is deprecated, use ExAllocatePool2."))
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25681,18): warning: 'ExAllocatePoolWithQuotaTag' is deprecated: ExAllocatePoolWithQuotaTag is deprecated, use ExAllocatePool2. [-Wdeprecated-declarations]
+ 25681 |     Allocation = ExAllocatePoolWithQuotaTag((POOL_TYPE) (PoolType | POOL_ZERO_ALLOCATION),
+       |                  ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25549,12): note: 'ExAllocatePoolWithQuotaTag' has been explicitly marked deprecated here
+ 25549 | __declspec(deprecated("ExAllocatePoolWithQuotaTag is deprecated, use ExAllocatePool2."))
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25719,12): warning: 'ExAllocatePoolWithQuotaTag' is deprecated: ExAllocatePoolWithQuotaTag is deprecated, use ExAllocatePool2. [-Wdeprecated-declarations]
+ 25719 |     return ExAllocatePoolWithQuotaTag(PoolType,
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25549,12): note: 'ExAllocatePoolWithQuotaTag' has been explicitly marked deprecated here
+ 25549 | __declspec(deprecated("ExAllocatePoolWithQuotaTag is deprecated, use ExAllocatePool2."))
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25750,18): warning: 'ExAllocatePoolWithTagPriority' is deprecated: ExAllocatePoolWithTagPriority is deprecated, use ExAllocatePool3. [-Wdeprecated-declarations]
+ 25750 |     Allocation = ExAllocatePoolWithTagPriority((POOL_TYPE) (PoolType | POOL_ZERO_ALLOCATION),
+       |                  ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25344,12): note: 'ExAllocatePoolWithTagPriority' has been explicitly marked deprecated here
+ 25344 | __declspec(deprecated("ExAllocatePoolWithTagPriority is deprecated, use ExAllocatePool3."))
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25790,12): warning: 'ExAllocatePoolWithTagPriority' is deprecated: ExAllocatePoolWithTagPriority is deprecated, use ExAllocatePool3. [-Wdeprecated-declarations]
+ 25790 |     return ExAllocatePoolWithTagPriority(PoolType,
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25344,12): note: 'ExAllocatePoolWithTagPriority' has been explicitly marked deprecated here
+ 25344 | __declspec(deprecated("ExAllocatePoolWithTagPriority is deprecated, use ExAllocatePool3."))
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(43694,5): warning: anonymous structs are a Microsoft extension [-Wmicrosoft-anon-tag]
+ 43694 |     PCI_COMMON_HEADER DUMMYSTRUCTNAME;
+       |     ^~~~~~~~~~~~~~~~~
+8 warnings generated.
+In file included from C:\Users\cal\Desktop\example-device-driver-scanner\fixture\driver.c:1:
+In file included from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\ntddk.h:47:
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(18168,32): warning: forward references to 'enum' types are a Microsoft extension [-Wmicrosoft-enum-forward-reference]
+ 18168 | typedef _Enum_is_bitflag_ enum _POOL_TYPE POOL_TYPE;
+       |                                ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25613,18): warning: 'ExAllocatePoolWithTag' is deprecated: ExAllocatePoolWithTag is deprecated, use ExAllocatePool2. [-Wdeprecated-declarations]
+ 25613 |     Allocation = ExAllocatePoolWithTag((POOL_TYPE) (PoolType | POOL_ZERO_ALLOCATION),
+       |                  ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25279,12): note: 'ExAllocatePoolWithTag' has been explicitly marked deprecated here
+ 25279 | __declspec(deprecated("ExAllocatePoolWithTag is deprecated, use ExAllocatePool2."))
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25651,12): warning: 'ExAllocatePoolWithTag' is deprecated: ExAllocatePoolWithTag is deprecated, use ExAllocatePool2. [-Wdeprecated-declarations]
+ 25651 |     return ExAllocatePoolWithTag(PoolType,
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25279,12): note: 'ExAllocatePoolWithTag' has been explicitly marked deprecated here
+ 25279 | __declspec(deprecated("ExAllocatePoolWithTag is deprecated, use ExAllocatePool2."))
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25681,18): warning: 'ExAllocatePoolWithQuotaTag' is deprecated: ExAllocatePoolWithQuotaTag is deprecated, use ExAllocatePool2. [-Wdeprecated-declarations]
+ 25681 |     Allocation = ExAllocatePoolWithQuotaTag((POOL_TYPE) (PoolType | POOL_ZERO_ALLOCATION),
+       |                  ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25549,12): note: 'ExAllocatePoolWithQuotaTag' has been explicitly marked deprecated here
+ 25549 | __declspec(deprecated("ExAllocatePoolWithQuotaTag is deprecated, use ExAllocatePool2."))
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25719,12): warning: 'ExAllocatePoolWithQuotaTag' is deprecated: ExAllocatePoolWithQuotaTag is deprecated, use ExAllocatePool2. [-Wdeprecated-declarations]
+ 25719 |     return ExAllocatePoolWithQuotaTag(PoolType,
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25549,12): note: 'ExAllocatePoolWithQuotaTag' has been explicitly marked deprecated here
+ 25549 | __declspec(deprecated("ExAllocatePoolWithQuotaTag is deprecated, use ExAllocatePool2."))
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25750,18): warning: 'ExAllocatePoolWithTagPriority' is deprecated: ExAllocatePoolWithTagPriority is deprecated, use ExAllocatePool3. [-Wdeprecated-declarations]
+ 25750 |     Allocation = ExAllocatePoolWithTagPriority((POOL_TYPE) (PoolType | POOL_ZERO_ALLOCATION),
+       |                  ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25344,12): note: 'ExAllocatePoolWithTagPriority' has been explicitly marked deprecated here
+ 25344 | __declspec(deprecated("ExAllocatePoolWithTagPriority is deprecated, use ExAllocatePool3."))
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25790,12): warning: 'ExAllocatePoolWithTagPriority' is deprecated: ExAllocatePoolWithTagPriority is deprecated, use ExAllocatePool3. [-Wdeprecated-declarations]
+ 25790 |     return ExAllocatePoolWithTagPriority(PoolType,
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25344,12): note: 'ExAllocatePoolWithTagPriority' has been explicitly marked deprecated here
+ 25344 | __declspec(deprecated("ExAllocatePoolWithTagPriority is deprecated, use ExAllocatePool3."))
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(43694,5): warning: anonymous structs are a Microsoft extension [-Wmicrosoft-anon-tag]
+ 43694 |     PCI_COMMON_HEADER DUMMYSTRUCTNAME;
+       |     ^~~~~~~~~~~~~~~~~
+8 warnings generated.
+In file included from C:\Users\cal\Desktop\example-device-driver-scanner\fixture\driver.c:1:
+In file included from C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\ntddk.h:47:
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(18168,32): warning: forward references to 'enum' types are a Microsoft extension [-Wmicrosoft-enum-forward-reference]
+ 18168 | typedef _Enum_is_bitflag_ enum _POOL_TYPE POOL_TYPE;
+       |                                ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25613,18): warning: 'ExAllocatePoolWithTag' is deprecated: ExAllocatePoolWithTag is deprecated, use ExAllocatePool2. [-Wdeprecated-declarations]
+ 25613 |     Allocation = ExAllocatePoolWithTag((POOL_TYPE) (PoolType | POOL_ZERO_ALLOCATION),
+       |                  ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25279,12): note: 'ExAllocatePoolWithTag' has been explicitly marked deprecated here
+ 25279 | __declspec(deprecated("ExAllocatePoolWithTag is deprecated, use ExAllocatePool2."))
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25651,12): warning: 'ExAllocatePoolWithTag' is deprecated: ExAllocatePoolWithTag is deprecated, use ExAllocatePool2. [-Wdeprecated-declarations]
+ 25651 |     return ExAllocatePoolWithTag(PoolType,
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25279,12): note: 'ExAllocatePoolWithTag' has been explicitly marked deprecated here
+ 25279 | __declspec(deprecated("ExAllocatePoolWithTag is deprecated, use ExAllocatePool2."))
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25681,18): warning: 'ExAllocatePoolWithQuotaTag' is deprecated: ExAllocatePoolWithQuotaTag is deprecated, use ExAllocatePool2. [-Wdeprecated-declarations]
+ 25681 |     Allocation = ExAllocatePoolWithQuotaTag((POOL_TYPE) (PoolType | POOL_ZERO_ALLOCATION),
+       |                  ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25549,12): note: 'ExAllocatePoolWithQuotaTag' has been explicitly marked deprecated here
+ 25549 | __declspec(deprecated("ExAllocatePoolWithQuotaTag is deprecated, use ExAllocatePool2."))
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25719,12): warning: 'ExAllocatePoolWithQuotaTag' is deprecated: ExAllocatePoolWithQuotaTag is deprecated, use ExAllocatePool2. [-Wdeprecated-declarations]
+ 25719 |     return ExAllocatePoolWithQuotaTag(PoolType,
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25549,12): note: 'ExAllocatePoolWithQuotaTag' has been explicitly marked deprecated here
+ 25549 | __declspec(deprecated("ExAllocatePoolWithQuotaTag is deprecated, use ExAllocatePool2."))
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25750,18): warning: 'ExAllocatePoolWithTagPriority' is deprecated: ExAllocatePoolWithTagPriority is deprecated, use ExAllocatePool3. [-Wdeprecated-declarations]
+ 25750 |     Allocation = ExAllocatePoolWithTagPriority((POOL_TYPE) (PoolType | POOL_ZERO_ALLOCATION),
+       |                  ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25344,12): note: 'ExAllocatePoolWithTagPriority' has been explicitly marked deprecated here
+ 25344 | __declspec(deprecated("ExAllocatePoolWithTagPriority is deprecated, use ExAllocatePool3."))
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25790,12): warning: 'ExAllocatePoolWithTagPriority' is deprecated: ExAllocatePoolWithTagPriority is deprecated, use ExAllocatePool3. [-Wdeprecated-declarations]
+ 25790 |     return ExAllocatePoolWithTagPriority(PoolType,
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(25344,12): note: 'ExAllocatePoolWithTagPriority' has been explicitly marked deprecated here
+ 25344 | __declspec(deprecated("ExAllocatePoolWithTagPriority is deprecated, use ExAllocatePool3."))
+       |            ^
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\km\wdm.h(43694,5): warning: anonymous structs are a Microsoft extension [-Wmicrosoft-anon-tag]
+ 43694 |     PCI_COMMON_HEADER DUMMYSTRUCTNAME;
+       |     ^~~~~~~~~~~~~~~~~
+8 warnings generated.

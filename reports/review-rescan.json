@@ -1,0 +1,65 @@
+{
+  "results": [
+    {
+      "schema_version": 1,
+      "file": "C:\\Windows\\System32\\drivers\\vmbusproxy.sys",
+      "sha256": "10915cbc92de7b95ccdc79cb6a9aa96b4f0190bc8b291f75fa47d78abcadbdca",
+      "classification": "INCONCLUSIVE",
+      "vulnerability_claim": false,
+      "user_openability": "UNCONFIRMED_REQUIRES_RUNTIME_AND_DEPLOYMENT_SECURITY",
+      "namespace_import_hints": [
+        "IoCreateDevice"
+      ],
+      "namespace_string_hints": [
+        "\\Device\\vmbusproxy"
+      ],
+      "create_dispatch_rvas": [
+        "0x3ea0"
+      ],
+      "device_control_dispatch_rvas": [
+        "0x3ef0"
+      ],
+      "findings": [],
+      "unproven_writable_indirect_calls": [],
+      "limitations": [
+        "call_depth_or_recursion_limit",
+        "instruction_state_budget_exhausted"
+      ],
+      "initialization_states_processed": 927,
+      "analysis_model": "x64 WDM offsets; bounded interprocedural abstract interpretation; unconstrained branch union"
+    },
+    {
+      "schema_version": 1,
+      "file": "C:\\Windows\\System32\\drivers\\cimfs.sys",
+      "sha256": "116b77f4d17694409a3e202308776882f045554ed8c615c3442df539625f0df7",
+      "classification": "INCONCLUSIVE",
+      "vulnerability_claim": false,
+      "user_openability": "UNCONFIRMED_REQUIRES_RUNTIME_AND_DEPLOYMENT_SECURITY",
+      "namespace_import_hints": [
+        "IoCreateDevice",
+        "IoCreateSymbolicLink"
+      ],
+      "namespace_string_hints": [
+        "\\Device\\MountPointManager",
+        "\\Device\\cimfs",
+        "\\Device\\cimfs\\control",
+        "\\DosDevices\\CimfsControl"
+      ],
+      "create_dispatch_rvas": [],
+      "device_control_dispatch_rvas": [],
+      "findings": [],
+      "unproven_writable_indirect_calls": [],
+      "limitations": [
+        "call_depth_or_recursion_limit",
+        "device_control_dispatch_not_resolved",
+        "instruction_state_budget_exhausted",
+        "per_instruction_state_limit"
+      ],
+      "initialization_states_processed": 12005,
+      "analysis_model": "x64 WDM offsets; bounded interprocedural abstract interpretation; unconstrained branch union"
+    }
+  ],
+  "summary": {
+    "INCONCLUSIVE": 2
+  }
+}

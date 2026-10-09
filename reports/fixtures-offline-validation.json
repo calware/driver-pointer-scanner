@@ -1,0 +1,2979 @@
+{
+  "results": [
+    {
+      "schema_version": 3,
+      "file": "C:\\Users\\cal\\Desktop\\example-device-driver-scanner\\fixtures\\helper-O2.sys",
+      "sha256": "87f428490eb5a5ddab4d8f004f6215a5ddf1fc0e8e94a04cc1b15531cb1209ed",
+      "classification": "PATTERN_CANDIDATE",
+      "classification_scope": "Only the bounded, modeled dispatch/callback graph; not a proof of driver-wide absence or user accessibility.",
+      "vulnerability_claim": false,
+      "user_openability": "UNCONFIRMED_REQUIRES_RUNTIME_AND_DEPLOYMENT_SECURITY",
+      "namespace_import_hints": [
+        "IoCreateDevice",
+        "IoCreateSymbolicLink"
+      ],
+      "namespace_string_hints": [
+        "\\Device\\CallbackSurfaceFixture",
+        "\\DosDevices\\CallbackSurfaceFixture"
+      ],
+      "create_dispatch_rvas": [
+        "0x10b0"
+      ],
+      "device_control_dispatch_rvas": [
+        "0x1110"
+      ],
+      "findings": [
+        {
+          "dispatch_rva": "0x1110",
+          "call_rva": "0x10a7",
+          "function_rva": "0x10a0",
+          "slot_rva": "0x3000",
+          "section": ".data",
+          "initial_target_rva": "0x1000",
+          "arguments": {
+            "rcx": [
+              {
+                "kind": "buffer",
+                "offset": 0
+              }
+            ],
+            "rdx": [
+              {
+                "kind": "input_length",
+                "offset": 0
+              }
+            ],
+            "r8": [
+              {
+                "kind": "const",
+                "offset": 0
+              }
+            ],
+            "r9": [
+              {
+                "kind": "unknown",
+                "offset": null
+              }
+            ],
+            "stack_arg_6": [
+              {
+                "kind": "unknown",
+                "offset": null
+              }
+            ]
+          },
+          "systembuffer_arguments": [
+            "rcx"
+          ],
+          "stack_only_input_lead": false,
+          "instruction": "jmp rax",
+          "modeled_path_feasibility": {
+            "status": "NOT_CHECKED",
+            "reason": "MAY joins discard branch predicates"
+          },
+          "interpretation": "Fixed-point MAY candidate; correlated predicates, runtime invocation and successful completion are not proved."
+        }
+      ],
+      "unproven_writable_indirect_calls": [],
+      "path_refined_writable_indirect_calls": [],
+      "limitations": [
+        "external_call_memory_effects_unmodeled"
+      ],
+      "initialization_limitations": [],
+      "initialization_states_processed": 69,
+      "dispatch_root_provenance": {
+        "abstract_initialization_rvas": [
+          "0x1110"
+        ],
+        "synthetic_execution_rvas": [],
+        "fixed_point_initialization_rvas": []
+      },
+      "synthetic_initialization": null,
+      "fixed_point_initialization": null,
+      "fixed_point_analysis": {
+        "analysis_model": "dispatch-rooted finite fixed-point MAY dataflow; predicates discarded",
+        "coverage": {
+          "status": "FIXED_POINT_COMPLETE",
+          "complete": true,
+          "dispatch_roots_total": 1,
+          "dispatch_roots_completed": 1,
+          "semantic_coverage_complete": false
+        },
+        "findings": [
+          {
+            "dispatch_rva": "0x1110",
+            "call_rva": "0x10a7",
+            "function_rva": "0x10a0",
+            "slot_rva": "0x3000",
+            "section": ".data",
+            "initial_target_rva": "0x1000",
+            "arguments": {
+              "rcx": [
+                {
+                  "kind": "buffer",
+                  "offset": 0
+                }
+              ],
+              "rdx": [
+                {
+                  "kind": "input_length",
+                  "offset": 0
+                }
+              ],
+              "r8": [
+                {
+                  "kind": "const",
+                  "offset": 0
+                }
+              ],
+              "r9": [
+                {
+                  "kind": "unknown",
+                  "offset": null
+                }
+              ],
+              "stack_arg_6": [
+                {
+                  "kind": "unknown",
+                  "offset": null
+                }
+              ]
+            },
+            "systembuffer_arguments": [
+              "rcx"
+            ],
+            "stack_only_input_lead": false,
+            "instruction": "jmp rax",
+            "modeled_path_feasibility": {
+              "status": "NOT_CHECKED",
+              "reason": "MAY joins discard branch predicates"
+            },
+            "interpretation": "Fixed-point MAY candidate; correlated predicates, runtime invocation and successful completion are not proved."
+          }
+        ],
+        "unproven_writable_indirect_calls": [],
+        "nonimage_indirect_call_leads": [],
+        "read_only_image_pointer_calls": [],
+        "limitations": [
+          "external_call_memory_effects_unmodeled"
+        ],
+        "metrics": {
+          "transfer_evaluations": 45,
+          "join_updates": 13,
+          "branch_joins": 4,
+          "instruction_states": 32,
+          "functions": 2,
+          "max_queue": 3
+        },
+        "predicates": "DISCARDED_AT_JOINS_NOT_RUNTIME_CONFIRMED"
+      },
+      "wdf_callback_registration": null,
+      "wdf_callback_analysis": null,
+      "analysis_engine": "fixedpoint",
+      "analysis_model": "x64 WDM offsets; abstract initialization, optional synthetic Unicorn path, bounded legacy or finite MAY dispatch analysis",
+      "user_interaction_analysis": {
+        "file": "C:\\Users\\cal\\Desktop\\example-device-driver-scanner\\fixtures\\helper-O2.sys",
+        "sha256": "87f428490eb5a5ddab4d8f004f6215a5ddf1fc0e8e94a04cc1b15531cb1209ed",
+        "entry_roots": {
+          "CreateFile": [
+            "0x10b0"
+          ],
+          "ReadFile": [
+            "0x10e0"
+          ],
+          "WriteFile": [
+            "0x10e0"
+          ],
+          "DeviceIoControl": [
+            "0x1110"
+          ]
+        },
+        "sites": [
+          {
+            "event": "DeviceIoControl",
+            "entry_model": "WDM",
+            "pointer_kind": "WRITABLE_IMAGE_SLOT",
+            "dispatch_rva": "0x1110",
+            "function_rva": "0x10a0",
+            "call_rva": "0x10a7",
+            "slot_rva": "0x3000",
+            "section": ".data",
+            "initial_target_rva": "0x1000",
+            "instruction": "jmp rax",
+            "input_buffer_variant_candidate": true,
+            "field_displacement": null,
+            "base_provenance": null,
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          }
+        ],
+        "entry_coverage": {
+          "CreateFile": {
+            "status": "FIXED_POINT_COMPLETE",
+            "complete": true,
+            "dispatch_roots_total": 1,
+            "dispatch_roots_completed": 1,
+            "semantic_coverage_complete": false
+          },
+          "ReadFile": {
+            "status": "FIXED_POINT_COMPLETE",
+            "complete": true,
+            "dispatch_roots_total": 1,
+            "dispatch_roots_completed": 1,
+            "semantic_coverage_complete": false
+          },
+          "WriteFile": {
+            "status": "FIXED_POINT_COMPLETE",
+            "complete": true,
+            "dispatch_roots_total": 1,
+            "dispatch_roots_completed": 1,
+            "semantic_coverage_complete": false
+          },
+          "DeviceIoControl": {
+            "status": "FIXED_POINT_COMPLETE",
+            "complete": true,
+            "dispatch_roots_total": 1,
+            "dispatch_roots_completed": 1,
+            "semantic_coverage_complete": false
+          }
+        },
+        "limitations": [
+          "CreateFile:external_call_memory_effects_unmodeled",
+          "DeviceIoControl:external_call_memory_effects_unmodeled",
+          "ReadFile:external_call_memory_effects_unmodeled",
+          "WriteFile:external_call_memory_effects_unmodeled",
+          "fixed_init:external_call_memory_effects_unmodeled",
+          "fixed_init:unmodeled_instruction_effects"
+        ],
+        "runtime_reachability": "UNVERIFIED",
+        "user_handle_access": "UNVERIFIED",
+        "abstract_init_steps": 69,
+        "wdm_initialization_coverage": {
+          "status": "FIXED_POINT_COMPLETE",
+          "complete": true
+        },
+        "classification": "ROOTED_IMAGE_POINTER_CALL_LEAD",
+        "scope": "A resolved entry and a fixed-point MAY path do not prove a user-visible device, request success, path feasibility, or execution on this machine. Object-field leads do not establish that the field belongs to this image."
+      },
+      "offline_validation": {
+        "schema_version": 1,
+        "engine": "Unicorn synthetic WDM request replay",
+        "image_sha256": "87f428490eb5a5ddab4d8f004f6215a5ddf1fc0e8e94a04cc1b15531cb1209ed",
+        "sites_total": 1,
+        "sites_selected": 1,
+        "site_limit": 4,
+        "sites": [
+          {
+            "event": "DeviceIoControl",
+            "entry_model": "WDM",
+            "pointer_kind": "WRITABLE_IMAGE_SLOT",
+            "dispatch_rva": "0x1110",
+            "call_rva": "0x10a7",
+            "slot_rva": "0x3000",
+            "input_buffer_variant_candidate": true,
+            "path_evidence": {
+              "status": "SAT_PARTIAL_MODEL",
+              "modeled_predicates": 3,
+              "witness": {
+                "output_length_0_32": "0x4",
+                "systembuffer_pointer_64": "0xffffffffffffffff",
+                "ioctl_0_32": "0x226000"
+              },
+              "scope": "Only tracked integer predicates; not proof of runtime reachability, handle access, or full buffer validity."
+            },
+            "attempts": [
+              {
+                "scenario": {
+                  "name": "ioctl_00226000_len4",
+                  "file_name": "",
+                  "ioctl": 2252800,
+                  "input_length": 4,
+                  "output_length": 64
+                },
+                "status": "CALLSITE_HIT",
+                "instructions": 22,
+                "modeled_import_calls": {},
+                "unmodeled_import_calls": {},
+                "synthetic_request": true,
+                "actual_target_rva": "0x1000",
+                "actual_target_in_image": true,
+                "slot_rva": "0x3000",
+                "observed_storage_address": null,
+                "observed_storage_region": "UNRESOLVED_OR_REGISTER",
+                "target_matches_image_pointer": true
+              }
+            ],
+            "offline_evidence_score": {
+              "value": 85,
+              "tier": "STRONG_SYNTHETIC_EVIDENCE",
+              "scale": "0-85 OFFLINE_EVIDENCE_ONLY",
+              "components": {
+                "rooted_may_flow": 15,
+                "storage_evidence": 20,
+                "initial_local_target": 10,
+                "specific_input_variant": 5,
+                "tracked_path_predicates_sat": 10,
+                "synthetic_callsite_hit": 20,
+                "synthetic_target_match": 10
+              },
+              "not_a_probability": true,
+              "live_user_openability": "UNVERIFIED",
+              "interpretation": "Ranking evidence within the synthetic/static model; not a vulnerability or live-reachability probability."
+            }
+          }
+        ],
+        "installed_image_unchanged": true,
+        "evidence_scope": "Synthetic model only. No live device, OS I/O manager, real KMDF queue, handle ACL, or user request was exercised.",
+        "no_live_reachability_claim": true
+      }
+    },
+    {
+      "schema_version": 3,
+      "file": "C:\\Users\\cal\\Desktop\\example-device-driver-scanner\\fixtures\\helper-Od.sys",
+      "sha256": "33a55f5e73d05e4d8ee45ec999755eeac0ca99f34866bf102767024c51c851e6",
+      "classification": "PATTERN_CANDIDATE",
+      "classification_scope": "Only the bounded, modeled dispatch/callback graph; not a proof of driver-wide absence or user accessibility.",
+      "vulnerability_claim": false,
+      "user_openability": "UNCONFIRMED_REQUIRES_RUNTIME_AND_DEPLOYMENT_SECURITY",
+      "namespace_import_hints": [
+        "IoCreateDevice",
+        "IoCreateSymbolicLink"
+      ],
+      "namespace_string_hints": [
+        "\\Device\\CallbackSurfaceFixture",
+        "\\DosDevices\\CallbackSurfaceFixture"
+      ],
+      "create_dispatch_rvas": [
+        "0x1080",
+        "0x1100"
+      ],
+      "device_control_dispatch_rvas": [
+        "0x1100",
+        "0x1130"
+      ],
+      "findings": [
+        {
+          "dispatch_rva": "0x1130",
+          "call_rva": "0x106d",
+          "function_rva": "0x1050",
+          "slot_rva": "0x3000",
+          "section": ".data",
+          "initial_target_rva": "0x1000",
+          "arguments": {
+            "rcx": [
+              {
+                "kind": "buffer",
+                "offset": 0
+              }
+            ],
+            "rdx": [
+              {
+                "kind": "input_length",
+                "offset": 0
+              }
+            ],
+            "r8": [
+              {
+                "kind": "unknown",
+                "offset": null
+              }
+            ],
+            "r9": [
+              {
+                "kind": "unknown",
+                "offset": null
+              }
+            ],
+            "stack_arg_6": [
+              {
+                "kind": "buffer",
+                "offset": 0
+              }
+            ]
+          },
+          "systembuffer_arguments": [
+            "rcx",
+            "stack_arg_6"
+          ],
+          "stack_only_input_lead": false,
+          "instruction": "call rax",
+          "modeled_path_feasibility": {
+            "status": "NOT_CHECKED",
+            "reason": "MAY joins discard branch predicates"
+          },
+          "interpretation": "Fixed-point MAY candidate; correlated predicates, runtime invocation and successful completion are not proved."
+        }
+      ],
+      "unproven_writable_indirect_calls": [],
+      "path_refined_writable_indirect_calls": [],
+      "limitations": [
+        "external_call_memory_effects_unmodeled",
+        "helper_memory_effects_not_propagated"
+      ],
+      "initialization_limitations": [],
+      "initialization_states_processed": 343,
+      "dispatch_root_provenance": {
+        "abstract_initialization_rvas": [
+          "0x1100",
+          "0x1130"
+        ],
+        "synthetic_execution_rvas": [],
+        "fixed_point_initialization_rvas": []
+      },
+      "synthetic_initialization": null,
+      "fixed_point_initialization": null,
+      "fixed_point_analysis": {
+        "analysis_model": "dispatch-rooted finite fixed-point MAY dataflow; predicates discarded",
+        "coverage": {
+          "status": "FIXED_POINT_COMPLETE",
+          "complete": true,
+          "dispatch_roots_total": 2,
+          "dispatch_roots_completed": 2,
+          "semantic_coverage_complete": false
+        },
+        "findings": [
+          {
+            "dispatch_rva": "0x1130",
+            "call_rva": "0x106d",
+            "function_rva": "0x1050",
+            "slot_rva": "0x3000",
+            "section": ".data",
+            "initial_target_rva": "0x1000",
+            "arguments": {
+              "rcx": [
+                {
+                  "kind": "buffer",
+                  "offset": 0
+                }
+              ],
+              "rdx": [
+                {
+                  "kind": "input_length",
+                  "offset": 0
+                }
+              ],
+              "r8": [
+                {
+                  "kind": "unknown",
+                  "offset": null
+                }
+              ],
+              "r9": [
+                {
+                  "kind": "unknown",
+                  "offset": null
+                }
+              ],
+              "stack_arg_6": [
+                {
+                  "kind": "buffer",
+                  "offset": 0
+                }
+              ]
+            },
+            "systembuffer_arguments": [
+              "rcx",
+              "stack_arg_6"
+            ],
+            "stack_only_input_lead": false,
+            "instruction": "call rax",
+            "modeled_path_feasibility": {
+              "status": "NOT_CHECKED",
+              "reason": "MAY joins discard branch predicates"
+            },
+            "interpretation": "Fixed-point MAY candidate; correlated predicates, runtime invocation and successful completion are not proved."
+          }
+        ],
+        "unproven_writable_indirect_calls": [],
+        "nonimage_indirect_call_leads": [],
+        "read_only_image_pointer_calls": [],
+        "limitations": [
+          "external_call_memory_effects_unmodeled",
+          "helper_memory_effects_not_propagated"
+        ],
+        "metrics": {
+          "transfer_evaluations": 174,
+          "join_updates": 57,
+          "branch_joins": 5,
+          "instruction_states": 109,
+          "functions": 5,
+          "max_queue": 5
+        },
+        "predicates": "DISCARDED_AT_JOINS_NOT_RUNTIME_CONFIRMED"
+      },
+      "wdf_callback_registration": null,
+      "wdf_callback_analysis": null,
+      "analysis_engine": "fixedpoint",
+      "analysis_model": "x64 WDM offsets; abstract initialization, optional synthetic Unicorn path, bounded legacy or finite MAY dispatch analysis",
+      "user_interaction_analysis": {
+        "file": "C:\\Users\\cal\\Desktop\\example-device-driver-scanner\\fixtures\\helper-Od.sys",
+        "sha256": "33a55f5e73d05e4d8ee45ec999755eeac0ca99f34866bf102767024c51c851e6",
+        "entry_roots": {
+          "CreateFile": [
+            "0x1080",
+            "0x1100"
+          ],
+          "ReadFile": [
+            "0x1100"
+          ],
+          "WriteFile": [
+            "0x1100"
+          ],
+          "DeviceIoControl": [
+            "0x1100",
+            "0x1130"
+          ]
+        },
+        "sites": [
+          {
+            "event": "DeviceIoControl",
+            "entry_model": "WDM",
+            "pointer_kind": "WRITABLE_IMAGE_SLOT",
+            "dispatch_rva": "0x1130",
+            "function_rva": "0x1050",
+            "call_rva": "0x106d",
+            "slot_rva": "0x3000",
+            "section": ".data",
+            "initial_target_rva": "0x1000",
+            "instruction": "call rax",
+            "input_buffer_variant_candidate": true,
+            "field_displacement": null,
+            "base_provenance": null,
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          }
+        ],
+        "entry_coverage": {
+          "CreateFile": {
+            "status": "FIXED_POINT_COMPLETE",
+            "complete": true,
+            "dispatch_roots_total": 2,
+            "dispatch_roots_completed": 2,
+            "semantic_coverage_complete": false
+          },
+          "ReadFile": {
+            "status": "FIXED_POINT_COMPLETE",
+            "complete": true,
+            "dispatch_roots_total": 1,
+            "dispatch_roots_completed": 1,
+            "semantic_coverage_complete": false
+          },
+          "WriteFile": {
+            "status": "FIXED_POINT_COMPLETE",
+            "complete": true,
+            "dispatch_roots_total": 1,
+            "dispatch_roots_completed": 1,
+            "semantic_coverage_complete": false
+          },
+          "DeviceIoControl": {
+            "status": "FIXED_POINT_COMPLETE",
+            "complete": true,
+            "dispatch_roots_total": 2,
+            "dispatch_roots_completed": 2,
+            "semantic_coverage_complete": false
+          }
+        },
+        "limitations": [
+          "CreateFile:external_call_memory_effects_unmodeled",
+          "CreateFile:helper_memory_effects_not_propagated",
+          "DeviceIoControl:external_call_memory_effects_unmodeled",
+          "DeviceIoControl:helper_memory_effects_not_propagated",
+          "ReadFile:external_call_memory_effects_unmodeled",
+          "ReadFile:helper_memory_effects_not_propagated",
+          "WriteFile:external_call_memory_effects_unmodeled",
+          "WriteFile:helper_memory_effects_not_propagated",
+          "fixed_init:external_call_memory_effects_unmodeled",
+          "fixed_init:unresolved_memory_write"
+        ],
+        "runtime_reachability": "UNVERIFIED",
+        "user_handle_access": "UNVERIFIED",
+        "abstract_init_steps": 343,
+        "wdm_initialization_coverage": {
+          "status": "FIXED_POINT_COMPLETE",
+          "complete": true
+        },
+        "classification": "ROOTED_IMAGE_POINTER_CALL_LEAD",
+        "scope": "A resolved entry and a fixed-point MAY path do not prove a user-visible device, request success, path feasibility, or execution on this machine. Object-field leads do not establish that the field belongs to this image."
+      },
+      "offline_validation": {
+        "schema_version": 1,
+        "engine": "Unicorn synthetic WDM request replay",
+        "image_sha256": "33a55f5e73d05e4d8ee45ec999755eeac0ca99f34866bf102767024c51c851e6",
+        "sites_total": 1,
+        "sites_selected": 1,
+        "site_limit": 4,
+        "sites": [
+          {
+            "event": "DeviceIoControl",
+            "entry_model": "WDM",
+            "pointer_kind": "WRITABLE_IMAGE_SLOT",
+            "dispatch_rva": "0x1130",
+            "call_rva": "0x106d",
+            "slot_rva": "0x3000",
+            "input_buffer_variant_candidate": true,
+            "path_evidence": {
+              "status": "SAT_PARTIAL_MODEL",
+              "modeled_predicates": 5,
+              "witness": {
+                "input_length_0_32": "0x1000",
+                "output_length_0_32": "0x4",
+                "ioctl_0_32": "0x226000",
+                "systembuffer_pointer_64": "0xffffffffffffffff"
+              },
+              "scope": "Only tracked integer predicates; not proof of runtime reachability, handle access, or full buffer validity."
+            },
+            "attempts": [
+              {
+                "scenario": {
+                  "name": "ioctl_00226000_len4096",
+                  "file_name": "",
+                  "ioctl": 2252800,
+                  "input_length": 4096,
+                  "output_length": 64
+                },
+                "status": "CALLSITE_HIT",
+                "instructions": 36,
+                "modeled_import_calls": {},
+                "unmodeled_import_calls": {},
+                "synthetic_request": true,
+                "actual_target_rva": "0x1000",
+                "actual_target_in_image": true,
+                "slot_rva": "0x3000",
+                "observed_storage_address": null,
+                "observed_storage_region": "UNRESOLVED_OR_REGISTER",
+                "target_matches_image_pointer": true
+              }
+            ],
+            "offline_evidence_score": {
+              "value": 85,
+              "tier": "STRONG_SYNTHETIC_EVIDENCE",
+              "scale": "0-85 OFFLINE_EVIDENCE_ONLY",
+              "components": {
+                "rooted_may_flow": 15,
+                "storage_evidence": 20,
+                "initial_local_target": 10,
+                "specific_input_variant": 5,
+                "tracked_path_predicates_sat": 10,
+                "synthetic_callsite_hit": 20,
+                "synthetic_target_match": 10
+              },
+              "not_a_probability": true,
+              "live_user_openability": "UNVERIFIED",
+              "interpretation": "Ranking evidence within the synthetic/static model; not a vulnerability or live-reachability probability."
+            }
+          }
+        ],
+        "installed_image_unchanged": true,
+        "evidence_scope": "Synthetic model only. No live device, OS I/O manager, real KMDF queue, handle ACL, or user request was exercised.",
+        "no_live_reachability_claim": true
+      }
+    },
+    {
+      "schema_version": 3,
+      "file": "C:\\Users\\cal\\Desktop\\example-device-driver-scanner\\fixtures\\internal-O2.sys",
+      "sha256": "23a0c16e146d89702e043cc07777e5fa417bb09a987dd211fe2eff8597fd53e1",
+      "classification": "INCONCLUSIVE",
+      "classification_scope": "Only the bounded, modeled dispatch/callback graph; not a proof of driver-wide absence or user accessibility.",
+      "vulnerability_claim": false,
+      "user_openability": "UNCONFIRMED_REQUIRES_RUNTIME_AND_DEPLOYMENT_SECURITY",
+      "namespace_import_hints": [
+        "IoCreateDevice",
+        "IoCreateSymbolicLink"
+      ],
+      "namespace_string_hints": [
+        "\\Device\\CallbackSurfaceFixture",
+        "\\DosDevices\\CallbackSurfaceFixture"
+      ],
+      "create_dispatch_rvas": [
+        "0x10a0"
+      ],
+      "device_control_dispatch_rvas": [],
+      "findings": [],
+      "unproven_writable_indirect_calls": [],
+      "path_refined_writable_indirect_calls": [],
+      "limitations": [
+        "device_control_dispatch_not_resolved"
+      ],
+      "initialization_limitations": [],
+      "initialization_states_processed": 67,
+      "dispatch_root_provenance": {
+        "abstract_initialization_rvas": [],
+        "synthetic_execution_rvas": [],
+        "fixed_point_initialization_rvas": []
+      },
+      "synthetic_initialization": null,
+      "fixed_point_initialization": {
+        "analysis_model": "DriverEntry fixed-point MAY registration analysis; branches joined",
+        "coverage": {
+          "status": "FIXED_POINT_COMPLETE",
+          "complete": true
+        },
+        "dispatch_rvas_by_major": {
+          "1": [
+            "0x10d0"
+          ],
+          "3": [
+            "0x10d0"
+          ],
+          "4": [
+            "0x10d0"
+          ],
+          "5": [
+            "0x10d0"
+          ],
+          "6": [
+            "0x10d0"
+          ],
+          "16": [
+            "0x10d0"
+          ],
+          "17": [
+            "0x10d0"
+          ],
+          "18": [
+            "0x10d0"
+          ],
+          "19": [
+            "0x10d0"
+          ],
+          "20": [
+            "0x10d0"
+          ],
+          "21": [
+            "0x10d0"
+          ],
+          "22": [
+            "0x10d0"
+          ],
+          "23": [
+            "0x10d0"
+          ],
+          "24": [
+            "0x10d0"
+          ],
+          "25": [
+            "0x10d0"
+          ],
+          "26": [
+            "0x10d0"
+          ],
+          "27": [
+            "0x10d0"
+          ],
+          "0": [
+            "0x10a0"
+          ],
+          "2": [
+            "0x10a0"
+          ],
+          "15": [
+            "0x1100"
+          ]
+        },
+        "device_control_dispatch_rvas": [],
+        "create_dispatch_rvas": [
+          "0x10a0"
+        ],
+        "registration_sites": {
+          "1": [
+            "0x1218"
+          ],
+          "3": [
+            "0x121c"
+          ],
+          "4": [
+            "0x1223"
+          ],
+          "5": [
+            "0x122a"
+          ],
+          "6": [
+            "0x1231"
+          ],
+          "16": [
+            "0x1262"
+          ],
+          "17": [
+            "0x1269"
+          ],
+          "18": [
+            "0x1270"
+          ],
+          "19": [
+            "0x1277"
+          ],
+          "20": [
+            "0x127e"
+          ],
+          "21": [
+            "0x1285"
+          ],
+          "22": [
+            "0x128c"
+          ],
+          "23": [
+            "0x1293"
+          ],
+          "24": [
+            "0x129a"
+          ],
+          "25": [
+            "0x12a1"
+          ],
+          "26": [
+            "0x12a8"
+          ],
+          "27": [
+            "0x12af"
+          ],
+          "0": [
+            "0x12bd"
+          ],
+          "2": [
+            "0x12c1"
+          ],
+          "15": [
+            "0x12cf"
+          ]
+        },
+        "limitations": [
+          "external_call_memory_effects_unmodeled",
+          "unmodeled_instruction_effects"
+        ],
+        "metrics": {
+          "transfer_evaluations": 67,
+          "instruction_states": 64,
+          "functions": 1,
+          "join_updates": 3
+        }
+      },
+      "fixed_point_analysis": {
+        "analysis_model": "dispatch-rooted finite fixed-point MAY dataflow; predicates discarded",
+        "coverage": {
+          "status": "INCOMPLETE",
+          "complete": false,
+          "dispatch_roots_total": 0,
+          "dispatch_roots_completed": 0,
+          "semantic_coverage_complete": false
+        },
+        "findings": [],
+        "unproven_writable_indirect_calls": [],
+        "nonimage_indirect_call_leads": [],
+        "read_only_image_pointer_calls": [],
+        "limitations": [
+          "device_control_dispatch_not_resolved"
+        ],
+        "metrics": {
+          "transfer_evaluations": 0,
+          "join_updates": 0,
+          "branch_joins": 0,
+          "instruction_states": 0,
+          "functions": 0,
+          "max_queue": 0
+        },
+        "predicates": "DISCARDED_AT_JOINS_NOT_RUNTIME_CONFIRMED"
+      },
+      "wdf_callback_registration": null,
+      "wdf_callback_analysis": null,
+      "analysis_engine": "fixedpoint",
+      "analysis_model": "x64 WDM offsets; abstract initialization, optional synthetic Unicorn path, bounded legacy or finite MAY dispatch analysis",
+      "user_interaction_analysis": {
+        "file": "C:\\Users\\cal\\Desktop\\example-device-driver-scanner\\fixtures\\internal-O2.sys",
+        "sha256": "23a0c16e146d89702e043cc07777e5fa417bb09a987dd211fe2eff8597fd53e1",
+        "entry_roots": {
+          "CreateFile": [
+            "0x10a0"
+          ],
+          "ReadFile": [
+            "0x10d0"
+          ],
+          "WriteFile": [
+            "0x10d0"
+          ],
+          "DeviceIoControl": []
+        },
+        "sites": [],
+        "entry_coverage": {
+          "CreateFile": {
+            "status": "FIXED_POINT_COMPLETE",
+            "complete": true,
+            "dispatch_roots_total": 1,
+            "dispatch_roots_completed": 1,
+            "semantic_coverage_complete": false
+          },
+          "ReadFile": {
+            "status": "FIXED_POINT_COMPLETE",
+            "complete": true,
+            "dispatch_roots_total": 1,
+            "dispatch_roots_completed": 1,
+            "semantic_coverage_complete": false
+          },
+          "WriteFile": {
+            "status": "FIXED_POINT_COMPLETE",
+            "complete": true,
+            "dispatch_roots_total": 1,
+            "dispatch_roots_completed": 1,
+            "semantic_coverage_complete": false
+          },
+          "DeviceIoControl": {
+            "status": "ROOT_NOT_RESOLVED",
+            "complete": false
+          }
+        },
+        "limitations": [
+          "CreateFile:external_call_memory_effects_unmodeled",
+          "ReadFile:external_call_memory_effects_unmodeled",
+          "WriteFile:external_call_memory_effects_unmodeled",
+          "fixed_init:external_call_memory_effects_unmodeled",
+          "fixed_init:unmodeled_instruction_effects"
+        ],
+        "runtime_reachability": "UNVERIFIED",
+        "user_handle_access": "UNVERIFIED",
+        "abstract_init_steps": 67,
+        "wdm_initialization_coverage": {
+          "status": "FIXED_POINT_COMPLETE",
+          "complete": true
+        },
+        "classification": "NO_INDIRECT_CALL_IN_MODELED_PATHS",
+        "scope": "A resolved entry and a fixed-point MAY path do not prove a user-visible device, request success, path feasibility, or execution on this machine. Object-field leads do not establish that the field belongs to this image."
+      },
+      "offline_validation": {
+        "schema_version": 1,
+        "engine": "Unicorn synthetic WDM request replay",
+        "image_sha256": "23a0c16e146d89702e043cc07777e5fa417bb09a987dd211fe2eff8597fd53e1",
+        "sites_total": 0,
+        "sites_selected": 0,
+        "site_limit": 4,
+        "sites": [],
+        "installed_image_unchanged": true,
+        "evidence_scope": "Synthetic model only. No live device, OS I/O manager, real KMDF queue, handle ACL, or user request was exercised.",
+        "no_live_reachability_claim": true
+      }
+    },
+    {
+      "schema_version": 3,
+      "file": "C:\\Users\\cal\\Desktop\\example-device-driver-scanner\\fixtures\\internal-Od.sys",
+      "sha256": "35ee9a5423123f28881a4c2cfa6567570fad9c3ecbf30382e1308f91249cfd62",
+      "classification": "NO_CANDIDATE_IN_MODELED_PATHS",
+      "classification_scope": "Only the bounded, modeled dispatch/callback graph; not a proof of driver-wide absence or user accessibility.",
+      "vulnerability_claim": false,
+      "user_openability": "UNCONFIRMED_REQUIRES_RUNTIME_AND_DEPLOYMENT_SECURITY",
+      "namespace_import_hints": [
+        "IoCreateDevice",
+        "IoCreateSymbolicLink"
+      ],
+      "namespace_string_hints": [
+        "\\Device\\CallbackSurfaceFixture",
+        "\\DosDevices\\CallbackSurfaceFixture"
+      ],
+      "create_dispatch_rvas": [
+        "0x1050",
+        "0x10d0"
+      ],
+      "device_control_dispatch_rvas": [
+        "0x10d0"
+      ],
+      "findings": [],
+      "unproven_writable_indirect_calls": [],
+      "path_refined_writable_indirect_calls": [],
+      "limitations": [
+        "external_call_memory_effects_unmodeled",
+        "helper_memory_effects_not_propagated"
+      ],
+      "initialization_limitations": [],
+      "initialization_states_processed": 343,
+      "dispatch_root_provenance": {
+        "abstract_initialization_rvas": [
+          "0x10d0"
+        ],
+        "synthetic_execution_rvas": [],
+        "fixed_point_initialization_rvas": []
+      },
+      "synthetic_initialization": null,
+      "fixed_point_initialization": null,
+      "fixed_point_analysis": {
+        "analysis_model": "dispatch-rooted finite fixed-point MAY dataflow; predicates discarded",
+        "coverage": {
+          "status": "FIXED_POINT_COMPLETE",
+          "complete": true,
+          "dispatch_roots_total": 1,
+          "dispatch_roots_completed": 1,
+          "semantic_coverage_complete": false
+        },
+        "findings": [],
+        "unproven_writable_indirect_calls": [],
+        "nonimage_indirect_call_leads": [],
+        "read_only_image_pointer_calls": [],
+        "limitations": [
+          "external_call_memory_effects_unmodeled",
+          "helper_memory_effects_not_propagated"
+        ],
+        "metrics": {
+          "transfer_evaluations": 28,
+          "join_updates": 0,
+          "branch_joins": 0,
+          "instruction_states": 27,
+          "functions": 2,
+          "max_queue": 1
+        },
+        "predicates": "DISCARDED_AT_JOINS_NOT_RUNTIME_CONFIRMED"
+      },
+      "wdf_callback_registration": null,
+      "wdf_callback_analysis": null,
+      "analysis_engine": "fixedpoint",
+      "analysis_model": "x64 WDM offsets; abstract initialization, optional synthetic Unicorn path, bounded legacy or finite MAY dispatch analysis",
+      "user_interaction_analysis": {
+        "file": "C:\\Users\\cal\\Desktop\\example-device-driver-scanner\\fixtures\\internal-Od.sys",
+        "sha256": "35ee9a5423123f28881a4c2cfa6567570fad9c3ecbf30382e1308f91249cfd62",
+        "entry_roots": {
+          "CreateFile": [
+            "0x1050",
+            "0x10d0"
+          ],
+          "ReadFile": [
+            "0x10d0"
+          ],
+          "WriteFile": [
+            "0x10d0"
+          ],
+          "DeviceIoControl": [
+            "0x10d0"
+          ]
+        },
+        "sites": [],
+        "entry_coverage": {
+          "CreateFile": {
+            "status": "FIXED_POINT_COMPLETE",
+            "complete": true,
+            "dispatch_roots_total": 2,
+            "dispatch_roots_completed": 2,
+            "semantic_coverage_complete": false
+          },
+          "ReadFile": {
+            "status": "FIXED_POINT_COMPLETE",
+            "complete": true,
+            "dispatch_roots_total": 1,
+            "dispatch_roots_completed": 1,
+            "semantic_coverage_complete": false
+          },
+          "WriteFile": {
+            "status": "FIXED_POINT_COMPLETE",
+            "complete": true,
+            "dispatch_roots_total": 1,
+            "dispatch_roots_completed": 1,
+            "semantic_coverage_complete": false
+          },
+          "DeviceIoControl": {
+            "status": "FIXED_POINT_COMPLETE",
+            "complete": true,
+            "dispatch_roots_total": 1,
+            "dispatch_roots_completed": 1,
+            "semantic_coverage_complete": false
+          }
+        },
+        "limitations": [
+          "CreateFile:external_call_memory_effects_unmodeled",
+          "CreateFile:helper_memory_effects_not_propagated",
+          "DeviceIoControl:external_call_memory_effects_unmodeled",
+          "DeviceIoControl:helper_memory_effects_not_propagated",
+          "ReadFile:external_call_memory_effects_unmodeled",
+          "ReadFile:helper_memory_effects_not_propagated",
+          "WriteFile:external_call_memory_effects_unmodeled",
+          "WriteFile:helper_memory_effects_not_propagated",
+          "fixed_init:external_call_memory_effects_unmodeled",
+          "fixed_init:unresolved_memory_write"
+        ],
+        "runtime_reachability": "UNVERIFIED",
+        "user_handle_access": "UNVERIFIED",
+        "abstract_init_steps": 343,
+        "wdm_initialization_coverage": {
+          "status": "FIXED_POINT_COMPLETE",
+          "complete": true
+        },
+        "classification": "NO_INDIRECT_CALL_IN_MODELED_PATHS",
+        "scope": "A resolved entry and a fixed-point MAY path do not prove a user-visible device, request success, path feasibility, or execution on this machine. Object-field leads do not establish that the field belongs to this image."
+      },
+      "offline_validation": {
+        "schema_version": 1,
+        "engine": "Unicorn synthetic WDM request replay",
+        "image_sha256": "35ee9a5423123f28881a4c2cfa6567570fad9c3ecbf30382e1308f91249cfd62",
+        "sites_total": 0,
+        "sites_selected": 0,
+        "site_limit": 4,
+        "sites": [],
+        "installed_image_unchanged": true,
+        "evidence_scope": "Synthetic model only. No live device, OS I/O manager, real KMDF queue, handle ACL, or user request was exercised.",
+        "no_live_reachability_claim": true
+      }
+    },
+    {
+      "schema_version": 3,
+      "file": "C:\\Users\\cal\\Desktop\\example-device-driver-scanner\\fixtures\\positive-O2.sys",
+      "sha256": "cb4c388a212127337351b615f2b9e22d60151bc9f43c66a0090abbdaf4fdd604",
+      "classification": "PATTERN_CANDIDATE",
+      "classification_scope": "Only the bounded, modeled dispatch/callback graph; not a proof of driver-wide absence or user accessibility.",
+      "vulnerability_claim": false,
+      "user_openability": "UNCONFIRMED_REQUIRES_RUNTIME_AND_DEPLOYMENT_SECURITY",
+      "namespace_import_hints": [
+        "IoCreateDevice",
+        "IoCreateSymbolicLink"
+      ],
+      "namespace_string_hints": [
+        "\\Device\\CallbackSurfaceFixture",
+        "\\DosDevices\\CallbackSurfaceFixture"
+      ],
+      "create_dispatch_rvas": [
+        "0x10a0"
+      ],
+      "device_control_dispatch_rvas": [
+        "0x1100"
+      ],
+      "findings": [
+        {
+          "dispatch_rva": "0x1100",
+          "call_rva": "0x1150",
+          "function_rva": "0x1100",
+          "slot_rva": "0x3000",
+          "section": ".data",
+          "initial_target_rva": "0x1000",
+          "arguments": {
+            "rcx": [
+              {
+                "kind": "buffer",
+                "offset": 0
+              }
+            ],
+            "rdx": [
+              {
+                "kind": "input_length",
+                "offset": 0
+              }
+            ],
+            "r8": [
+              {
+                "kind": "slot",
+                "offset": 5368721408
+              }
+            ],
+            "r9": [
+              {
+                "kind": "unknown",
+                "offset": null
+              }
+            ],
+            "stack_arg_5": [
+              {
+                "kind": "unknown",
+                "offset": null
+              }
+            ]
+          },
+          "systembuffer_arguments": [
+            "rcx"
+          ],
+          "stack_only_input_lead": false,
+          "instruction": "call r8",
+          "modeled_path_feasibility": {
+            "status": "NOT_CHECKED",
+            "reason": "MAY joins discard branch predicates"
+          },
+          "interpretation": "Fixed-point MAY candidate; correlated predicates, runtime invocation and successful completion are not proved."
+        }
+      ],
+      "unproven_writable_indirect_calls": [],
+      "path_refined_writable_indirect_calls": [],
+      "limitations": [
+        "external_call_memory_effects_unmodeled"
+      ],
+      "initialization_limitations": [],
+      "initialization_states_processed": 69,
+      "dispatch_root_provenance": {
+        "abstract_initialization_rvas": [
+          "0x1100"
+        ],
+        "synthetic_execution_rvas": [],
+        "fixed_point_initialization_rvas": []
+      },
+      "synthetic_initialization": null,
+      "fixed_point_initialization": null,
+      "fixed_point_analysis": {
+        "analysis_model": "dispatch-rooted finite fixed-point MAY dataflow; predicates discarded",
+        "coverage": {
+          "status": "FIXED_POINT_COMPLETE",
+          "complete": true,
+          "dispatch_roots_total": 1,
+          "dispatch_roots_completed": 1,
+          "semantic_coverage_complete": false
+        },
+        "findings": [
+          {
+            "dispatch_rva": "0x1100",
+            "call_rva": "0x1150",
+            "function_rva": "0x1100",
+            "slot_rva": "0x3000",
+            "section": ".data",
+            "initial_target_rva": "0x1000",
+            "arguments": {
+              "rcx": [
+                {
+                  "kind": "buffer",
+                  "offset": 0
+                }
+              ],
+              "rdx": [
+                {
+                  "kind": "input_length",
+                  "offset": 0
+                }
+              ],
+              "r8": [
+                {
+                  "kind": "slot",
+                  "offset": 5368721408
+                }
+              ],
+              "r9": [
+                {
+                  "kind": "unknown",
+                  "offset": null
+                }
+              ],
+              "stack_arg_5": [
+                {
+                  "kind": "unknown",
+                  "offset": null
+                }
+              ]
+            },
+            "systembuffer_arguments": [
+              "rcx"
+            ],
+            "stack_only_input_lead": false,
+            "instruction": "call r8",
+            "modeled_path_feasibility": {
+              "status": "NOT_CHECKED",
+              "reason": "MAY joins discard branch predicates"
+            },
+            "interpretation": "Fixed-point MAY candidate; correlated predicates, runtime invocation and successful completion are not proved."
+          }
+        ],
+        "unproven_writable_indirect_calls": [],
+        "nonimage_indirect_call_leads": [],
+        "read_only_image_pointer_calls": [],
+        "limitations": [
+          "external_call_memory_effects_unmodeled"
+        ],
+        "metrics": {
+          "transfer_evaluations": 54,
+          "join_updates": 17,
+          "branch_joins": 4,
+          "instruction_states": 37,
+          "functions": 1,
+          "max_queue": 3
+        },
+        "predicates": "DISCARDED_AT_JOINS_NOT_RUNTIME_CONFIRMED"
+      },
+      "wdf_callback_registration": null,
+      "wdf_callback_analysis": null,
+      "analysis_engine": "fixedpoint",
+      "analysis_model": "x64 WDM offsets; abstract initialization, optional synthetic Unicorn path, bounded legacy or finite MAY dispatch analysis",
+      "user_interaction_analysis": {
+        "file": "C:\\Users\\cal\\Desktop\\example-device-driver-scanner\\fixtures\\positive-O2.sys",
+        "sha256": "cb4c388a212127337351b615f2b9e22d60151bc9f43c66a0090abbdaf4fdd604",
+        "entry_roots": {
+          "CreateFile": [
+            "0x10a0"
+          ],
+          "ReadFile": [
+            "0x10d0"
+          ],
+          "WriteFile": [
+            "0x10d0"
+          ],
+          "DeviceIoControl": [
+            "0x1100"
+          ]
+        },
+        "sites": [
+          {
+            "event": "DeviceIoControl",
+            "entry_model": "WDM",
+            "pointer_kind": "WRITABLE_IMAGE_SLOT",
+            "dispatch_rva": "0x1100",
+            "function_rva": "0x1100",
+            "call_rva": "0x1150",
+            "slot_rva": "0x3000",
+            "section": ".data",
+            "initial_target_rva": "0x1000",
+            "instruction": "call r8",
+            "input_buffer_variant_candidate": true,
+            "field_displacement": null,
+            "base_provenance": null,
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          }
+        ],
+        "entry_coverage": {
+          "CreateFile": {
+            "status": "FIXED_POINT_COMPLETE",
+            "complete": true,
+            "dispatch_roots_total": 1,
+            "dispatch_roots_completed": 1,
+            "semantic_coverage_complete": false
+          },
+          "ReadFile": {
+            "status": "FIXED_POINT_COMPLETE",
+            "complete": true,
+            "dispatch_roots_total": 1,
+            "dispatch_roots_completed": 1,
+            "semantic_coverage_complete": false
+          },
+          "WriteFile": {
+            "status": "FIXED_POINT_COMPLETE",
+            "complete": true,
+            "dispatch_roots_total": 1,
+            "dispatch_roots_completed": 1,
+            "semantic_coverage_complete": false
+          },
+          "DeviceIoControl": {
+            "status": "FIXED_POINT_COMPLETE",
+            "complete": true,
+            "dispatch_roots_total": 1,
+            "dispatch_roots_completed": 1,
+            "semantic_coverage_complete": false
+          }
+        },
+        "limitations": [
+          "CreateFile:external_call_memory_effects_unmodeled",
+          "DeviceIoControl:external_call_memory_effects_unmodeled",
+          "ReadFile:external_call_memory_effects_unmodeled",
+          "WriteFile:external_call_memory_effects_unmodeled",
+          "fixed_init:external_call_memory_effects_unmodeled",
+          "fixed_init:unmodeled_instruction_effects"
+        ],
+        "runtime_reachability": "UNVERIFIED",
+        "user_handle_access": "UNVERIFIED",
+        "abstract_init_steps": 69,
+        "wdm_initialization_coverage": {
+          "status": "FIXED_POINT_COMPLETE",
+          "complete": true
+        },
+        "classification": "ROOTED_IMAGE_POINTER_CALL_LEAD",
+        "scope": "A resolved entry and a fixed-point MAY path do not prove a user-visible device, request success, path feasibility, or execution on this machine. Object-field leads do not establish that the field belongs to this image."
+      },
+      "offline_validation": {
+        "schema_version": 1,
+        "engine": "Unicorn synthetic WDM request replay",
+        "image_sha256": "cb4c388a212127337351b615f2b9e22d60151bc9f43c66a0090abbdaf4fdd604",
+        "sites_total": 1,
+        "sites_selected": 1,
+        "site_limit": 4,
+        "sites": [
+          {
+            "event": "DeviceIoControl",
+            "entry_model": "WDM",
+            "pointer_kind": "WRITABLE_IMAGE_SLOT",
+            "dispatch_rva": "0x1100",
+            "call_rva": "0x1150",
+            "slot_rva": "0x3000",
+            "input_buffer_variant_candidate": true,
+            "path_evidence": {
+              "status": "SAT_PARTIAL_MODEL",
+              "modeled_predicates": 3,
+              "witness": {
+                "output_length_0_32": "0x4",
+                "systembuffer_pointer_64": "0xffffffffffffffff",
+                "ioctl_0_32": "0x226000"
+              },
+              "scope": "Only tracked integer predicates; not proof of runtime reachability, handle access, or full buffer validity."
+            },
+            "attempts": [
+              {
+                "scenario": {
+                  "name": "ioctl_00226000_len4",
+                  "file_name": "",
+                  "ioctl": 2252800,
+                  "input_length": 4,
+                  "output_length": 64
+                },
+                "status": "CALLSITE_HIT",
+                "instructions": 21,
+                "modeled_import_calls": {},
+                "unmodeled_import_calls": {},
+                "synthetic_request": true,
+                "actual_target_rva": "0x1000",
+                "actual_target_in_image": true,
+                "slot_rva": "0x3000",
+                "observed_storage_address": null,
+                "observed_storage_region": "UNRESOLVED_OR_REGISTER",
+                "target_matches_image_pointer": true
+              }
+            ],
+            "offline_evidence_score": {
+              "value": 85,
+              "tier": "STRONG_SYNTHETIC_EVIDENCE",
+              "scale": "0-85 OFFLINE_EVIDENCE_ONLY",
+              "components": {
+                "rooted_may_flow": 15,
+                "storage_evidence": 20,
+                "initial_local_target": 10,
+                "specific_input_variant": 5,
+                "tracked_path_predicates_sat": 10,
+                "synthetic_callsite_hit": 20,
+                "synthetic_target_match": 10
+              },
+              "not_a_probability": true,
+              "live_user_openability": "UNVERIFIED",
+              "interpretation": "Ranking evidence within the synthetic/static model; not a vulnerability or live-reachability probability."
+            }
+          }
+        ],
+        "installed_image_unchanged": true,
+        "evidence_scope": "Synthetic model only. No live device, OS I/O manager, real KMDF queue, handle ACL, or user request was exercised.",
+        "no_live_reachability_claim": true
+      }
+    },
+    {
+      "schema_version": 3,
+      "file": "C:\\Users\\cal\\Desktop\\example-device-driver-scanner\\fixtures\\positive-Od.sys",
+      "sha256": "6024ad606c4645dafd0d2cad3e47652611f235c530418c177351658f9bef7a5f",
+      "classification": "PATTERN_CANDIDATE",
+      "classification_scope": "Only the bounded, modeled dispatch/callback graph; not a proof of driver-wide absence or user accessibility.",
+      "vulnerability_claim": false,
+      "user_openability": "UNCONFIRMED_REQUIRES_RUNTIME_AND_DEPLOYMENT_SECURITY",
+      "namespace_import_hints": [
+        "IoCreateDevice",
+        "IoCreateSymbolicLink"
+      ],
+      "namespace_string_hints": [
+        "\\Device\\CallbackSurfaceFixture",
+        "\\DosDevices\\CallbackSurfaceFixture"
+      ],
+      "create_dispatch_rvas": [
+        "0x1050",
+        "0x10d0"
+      ],
+      "device_control_dispatch_rvas": [
+        "0x10d0",
+        "0x1100"
+      ],
+      "findings": [
+        {
+          "dispatch_rva": "0x1100",
+          "call_rva": "0x11b9",
+          "function_rva": "0x1100",
+          "slot_rva": "0x3000",
+          "section": ".data",
+          "initial_target_rva": "0x1000",
+          "arguments": {
+            "rcx": [
+              {
+                "kind": "buffer",
+                "offset": 0
+              }
+            ],
+            "rdx": [
+              {
+                "kind": "input_length",
+                "offset": 0
+              }
+            ],
+            "r8": [
+              {
+                "kind": "unknown",
+                "offset": null
+              }
+            ],
+            "r9": [
+              {
+                "kind": "unknown",
+                "offset": null
+              }
+            ],
+            "stack_arg_7": [
+              {
+                "kind": "iostack",
+                "offset": 0
+              }
+            ],
+            "stack_arg_8": [
+              {
+                "kind": "device",
+                "offset": 0
+              }
+            ]
+          },
+          "systembuffer_arguments": [
+            "rcx"
+          ],
+          "stack_only_input_lead": false,
+          "instruction": "call rax",
+          "modeled_path_feasibility": {
+            "status": "NOT_CHECKED",
+            "reason": "MAY joins discard branch predicates"
+          },
+          "interpretation": "Fixed-point MAY candidate; correlated predicates, runtime invocation and successful completion are not proved."
+        }
+      ],
+      "unproven_writable_indirect_calls": [],
+      "path_refined_writable_indirect_calls": [],
+      "limitations": [
+        "external_call_memory_effects_unmodeled",
+        "helper_memory_effects_not_propagated"
+      ],
+      "initialization_limitations": [],
+      "initialization_states_processed": 343,
+      "dispatch_root_provenance": {
+        "abstract_initialization_rvas": [
+          "0x10d0",
+          "0x1100"
+        ],
+        "synthetic_execution_rvas": [],
+        "fixed_point_initialization_rvas": []
+      },
+      "synthetic_initialization": null,
+      "fixed_point_initialization": null,
+      "fixed_point_analysis": {
+        "analysis_model": "dispatch-rooted finite fixed-point MAY dataflow; predicates discarded",
+        "coverage": {
+          "status": "FIXED_POINT_COMPLETE",
+          "complete": true,
+          "dispatch_roots_total": 2,
+          "dispatch_roots_completed": 2,
+          "semantic_coverage_complete": false
+        },
+        "findings": [
+          {
+            "dispatch_rva": "0x1100",
+            "call_rva": "0x11b9",
+            "function_rva": "0x1100",
+            "slot_rva": "0x3000",
+            "section": ".data",
+            "initial_target_rva": "0x1000",
+            "arguments": {
+              "rcx": [
+                {
+                  "kind": "buffer",
+                  "offset": 0
+                }
+              ],
+              "rdx": [
+                {
+                  "kind": "input_length",
+                  "offset": 0
+                }
+              ],
+              "r8": [
+                {
+                  "kind": "unknown",
+                  "offset": null
+                }
+              ],
+              "r9": [
+                {
+                  "kind": "unknown",
+                  "offset": null
+                }
+              ],
+              "stack_arg_7": [
+                {
+                  "kind": "iostack",
+                  "offset": 0
+                }
+              ],
+              "stack_arg_8": [
+                {
+                  "kind": "device",
+                  "offset": 0
+                }
+              ]
+            },
+            "systembuffer_arguments": [
+              "rcx"
+            ],
+            "stack_only_input_lead": false,
+            "instruction": "call rax",
+            "modeled_path_feasibility": {
+              "status": "NOT_CHECKED",
+              "reason": "MAY joins discard branch predicates"
+            },
+            "interpretation": "Fixed-point MAY candidate; correlated predicates, runtime invocation and successful completion are not proved."
+          }
+        ],
+        "unproven_writable_indirect_calls": [],
+        "nonimage_indirect_call_leads": [],
+        "read_only_image_pointer_calls": [],
+        "limitations": [
+          "external_call_memory_effects_unmodeled",
+          "helper_memory_effects_not_propagated"
+        ],
+        "metrics": {
+          "transfer_evaluations": 161,
+          "join_updates": 54,
+          "branch_joins": 5,
+          "instruction_states": 100,
+          "functions": 4,
+          "max_queue": 5
+        },
+        "predicates": "DISCARDED_AT_JOINS_NOT_RUNTIME_CONFIRMED"
+      },
+      "wdf_callback_registration": null,
+      "wdf_callback_analysis": null,
+      "analysis_engine": "fixedpoint",
+      "analysis_model": "x64 WDM offsets; abstract initialization, optional synthetic Unicorn path, bounded legacy or finite MAY dispatch analysis",
+      "user_interaction_analysis": {
+        "file": "C:\\Users\\cal\\Desktop\\example-device-driver-scanner\\fixtures\\positive-Od.sys",
+        "sha256": "6024ad606c4645dafd0d2cad3e47652611f235c530418c177351658f9bef7a5f",
+        "entry_roots": {
+          "CreateFile": [
+            "0x1050",
+            "0x10d0"
+          ],
+          "ReadFile": [
+            "0x10d0"
+          ],
+          "WriteFile": [
+            "0x10d0"
+          ],
+          "DeviceIoControl": [
+            "0x10d0",
+            "0x1100"
+          ]
+        },
+        "sites": [
+          {
+            "event": "DeviceIoControl",
+            "entry_model": "WDM",
+            "pointer_kind": "WRITABLE_IMAGE_SLOT",
+            "dispatch_rva": "0x1100",
+            "function_rva": "0x1100",
+            "call_rva": "0x11b9",
+            "slot_rva": "0x3000",
+            "section": ".data",
+            "initial_target_rva": "0x1000",
+            "instruction": "call rax",
+            "input_buffer_variant_candidate": true,
+            "field_displacement": null,
+            "base_provenance": null,
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          }
+        ],
+        "entry_coverage": {
+          "CreateFile": {
+            "status": "FIXED_POINT_COMPLETE",
+            "complete": true,
+            "dispatch_roots_total": 2,
+            "dispatch_roots_completed": 2,
+            "semantic_coverage_complete": false
+          },
+          "ReadFile": {
+            "status": "FIXED_POINT_COMPLETE",
+            "complete": true,
+            "dispatch_roots_total": 1,
+            "dispatch_roots_completed": 1,
+            "semantic_coverage_complete": false
+          },
+          "WriteFile": {
+            "status": "FIXED_POINT_COMPLETE",
+            "complete": true,
+            "dispatch_roots_total": 1,
+            "dispatch_roots_completed": 1,
+            "semantic_coverage_complete": false
+          },
+          "DeviceIoControl": {
+            "status": "FIXED_POINT_COMPLETE",
+            "complete": true,
+            "dispatch_roots_total": 2,
+            "dispatch_roots_completed": 2,
+            "semantic_coverage_complete": false
+          }
+        },
+        "limitations": [
+          "CreateFile:external_call_memory_effects_unmodeled",
+          "CreateFile:helper_memory_effects_not_propagated",
+          "DeviceIoControl:external_call_memory_effects_unmodeled",
+          "DeviceIoControl:helper_memory_effects_not_propagated",
+          "ReadFile:external_call_memory_effects_unmodeled",
+          "ReadFile:helper_memory_effects_not_propagated",
+          "WriteFile:external_call_memory_effects_unmodeled",
+          "WriteFile:helper_memory_effects_not_propagated",
+          "fixed_init:external_call_memory_effects_unmodeled",
+          "fixed_init:unresolved_memory_write"
+        ],
+        "runtime_reachability": "UNVERIFIED",
+        "user_handle_access": "UNVERIFIED",
+        "abstract_init_steps": 343,
+        "wdm_initialization_coverage": {
+          "status": "FIXED_POINT_COMPLETE",
+          "complete": true
+        },
+        "classification": "ROOTED_IMAGE_POINTER_CALL_LEAD",
+        "scope": "A resolved entry and a fixed-point MAY path do not prove a user-visible device, request success, path feasibility, or execution on this machine. Object-field leads do not establish that the field belongs to this image."
+      },
+      "offline_validation": {
+        "schema_version": 1,
+        "engine": "Unicorn synthetic WDM request replay",
+        "image_sha256": "6024ad606c4645dafd0d2cad3e47652611f235c530418c177351658f9bef7a5f",
+        "sites_total": 1,
+        "sites_selected": 1,
+        "site_limit": 4,
+        "sites": [
+          {
+            "event": "DeviceIoControl",
+            "entry_model": "WDM",
+            "pointer_kind": "WRITABLE_IMAGE_SLOT",
+            "dispatch_rva": "0x1100",
+            "call_rva": "0x11b9",
+            "slot_rva": "0x3000",
+            "input_buffer_variant_candidate": true,
+            "path_evidence": {
+              "status": "SAT_PARTIAL_MODEL",
+              "modeled_predicates": 5,
+              "witness": {
+                "input_length_0_32": "0x1000",
+                "output_length_0_32": "0x4",
+                "ioctl_0_32": "0x226000",
+                "systembuffer_pointer_64": "0xffffffffffffffff"
+              },
+              "scope": "Only tracked integer predicates; not proof of runtime reachability, handle access, or full buffer validity."
+            },
+            "attempts": [
+              {
+                "scenario": {
+                  "name": "ioctl_00226000_len4096",
+                  "file_name": "",
+                  "ioctl": 2252800,
+                  "input_length": 4096,
+                  "output_length": 64
+                },
+                "status": "CALLSITE_HIT",
+                "instructions": 30,
+                "modeled_import_calls": {},
+                "unmodeled_import_calls": {},
+                "synthetic_request": true,
+                "actual_target_rva": "0x1000",
+                "actual_target_in_image": true,
+                "slot_rva": "0x3000",
+                "observed_storage_address": null,
+                "observed_storage_region": "UNRESOLVED_OR_REGISTER",
+                "target_matches_image_pointer": true
+              }
+            ],
+            "offline_evidence_score": {
+              "value": 85,
+              "tier": "STRONG_SYNTHETIC_EVIDENCE",
+              "scale": "0-85 OFFLINE_EVIDENCE_ONLY",
+              "components": {
+                "rooted_may_flow": 15,
+                "storage_evidence": 20,
+                "initial_local_target": 10,
+                "specific_input_variant": 5,
+                "tracked_path_predicates_sat": 10,
+                "synthetic_callsite_hit": 20,
+                "synthetic_target_match": 10
+              },
+              "not_a_probability": true,
+              "live_user_openability": "UNVERIFIED",
+              "interpretation": "Ranking evidence within the synthetic/static model; not a vulnerability or live-reachability probability."
+            }
+          }
+        ],
+        "installed_image_unchanged": true,
+        "evidence_scope": "Synthetic model only. No live device, OS I/O manager, real KMDF queue, handle ACL, or user request was exercised.",
+        "no_live_reachability_claim": true
+      }
+    },
+    {
+      "schema_version": 3,
+      "file": "C:\\Users\\cal\\Desktop\\example-device-driver-scanner\\fixtures\\readonly-O2.sys",
+      "sha256": "7aecbaf15b2f164e6e9d220f7cd105235d28b387413ace654370df54d014adab",
+      "classification": "NO_CANDIDATE_IN_MODELED_PATHS",
+      "classification_scope": "Only the bounded, modeled dispatch/callback graph; not a proof of driver-wide absence or user accessibility.",
+      "vulnerability_claim": false,
+      "user_openability": "UNCONFIRMED_REQUIRES_RUNTIME_AND_DEPLOYMENT_SECURITY",
+      "namespace_import_hints": [
+        "IoCreateDevice",
+        "IoCreateSymbolicLink"
+      ],
+      "namespace_string_hints": [
+        "\\Device\\CallbackSurfaceFixture",
+        "\\DosDevices\\CallbackSurfaceFixture"
+      ],
+      "create_dispatch_rvas": [
+        "0x10a0"
+      ],
+      "device_control_dispatch_rvas": [
+        "0x1100"
+      ],
+      "findings": [],
+      "unproven_writable_indirect_calls": [],
+      "path_refined_writable_indirect_calls": [],
+      "limitations": [
+        "external_call_memory_effects_unmodeled",
+        "unmodeled_instruction_effects"
+      ],
+      "initialization_limitations": [],
+      "initialization_states_processed": 69,
+      "dispatch_root_provenance": {
+        "abstract_initialization_rvas": [
+          "0x1100"
+        ],
+        "synthetic_execution_rvas": [],
+        "fixed_point_initialization_rvas": []
+      },
+      "synthetic_initialization": null,
+      "fixed_point_initialization": null,
+      "fixed_point_analysis": {
+        "analysis_model": "dispatch-rooted finite fixed-point MAY dataflow; predicates discarded",
+        "coverage": {
+          "status": "FIXED_POINT_COMPLETE",
+          "complete": true,
+          "dispatch_roots_total": 1,
+          "dispatch_roots_completed": 1,
+          "semantic_coverage_complete": false
+        },
+        "findings": [],
+        "unproven_writable_indirect_calls": [],
+        "nonimage_indirect_call_leads": [],
+        "read_only_image_pointer_calls": [
+          {
+            "dispatch_rva": "0x1100",
+            "function_rva": "0x1100",
+            "call_rva": "0x1150",
+            "slot_rva": "0x2000",
+            "initial_target_rva": "0x1000",
+            "section": ".rdata",
+            "storage": "READ_ONLY_IMAGE_SECTION",
+            "instruction": "call r8",
+            "runtime_reachability": "UNVERIFIED"
+          }
+        ],
+        "limitations": [
+          "external_call_memory_effects_unmodeled",
+          "unmodeled_instruction_effects"
+        ],
+        "metrics": {
+          "transfer_evaluations": 304,
+          "join_updates": 223,
+          "branch_joins": 24,
+          "instruction_states": 80,
+          "functions": 2,
+          "max_queue": 5
+        },
+        "predicates": "DISCARDED_AT_JOINS_NOT_RUNTIME_CONFIRMED"
+      },
+      "wdf_callback_registration": null,
+      "wdf_callback_analysis": null,
+      "analysis_engine": "fixedpoint",
+      "analysis_model": "x64 WDM offsets; abstract initialization, optional synthetic Unicorn path, bounded legacy or finite MAY dispatch analysis",
+      "user_interaction_analysis": {
+        "file": "C:\\Users\\cal\\Desktop\\example-device-driver-scanner\\fixtures\\readonly-O2.sys",
+        "sha256": "7aecbaf15b2f164e6e9d220f7cd105235d28b387413ace654370df54d014adab",
+        "entry_roots": {
+          "CreateFile": [
+            "0x10a0"
+          ],
+          "ReadFile": [
+            "0x10d0"
+          ],
+          "WriteFile": [
+            "0x10d0"
+          ],
+          "DeviceIoControl": [
+            "0x1100"
+          ]
+        },
+        "sites": [
+          {
+            "event": "DeviceIoControl",
+            "entry_model": "WDM",
+            "pointer_kind": "READ_ONLY_IMAGE_POINTER",
+            "dispatch_rva": "0x1100",
+            "function_rva": "0x1100",
+            "call_rva": "0x1150",
+            "slot_rva": "0x2000",
+            "section": ".rdata",
+            "initial_target_rva": "0x1000",
+            "instruction": "call r8",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": null,
+            "base_provenance": null,
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          }
+        ],
+        "entry_coverage": {
+          "CreateFile": {
+            "status": "FIXED_POINT_COMPLETE",
+            "complete": true,
+            "dispatch_roots_total": 1,
+            "dispatch_roots_completed": 1,
+            "semantic_coverage_complete": false
+          },
+          "ReadFile": {
+            "status": "FIXED_POINT_COMPLETE",
+            "complete": true,
+            "dispatch_roots_total": 1,
+            "dispatch_roots_completed": 1,
+            "semantic_coverage_complete": false
+          },
+          "WriteFile": {
+            "status": "FIXED_POINT_COMPLETE",
+            "complete": true,
+            "dispatch_roots_total": 1,
+            "dispatch_roots_completed": 1,
+            "semantic_coverage_complete": false
+          },
+          "DeviceIoControl": {
+            "status": "FIXED_POINT_COMPLETE",
+            "complete": true,
+            "dispatch_roots_total": 1,
+            "dispatch_roots_completed": 1,
+            "semantic_coverage_complete": false
+          }
+        },
+        "limitations": [
+          "CreateFile:external_call_memory_effects_unmodeled",
+          "DeviceIoControl:external_call_memory_effects_unmodeled",
+          "DeviceIoControl:unmodeled_instruction_effects",
+          "ReadFile:external_call_memory_effects_unmodeled",
+          "WriteFile:external_call_memory_effects_unmodeled",
+          "fixed_init:external_call_memory_effects_unmodeled",
+          "fixed_init:unmodeled_instruction_effects"
+        ],
+        "runtime_reachability": "UNVERIFIED",
+        "user_handle_access": "UNVERIFIED",
+        "abstract_init_steps": 69,
+        "wdm_initialization_coverage": {
+          "status": "FIXED_POINT_COMPLETE",
+          "complete": true
+        },
+        "classification": "ROOTED_IMAGE_POINTER_CALL_LEAD",
+        "scope": "A resolved entry and a fixed-point MAY path do not prove a user-visible device, request success, path feasibility, or execution on this machine. Object-field leads do not establish that the field belongs to this image."
+      },
+      "offline_validation": {
+        "schema_version": 1,
+        "engine": "Unicorn synthetic WDM request replay",
+        "image_sha256": "7aecbaf15b2f164e6e9d220f7cd105235d28b387413ace654370df54d014adab",
+        "sites_total": 1,
+        "sites_selected": 1,
+        "site_limit": 4,
+        "sites": [
+          {
+            "event": "DeviceIoControl",
+            "entry_model": "WDM",
+            "pointer_kind": "READ_ONLY_IMAGE_POINTER",
+            "dispatch_rva": "0x1100",
+            "call_rva": "0x1150",
+            "slot_rva": "0x2000",
+            "input_buffer_variant_candidate": false,
+            "path_evidence": null,
+            "attempts": [
+              {
+                "scenario": {
+                  "name": "ioctl_fffff000_len4",
+                  "file_name": "",
+                  "ioctl": 4294963200,
+                  "input_length": 4,
+                  "output_length": 64
+                },
+                "status": "RETURNED_BEFORE_CALLSITE",
+                "instructions": 17,
+                "modeled_import_calls": {
+                  "IofCompleteRequest": 1
+                },
+                "unmodeled_import_calls": {},
+                "synthetic_request": true
+              },
+              {
+                "scenario": {
+                  "name": "ioctl_fffff000_len64",
+                  "file_name": "",
+                  "ioctl": 4294963200,
+                  "input_length": 64,
+                  "output_length": 64
+                },
+                "status": "RETURNED_BEFORE_CALLSITE",
+                "instructions": 17,
+                "modeled_import_calls": {
+                  "IofCompleteRequest": 1
+                },
+                "unmodeled_import_calls": {},
+                "synthetic_request": true
+              },
+              {
+                "scenario": {
+                  "name": "ioctl_00226000_len4",
+                  "file_name": "",
+                  "ioctl": 2252800,
+                  "input_length": 4,
+                  "output_length": 64
+                },
+                "status": "CALLSITE_HIT",
+                "instructions": 21,
+                "modeled_import_calls": {},
+                "unmodeled_import_calls": {},
+                "synthetic_request": true,
+                "actual_target_rva": "0x1000",
+                "actual_target_in_image": true,
+                "slot_rva": "0x2000",
+                "observed_storage_address": null,
+                "observed_storage_region": "UNRESOLVED_OR_REGISTER",
+                "target_matches_image_pointer": true
+              }
+            ],
+            "offline_evidence_score": {
+              "value": 75,
+              "tier": "STRONG_SYNTHETIC_EVIDENCE",
+              "scale": "0-85 OFFLINE_EVIDENCE_ONLY",
+              "components": {
+                "rooted_may_flow": 15,
+                "storage_evidence": 20,
+                "initial_local_target": 10,
+                "synthetic_callsite_hit": 20,
+                "synthetic_target_match": 10
+              },
+              "not_a_probability": true,
+              "live_user_openability": "UNVERIFIED",
+              "interpretation": "Ranking evidence within the synthetic/static model; not a vulnerability or live-reachability probability."
+            }
+          }
+        ],
+        "installed_image_unchanged": true,
+        "evidence_scope": "Synthetic model only. No live device, OS I/O manager, real KMDF queue, handle ACL, or user request was exercised.",
+        "no_live_reachability_claim": true
+      }
+    },
+    {
+      "schema_version": 3,
+      "file": "C:\\Users\\cal\\Desktop\\example-device-driver-scanner\\fixtures\\readonly-Od.sys",
+      "sha256": "a778f71c58c910e5294dd288d034b6983ad3e0bee7f4f90bcb843b3defe84764",
+      "classification": "NO_CANDIDATE_IN_MODELED_PATHS",
+      "classification_scope": "Only the bounded, modeled dispatch/callback graph; not a proof of driver-wide absence or user accessibility.",
+      "vulnerability_claim": false,
+      "user_openability": "UNCONFIRMED_REQUIRES_RUNTIME_AND_DEPLOYMENT_SECURITY",
+      "namespace_import_hints": [
+        "IoCreateDevice",
+        "IoCreateSymbolicLink"
+      ],
+      "namespace_string_hints": [
+        "\\Device\\CallbackSurfaceFixture",
+        "\\DosDevices\\CallbackSurfaceFixture"
+      ],
+      "create_dispatch_rvas": [
+        "0x1050",
+        "0x10d0"
+      ],
+      "device_control_dispatch_rvas": [
+        "0x10d0",
+        "0x1100"
+      ],
+      "findings": [],
+      "unproven_writable_indirect_calls": [],
+      "path_refined_writable_indirect_calls": [],
+      "limitations": [
+        "external_call_memory_effects_unmodeled",
+        "helper_memory_effects_not_propagated"
+      ],
+      "initialization_limitations": [],
+      "initialization_states_processed": 343,
+      "dispatch_root_provenance": {
+        "abstract_initialization_rvas": [
+          "0x10d0",
+          "0x1100"
+        ],
+        "synthetic_execution_rvas": [],
+        "fixed_point_initialization_rvas": []
+      },
+      "synthetic_initialization": null,
+      "fixed_point_initialization": null,
+      "fixed_point_analysis": {
+        "analysis_model": "dispatch-rooted finite fixed-point MAY dataflow; predicates discarded",
+        "coverage": {
+          "status": "FIXED_POINT_COMPLETE",
+          "complete": true,
+          "dispatch_roots_total": 2,
+          "dispatch_roots_completed": 2,
+          "semantic_coverage_complete": false
+        },
+        "findings": [],
+        "unproven_writable_indirect_calls": [],
+        "nonimage_indirect_call_leads": [],
+        "read_only_image_pointer_calls": [
+          {
+            "dispatch_rva": "0x1100",
+            "function_rva": "0x1100",
+            "call_rva": "0x11b9",
+            "slot_rva": "0x2000",
+            "initial_target_rva": "0x1000",
+            "section": ".rdata",
+            "storage": "READ_ONLY_IMAGE_SECTION",
+            "instruction": "call rax",
+            "runtime_reachability": "UNVERIFIED"
+          }
+        ],
+        "limitations": [
+          "external_call_memory_effects_unmodeled",
+          "helper_memory_effects_not_propagated"
+        ],
+        "metrics": {
+          "transfer_evaluations": 415,
+          "join_updates": 284,
+          "branch_joins": 16,
+          "instruction_states": 120,
+          "functions": 5,
+          "max_queue": 7
+        },
+        "predicates": "DISCARDED_AT_JOINS_NOT_RUNTIME_CONFIRMED"
+      },
+      "wdf_callback_registration": null,
+      "wdf_callback_analysis": null,
+      "analysis_engine": "fixedpoint",
+      "analysis_model": "x64 WDM offsets; abstract initialization, optional synthetic Unicorn path, bounded legacy or finite MAY dispatch analysis",
+      "user_interaction_analysis": {
+        "file": "C:\\Users\\cal\\Desktop\\example-device-driver-scanner\\fixtures\\readonly-Od.sys",
+        "sha256": "a778f71c58c910e5294dd288d034b6983ad3e0bee7f4f90bcb843b3defe84764",
+        "entry_roots": {
+          "CreateFile": [
+            "0x1050",
+            "0x10d0"
+          ],
+          "ReadFile": [
+            "0x10d0"
+          ],
+          "WriteFile": [
+            "0x10d0"
+          ],
+          "DeviceIoControl": [
+            "0x10d0",
+            "0x1100"
+          ]
+        },
+        "sites": [
+          {
+            "event": "DeviceIoControl",
+            "entry_model": "WDM",
+            "pointer_kind": "READ_ONLY_IMAGE_POINTER",
+            "dispatch_rva": "0x1100",
+            "function_rva": "0x1100",
+            "call_rva": "0x11b9",
+            "slot_rva": "0x2000",
+            "section": ".rdata",
+            "initial_target_rva": "0x1000",
+            "instruction": "call rax",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": null,
+            "base_provenance": null,
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          }
+        ],
+        "entry_coverage": {
+          "CreateFile": {
+            "status": "FIXED_POINT_COMPLETE",
+            "complete": true,
+            "dispatch_roots_total": 2,
+            "dispatch_roots_completed": 2,
+            "semantic_coverage_complete": false
+          },
+          "ReadFile": {
+            "status": "FIXED_POINT_COMPLETE",
+            "complete": true,
+            "dispatch_roots_total": 1,
+            "dispatch_roots_completed": 1,
+            "semantic_coverage_complete": false
+          },
+          "WriteFile": {
+            "status": "FIXED_POINT_COMPLETE",
+            "complete": true,
+            "dispatch_roots_total": 1,
+            "dispatch_roots_completed": 1,
+            "semantic_coverage_complete": false
+          },
+          "DeviceIoControl": {
+            "status": "FIXED_POINT_COMPLETE",
+            "complete": true,
+            "dispatch_roots_total": 2,
+            "dispatch_roots_completed": 2,
+            "semantic_coverage_complete": false
+          }
+        },
+        "limitations": [
+          "CreateFile:external_call_memory_effects_unmodeled",
+          "CreateFile:helper_memory_effects_not_propagated",
+          "DeviceIoControl:external_call_memory_effects_unmodeled",
+          "DeviceIoControl:helper_memory_effects_not_propagated",
+          "ReadFile:external_call_memory_effects_unmodeled",
+          "ReadFile:helper_memory_effects_not_propagated",
+          "WriteFile:external_call_memory_effects_unmodeled",
+          "WriteFile:helper_memory_effects_not_propagated",
+          "fixed_init:external_call_memory_effects_unmodeled",
+          "fixed_init:unresolved_memory_write"
+        ],
+        "runtime_reachability": "UNVERIFIED",
+        "user_handle_access": "UNVERIFIED",
+        "abstract_init_steps": 343,
+        "wdm_initialization_coverage": {
+          "status": "FIXED_POINT_COMPLETE",
+          "complete": true
+        },
+        "classification": "ROOTED_IMAGE_POINTER_CALL_LEAD",
+        "scope": "A resolved entry and a fixed-point MAY path do not prove a user-visible device, request success, path feasibility, or execution on this machine. Object-field leads do not establish that the field belongs to this image."
+      },
+      "offline_validation": {
+        "schema_version": 1,
+        "engine": "Unicorn synthetic WDM request replay",
+        "image_sha256": "a778f71c58c910e5294dd288d034b6983ad3e0bee7f4f90bcb843b3defe84764",
+        "sites_total": 1,
+        "sites_selected": 1,
+        "site_limit": 4,
+        "sites": [
+          {
+            "event": "DeviceIoControl",
+            "entry_model": "WDM",
+            "pointer_kind": "READ_ONLY_IMAGE_POINTER",
+            "dispatch_rva": "0x1100",
+            "call_rva": "0x11b9",
+            "slot_rva": "0x2000",
+            "input_buffer_variant_candidate": false,
+            "path_evidence": null,
+            "attempts": [
+              {
+                "scenario": {
+                  "name": "ioctl_00226000_len4",
+                  "file_name": "",
+                  "ioctl": 2252800,
+                  "input_length": 4,
+                  "output_length": 64
+                },
+                "status": "CALLSITE_HIT",
+                "instructions": 30,
+                "modeled_import_calls": {},
+                "unmodeled_import_calls": {},
+                "synthetic_request": true,
+                "actual_target_rva": "0x1000",
+                "actual_target_in_image": true,
+                "slot_rva": "0x2000",
+                "observed_storage_address": null,
+                "observed_storage_region": "UNRESOLVED_OR_REGISTER",
+                "target_matches_image_pointer": true
+              }
+            ],
+            "offline_evidence_score": {
+              "value": 75,
+              "tier": "STRONG_SYNTHETIC_EVIDENCE",
+              "scale": "0-85 OFFLINE_EVIDENCE_ONLY",
+              "components": {
+                "rooted_may_flow": 15,
+                "storage_evidence": 20,
+                "initial_local_target": 10,
+                "synthetic_callsite_hit": 20,
+                "synthetic_target_match": 10
+              },
+              "not_a_probability": true,
+              "live_user_openability": "UNVERIFIED",
+              "interpretation": "Ranking evidence within the synthetic/static model; not a vulnerability or live-reachability probability."
+            }
+          }
+        ],
+        "installed_image_unchanged": true,
+        "evidence_scope": "Synthetic model only. No live device, OS I/O manager, real KMDF queue, handle ACL, or user request was exercised.",
+        "no_live_reachability_claim": true
+      }
+    },
+    {
+      "schema_version": 3,
+      "file": "C:\\Users\\cal\\Desktop\\example-device-driver-scanner\\fixtures\\unrelated-O2.sys",
+      "sha256": "5c69aa7d7164612fb59bae00f9d89f0cb7c3e120bd9c83a9d763ea58dd62ae5e",
+      "classification": "NO_CANDIDATE_IN_MODELED_PATHS",
+      "classification_scope": "Only the bounded, modeled dispatch/callback graph; not a proof of driver-wide absence or user accessibility.",
+      "vulnerability_claim": false,
+      "user_openability": "UNCONFIRMED_REQUIRES_RUNTIME_AND_DEPLOYMENT_SECURITY",
+      "namespace_import_hints": [
+        "IoCreateDevice",
+        "IoCreateSymbolicLink"
+      ],
+      "namespace_string_hints": [
+        "\\Device\\CallbackSurfaceFixture",
+        "\\DosDevices\\CallbackSurfaceFixture"
+      ],
+      "create_dispatch_rvas": [
+        "0x10a0"
+      ],
+      "device_control_dispatch_rvas": [
+        "0x1100"
+      ],
+      "findings": [],
+      "unproven_writable_indirect_calls": [
+        {
+          "dispatch_rva": "0x1100",
+          "call_rva": "0x1152",
+          "function_rva": "0x1100",
+          "slot_rva": "0x3000",
+          "section": ".data",
+          "initial_target_rva": "0x1000",
+          "arguments": {
+            "rcx": [
+              {
+                "kind": "stack",
+                "offset": -12
+              }
+            ],
+            "rdx": [
+              {
+                "kind": "const",
+                "offset": 3
+              }
+            ],
+            "r8": [
+              {
+                "kind": "unknown",
+                "offset": null
+              }
+            ],
+            "r9": [
+              {
+                "kind": "unknown",
+                "offset": null
+              }
+            ],
+            "stack_arg_7": [
+              {
+                "kind": "unknown",
+                "offset": null
+              }
+            ]
+          },
+          "systembuffer_arguments": [],
+          "stack_only_input_lead": false,
+          "instruction": "call rax",
+          "modeled_path_feasibility": {
+            "status": "NOT_CHECKED",
+            "reason": "MAY joins discard branch predicates"
+          },
+          "interpretation": "Fixed-point MAY candidate; correlated predicates, runtime invocation and successful completion are not proved."
+        }
+      ],
+      "path_refined_writable_indirect_calls": [],
+      "limitations": [
+        "external_call_memory_effects_unmodeled"
+      ],
+      "initialization_limitations": [],
+      "initialization_states_processed": 69,
+      "dispatch_root_provenance": {
+        "abstract_initialization_rvas": [
+          "0x1100"
+        ],
+        "synthetic_execution_rvas": [],
+        "fixed_point_initialization_rvas": []
+      },
+      "synthetic_initialization": null,
+      "fixed_point_initialization": null,
+      "fixed_point_analysis": {
+        "analysis_model": "dispatch-rooted finite fixed-point MAY dataflow; predicates discarded",
+        "coverage": {
+          "status": "FIXED_POINT_COMPLETE",
+          "complete": true,
+          "dispatch_roots_total": 1,
+          "dispatch_roots_completed": 1,
+          "semantic_coverage_complete": false
+        },
+        "findings": [],
+        "unproven_writable_indirect_calls": [
+          {
+            "dispatch_rva": "0x1100",
+            "call_rva": "0x1152",
+            "function_rva": "0x1100",
+            "slot_rva": "0x3000",
+            "section": ".data",
+            "initial_target_rva": "0x1000",
+            "arguments": {
+              "rcx": [
+                {
+                  "kind": "stack",
+                  "offset": -12
+                }
+              ],
+              "rdx": [
+                {
+                  "kind": "const",
+                  "offset": 3
+                }
+              ],
+              "r8": [
+                {
+                  "kind": "unknown",
+                  "offset": null
+                }
+              ],
+              "r9": [
+                {
+                  "kind": "unknown",
+                  "offset": null
+                }
+              ],
+              "stack_arg_7": [
+                {
+                  "kind": "unknown",
+                  "offset": null
+                }
+              ]
+            },
+            "systembuffer_arguments": [],
+            "stack_only_input_lead": false,
+            "instruction": "call rax",
+            "modeled_path_feasibility": {
+              "status": "NOT_CHECKED",
+              "reason": "MAY joins discard branch predicates"
+            },
+            "interpretation": "Fixed-point MAY candidate; correlated predicates, runtime invocation and successful completion are not proved."
+          }
+        ],
+        "nonimage_indirect_call_leads": [],
+        "read_only_image_pointer_calls": [],
+        "limitations": [
+          "external_call_memory_effects_unmodeled"
+        ],
+        "metrics": {
+          "transfer_evaluations": 49,
+          "join_updates": 0,
+          "branch_joins": 4,
+          "instruction_states": 49,
+          "functions": 1,
+          "max_queue": 3
+        },
+        "predicates": "DISCARDED_AT_JOINS_NOT_RUNTIME_CONFIRMED"
+      },
+      "wdf_callback_registration": null,
+      "wdf_callback_analysis": null,
+      "analysis_engine": "fixedpoint",
+      "analysis_model": "x64 WDM offsets; abstract initialization, optional synthetic Unicorn path, bounded legacy or finite MAY dispatch analysis",
+      "user_interaction_analysis": {
+        "file": "C:\\Users\\cal\\Desktop\\example-device-driver-scanner\\fixtures\\unrelated-O2.sys",
+        "sha256": "5c69aa7d7164612fb59bae00f9d89f0cb7c3e120bd9c83a9d763ea58dd62ae5e",
+        "entry_roots": {
+          "CreateFile": [
+            "0x10a0"
+          ],
+          "ReadFile": [
+            "0x10d0"
+          ],
+          "WriteFile": [
+            "0x10d0"
+          ],
+          "DeviceIoControl": [
+            "0x1100"
+          ]
+        },
+        "sites": [
+          {
+            "event": "DeviceIoControl",
+            "entry_model": "WDM",
+            "pointer_kind": "WRITABLE_IMAGE_SLOT",
+            "dispatch_rva": "0x1100",
+            "function_rva": "0x1100",
+            "call_rva": "0x1152",
+            "slot_rva": "0x3000",
+            "section": ".data",
+            "initial_target_rva": "0x1000",
+            "instruction": "call rax",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": null,
+            "base_provenance": null,
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          }
+        ],
+        "entry_coverage": {
+          "CreateFile": {
+            "status": "FIXED_POINT_COMPLETE",
+            "complete": true,
+            "dispatch_roots_total": 1,
+            "dispatch_roots_completed": 1,
+            "semantic_coverage_complete": false
+          },
+          "ReadFile": {
+            "status": "FIXED_POINT_COMPLETE",
+            "complete": true,
+            "dispatch_roots_total": 1,
+            "dispatch_roots_completed": 1,
+            "semantic_coverage_complete": false
+          },
+          "WriteFile": {
+            "status": "FIXED_POINT_COMPLETE",
+            "complete": true,
+            "dispatch_roots_total": 1,
+            "dispatch_roots_completed": 1,
+            "semantic_coverage_complete": false
+          },
+          "DeviceIoControl": {
+            "status": "FIXED_POINT_COMPLETE",
+            "complete": true,
+            "dispatch_roots_total": 1,
+            "dispatch_roots_completed": 1,
+            "semantic_coverage_complete": false
+          }
+        },
+        "limitations": [
+          "CreateFile:external_call_memory_effects_unmodeled",
+          "DeviceIoControl:external_call_memory_effects_unmodeled",
+          "ReadFile:external_call_memory_effects_unmodeled",
+          "WriteFile:external_call_memory_effects_unmodeled",
+          "fixed_init:external_call_memory_effects_unmodeled",
+          "fixed_init:unmodeled_instruction_effects"
+        ],
+        "runtime_reachability": "UNVERIFIED",
+        "user_handle_access": "UNVERIFIED",
+        "abstract_init_steps": 69,
+        "wdm_initialization_coverage": {
+          "status": "FIXED_POINT_COMPLETE",
+          "complete": true
+        },
+        "classification": "ROOTED_IMAGE_POINTER_CALL_LEAD",
+        "scope": "A resolved entry and a fixed-point MAY path do not prove a user-visible device, request success, path feasibility, or execution on this machine. Object-field leads do not establish that the field belongs to this image."
+      },
+      "offline_validation": {
+        "schema_version": 1,
+        "engine": "Unicorn synthetic WDM request replay",
+        "image_sha256": "5c69aa7d7164612fb59bae00f9d89f0cb7c3e120bd9c83a9d763ea58dd62ae5e",
+        "sites_total": 1,
+        "sites_selected": 1,
+        "site_limit": 4,
+        "sites": [
+          {
+            "event": "DeviceIoControl",
+            "entry_model": "WDM",
+            "pointer_kind": "WRITABLE_IMAGE_SLOT",
+            "dispatch_rva": "0x1100",
+            "call_rva": "0x1152",
+            "slot_rva": "0x3000",
+            "input_buffer_variant_candidate": false,
+            "path_evidence": {
+              "status": "SAT_PARTIAL_MODEL",
+              "modeled_predicates": 3,
+              "witness": {
+                "output_length_0_32": "0x4",
+                "systembuffer_pointer_64": "0xffffffffffffffff",
+                "ioctl_0_32": "0x226000"
+              },
+              "scope": "Only tracked integer predicates; not proof of runtime reachability, handle access, or full buffer validity."
+            },
+            "attempts": [
+              {
+                "scenario": {
+                  "name": "ioctl_00226000_len4",
+                  "file_name": "",
+                  "ioctl": 2252800,
+                  "input_length": 4,
+                  "output_length": 64
+                },
+                "status": "CALLSITE_HIT",
+                "instructions": 20,
+                "modeled_import_calls": {},
+                "unmodeled_import_calls": {},
+                "synthetic_request": true,
+                "actual_target_rva": "0x1000",
+                "actual_target_in_image": true,
+                "slot_rva": "0x3000",
+                "observed_storage_address": null,
+                "observed_storage_region": "UNRESOLVED_OR_REGISTER",
+                "target_matches_image_pointer": true
+              }
+            ],
+            "offline_evidence_score": {
+              "value": 85,
+              "tier": "STRONG_SYNTHETIC_EVIDENCE",
+              "scale": "0-85 OFFLINE_EVIDENCE_ONLY",
+              "components": {
+                "rooted_may_flow": 15,
+                "storage_evidence": 20,
+                "initial_local_target": 10,
+                "tracked_path_predicates_sat": 10,
+                "synthetic_callsite_hit": 20,
+                "synthetic_target_match": 10
+              },
+              "not_a_probability": true,
+              "live_user_openability": "UNVERIFIED",
+              "interpretation": "Ranking evidence within the synthetic/static model; not a vulnerability or live-reachability probability."
+            }
+          }
+        ],
+        "installed_image_unchanged": true,
+        "evidence_scope": "Synthetic model only. No live device, OS I/O manager, real KMDF queue, handle ACL, or user request was exercised.",
+        "no_live_reachability_claim": true
+      }
+    },
+    {
+      "schema_version": 3,
+      "file": "C:\\Users\\cal\\Desktop\\example-device-driver-scanner\\fixtures\\unrelated-Od.sys",
+      "sha256": "4e342529dcc1b383bf633462eceb215e08080c4758ef0ca228a62d0ac93b49c7",
+      "classification": "NO_CANDIDATE_IN_MODELED_PATHS",
+      "classification_scope": "Only the bounded, modeled dispatch/callback graph; not a proof of driver-wide absence or user accessibility.",
+      "vulnerability_claim": false,
+      "user_openability": "UNCONFIRMED_REQUIRES_RUNTIME_AND_DEPLOYMENT_SECURITY",
+      "namespace_import_hints": [
+        "IoCreateDevice",
+        "IoCreateSymbolicLink"
+      ],
+      "namespace_string_hints": [
+        "\\Device\\CallbackSurfaceFixture",
+        "\\DosDevices\\CallbackSurfaceFixture"
+      ],
+      "create_dispatch_rvas": [
+        "0x1050",
+        "0x10d0"
+      ],
+      "device_control_dispatch_rvas": [
+        "0x10d0",
+        "0x1100"
+      ],
+      "findings": [],
+      "unproven_writable_indirect_calls": [
+        {
+          "dispatch_rva": "0x1100",
+          "call_rva": "0x11c2",
+          "function_rva": "0x1100",
+          "slot_rva": "0x3000",
+          "section": ".data",
+          "initial_target_rva": "0x1000",
+          "arguments": {
+            "rcx": [
+              {
+                "kind": "stack",
+                "offset": -48
+              }
+            ],
+            "rdx": [
+              {
+                "kind": "const",
+                "offset": 3
+              }
+            ],
+            "r8": [
+              {
+                "kind": "unknown",
+                "offset": null
+              }
+            ],
+            "r9": [
+              {
+                "kind": "unknown",
+                "offset": null
+              }
+            ],
+            "stack_arg_6": [
+              {
+                "kind": "const",
+                "offset": 513
+              }
+            ],
+            "stack_arg_7": [
+              {
+                "kind": "iostack",
+                "offset": 0
+              }
+            ],
+            "stack_arg_8": [
+              {
+                "kind": "device",
+                "offset": 0
+              }
+            ]
+          },
+          "systembuffer_arguments": [],
+          "stack_only_input_lead": false,
+          "instruction": "call rax",
+          "modeled_path_feasibility": {
+            "status": "NOT_CHECKED",
+            "reason": "MAY joins discard branch predicates"
+          },
+          "interpretation": "Fixed-point MAY candidate; correlated predicates, runtime invocation and successful completion are not proved."
+        }
+      ],
+      "path_refined_writable_indirect_calls": [],
+      "limitations": [
+        "external_call_memory_effects_unmodeled",
+        "helper_memory_effects_not_propagated"
+      ],
+      "initialization_limitations": [],
+      "initialization_states_processed": 343,
+      "dispatch_root_provenance": {
+        "abstract_initialization_rvas": [
+          "0x10d0",
+          "0x1100"
+        ],
+        "synthetic_execution_rvas": [],
+        "fixed_point_initialization_rvas": []
+      },
+      "synthetic_initialization": null,
+      "fixed_point_initialization": null,
+      "fixed_point_analysis": {
+        "analysis_model": "dispatch-rooted finite fixed-point MAY dataflow; predicates discarded",
+        "coverage": {
+          "status": "FIXED_POINT_COMPLETE",
+          "complete": true,
+          "dispatch_roots_total": 2,
+          "dispatch_roots_completed": 2,
+          "semantic_coverage_complete": false
+        },
+        "findings": [],
+        "unproven_writable_indirect_calls": [
+          {
+            "dispatch_rva": "0x1100",
+            "call_rva": "0x11c2",
+            "function_rva": "0x1100",
+            "slot_rva": "0x3000",
+            "section": ".data",
+            "initial_target_rva": "0x1000",
+            "arguments": {
+              "rcx": [
+                {
+                  "kind": "stack",
+                  "offset": -48
+                }
+              ],
+              "rdx": [
+                {
+                  "kind": "const",
+                  "offset": 3
+                }
+              ],
+              "r8": [
+                {
+                  "kind": "unknown",
+                  "offset": null
+                }
+              ],
+              "r9": [
+                {
+                  "kind": "unknown",
+                  "offset": null
+                }
+              ],
+              "stack_arg_6": [
+                {
+                  "kind": "const",
+                  "offset": 513
+                }
+              ],
+              "stack_arg_7": [
+                {
+                  "kind": "iostack",
+                  "offset": 0
+                }
+              ],
+              "stack_arg_8": [
+                {
+                  "kind": "device",
+                  "offset": 0
+                }
+              ]
+            },
+            "systembuffer_arguments": [],
+            "stack_only_input_lead": false,
+            "instruction": "call rax",
+            "modeled_path_feasibility": {
+              "status": "NOT_CHECKED",
+              "reason": "MAY joins discard branch predicates"
+            },
+            "interpretation": "Fixed-point MAY candidate; correlated predicates, runtime invocation and successful completion are not proved."
+          }
+        ],
+        "nonimage_indirect_call_leads": [],
+        "read_only_image_pointer_calls": [],
+        "limitations": [
+          "external_call_memory_effects_unmodeled",
+          "helper_memory_effects_not_propagated"
+        ],
+        "metrics": {
+          "transfer_evaluations": 162,
+          "join_updates": 55,
+          "branch_joins": 5,
+          "instruction_states": 101,
+          "functions": 4,
+          "max_queue": 5
+        },
+        "predicates": "DISCARDED_AT_JOINS_NOT_RUNTIME_CONFIRMED"
+      },
+      "wdf_callback_registration": null,
+      "wdf_callback_analysis": null,
+      "analysis_engine": "fixedpoint",
+      "analysis_model": "x64 WDM offsets; abstract initialization, optional synthetic Unicorn path, bounded legacy or finite MAY dispatch analysis",
+      "user_interaction_analysis": {
+        "file": "C:\\Users\\cal\\Desktop\\example-device-driver-scanner\\fixtures\\unrelated-Od.sys",
+        "sha256": "4e342529dcc1b383bf633462eceb215e08080c4758ef0ca228a62d0ac93b49c7",
+        "entry_roots": {
+          "CreateFile": [
+            "0x1050",
+            "0x10d0"
+          ],
+          "ReadFile": [
+            "0x10d0"
+          ],
+          "WriteFile": [
+            "0x10d0"
+          ],
+          "DeviceIoControl": [
+            "0x10d0",
+            "0x1100"
+          ]
+        },
+        "sites": [
+          {
+            "event": "DeviceIoControl",
+            "entry_model": "WDM",
+            "pointer_kind": "WRITABLE_IMAGE_SLOT",
+            "dispatch_rva": "0x1100",
+            "function_rva": "0x1100",
+            "call_rva": "0x11c2",
+            "slot_rva": "0x3000",
+            "section": ".data",
+            "initial_target_rva": "0x1000",
+            "instruction": "call rax",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": null,
+            "base_provenance": null,
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          }
+        ],
+        "entry_coverage": {
+          "CreateFile": {
+            "status": "FIXED_POINT_COMPLETE",
+            "complete": true,
+            "dispatch_roots_total": 2,
+            "dispatch_roots_completed": 2,
+            "semantic_coverage_complete": false
+          },
+          "ReadFile": {
+            "status": "FIXED_POINT_COMPLETE",
+            "complete": true,
+            "dispatch_roots_total": 1,
+            "dispatch_roots_completed": 1,
+            "semantic_coverage_complete": false
+          },
+          "WriteFile": {
+            "status": "FIXED_POINT_COMPLETE",
+            "complete": true,
+            "dispatch_roots_total": 1,
+            "dispatch_roots_completed": 1,
+            "semantic_coverage_complete": false
+          },
+          "DeviceIoControl": {
+            "status": "FIXED_POINT_COMPLETE",
+            "complete": true,
+            "dispatch_roots_total": 2,
+            "dispatch_roots_completed": 2,
+            "semantic_coverage_complete": false
+          }
+        },
+        "limitations": [
+          "CreateFile:external_call_memory_effects_unmodeled",
+          "CreateFile:helper_memory_effects_not_propagated",
+          "DeviceIoControl:external_call_memory_effects_unmodeled",
+          "DeviceIoControl:helper_memory_effects_not_propagated",
+          "ReadFile:external_call_memory_effects_unmodeled",
+          "ReadFile:helper_memory_effects_not_propagated",
+          "WriteFile:external_call_memory_effects_unmodeled",
+          "WriteFile:helper_memory_effects_not_propagated",
+          "fixed_init:external_call_memory_effects_unmodeled",
+          "fixed_init:unresolved_memory_write"
+        ],
+        "runtime_reachability": "UNVERIFIED",
+        "user_handle_access": "UNVERIFIED",
+        "abstract_init_steps": 343,
+        "wdm_initialization_coverage": {
+          "status": "FIXED_POINT_COMPLETE",
+          "complete": true
+        },
+        "classification": "ROOTED_IMAGE_POINTER_CALL_LEAD",
+        "scope": "A resolved entry and a fixed-point MAY path do not prove a user-visible device, request success, path feasibility, or execution on this machine. Object-field leads do not establish that the field belongs to this image."
+      },
+      "offline_validation": {
+        "schema_version": 1,
+        "engine": "Unicorn synthetic WDM request replay",
+        "image_sha256": "4e342529dcc1b383bf633462eceb215e08080c4758ef0ca228a62d0ac93b49c7",
+        "sites_total": 1,
+        "sites_selected": 1,
+        "site_limit": 4,
+        "sites": [
+          {
+            "event": "DeviceIoControl",
+            "entry_model": "WDM",
+            "pointer_kind": "WRITABLE_IMAGE_SLOT",
+            "dispatch_rva": "0x1100",
+            "call_rva": "0x11c2",
+            "slot_rva": "0x3000",
+            "input_buffer_variant_candidate": false,
+            "path_evidence": {
+              "status": "SAT_PARTIAL_MODEL",
+              "modeled_predicates": 5,
+              "witness": {
+                "input_length_0_32": "0x1000",
+                "output_length_0_32": "0x4",
+                "ioctl_0_32": "0x226000",
+                "systembuffer_pointer_64": "0xffffffffffffffff"
+              },
+              "scope": "Only tracked integer predicates; not proof of runtime reachability, handle access, or full buffer validity."
+            },
+            "attempts": [
+              {
+                "scenario": {
+                  "name": "ioctl_00226000_len4096",
+                  "file_name": "",
+                  "ioctl": 2252800,
+                  "input_length": 4096,
+                  "output_length": 64
+                },
+                "status": "CALLSITE_HIT",
+                "instructions": 31,
+                "modeled_import_calls": {},
+                "unmodeled_import_calls": {},
+                "synthetic_request": true,
+                "actual_target_rva": "0x1000",
+                "actual_target_in_image": true,
+                "slot_rva": "0x3000",
+                "observed_storage_address": null,
+                "observed_storage_region": "UNRESOLVED_OR_REGISTER",
+                "target_matches_image_pointer": true
+              }
+            ],
+            "offline_evidence_score": {
+              "value": 85,
+              "tier": "STRONG_SYNTHETIC_EVIDENCE",
+              "scale": "0-85 OFFLINE_EVIDENCE_ONLY",
+              "components": {
+                "rooted_may_flow": 15,
+                "storage_evidence": 20,
+                "initial_local_target": 10,
+                "tracked_path_predicates_sat": 10,
+                "synthetic_callsite_hit": 20,
+                "synthetic_target_match": 10
+              },
+              "not_a_probability": true,
+              "live_user_openability": "UNVERIFIED",
+              "interpretation": "Ranking evidence within the synthetic/static model; not a vulnerability or live-reachability probability."
+            }
+          }
+        ],
+        "installed_image_unchanged": true,
+        "evidence_scope": "Synthetic model only. No live device, OS I/O manager, real KMDF queue, handle ACL, or user request was exercised.",
+        "no_live_reachability_claim": true
+      }
+    }
+  ],
+  "summary": {
+    "PATTERN_CANDIDATE": 4,
+    "INCONCLUSIVE": 1,
+    "NO_CANDIDATE_IN_MODELED_PATHS": 5
+  }
+}

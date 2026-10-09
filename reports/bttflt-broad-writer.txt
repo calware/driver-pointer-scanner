@@ -1,0 +1,121 @@
+IMAGE: C:\Windows\System32\drivers\bttflt.sys
+BASE: 0x1c0000000
+ENTRY RVA: 0xd010
+SECTIONS:
+b'.text\x00\x00\x00' RVA=0x1000 size=0x3e77 flags=0x68000020
+b'fothk\x00\x00\x00' RVA=0x5000 size=0x1000 flags=0x68000020
+b'.rdata\x00\x00' RVA=0x6000 size=0x11d4 flags=0x48000040
+b'.data\x00\x00\x00' RVA=0x8000 size=0x300 flags=0xc8000040
+b'.pdata\x00\x00' RVA=0x9000 size=0x4ec flags=0x48000040
+b'.idata\x00\x00' RVA=0xa000 size=0x688 flags=0x48000040
+b'PAGE\x00\x00\x00\x00' RVA=0xb000 size=0x1b32 flags=0x60000020
+b'INIT\x00\x00\x00\x00' RVA=0xd000 size=0x255 flags=0x62000020
+b'GFIDS\x00\x00\x00' RVA=0xe000 size=0x88 flags=0x42000040
+b'.rsrc\x00\x00\x00' RVA=0xf000 size=0x3f8 flags=0x42000040
+b'.reloc\x00\x00' RVA=0x10000 size=0x408 flags=0x42000040
+IMPORTS:
+0xa000 IoBuildPartialMdl
+0xa008 ExAllocateFromLookasideListEx
+0xa010 KeAcquireSpinLockRaiseToDpc
+0xa018 ExDeleteLookasideListEx
+0xa020 IoDetachDevice
+0xa028 IoSynchronousCallDriver
+0xa030 IoFreeIrp
+0xa038 MmBuildMdlForNonPagedPool
+0xa040 IoAllocateMdl
+0xa048 RtlInitUnicodeString
+0xa050 KeInitializeSpinLock
+0xa058 IoDeleteDevice
+0xa060 IoForwardIrpSynchronously
+0xa068 IoBuildDeviceIoControlRequest
+0xa070 IoAttachDeviceToDeviceStack
+0xa078 KeReleaseSpinLock
+0xa080 ExAllocatePool2
+0xa088 IoAllocateIrpEx
+0xa090 IoFreeMdl
+0xa098 MmGetSystemRoutineAddress
+0xa0a0 ExFreeToLookasideListEx
+0xa0a8 IoCreateDevice
+0xa0b0 IofCallDriver
+0xa0b8 ExFreePoolWithTag
+0xa0c0 IoWMIRegistrationControl
+0xa0c8 ExInitializeLookasideListEx
+0xa0d0 KeInitializeEvent
+0xa0d8 MmUnmapLockedPages
+0xa0e0 IofCompleteRequest
+0xa0e8 KeWaitForSingleObject
+0xa0f0 RtlCompareMemory
+0xa0f8 KeGetCurrentProcessorNumberEx
+0xa100 RtlFlushNonVolatileMemory
+0xa108 RtlWriteNonVolatileMemory
+0xa110 MmUnmapIoSpace
+0xa118 MmGetPhysicalAddress
+0xa120 MmMapIoSpaceEx
+0xa128 ExUuidCreate
+0xa130 KeQueryActiveProcessorCountEx
+0xa138 __chkstk
+FUNCTION RVA 0xc760:
+0000c760 4055                     push     rbp 
+0000c762 488bec                   mov      rbp, rsp 
+0000c765 4883ec40                 sub      rsp, 0x40 
+0000c769 83651000                 and      dword ptr [rbp + 0x10], 0 
+0000c76d 488d150c9affff           lea      rdx, [rip - 0x65f4] RVA 0x6180 b'.rdata\x00\x00' writable=False
+0000c774 0f57c0                   xorps    xmm0, xmm0 
+0000c777 488d4df0                 lea      rcx, [rbp - 0x10] 
+0000c77b 0f1145f0                 movups   xmmword ptr [rbp - 0x10], xmm0 
+0000c77f 48ff15c2d8ffff           call     qword ptr [rip - 0x273e] RtlInitUnicodeString; RVA 0xa048 b'.idata\x00\x00' writable=False
+0000c786 0f1f440000               nop      dword ptr [rax + rax] 
+0000c78b 488d4df0                 lea      rcx, [rbp - 0x10] 
+0000c78f 48ff1502d9ffff           call     qword ptr [rip - 0x26fe] MmGetSystemRoutineAddress; RVA 0xa098 b'.idata\x00\x00' writable=False
+0000c796 0f1f440000               nop      dword ptr [rax + rax] 
+0000c79b 488d15fe99ffff           lea      rdx, [rip - 0x6602] RVA 0x61a0 b'.rdata\x00\x00' writable=False
+0000c7a2 48890527b9ffff           mov      qword ptr [rip - 0x46d9], rax RVA 0x80d0 b'.data\x00\x00\x00' writable=True
+0000c7a9 488d4df0                 lea      rcx, [rbp - 0x10] 
+0000c7ad 48ff1594d8ffff           call     qword ptr [rip - 0x276c] RtlInitUnicodeString; RVA 0xa048 b'.idata\x00\x00' writable=False
+0000c7b4 0f1f440000               nop      dword ptr [rax + rax] 
+0000c7b9 488d4df0                 lea      rcx, [rbp - 0x10] 
+0000c7bd 48ff15d4d8ffff           call     qword ptr [rip - 0x272c] MmGetSystemRoutineAddress; RVA 0xa098 b'.idata\x00\x00' writable=False
+0000c7c4 0f1f440000               nop      dword ptr [rax + rax] 
+0000c7c9 488d15f099ffff           lea      rdx, [rip - 0x6610] RVA 0x61c0 b'.rdata\x00\x00' writable=False
+0000c7d0 488905f1b8ffff           mov      qword ptr [rip - 0x470f], rax RVA 0x80c8 b'.data\x00\x00\x00' writable=True
+0000c7d7 488d4df0                 lea      rcx, [rbp - 0x10] 
+0000c7db 48ff1566d8ffff           call     qword ptr [rip - 0x279a] RtlInitUnicodeString; RVA 0xa048 b'.idata\x00\x00' writable=False
+0000c7e2 0f1f440000               nop      dword ptr [rax + rax] 
+0000c7e7 488d4df0                 lea      rcx, [rbp - 0x10] 
+0000c7eb 48ff15a6d8ffff           call     qword ptr [rip - 0x275a] MmGetSystemRoutineAddress; RVA 0xa098 b'.idata\x00\x00' writable=False
+0000c7f2 0f1f440000               nop      dword ptr [rax + rax] 
+0000c7f7 488905dab9ffff           mov      qword ptr [rip - 0x4626], rax RVA 0x81d8 b'.data\x00\x00\x00' writable=True
+0000c7fe 488b05cbb8ffff           mov      rax, qword ptr [rip - 0x4735] RVA 0x80d0 b'.data\x00\x00\x00' writable=True
+0000c805 c705c1b9ffff02000000     mov      dword ptr [rip - 0x463f], 2 RVA 0x81d0 b'.data\x00\x00\x00' writable=True
+0000c80f 4885c0                   test     rax, rax 
+0000c812 7411                     je       0x1c000c825 
+0000c814 4533c9                   xor      r9d, r9d 
+0000c817 488d4d10                 lea      rcx, [rbp + 0x10] 
+0000c81b 4533c0                   xor      r8d, r8d 
+0000c81e 33d2                     xor      edx, edx 
+0000c820 e89b7dffff               call     0x1c00045c0 
+0000c825 837d1006                 cmp      dword ptr [rbp + 0x10], 6 
+0000c829 726b                     jb       0x1c000c896 
+0000c82b 488d15c699ffff           lea      rdx, [rip - 0x663a] RVA 0x61f8 b'.rdata\x00\x00' writable=False
+0000c832 488d4df0                 lea      rcx, [rbp - 0x10] 
+0000c836 48ff150bd8ffff           call     qword ptr [rip - 0x27f5] RtlInitUnicodeString; RVA 0xa048 b'.idata\x00\x00' writable=False
+0000c83d 0f1f440000               nop      dword ptr [rax + rax] 
+0000c842 488d4df0                 lea      rcx, [rbp - 0x10] 
+0000c846 48ff154bd8ffff           call     qword ptr [rip - 0x27b5] MmGetSystemRoutineAddress; RVA 0xa098 b'.idata\x00\x00' writable=False
+0000c84d 0f1f440000               nop      dword ptr [rax + rax] 
+0000c852 48890567b8ffff           mov      qword ptr [rip - 0x4799], rax RVA 0x80c0 b'.data\x00\x00\x00' writable=True
+0000c859 4885c0                   test     rax, rax 
+0000c85c 7438                     je       0x1c000c896 
+0000c85e 488d15cb99ffff           lea      rdx, [rip - 0x6635] RVA 0x6230 b'.rdata\x00\x00' writable=False
+0000c865 488d4df0                 lea      rcx, [rbp - 0x10] 
+0000c869 48ff15d8d7ffff           call     qword ptr [rip - 0x2828] RtlInitUnicodeString; RVA 0xa048 b'.idata\x00\x00' writable=False
+0000c870 0f1f440000               nop      dword ptr [rax + rax] 
+0000c875 488d4df0                 lea      rcx, [rbp - 0x10] 
+0000c879 48ff1518d8ffff           call     qword ptr [rip - 0x27e8] MmGetSystemRoutineAddress; RVA 0xa098 b'.idata\x00\x00' writable=False
+0000c880 0f1f440000               nop      dword ptr [rax + rax] 
+0000c885 48890554b9ffff           mov      qword ptr [rip - 0x46ac], rax RVA 0x81e0 b'.data\x00\x00\x00' writable=True
+0000c88c c7053ab9ffff04000000     mov      dword ptr [rip - 0x46c6], 4 RVA 0x81d0 b'.data\x00\x00\x00' writable=True
+0000c896 4883c440                 add      rsp, 0x40 
+0000c89a 5d                       pop      rbp 
+0000c89b c3                       ret       
+0000c89c cc                       int3      

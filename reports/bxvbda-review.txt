@@ -1,0 +1,134 @@
+IMAGE: C:\Windows\System32\drivers\bxvbda.sys
+BASE: 0x140000000
+ENTRY RVA: 0x34318
+SECTIONS:
+b'.text\x00\x00\x00' RVA=0x1000 size=0x3580e flags=0x68000020
+b'.rdata\x00\x00' RVA=0x37000 size=0x25ac flags=0x48000040
+b'.data\x00\x00\x00' RVA=0x3a000 size=0x47a90 flags=0xc8000040
+b'.pdata\x00\x00' RVA=0x82000 size=0x18c0 flags=0x48000040
+b'.gfids\x00\x00' RVA=0x84000 size=0x4 flags=0x48000040
+b'INIT\x00\x00\x00\x00' RVA=0x85000 size=0x8f2 flags=0x62000020
+b'.rsrc\x00\x00\x00' RVA=0x86000 size=0x1208 flags=0x42000040
+b'.reloc\x00\x00' RVA=0x88000 size=0x54 flags=0x42000040
+IMPORTS:
+0x37000 KeQueryPerformanceCounter
+0x37008 KeStallExecutionProcessor
+0x37018 WdfVersionBind
+0x37020 WdfVersionUnbind
+0x37028 WdfVersionBindClass
+0x37030 WdfVersionUnbindClass
+0x37040 RtlWriteRegistryValue
+0x37048 RtlCheckRegistryKey
+0x37050 RtlAppendUnicodeToString
+0x37058 KeSetEvent
+0x37060 KeWaitForSingleObject
+0x37068 KeAcquireSpinLockRaiseToDpc
+0x37070 KeReleaseSpinLock
+0x37078 ExAllocatePoolWithTag
+0x37080 ExFreePoolWithTag
+0x37088 IoAllocateIrp
+0x37090 IofCallDriver
+0x37098 IoFreeIrp
+0x370a0 IoGetDeviceProperty
+0x370a8 ZwClose
+0x370b0 ZwCreateKey
+0x370b8 ZwOpenKey
+0x370c0 ZwDeleteKey
+0x370c8 ZwDeleteValueKey
+0x370d0 ZwEnumerateKey
+0x370d8 ZwQueryValueKey
+0x370e0 ZwSetValueKey
+0x370e8 RtlQueryRegistryValues
+0x370f0 KeLowerIrql
+0x370f8 KfRaiseIrql
+0x37100 KeInitializeDpc
+0x37108 KeSetImportanceDpc
+0x37110 KeDelayExecutionThread
+0x37118 KeInitializeTimer
+0x37120 RtlUnicodeStringToInteger
+0x37128 KeSetTimer
+0x37130 KeAcquireSpinLockAtDpcLevel
+0x37138 KeReleaseSpinLockFromDpcLevel
+0x37140 ExAcquireFastMutexUnsafe
+0x37148 ExReleaseFastMutexUnsafe
+0x37150 ExInitializeNPagedLookasideList
+0x37158 PsCreateSystemThread
+0x37160 IoAllocateErrorLogEntry
+0x37168 IoGetDmaAdapter
+0x37170 IoWriteErrorLogEntry
+0x37178 ObReferenceObjectByHandle
+0x37180 ObfDereferenceObject
+0x37188 KeInsertQueueDpc
+0x37190 ExDeleteNPagedLookasideList
+0x37198 MmUnmapIoSpace
+0x371a0 KeClearEvent
+0x371a8 ExQueryDepthSList
+0x371b0 ExpInterlockedPopEntrySList
+0x371b8 ExpInterlockedPushEntrySList
+0x371c0 ZwFlushKey
+0x371c8 MmMapIoSpaceEx
+0x371d0 memcpy_s
+0x371d8 RtlCompareMemory
+0x371e0 ZwOpenSection
+0x371e8 ZwMapViewOfSection
+0x371f0 ZwUnmapViewOfSection
+0x371f8 ZwQuerySystemInformation
+0x37200 RtlIntegerToUnicodeString
+0x37208 KeNumberProcessors
+0x37210 KeSetTargetProcessorDpc
+0x37218 RtlCopyUnicodeString
+0x37220 PsGetVersion
+0x37228 KeInitializeEvent
+0x37230 MmGetSystemRoutineAddress
+0x37238 KeCancelTimer
+0x37240 RtlInitUnicodeString
+FUNCTION RVA 0x17a8:
+000017a8 48895c2408               mov      qword ptr [rsp + 8], rbx 
+000017ad 4889742410               mov      qword ptr [rsp + 0x10], rsi 
+000017b2 57                       push     rdi 
+000017b3 4883ec40                 sub      rsp, 0x40 
+000017b7 488b05a2fe0700           mov      rax, qword ptr [rip + 0x7fea2] RVA 0x81660 b'.data\x00\x00\x00' writable=True
+000017be 488bda                   mov      rbx, rdx 
+000017c1 488bd1                   mov      rdx, rcx 
+000017c4 498bf9                   mov      rdi, r9 
+000017c7 488b0d8afe0700           mov      rcx, qword ptr [rip + 0x7fe8a] RVA 0x81658 b'.data\x00\x00\x00' writable=True
+000017ce 498bf0                   mov      rsi, r8 
+000017d1 ff90e8040000             call     qword ptr [rax + 0x4e8] 
+000017d7 4c8b053a880300           mov      r8, qword ptr [rip + 0x3883a] RVA 0x3a018 b'.data\x00\x00\x00' writable=True
+000017de 488bd0                   mov      rdx, rax 
+000017e1 488b0578fe0700           mov      rax, qword ptr [rip + 0x7fe78] RVA 0x81660 b'.data\x00\x00\x00' writable=True
+000017e8 488b0d69fe0700           mov      rcx, qword ptr [rip + 0x7fe69] RVA 0x81658 b'.data\x00\x00\x00' writable=True
+000017ef 488364243000             and      qword ptr [rsp + 0x30], 0 
+000017f5 ff9050060000             call     qword ptr [rax + 0x650] 
+000017fb 488d4810                 lea      rcx, [rax + 0x10] 
+000017ff 833900                   cmp      dword ptr [rcx], 0 
+00001802 753b                     jne      0x14000183f 
+00001804 8b5104                   mov      edx, dword ptr [rcx + 4] 
+00001807 8d42ff                   lea      eax, [rdx - 1] 
+0000180a a9fcffffff               test     eax, 0xfffffffc 
+0000180f 7527                     jne      0x140001838 
+00001811 83fa03                   cmp      edx, 3 
+00001814 7422                     je       0x140001838 
+00001816 488d442430               lea      rax, [rsp + 0x30] 
+0000181b 4c8bcf                   mov      r9, rdi 
+0000181e 4889442428               mov      qword ptr [rsp + 0x28], rax 
+00001823 4c8bc6                   mov      r8, rsi 
+00001826 8b442470                 mov      eax, dword ptr [rsp + 0x70] 
+0000182a 488bd3                   mov      rdx, rbx 
+0000182d 89442420                 mov      dword ptr [rsp + 0x20], eax 
+00001831 e8662f0000               call     0x14000479c 
+00001836 eb0c                     jmp      0x140001844 
+00001838 b80e0000c0               mov      eax, 0xc000000e 
+0000183d eb05                     jmp      0x140001844 
+0000183f b8100000c0               mov      eax, 0xc0000010 
+00001844 4c8b4c2430               mov      r9, qword ptr [rsp + 0x30] 
+00001849 448bc0                   mov      r8d, eax 
+0000184c 488b050dfe0700           mov      rax, qword ptr [rip + 0x7fe0d] RVA 0x81660 b'.data\x00\x00\x00' writable=True
+00001853 488bd3                   mov      rdx, rbx 
+00001856 488b0dfbfd0700           mov      rcx, qword ptr [rip + 0x7fdfb] RVA 0x81658 b'.data\x00\x00\x00' writable=True
+0000185d ff9048080000             call     qword ptr [rax + 0x848] 
+00001863 488b5c2450               mov      rbx, qword ptr [rsp + 0x50] 
+00001868 488b742458               mov      rsi, qword ptr [rsp + 0x58] 
+0000186d 4883c440                 add      rsp, 0x40 
+00001871 5f                       pop      rdi 
+00001872 c3                       ret       
