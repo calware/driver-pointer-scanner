@@ -1,0 +1,20 @@
+[1/19] acpi.sys: 0 synthetic target entries
+[2/19] Acx01000.sys: 0 synthetic target entries
+[3/19] afd.sys: 1 synthetic target entries
+[4/19] AppvVemgr.sys: 0 synthetic target entries
+[5/19] BthHfEnum.sys: 0 synthetic target entries
+[6/19] bthmodem.sys: 0 synthetic target entries
+[7/19] bthport.sys: 0 synthetic target entries
+[8/19] cdrom.sys: 0 synthetic target entries
+[9/19] cimfs.sys: 0 synthetic target entries
+[10/19] dxgkrnl.sys: 0 synthetic target entries
+[11/19] ExecutionContext.sys: 0 synthetic target entries
+[12/19] fvevol.sys: 0 synthetic target entries
+[13/19] hidi2c.sys: 0 synthetic target entries
+[14/19] iorate.sys: 0 synthetic target entries
+[15/19] ipnat.sys: 0 synthetic target entries
+[16/19] kbdclass.sys: 0 synthetic target entries
+[17/19] ksecdd.sys: 0 synthetic target entries
+[18/19] lltdio.sys: 0 synthetic target entries
+[19/19] mlx4_bus.sys: 0 synthetic target entries
+{'images': 19, 'attempt_statuses': {'BUGCHECK_PATH': 110, 'UNSUPPORTED_KMDF_CALLBACK_MODEL': 940, 'RETURNED_BEFORE_CALLSITE': 774, 'TARGET_ENTERED': 1, 'EMU_ERROR': 85}}

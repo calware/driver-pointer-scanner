@@ -103,6 +103,12 @@ class WdfFlowTests(unittest.TestCase):
         self.assertIsNone(result['wdf_api_calls'][0]['request_argument_provenance'])
         self.assertFalse(result['findings'])
 
+    def test_request_object_field_register_call_is_retained(self):
+        # mov rax,[rdx+20]; call rax; ret
+        result=self.analyze(bytes.fromhex('488b4220ffd0c3'))
+        self.assertEqual(result['nonimage_indirect_call_leads'][0]['field_chain'],[0x20])
+        self.assertEqual(result['nonimage_indirect_call_leads'][0]['base_provenance'][0]['kind'],'wdf_request')
+
     @unittest.skipUnless((DRIVERS / '1394ohci.sys').exists() and
                          (DRIVERS / 'USBXHCI.SYS').exists(), 'installed WDF drivers absent')
     def test_two_installed_kmdf_roots_are_analyzed_read_only(self):

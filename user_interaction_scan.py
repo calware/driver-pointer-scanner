@@ -14,7 +14,7 @@ from pathlib import Path
 
 from scanner import Analyzer, Image
 from flow_engine import analyze_dispatch
-from init_flow import analyze_initialization
+from init_flow import analyze_initialization, recover_registrations_local
 from wdf_probe import discover_wdf_io_control, USER_REQUEST_EVENTS
 from wdf_flow import analyze_wdf_callbacks
 
@@ -40,6 +40,7 @@ def _sites(flow, event, model):
                             'instruction': item.get('instruction'),
                             'input_buffer_variant_candidate': name == 'findings' and event in ('DeviceIoControl', 'EvtIoDeviceControl'),
                             'field_displacement': item.get('field_displacement'),
+                            'field_chain': item.get('field_chain'),
                             'base_provenance': item.get('base_provenance'),
                             'evidence': 'ROOTED_FIXED_POINT_MAY',
                             'runtime_reachability': 'UNVERIFIED',
@@ -77,6 +78,13 @@ def analyze_one(prior, init_budget=30000, flow_budget=30000):
                 roots[int(major)].update(image.base + int(x, 0) for x in rvas)
         row['wdm_initialization_coverage'] = init['coverage']
         row['limitations'].extend('fixed_init:' + x for x in init['limitations'])
+        if not init['coverage']['complete'] or not any(roots[m] for m in MAJORS):
+            local = recover_registrations_local(image)
+            row['local_initialization'] = local
+            for major, rvas in local['dispatch_rvas_by_major'].items():
+                if int(major) in MAJORS:
+                    roots[int(major)].update(image.base+int(x,0) for x in rvas)
+            row['limitations'].extend('local_init:' + x for x in local['limitations'])
     else:
         row['wdm_initialization_coverage'] = {'status': 'NOT_RUN_NO_WDM_DEVICE_CREATION_IMPORT_OR_SIZE_LIMIT'}
     for major, event in MAJORS.items():

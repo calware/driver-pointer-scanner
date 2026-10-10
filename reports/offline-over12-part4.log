@@ -1,0 +1,20 @@
+[1/19] vhdmp.sys: 0 synthetic target entries
+[2/19] vmbus.sys: 0 synthetic target entries
+[3/19] vmbusr.sys: 0 synthetic target entries
+[4/19] vmusb.sys: 0 synthetic target entries
+[5/19] volmgr.sys: 0 synthetic target entries
+[6/19] vpcivsp.sys: 0 synthetic target entries
+[7/19] vsock.sys: 0 synthetic target entries
+[8/19] wanarp.sys: 0 synthetic target entries
+[9/19] WifiCx.sys: 0 synthetic target entries
+[10/19] WinAccelCx.sys: 0 synthetic target entries
+[11/19] WindowsTrustedRT.sys: 0 synthetic target entries
+[12/19] winusb.sys: 0 synthetic target entries
+[13/19] WUDFRd.sys: 0 synthetic target entries
+[14/19] xboxgip.sys: 4 synthetic target entries
+[15/19] xinputhid.sys: 0 synthetic target entries
+[16/19] TeeDriverW10x64.sys: 0 synthetic target entries
+[17/19] i3chost.sys: 0 synthetic target entries
+[18/19] SdcaMfd.sys: 0 synthetic target entries
+[19/19] Usb4HostRouter.sys: 0 synthetic target entries
+{'images': 19, 'attempt_statuses': {'CALLSITE_HIT': 3, 'EMU_ERROR': 60, 'UNSUPPORTED_KMDF_CALLBACK_MODEL': 1930, 'RETURNED_BEFORE_CALLSITE': 513, 'TARGET_ENTERED': 4}}

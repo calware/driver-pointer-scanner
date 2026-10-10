@@ -1,0 +1,611 @@
+[
+  {
+    "file": "C:\\Windows\\System32\\drivers\\acpi.sys",
+    "roots": {
+      "0": [
+        "0x1ade0"
+      ],
+      "3": [
+        "0x1ade0"
+      ],
+      "4": [
+        "0x1ade0"
+      ],
+      "14": [
+        "0x1ade0"
+      ]
+    },
+    "functions": 6,
+    "limitations": []
+  },
+  {
+    "file": "C:\\Windows\\System32\\drivers\\afd.sys",
+    "roots": {
+      "0": [
+        "0x176c0"
+      ],
+      "3": [
+        "0x176c0"
+      ],
+      "4": [
+        "0x176c0"
+      ],
+      "14": [
+        "0x14cc0",
+        "0x176c0"
+      ]
+    },
+    "functions": 6,
+    "limitations": []
+  },
+  {
+    "file": "C:\\Windows\\System32\\drivers\\ahcache.sys",
+    "roots": {
+      "0": [
+        "0x2ba30"
+      ],
+      "3": [],
+      "4": [],
+      "14": [
+        "0x392d0"
+      ]
+    },
+    "functions": 4,
+    "limitations": []
+  },
+  {
+    "file": "C:\\Windows\\System32\\drivers\\ataport.sys",
+    "roots": {
+      "0": [],
+      "3": [],
+      "4": [],
+      "14": []
+    },
+    "functions": 3,
+    "limitations": []
+  },
+  {
+    "file": "C:\\Windows\\System32\\drivers\\Classpnp.sys",
+    "roots": {
+      "0": [],
+      "3": [],
+      "4": [],
+      "14": []
+    },
+    "functions": 3,
+    "limitations": []
+  },
+  {
+    "file": "C:\\Windows\\System32\\drivers\\cldflt.sys",
+    "roots": {
+      "0": [],
+      "3": [],
+      "4": [],
+      "14": []
+    },
+    "functions": 8,
+    "limitations": []
+  },
+  {
+    "file": "C:\\Windows\\System32\\drivers\\clfs.sys",
+    "roots": {
+      "0": [],
+      "3": [],
+      "4": [],
+      "14": []
+    },
+    "functions": 9,
+    "limitations": []
+  },
+  {
+    "file": "C:\\Windows\\System32\\drivers\\fse.sys",
+    "roots": {
+      "0": [],
+      "3": [],
+      "4": [],
+      "14": []
+    },
+    "functions": 7,
+    "limitations": []
+  },
+  {
+    "file": "C:\\Windows\\System32\\drivers\\hidclass.sys",
+    "roots": {
+      "0": [],
+      "3": [],
+      "4": [],
+      "14": []
+    },
+    "functions": 3,
+    "limitations": []
+  },
+  {
+    "file": "C:\\Windows\\System32\\drivers\\http.sys",
+    "roots": {
+      "0": [],
+      "3": [],
+      "4": [],
+      "14": []
+    },
+    "functions": 3,
+    "limitations": []
+  },
+  {
+    "file": "C:\\Windows\\System32\\drivers\\iaStorV.sys",
+    "roots": {
+      "0": [
+        "0x5325c"
+      ],
+      "3": [],
+      "4": [],
+      "14": [
+        "0x4c084"
+      ]
+    },
+    "functions": 2,
+    "limitations": []
+  },
+  {
+    "file": "C:\\Windows\\System32\\drivers\\ipfltdrv.sys",
+    "roots": {
+      "0": [],
+      "3": [],
+      "4": [],
+      "14": []
+    },
+    "functions": 3,
+    "limitations": []
+  },
+  {
+    "file": "C:\\Windows\\System32\\drivers\\kdnic.sys",
+    "roots": {
+      "0": [],
+      "3": [],
+      "4": [],
+      "14": []
+    },
+    "functions": 9,
+    "limitations": []
+  },
+  {
+    "file": "C:\\Windows\\System32\\drivers\\kdnic_legacy.sys",
+    "roots": {
+      "0": [],
+      "3": [],
+      "4": [],
+      "14": []
+    },
+    "functions": 7,
+    "limitations": []
+  },
+  {
+    "file": "C:\\Windows\\System32\\drivers\\ks.sys",
+    "roots": {
+      "0": [],
+      "3": [],
+      "4": [],
+      "14": []
+    },
+    "functions": 3,
+    "limitations": []
+  },
+  {
+    "file": "C:\\Windows\\System32\\drivers\\ksthunk.sys",
+    "roots": {
+      "0": [],
+      "3": [],
+      "4": [],
+      "14": []
+    },
+    "functions": 4,
+    "limitations": []
+  },
+  {
+    "file": "C:\\Windows\\System32\\drivers\\lxcore.sys",
+    "roots": {
+      "0": [],
+      "3": [],
+      "4": [],
+      "14": []
+    },
+    "functions": 4,
+    "limitations": []
+  },
+  {
+    "file": "C:\\Windows\\System32\\drivers\\mskssrv.sys",
+    "roots": {
+      "0": [],
+      "3": [],
+      "4": [],
+      "14": []
+    },
+    "functions": 4,
+    "limitations": []
+  },
+  {
+    "file": "C:\\Windows\\System32\\drivers\\mspclock.sys",
+    "roots": {
+      "0": [],
+      "3": [],
+      "4": [],
+      "14": []
+    },
+    "functions": 3,
+    "limitations": []
+  },
+  {
+    "file": "C:\\Windows\\System32\\drivers\\mspqm.sys",
+    "roots": {
+      "0": [],
+      "3": [],
+      "4": [],
+      "14": []
+    },
+    "functions": 3,
+    "limitations": []
+  },
+  {
+    "file": "C:\\Windows\\System32\\drivers\\mssmbios.sys",
+    "roots": {
+      "0": [],
+      "3": [],
+      "4": [],
+      "14": []
+    },
+    "functions": 3,
+    "limitations": []
+  },
+  {
+    "file": "C:\\Windows\\System32\\drivers\\ndis.sys",
+    "roots": {
+      "0": [],
+      "3": [],
+      "4": [],
+      "14": []
+    },
+    "functions": 8,
+    "limitations": []
+  },
+  {
+    "file": "C:\\Windows\\System32\\drivers\\Ndu.sys",
+    "roots": {
+      "0": [],
+      "3": [],
+      "4": [],
+      "14": []
+    },
+    "functions": 6,
+    "limitations": []
+  },
+  {
+    "file": "C:\\Windows\\System32\\drivers\\netio.sys",
+    "roots": {
+      "0": [],
+      "3": [],
+      "4": [],
+      "14": []
+    },
+    "functions": 3,
+    "limitations": []
+  },
+  {
+    "file": "C:\\Windows\\System32\\drivers\\ntfs.sys",
+    "roots": {
+      "0": [
+        "0x16ecd0"
+      ],
+      "3": [
+        "0xeff0"
+      ],
+      "4": [
+        "0xea10"
+      ],
+      "14": [
+        "0x229af0"
+      ]
+    },
+    "functions": 6,
+    "limitations": [
+      "local_function_budget_exhausted"
+    ]
+  },
+  {
+    "file": "C:\\Windows\\System32\\drivers\\nvraid.sys",
+    "roots": {
+      "0": [],
+      "3": [],
+      "4": [],
+      "14": []
+    },
+    "functions": 2,
+    "limitations": []
+  },
+  {
+    "file": "C:\\Windows\\System32\\drivers\\pciidex.sys",
+    "roots": {
+      "0": [],
+      "3": [],
+      "4": [],
+      "14": []
+    },
+    "functions": 3,
+    "limitations": []
+  },
+  {
+    "file": "C:\\Windows\\System32\\drivers\\pcmcia.sys",
+    "roots": {
+      "0": [
+        "0x2940"
+      ],
+      "3": [],
+      "4": [],
+      "14": [
+        "0x2940"
+      ]
+    },
+    "functions": 6,
+    "limitations": []
+  },
+  {
+    "file": "C:\\Windows\\System32\\drivers\\pdc.sys",
+    "roots": {
+      "0": [
+        "0x1a010"
+      ],
+      "3": [
+        "0x1a010"
+      ],
+      "4": [
+        "0x1a010"
+      ],
+      "14": [
+        "0x1a010"
+      ]
+    },
+    "functions": 5,
+    "limitations": []
+  },
+  {
+    "file": "C:\\Windows\\System32\\drivers\\portcls.sys",
+    "roots": {
+      "0": [],
+      "3": [],
+      "4": [],
+      "14": []
+    },
+    "functions": 3,
+    "limitations": []
+  },
+  {
+    "file": "C:\\Windows\\System32\\drivers\\pvhdparser.sys",
+    "roots": {
+      "0": [],
+      "3": [],
+      "4": [],
+      "14": []
+    },
+    "functions": 3,
+    "limitations": []
+  },
+  {
+    "file": "C:\\Windows\\System32\\drivers\\rdyboost.sys",
+    "roots": {
+      "0": [
+        "0x138a0",
+        "0x14fe0"
+      ],
+      "3": [
+        "0x3290",
+        "0x14fe0"
+      ],
+      "4": [
+        "0x3290",
+        "0x14fe0"
+      ],
+      "14": [
+        "0x13a00",
+        "0x14fe0"
+      ]
+    },
+    "functions": 4,
+    "limitations": []
+  },
+  {
+    "file": "C:\\Windows\\System32\\drivers\\rspndr.sys",
+    "roots": {
+      "0": [],
+      "3": [],
+      "4": [],
+      "14": []
+    },
+    "functions": 8,
+    "limitations": []
+  },
+  {
+    "file": "C:\\Windows\\System32\\drivers\\scsiport.sys",
+    "roots": {
+      "0": [],
+      "3": [],
+      "4": [],
+      "14": []
+    },
+    "functions": 3,
+    "limitations": []
+  },
+  {
+    "file": "C:\\Windows\\System32\\drivers\\sdport.sys",
+    "roots": {
+      "0": [],
+      "3": [],
+      "4": [],
+      "14": []
+    },
+    "functions": 3,
+    "limitations": []
+  },
+  {
+    "file": "C:\\Windows\\System32\\drivers\\srvnet.sys",
+    "roots": {
+      "0": [
+        "0x54310",
+        "0x54640"
+      ],
+      "3": [
+        "0x54310"
+      ],
+      "4": [
+        "0x54310"
+      ],
+      "14": [
+        "0x54310",
+        "0x54490"
+      ]
+    },
+    "functions": 5,
+    "limitations": []
+  },
+  {
+    "file": "C:\\Windows\\System32\\drivers\\storport.sys",
+    "roots": {
+      "0": [],
+      "3": [],
+      "4": [],
+      "14": []
+    },
+    "functions": 3,
+    "limitations": []
+  },
+  {
+    "file": "C:\\Windows\\System32\\drivers\\stream.sys",
+    "roots": {
+      "0": [],
+      "3": [],
+      "4": [],
+      "14": []
+    },
+    "functions": 3,
+    "limitations": []
+  },
+  {
+    "file": "C:\\Windows\\System32\\drivers\\usbport.sys",
+    "roots": {
+      "0": [],
+      "3": [],
+      "4": [],
+      "14": []
+    },
+    "functions": 3,
+    "limitations": []
+  },
+  {
+    "file": "C:\\Windows\\System32\\drivers\\videoprt.sys",
+    "roots": {
+      "0": [],
+      "3": [],
+      "4": [],
+      "14": []
+    },
+    "functions": 3,
+    "limitations": []
+  },
+  {
+    "file": "C:\\Windows\\System32\\drivers\\vmswitch.sys",
+    "roots": {
+      "0": [],
+      "3": [],
+      "4": [],
+      "14": []
+    },
+    "functions": 19,
+    "limitations": []
+  },
+  {
+    "file": "C:\\Windows\\System32\\drivers\\vmx86.sys",
+    "roots": {
+      "0": [
+        "0x47d0"
+      ],
+      "3": [],
+      "4": [],
+      "14": [
+        "0x47d0"
+      ]
+    },
+    "functions": 4,
+    "limitations": []
+  },
+  {
+    "file": "C:\\Windows\\System32\\drivers\\wd\\WdAiNisDrv.sys",
+    "roots": {
+      "0": [],
+      "3": [],
+      "4": [],
+      "14": []
+    },
+    "functions": 8,
+    "limitations": []
+  },
+  {
+    "file": "C:\\Windows\\System32\\drivers\\WdDevFlt.sys",
+    "roots": {
+      "0": [
+        "0x1520"
+      ],
+      "3": [
+        "0x1520"
+      ],
+      "4": [
+        "0x1520"
+      ],
+      "14": [
+        "0x1520"
+      ]
+    },
+    "functions": 34,
+    "limitations": []
+  },
+  {
+    "file": "C:\\Windows\\System32\\drivers\\wfplwfs.sys",
+    "roots": {
+      "0": [],
+      "3": [],
+      "4": [],
+      "14": []
+    },
+    "functions": 5,
+    "limitations": []
+  },
+  {
+    "file": "C:\\Windows\\System32\\drivers\\winnat.sys",
+    "roots": {
+      "0": [],
+      "3": [],
+      "4": [],
+      "14": []
+    },
+    "functions": 8,
+    "limitations": []
+  },
+  {
+    "file": "C:\\Windows\\System32\\drivers\\ztdns.sys",
+    "roots": {
+      "0": [],
+      "3": [],
+      "4": [],
+      "14": []
+    },
+    "functions": 4,
+    "limitations": []
+  },
+  {
+    "file": "C:\\Windows\\System32\\DriverStore\\FileRepository\\uefi.inf_amd64_0dab6d8c22d34611\\uefi.sys",
+    "roots": {
+      "0": [],
+      "3": [],
+      "4": [],
+      "14": []
+    },
+    "functions": 5,
+    "limitations": []
+  }
+]

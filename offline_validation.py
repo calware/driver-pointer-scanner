@@ -18,7 +18,7 @@ from unicorn.x86_const import (UC_X86_REG_RAX, UC_X86_REG_RCX, UC_X86_REG_RDX,
     UC_X86_REG_R11, UC_X86_REG_R12, UC_X86_REG_R13, UC_X86_REG_R14,
     UC_X86_REG_R15, UC_X86_REG_RBP)
 
-from scanner import Analyzer, Image
+from scanner import Analyzer, Image, canonical
 
 PAGE = 0x1000
 STATE = 0x60000000
@@ -39,17 +39,59 @@ MAJORS = {'CreateFile':0, 'ReadFile':3, 'WriteFile':4, 'DeviceIoControl':14}
 def align(x): return (x+PAGE-1)&~(PAGE-1)
 
 
-def _ioctl_candidates(image, root):
-    """Bounded syntactic seed discovery, not a claim that a code is accepted."""
+def _ioctl_candidates(image, root, site=None):
+    """Seed IOCTLs from comparisons, including indexed code/handler tables."""
     candidates = [0x226000, 0x222000]
-    for ins in image.instructions(root).values():
+    instructions=list(image.instructions(root).values())
+    for pos,ins in enumerate(instructions):
+        if ins.mnemonic=='cmp':
+            for op in ins.operands:
+                if op.type!=X86_OP_MEM or op.size!=4 or not op.mem.index or op.mem.scale!=4:
+                    continue
+                base_name=canonical(ins.reg_name(op.mem.base)) if op.mem.base else None
+                index_name=canonical(ins.reg_name(op.mem.index))
+                if not base_name:continue
+                base_va=None
+                for previous in reversed(instructions[max(0,pos-16):pos]):
+                    if (previous.mnemonic=='lea' and len(previous.operands)==2 and
+                        previous.operands[0].type==X86_OP_REG and
+                        canonical(previous.reg_name(previous.operands[0].reg))==base_name and
+                        previous.operands[1].type==X86_OP_MEM and
+                        previous.reg_name(previous.operands[1].mem.base)=='rip'):
+                        base_va=previous.address+previous.size+previous.operands[1].mem.disp
+                        break
+                if base_va is None:continue
+                bound=None
+                for previous in reversed(instructions[max(0,pos-20):pos]):
+                    if previous.mnemonic!='cmp' or len(previous.operands)!=2:continue
+                    left,right=previous.operands
+                    if (left.type==X86_OP_REG and right.type==X86_OP_IMM and
+                        canonical(previous.reg_name(left.reg))==index_name and 1<=right.imm<=256):
+                        bound=right.imm
+                        break
+                if bound is None:continue
+                table=base_va+op.mem.disp
+                discovered=[]
+                for index in range(bound):
+                    try:code=struct.unpack('<I',image.pe.get_data(table-image.base+4*index,4))[0]
+                    except (ValueError,struct.error):break
+                    if 0x10000<=code<=0xffffffff and ((code>>2)&0x3ff)==index:
+                        discovered.append((index,code))
+                if len(discovered)<2:continue
+                if site and site.get('slot_rva') and site.get('initial_target_rva'):
+                    slot=image.base+int(site['slot_rva'],0)
+                    target=image.base+int(site['initial_target_rva'],0)
+                    discovered.sort(key=lambda pair:image.pointer(slot+8*pair[0])!=target)
+                for _,code in reversed(discovered[:12]):
+                    if code not in candidates:candidates.insert(0,code)
+    for ins in instructions:
         if ins.mnemonic not in ('cmp','test'):
             continue
         for op in ins.operands:
             if op.type == X86_OP_IMM and 0x10000 <= op.imm <= 0xffffffff:
                 if op.imm not in candidates: candidates.insert(0,op.imm)
         if len(candidates)>=10: break
-    return candidates[:6]
+    return candidates[:12]
 
 
 def _unicode_name_before_slot(image, slot):
@@ -87,7 +129,7 @@ def scenarios(image, site, path=None):
         return [{'name':f'{event.lower()}_64', 'file_name':'', 'ioctl':0,
                  'input_length':64,'output_length':64}]
     root=image.base+int(site['dispatch_rva'],0)
-    codes=_ioctl_candidates(image,root)
+    codes=_ioctl_candidates(image,root,site)
     witness=(path or {}).get('witness') or {}
     if 'ioctl_0_32' in witness:
         value=int(witness['ioctl_0_32'],0)
@@ -98,7 +140,7 @@ def scenarios(image, site, path=None):
         if 0<required<=4096:lengths=[required]+[x for x in lengths if x!=required]
     return [{'name':f'ioctl_{code:08x}_len{length}', 'file_name':'',
              'ioctl':code,'input_length':length,'output_length':64}
-            for code in codes[:3] for length in lengths[:2]]
+            for code in codes[:4] for length in lengths[:2]]
 
 
 def _score(site, path, attempts):
@@ -109,9 +151,10 @@ def _score(site, path, attempts):
     if site.get('input_buffer_variant_candidate'): parts['specific_input_variant']=5
     if path and path.get('status')=='SAT_PARTIAL_MODEL' and path.get('modeled_predicates',0):
         parts['tracked_path_predicates_sat']=10
-    hits=[a for a in attempts if a.get('status')=='CALLSITE_HIT']
+    hits=[a for a in attempts if a.get('status') in ('CALLSITE_HIT','TARGET_ENTERED')]
     if hits:
         parts['synthetic_callsite_hit']=20
+        if any(a.get('target_entered') for a in hits):parts['synthetic_target_entered']=10
         if any(a.get('target_matches_image_pointer') for a in hits):
             parts['synthetic_target_match']=10
         assumptions=min(sum(len(a.get('unmodeled_import_calls',{})) for a in hits),3)
@@ -167,9 +210,8 @@ def emulate_site(image, site, scenario, instruction_limit=30000):
         for address in image.guards:
             if image.section(address):
                 uc.mem_write(address,struct.pack('<Q',guard_check if address in image.guard_checks else guard_dispatch))
-        config=getattr(getattr(image.pe,'DIRECTORY_ENTRY_LOAD_CONFIG',None),'struct',None)
-        cookie=getattr(config,'SecurityCookie',0) if config else 0
-        if cookie and image.section(cookie):uc.mem_write(cookie,struct.pack('<Q',0x136ab4c7e2d9510f))
+        # Preserve the image's cookie. Replacing it without running the image's
+        # CRT/security initialization can invalidate legitimate saved frames.
         def putq(a,v):uc.mem_write(a,struct.pack('<Q',v&0xffffffffffffffff))
         def putd(a,v):uc.mem_write(a,struct.pack('<I',v&0xffffffff))
         def getq(a):return struct.unpack('<Q',uc.mem_read(a,8))[0]
@@ -198,6 +240,9 @@ def emulate_site(image, site, scenario, instruction_limit=30000):
         target_call=image.base+int(site['call_rva'],0)
         target_slot=image.base+int(site['slot_rva'],0) if site.get('slot_rva') else None
         import_calls=collections.Counter();unmodeled=collections.Counter()
+        recent=collections.deque(maxlen=32)
+        pending_target=None
+        pending_steps=0
         heap_next=HEAP
         def allocate(size):
             nonlocal heap_next
@@ -205,7 +250,16 @@ def emulate_site(image, site, scenario, instruction_limit=30000):
             if heap_next+size>HEAP+0x100000:raise MemoryError('synthetic heap exhausted')
             out=heap_next;heap_next+=size;return out
         def hook(emu,address,size,_):
+            nonlocal pending_target,pending_steps
             result['instructions']+=1
+            if image.executable(address):recent.append(hex(address-image.base))
+            if pending_target is not None:
+                pending_steps+=1
+                if address==pending_target or pending_steps>8 or address==STOP:
+                    result['target_entered']=address==pending_target
+                    result['status']='TARGET_ENTERED' if result['target_entered'] else 'CALLSITE_HIT'
+                    result['trace_tail_rvas']=list(recent)
+                    emu.emu_stop();return
             if address==STOP:
                 result['status']='RETURNED_BEFORE_CALLSITE';emu.emu_stop();return
             if result['instructions']>instruction_limit:
@@ -248,7 +302,19 @@ def emulate_site(image, site, scenario, instruction_limit=30000):
                                                        'SYNTHETIC_STATE' if storage_address is not None and STATE<=storage_address<STATE+0x20000 else
                                                        'SYNTHETIC_HEAP' if storage_address is not None and HEAP<=storage_address<HEAP+0x100000 else
                                                        'UNRESOLVED_OR_REGISTER'),
-                              target_matches_image_pointer=matched)
+                              target_matches_image_pointer=matched,
+                              concrete_call_witness={
+                                  'entry_rva':site['dispatch_rva'],'event':site['event'],
+                                  'request':scenario,'call_rva':site['call_rva'],
+                                  'target_rva':hex(actual-image.base) if image.executable(actual) else None,
+                                  'pointer_kind':site['pointer_kind'],
+                                  'input_pattern':'byte[i] = i & 0xff',
+                                  'input_prefix_hex':bytes((i&0xff for i in range(min(scenario['input_length'],64)))).hex(),
+                                  'storage_address':hex(storage_address) if storage_address is not None else None})
+                if image.executable(actual):
+                    pending_target=actual
+                    return
+                result['trace_tail_rvas']=list(recent)
                 emu.emu_stop();return
             if address in (guard_dispatch,guard_check):
                 if address==guard_dispatch:
@@ -295,7 +361,9 @@ def emulate_site(image, site, scenario, instruction_limit=30000):
             if result['status']=='RUNNING':
                 result['status']='EMU_ERROR';result['error']=str(exc)
                 result['fault_rva']=hex(uc.reg_read(UC_X86_REG_RIP)-image.base)
+                result['trace_tail_rvas']=list(recent)
         if result['status']=='RUNNING':result['status']='RETURNED_BEFORE_CALLSITE'
+        if 'trace_tail_rvas' not in result:result['trace_tail_rvas']=list(recent)
         result['modeled_import_calls']=dict(import_calls)
         result['unmodeled_import_calls']=dict(unmodeled)
         return result
@@ -320,19 +388,28 @@ def validate_row(row, max_sites=12, instruction_limit=30000, path_budget=12000):
         for scenario in scenarios(image,site,path):
             attempt=emulate_site(image,site,scenario,instruction_limit)
             attempts.append(attempt)
-            if attempt['status']=='CALLSITE_HIT' and attempt.get('target_matches_image_pointer'):
+            if attempt['status']=='TARGET_ENTERED' and (attempt.get('target_matches_image_pointer') or
+                                                        site['pointer_kind']=='OBJECT_FIELD_INDIRECT'):
                 break
         out.append({'event':site['event'],'entry_model':site['entry_model'],
                     'pointer_kind':site['pointer_kind'],'dispatch_rva':site['dispatch_rva'],
                     'call_rva':site['call_rva'],'slot_rva':site.get('slot_rva'),
+                    'field_chain':site.get('field_chain'),
                     'input_buffer_variant_candidate':site.get('input_buffer_variant_candidate',False),
                     'path_evidence':path,'attempts':attempts,
+                    'validation_outcome':(
+                        'SYNTHETIC_TARGET_ENTERED' if any(a['status']=='TARGET_ENTERED' for a in attempts) else
+                        'CALLSITE_ONLY' if any(a['status']=='CALLSITE_HIT' for a in attempts) else
+                        'UNSUPPORTED' if attempts and all(a['status'].startswith('UNSUPPORTED') for a in attempts) else
+                        'EMULATION_BLOCKED' if attempts and all(a['status'] in ('EMU_ERROR','SETUP_ERROR','MODEL_ERROR','BUGCHECK_PATH','INSTRUCTION_LIMIT') for a in attempts) else
+                        'NO_WITNESS'),
                     'offline_evidence_score':_score(site,path,attempts)})
     unchanged=hashlib.sha256(Path(row['file']).read_bytes()).hexdigest()==row['sha256']
     if not unchanged:raise RuntimeError('image changed during offline validation')
     return {'schema_version':1,'engine':'Unicorn synthetic WDM request replay',
             'image_sha256':row['sha256'],'sites_total':len(row.get('sites',[])),
             'sites_selected':len(out),'site_limit':max_sites,'sites':out,
+            'outcomes':dict(collections.Counter(s['validation_outcome'] for s in out)),
             'installed_image_unchanged':unchanged,
             'evidence_scope':'Synthetic model only. No live device, OS I/O manager, real KMDF queue, handle ACL, or user request was exercised.',
             'no_live_reachability_claim':True}
@@ -369,7 +446,7 @@ def main():
                     'no_live_reachability_claim':True}
         results.append(result)
         if a.output:print(f'[{index}/{len(rows)}] {Path(row["file"]).name}: '
-                          f'{sum(any(t["status"]=="CALLSITE_HIT" for t in s["attempts"]) for s in result.get("sites",[]))} synthetic hits',flush=True)
+                          f'{sum(any(t["status"]=="TARGET_ENTERED" for t in s["attempts"]) for s in result.get("sites",[]))} synthetic target entries',flush=True)
     counts=collections.Counter(t['status'] for result in results for site in result.get('sites',[])
                                for t in site['attempts'])
     document={'schema_version':1,'summary':{'images':len(results),'attempt_statuses':dict(counts)},

@@ -1,0 +1,20 @@
+[1/19] monitor.sys: 0 synthetic target entries
+[2/19] mouclass.sys: 0 synthetic target entries
+[3/19] msgpioclx.sys: 0 synthetic target entries
+[4/19] msgpiowin32.sys: 0 synthetic target entries
+[5/19] mup.sys: 0 synthetic target entries
+[6/19] ndisuio.sys: 0 synthetic target entries
+[7/19] NDKPerf.sys: 0 synthetic target entries
+[8/19] NDKPing.sys: 0 synthetic target entries
+[9/19] netbios.sys: 0 synthetic target entries
+[10/19] nsiproxy.sys: 0 synthetic target entries
+[11/19] nvdimm.sys: 0 synthetic target entries
+[12/19] nvvad64v.sys: 0 synthetic target entries
+[13/19] PEAuth.sys: 0 synthetic target entries
+[14/19] qwavedrv.sys: 0 synthetic target entries
+[15/19] rdbss.sys: 0 synthetic target entries
+[16/19] rdpbus.sys: 0 synthetic target entries
+[17/19] rdpdr.sys: 0 synthetic target entries
+[18/19] refsv1.sys: 0 synthetic target entries
+[19/19] rfcomm.sys: 0 synthetic target entries
+{'images': 19, 'attempt_statuses': {'UNSUPPORTED_KMDF_CALLBACK_MODEL': 520, 'RETURNED_BEFORE_CALLSITE': 1646, 'BUGCHECK_PATH': 96, 'EMU_ERROR': 183}}

@@ -130,6 +130,7 @@ class WdfFlow(Flow):
                 # the shared thunk joins unrelated callers and fabricates a
                 # buffer/slot pairing that never coexisted in one caller.
                 targets = state.get('rax', UNKNOWN)
+                self.nonimage_call(ins, targets, state, function)
                 self.readonly_image_call(ins, targets, function)
                 self.finding(ins, targets, state, function)
                 indices = {index for kind, index in targets if kind == 'wdf_api' and index is not None}

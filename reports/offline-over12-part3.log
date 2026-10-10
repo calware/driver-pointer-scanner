@@ -1,0 +1,20 @@
+[1/19] rmcast.sys: 0 synthetic target entries
+[2/19] sbp2port.sys: 0 synthetic target entries
+[3/19] sdbus.sys: 0 synthetic target entries
+[4/19] SerCx.sys: 0 synthetic target entries
+[5/19] SerCx2.sys: 0 synthetic target entries
+[6/19] spaceport.sys: 0 synthetic target entries
+[7/19] srv2.sys: 0 synthetic target entries
+[8/19] srvnet.sys: 0 synthetic target entries
+[9/19] tdx.sys: 0 synthetic target entries
+[10/19] tsusbhub.sys: 0 synthetic target entries
+[11/19] tunnel.sys: 0 synthetic target entries
+[12/19] UcmCx.sys: 0 synthetic target entries
+[13/19] UcmUcsiCx.sys: 0 synthetic target entries
+[14/19] Ucx01000.sys: 0 synthetic target entries
+[15/19] udfs.sys: 0 synthetic target entries
+[16/19] usbccgp.sys: 0 synthetic target entries
+[17/19] usbcir.sys: 0 synthetic target entries
+[18/19] USBHUB3.SYS: 0 synthetic target entries
+[19/19] USBXHCI.SYS: 0 synthetic target entries
+{'images': 19, 'attempt_statuses': {'RETURNED_BEFORE_CALLSITE': 937, 'UNSUPPORTED_KMDF_CALLBACK_MODEL': 1048, 'EMU_ERROR': 232}}

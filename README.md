@@ -48,6 +48,9 @@ Requires Python 3.10+, pefile, Capstone 5, z3-solver, and Unicorn 2.x. Installed
 ```powershell
 Set-Location C:\Users\cal\Desktop\example-device-driver-scanner
 python -m pip install -r requirements.txt
+pwsh -NoProfile -File .\scan-thorough.ps1 -Path C:\path\to\driver.sys
+pwsh -NoProfile -File .\scan-thorough.ps1 -Path C:\path\to\driver.sys -Output .\reports\driver-thorough.json
+pwsh -NoProfile -File .\scan-thorough.ps1 -Path C:\path\to\driver-folder -Recursive -Output .\reports\folder-thorough.json
 python scanner.py path\driver.sys --census --output reports\one-driver.json
 python scanner.py path\driver.sys --engine fixedpoint --emulate-init --output reports\one-driver.json
 python scanner.py C:\Windows\System32\drivers --output reports\directory.json
@@ -57,25 +60,47 @@ python scanner.py path\driver.sys --offline-validate
 python scanner.py path\driver.sys --offline-validate --output reports\driver-offline.json
 ```
 
-`--output` is optional. Without it, `scanner.py` prints the complete JSON
-document to stdout, so PowerShell redirection and pipelines work normally.
-With `--output`, it writes the file and prints a short progress/summary line.
+`--output` is optional. Without it, `scanner.py` prints a compact console
+summary: concrete synthetic target-entry witnesses first, then counts of
+unverified leads. Use `--format json` for the complete JSON on stdout, or
+`--output path.json` to save it. `--output` also prints short progress lines.
+`scan-thorough.ps1` is the one-command thorough profile. It first runs the
+regression suite and all ten bundled `.sys` fixtures, then scans the given
+image(s) with both static engines, copied-image initialization, structural
+census, broad user-request analysis, and synthetic request replay. The fixture
+run is a scanner self-check; it does not change or inject anything into the
+target driver. Use `-SkipFixtureCheck` for repeated scans after a successful
+self-check. `-Output` saves full JSON; without it the target's compact evidence
+report goes to the console. `-Recursive` scans subdirectories of a folder.
+For a large installed-driver directory, the thorough profile can take a long
+time; individual images or small batches are easier to review.
 
 `--offline-validate` adds the broad Create/Read/Write/DeviceControl variant
 inventory and bounded **synthetic** Unicorn WDM request replay. For each
 prioritized callsite it records the seed request, executed instruction count,
-modeled and unmodeled imports, whether the callsite was hit, and whether the
-observed target equals an image-resident pointer. A partial Z3 path witness is
+modeled and unmodeled imports, whether execution transferred into the indirect
+target, the target address, a short executed trace, and whether the observed
+target equals an image-resident pointer. A partial Z3 path witness is
 used to seed IOCTL values where available. `offline_evidence_score` is a
 transparent 0–85 evidence ranking, not a probability of vulnerability or live
 user reachability; its components and model assumptions are in the JSON.
 The tiers are `STATIC_LEAD_ONLY`, `MODELED_PATH_EVIDENCE`, and
 `STRONG_SYNTHETIC_EVIDENCE`; the strongest tier requires a synthetic callsite
-hit. None is a live-system confirmation.
+hit. The explicit `TARGET_ENTERED` status is the concrete synthetic witness;
+scores alone are not a reachability claim. None is a live-system confirmation.
+The replay extracts IOCTL seeds from indexed code/handler tables when it can
+verify their index relation, in addition to direct comparisons. It preserves
+the PE's existing security cookie; replacing the cookie had caused artificial
+`int 0x29` failures on installed drivers. Reports separate target-entry
+witnesses, callsite-only hits, emulator blocks, and paths that returned before
+the selected site. They also show when a witness depends on an unmodeled import.
 KMDF callback replay is explicitly marked unsupported by this synthetic WDM
 engine, while KMDF static variants remain in the inventory. The site and
 instruction budgets are configurable with `--offline-max-sites` and
-`--offline-instruction-limit`. No installed driver is opened, loaded, or
+`--offline-instruction-limit`; root, flow, and path budgets have separate
+`--offline-init-budget`, `--offline-flow-budget`, and `--offline-path-budget`
+flags. `--flow-budget` controls the original narrower engine and does not cap
+the broad pass. No installed driver is opened, loaded, or
 modified by this stage.
 
 The independent structural census walks unwind-described functions and identifies additional writable-slot call sites without asserting IRP provenance. It is slower, especially on GPU drivers. `structural_callback_sites` are review leads, never complete pattern matches. Non-unwind-described leaf functions are not comprehensively surveyed. The dispatch tracer can decode bounded leaf/thunk targets when reached.
@@ -117,7 +142,7 @@ The final 522-image run (`installed-verified.json`) contains 9 screening candida
 
 ## Implementation
 
-`scanner.py` combines PE import/section/unwind/load-config parsing with bounded initialization and dispatch analyses. `init_flow.py` recovers dispatch assignments across branch joins and bulk `rep stosq` initialization. Optional `init_emulator.py` executes an image copy in Unicorn with synthetic kernel objects and modeled imports; no installed driver runs in the host kernel. `flow_engine.py` uses a terminating finite MAY dataflow over dispatch roots, recording joins and budgets. `wdf_probe.py` recovers some KMDF `EvtIoDeviceControl` registrations; `wdf_flow.py` follows recognized WDF request-input retrieval calls from those roots. WDF input-buffer provenance is distinguished from direct `IRP.AssociatedIrp.SystemBuffer` provenance.
+`scanner.py` combines PE import/section/unwind/load-config parsing with bounded initialization and dispatch analyses. `init_flow.py` recovers dispatch assignments across branch joins and bulk `rep stosq` initialization. When the whole-program initializer is incomplete, a bounded DriverEntry call-chain pass analyzes functions locally so early, complex callees cannot consume the entire budget before later dispatch assignments. Optional `init_emulator.py` executes an image copy in Unicorn with synthetic kernel objects and modeled imports; no installed driver runs in the host kernel. `flow_engine.py` uses a terminating finite MAY dataflow over dispatch roots, recording joins and budgets. `wdf_probe.py` recovers some KMDF `EvtIoDeviceControl` registrations; `wdf_flow.py` follows recognized WDF request-input retrieval calls from those roots. WDF input-buffer provenance is distinguished from direct `IRP.AssociatedIrp.SystemBuffer` provenance.
 
 The SMT layer checks supported CMP/TEST predicates over IOCTL values, lengths, selected buffer values and the SystemBuffer pointer. It models 32-bit IOCTL/length values consistently when extended to 64 bits. A witness requires nonempty input, a non-null SystemBuffer, and transfer method 0, 1 or 2. `SAT_PARTIAL_MODEL` means only those modeled predicates are satisfiable. It is not a runnable test case or proof that every guard, alias, allocation, caller check, or buffer content condition is satisfied. Unmodeled predicates remain unconstrained. Input byte relationships and overlapping memory reads are not modeled coherently enough for full symbolic execution.
 

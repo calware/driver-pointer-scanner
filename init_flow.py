@@ -1,9 +1,9 @@
 """Finite MAY analysis of DriverEntry writes to WDM dispatch table."""
 from __future__ import annotations
 
-from collections import defaultdict
-from capstone.x86 import X86_OP_MEM
-from flow_engine import Flow, value
+from collections import defaultdict, deque
+from capstone.x86 import X86_OP_MEM, X86_OP_IMM
+from flow_engine import Flow, value, join_state
 
 
 class InitFlow(Flow):
@@ -68,3 +68,77 @@ def analyze_initialization(image,budget=50000):
             'limitations':sorted(engine.limitations),
             'metrics':{'transfer_evaluations':engine.steps,'instruction_states':len(engine.states),
                        'functions':len(engine.code),'join_updates':engine.joins}}
+
+
+class LocalInitFlow(InitFlow):
+    """Analyze one initializer function, recording calls without descending.
+
+    This avoids spending the entire fixed-point budget in early callees before
+    a later MajorFunction assignment in the caller is reached.
+    """
+    def __init__(self, image, root, initial, budget):
+        super().__init__(image,budget)
+        self.root=root
+        self.initial=initial
+        self.outgoing=defaultdict(list)
+
+    def process(self,function,ins,state):
+        if ins.mnemonic=='call' and ins.operands and ins.operands[0].type==X86_OP_IMM:
+            target=ins.operands[0].imm
+            if self.im.executable(target) and self.instructions(target):
+                outgoing={key:val for key,val in state.items() if isinstance(key,str) and key!='rsp'}
+                outgoing['rsp']=value('stack')
+                self.outgoing[target].append((ins.address,outgoing))
+            self.continuation(function,ins,state)
+            return
+        super().process(function,ins,state)
+
+    def run(self):
+        self.enqueue(self.root,self.root,self.initial)
+        while self.queue and self.steps<self.budget:
+            key=self.queue.popleft();self.queued.remove(key)
+            self.steps+=1
+            self.process(key[0],self.code[key[0]][key[1]],self.states[key])
+        if self.queue:self.limitations.add('local_function_budget_exhausted')
+        return not self.queue
+
+
+def recover_registrations_local(image, max_functions=80, max_depth=4,
+                                budget_per_function=5000):
+    """DriverEntry call-chain MAY recovery with explicit registration sites."""
+    initial={'rcx':value('driver'),'rdx':value('registry'),'rsp':value('stack')}
+    queue=deque([(image.entry,initial,(image.entry,))])
+    seen={}
+    registrations=defaultdict(set);sites=defaultdict(set);chains=defaultdict(list)
+    functions=0;limits=set()
+    while queue and functions<max_functions:
+        root,state,chain=queue.popleft()
+        merged,changed=join_state(seen.get(root),state)
+        if not changed:continue
+        seen[root]=merged
+        engine=LocalInitFlow(image,root,merged,budget_per_function)
+        complete=engine.run();functions+=1
+        if not complete:limits.add('local_function_budget_exhausted')
+        for major,targets in engine.registrations.items():
+            for target in targets:
+                registrations[major].add(target)
+                sites[major].update(engine.registration_sites[major])
+                chains[(major,target)].append(chain)
+        if len(chain)>=max_depth:continue
+        for target,edges in engine.outgoing.items():
+            if target in chain:continue
+            for callsite,next_state in edges:
+                if any(k=='driver' for k,_ in next_state.get('rcx',())) or any(
+                    k=='driver' for k,_ in next_state.get('rdx',())) or any(
+                    k=='driver' for k,_ in next_state.get('r8',())):
+                    queue.append((target,next_state,chain+(target,)))
+    if queue:limits.add('local_call_chain_limit')
+    return {'dispatch_rvas_by_major':{str(k):[hex(x-image.base) for x in sorted(v)]
+                                      for k,v in registrations.items()},
+            'registration_sites':{str(k):[hex(x-image.base) for x in sorted(v)]
+                                  for k,v in sites.items()},
+            'call_chains':{f'{major}:{hex(target-image.base)}':
+                           [[hex(x-image.base) for x in chain] for chain in paths[:4]]
+                           for (major,target),paths in chains.items()},
+            'functions_analyzed':functions,'limitations':sorted(limits),
+            'analysis_model':'DriverEntry direct-call chain; function-local MAY flow; callees summarized as unknown'}

@@ -605,11 +605,58 @@ def scan(path, budget=12000, depth=5, census=False, census_function_rvas=None,
     except Exception as exc:
         return {'file':str(Path(path).resolve()),'classification':'ERROR','error':f'{type(exc).__name__}: {exc}'}
 
+def print_brief(document):
+    for row in document['results']:
+        name=Path(row['file']).name
+        validation=row.get('offline_validation')
+        witnessed=sum(any(a.get('status')=='TARGET_ENTERED' for a in s.get('attempts',[]))
+                      for s in validation.get('sites',[])) if validation else 0
+        print(f"{name}: {witnessed} SYNTHETIC_TARGET_ENTRY_WITNESSES" if validation else
+              f"{name}: {row['classification']}")
+        if row['classification']=='ERROR':
+            print(f"  error: {row.get('error')}")
+            continue
+        broad=row.get('user_interaction_analysis')
+        if not broad:
+            print('  Add --offline-validate for rooted user-request paths and synthetic call witnesses.')
+            continue
+        sites=broad.get('sites',[])
+        print(f"  rooted analysis: {broad['classification']}; original narrow variant: {row['classification']}")
+        selected=(validation or {}).get('sites',[])
+        witnesses=[]
+        for site in selected:
+            for attempt in site.get('attempts',[]):
+                if attempt.get('status')=='TARGET_ENTERED':
+                    witnesses.append((site,attempt))
+                    break
+        unique_calls=len({(s['function_rva'],s['call_rva']) for s in sites})
+        print(f"  rooted leads: {len(sites)} entry/site combinations at {unique_calls} unique callsites; "
+              f"emulated: {len(selected)}; target-entry witnesses: {len(witnesses)}")
+        for site,attempt in witnesses[:20]:
+            request=attempt['scenario']
+            detail=(f"IOCTL=0x{request['ioctl']:08x} input={request['input_length']}" if request['ioctl']
+                    else f"name={request['file_name']!r}" if request['file_name'] else request['name'])
+            print(f"  WITNESS {site['event']} {site['pointer_kind']} entry={site['dispatch_rva']} "
+                  f"call={site['call_rva']} target={attempt.get('actual_target_rva')} "
+                  f"storage={site.get('slot_rva') or site.get('field_chain') or 'unresolved'} {detail}")
+            print(f"    executed trace tail: {' -> '.join(attempt.get('trace_tail_rvas',[])[-6:])}")
+            if attempt.get('unmodeled_import_calls'):
+                print(f"    import assumptions: {', '.join(attempt['unmodeled_import_calls'])}")
+        if len(witnesses)>20:print(f"  ... {len(witnesses)-20} more witnesses in full JSON")
+        if not witnesses:print('  No concrete synthetic witness found; remaining leads are unverified, not negatives.')
+        if validation and validation.get('outcomes'):
+            print('  modeled outcomes: '+', '.join(f'{k}={v}' for k,v in validation['outcomes'].items()))
+        if len(sites)>len(selected):print(f"  {len(sites)-len(selected)} rooted leads were not emulated; raise --offline-max-sites for broader coverage.")
+        if validation and validation.get('status')=='ERROR':print(f"  validation error: {validation.get('error')}")
+    if any('offline_validation' in row for row in document['results']):
+        print('Synthetic witnesses exercise a copied image and modeled request; live user access remains unverified.')
+
 def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('paths',nargs='+',type=Path)
     p.add_argument('--recursive',action='store_true')
-    p.add_argument('--output',type=Path,help='Write JSON report to this file; omit to print JSON to stdout')
+    p.add_argument('--output',type=Path,help='Write full JSON report to this file')
+    p.add_argument('--format',choices=('brief','json'),default='brief',help='Console format when --output is omitted')
     p.add_argument('--budget',type=int,default=12000)
     p.add_argument('--depth',type=int,default=5)
     p.add_argument('--census',action='store_true',help='Survey all unwind-described functions for additional unanchored writable callback sites')
@@ -621,8 +668,15 @@ def main():
     p.add_argument('--offline-max-sites',type=int,default=12,
                    help='Maximum prioritized indirect-call sites to emulate per image')
     p.add_argument('--offline-instruction-limit',type=int,default=30000)
+    p.add_argument('--offline-init-budget',type=int,default=30000,
+                   help='Transfer budget for broad DriverEntry root recovery')
+    p.add_argument('--offline-flow-budget',type=int,default=30000,
+                   help='Transfer budget per recovered user-request root')
+    p.add_argument('--offline-path-budget',type=int,default=12000,
+                   help='Budget for partial path/IOCTL constraint evidence')
     a=p.parse_args()
-    if a.offline_max_sites<1 or a.offline_instruction_limit<1:
+    if min(a.offline_max_sites,a.offline_instruction_limit,a.offline_init_budget,
+           a.offline_flow_budget,a.offline_path_budget)<1:
         p.error('offline budgets must be positive')
     files=[]
     for path in a.paths:
@@ -635,24 +689,32 @@ def main():
             try:
                 from user_interaction_scan import analyze_one
                 from offline_validation import validate_row
-                broad=analyze_one(result,init_budget=min(a.flow_budget,30000),
-                                  flow_budget=min(a.flow_budget,30000))
+                broad=analyze_one(result,init_budget=a.offline_init_budget,
+                                  flow_budget=a.offline_flow_budget)
                 result['user_interaction_analysis']=broad
                 result['offline_validation']=validate_row(
                     broad,max_sites=a.offline_max_sites,
-                    instruction_limit=a.offline_instruction_limit)
+                    instruction_limit=a.offline_instruction_limit,
+                    path_budget=a.offline_path_budget)
             except Exception as exc:
                 result['offline_validation']={'status':'ERROR',
                     'error':f'{type(exc).__name__}: {exc}',
                     'no_live_reachability_claim':True}
         if a.output:
-            print(f"[{n}/{len(files)}] {path.name}: {result['classification']}",flush=True)
+            if a.offline_validate:
+                sites=result.get('offline_validation',{}).get('sites',[])
+                count=sum(any(x.get('status')=='TARGET_ENTERED' for x in s.get('attempts',[])) for s in sites)
+                print(f"[{n}/{len(files)}] {path.name}: {count} synthetic target-entry witnesses",flush=True)
+            else:
+                print(f"[{n}/{len(files)}] {path.name}: {result['classification']}",flush=True)
     document={'results':results,'summary':dict(collections.Counter(r['classification'] for r in results))}
     if a.output:
         a.output.parent.mkdir(parents=True,exist_ok=True)
         a.output.write_text(json.dumps(document,indent=2),encoding='utf-8')
         print(json.dumps(document['summary']))
-    else:
+    elif a.format=='json':
         print(json.dumps(document,indent=2))
+    else:
+        print_brief(document)
 
 if __name__=='__main__': main()

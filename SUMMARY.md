@@ -23,6 +23,31 @@ The section below preserves the earlier, narrower SystemBuffer-input run.
 
 ## Synthetic replay added after the installed-image inventory
 
+The current scanner preserves pointer provenance through `mov reg,[object+field]`
+and multi-hop field loads before a register-indirect call. Those are reported as
+object-field leads with the field chain and do not claim image ownership.
+Unicorn now verifies transfer into the indirect target and records the concrete
+synthetic request plus a short trace. `scanner.py` prints a compact witness-first
+console report by default; `--format json` and `--output` retain full details.
+On the installed `mmcss.sys`, the three named Create requests produce
+`TARGET_ENTERED` witnesses in the current report
+`reports/mmcss-concrete-witness.json`. This still does not prove a live
+user-mode handle or production Windows request path.
+
+The critical audit of the older 522-image report found 275 images without any
+recovered request root. `afd.sys` was one concrete miss: whole-program
+initialization exhausted its budget before a DriverEntry-reachable helper
+assigned the MajorFunction table. The new local call-chain recovery found its
+Create/Read/Write/DeviceIoControl roots. An indexed IOCTL code table then
+yielded code `0x12003`; synthetic replay entered the table-selected target at
+RVA `0x39160` from the DeviceIoControl root at `0x14cc0`, via callsite
+`0x14d8e`. The witness includes one unmodeled import assumption and is not a
+live handle/openability claim. See `reports/afd-concrete-witness.json`.
+Among the 48 formerly rootless installed images under 64 MiB that import a
+recognized `IoCreateDevice` variant, the new pass recovered WDM request roots
+in 11; see `reports/local-root-recovery-sample.json`. This is a targeted
+coverage audit, not a new 522-image classification tally or a precision claim.
+
 `scanner.py --offline-validate` now adds an offline Unicorn replay and evidence
 score. On the ten compiled fixtures, the four positive/helper builds and both
 read-only callback builds reached their expected local targets; the two

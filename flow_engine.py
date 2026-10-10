@@ -9,7 +9,7 @@ from capstone.x86 import X86_OP_REG, X86_OP_IMM, X86_OP_MEM
 
 UNKNOWN = frozenset({('unknown', None)})
 VOLATILE = ('rax', 'rcx', 'rdx', 'r8', 'r9', 'r10', 'r11')
-POINTERS = {'va', 'stack', 'irp', 'iostack', 'buffer', 'device', 'driver', 'registry', 'slot', 'readonly_slot', 'image_table_slot', 'import', 'guard', 'guard_check'}
+POINTERS = {'va', 'stack', 'irp', 'iostack', 'buffer', 'device', 'driver', 'registry', 'slot', 'readonly_slot', 'image_table_slot', 'import', 'guard', 'guard_check', 'object_field'}
 MAX_ALTERNATIVES = 8
 MAX_MEMORY = 128
 
@@ -107,7 +107,11 @@ class Flow:
                 if kind not in POINTERS | {'const'}:
                     out.append(UNKNOWN)
                 elif ikind == 'const' and index is not None and offset is not None:
-                    out.append(value(kind, offset + mem.disp + index * mem.scale))
+                    if kind == 'object_field':
+                        root, chain = offset
+                        out.append(value(kind, (root, chain + (mem.disp + index * mem.scale,))))
+                    else:
+                        out.append(value(kind, offset + mem.disp + index * mem.scale))
                 else:
                     out.append(value(kind, None))
         return join_values(*out) if out else UNKNOWN
@@ -139,6 +143,8 @@ class Flow:
                 fields = {0:'major', 8:'output_length', 0x10:'input_length', 0x18:'ioctl'}
                 out.append(value(fields[offset]) if offset in fields else UNKNOWN)
             elif kind == 'buffer': out.append(value('buffer_data', offset))
+            elif kind == 'object_field' and op.size == 8:
+                out.append(value('object_field', offset))
             elif kind == 'va':
                 if offset in self.im.guard_checks: out.append(value('guard_check', offset))
                 elif offset in self.im.guards: out.append(value('guard', offset))
@@ -150,7 +156,17 @@ class Flow:
                         out.append(value('va', ptr))
                         out.append(value('readonly_slot', offset))
                     else: out.append(UNKNOWN)
-            elif key not in state: out.append(UNKNOWN)
+            elif key not in state:
+                if op.size == 8 and kind in ('device','driver','irp','iostack','wdf_request','wdf_queue','unknown'):
+                    out.append(value('object_field', (kind, (offset,))))
+                else:
+                    out.append(UNKNOWN)
+        # An unresolved base can still carry a pointer loaded from a field.
+        # Keep the root explicitly unknown; it never becomes image-owned evidence.
+        if op.size == 8 and op.mem.base and not op.mem.index:
+            base_name = canonical(ins.reg_name(op.mem.base))
+            if base_name not in ('rip','rsp','rbp') and any(k == 'unknown' for k,_ in state.get(base_name,UNKNOWN)):
+                out.append(value('object_field', ('unknown:'+base_name, (op.mem.disp,))))
         # Unknown index relative switch-table loads, MSVC style.
         mem = op.mem
         if mem.index and mem.scale in (4, 8):
@@ -240,27 +256,24 @@ class Flow:
         root path, but the field's backing allocation and mutability are not
         established from the image alone.
         """
-        if not ins.operands or ins.operands[0].type != X86_OP_MEM:
+        if not ins.operands:
             return
         op = ins.operands[0]
-        base_name = ins.reg_name(op.mem.base) if op.mem.base else None
-        if not base_name or base_name in ('rip','rsp','rbp'):
+        chains = [offset for kind,offset in targets
+                  if kind == 'object_field' and isinstance(offset,tuple) and len(offset)==2]
+        if not chains:
             return
-        if any(kind in ('import','slot','readonly_slot','guard','guard_check','va','code_target','wdf_api')
-               for kind,_ in targets):
-            return
-        base = state.get(canonical(base_name), UNKNOWN)
-        if all(kind == 'stack' for kind,_ in base):
-            return
-        key = (ins.address, op.mem.disp)
-        self.nonimage_indirect[key] = {
+        for root, hops in chains:
+            key = (ins.address, root, hops)
+            self.nonimage_indirect[key] = {
             'dispatch_rva': hex(self.root-self.im.base),
             'function_rva': hex(function-self.im.base),
             'call_rva': hex(ins.address-self.im.base),
             'instruction': ins.mnemonic+' '+ins.op_str,
-            'base_register': canonical(base_name),
-            'field_displacement': op.mem.disp,
-            'base_provenance': [{'kind':kind,'offset':offset} for kind,offset in sorted(base,key=repr)],
+            'base_register': canonical(ins.reg_name(op.mem.base)) if op.type == X86_OP_MEM and op.mem.base else None,
+            'field_displacement': hops[-1],
+            'field_chain': list(hops),
+            'base_provenance': [{'kind':root,'offset':0}],
             'classification': 'NONIMAGE_INDIRECT_CALL_MUTABILITY_UNVERIFIED',
             'runtime_reachability': 'UNVERIFIED'}
 
@@ -393,6 +406,9 @@ class Flow:
                         # table is finite. Subsequent arithmetic must re-enter
                         # the widening domain rather than grow an exact set.
                         arithmetic_kind = 'va' if kind == 'code_target' else 'const' if kind == 'relative_target' else kind
+                        if kind == 'object_field':
+                            results.append(value(kind,x) if y == 0 and mnemonic in ('add','sub') else UNKNOWN)
+                            continue
                         if x is None or y is None or rkind!='const':
                             if kind=='relative_target' and rkind=='va' and x is not None and y is not None and mnemonic=='add': results.append(value('code_target',x+y))
                             else: results.append(value(arithmetic_kind,None) if arithmetic_kind in POINTERS|{'buffer_data'} else UNKNOWN)
@@ -447,7 +463,8 @@ class Flow:
 
     @staticmethod
     def shift(val, delta):
-        return frozenset((kind, offset+delta if offset is not None and delta is not None else None) for kind,offset in val)
+        return frozenset((kind, offset+delta if isinstance(offset,int) and delta is not None else None)
+                         for kind,offset in val)
 
     def run(self):
         self.enqueue(self.root,self.root,{'rcx':value('device'),'rdx':value('irp'),'rsp':value('stack')})

@@ -1,0 +1,716 @@
+{
+  "results": [
+    {
+      "schema_version": 3,
+      "file": "C:\\Windows\\System32\\drivers\\mmcss.sys",
+      "sha256": "ac39cd989946c2bb1f3d5619467b10fbc4395aa69988fed7f08e171da96363df",
+      "classification": "INCONCLUSIVE",
+      "classification_scope": "Only the bounded, modeled dispatch/callback graph; not a proof of driver-wide absence or user accessibility.",
+      "vulnerability_claim": false,
+      "user_openability": "UNCONFIRMED_REQUIRES_RUNTIME_AND_DEPLOYMENT_SECURITY",
+      "namespace_import_hints": [
+        "IoCreateDevice"
+      ],
+      "namespace_string_hints": [
+        "\\Device\\MMCSS",
+        "\\Device\\MMCSS\\TaskIndex",
+        "\\Device\\Ndis"
+      ],
+      "create_dispatch_rvas": [
+        "0xeac0"
+      ],
+      "device_control_dispatch_rvas": [],
+      "findings": [],
+      "unproven_writable_indirect_calls": [],
+      "path_refined_writable_indirect_calls": [],
+      "limitations": [
+        "call_depth_or_recursion_limit",
+        "device_control_dispatch_not_resolved",
+        "instruction_state_budget_exhausted",
+        "per_instruction_state_limit"
+      ],
+      "initialization_limitations": [
+        "call_depth_or_recursion_limit",
+        "instruction_state_budget_exhausted",
+        "per_instruction_state_limit"
+      ],
+      "initialization_states_processed": 12005,
+      "dispatch_root_provenance": {
+        "abstract_initialization_rvas": [],
+        "synthetic_execution_rvas": [],
+        "fixed_point_initialization_rvas": []
+      },
+      "synthetic_initialization": null,
+      "fixed_point_initialization": {
+        "analysis_model": "DriverEntry fixed-point MAY registration analysis; branches joined",
+        "coverage": {
+          "status": "FIXED_POINT_COMPLETE",
+          "complete": true
+        },
+        "dispatch_rvas_by_major": {
+          "0": [
+            "0xeac0"
+          ],
+          "18": [
+            "0xe470"
+          ],
+          "2": [
+            "0xe8e0"
+          ]
+        },
+        "device_control_dispatch_rvas": [],
+        "create_dispatch_rvas": [
+          "0xeac0"
+        ],
+        "registration_sites": {
+          "0": [
+            "0xf8cd"
+          ],
+          "18": [
+            "0xf8db"
+          ],
+          "2": [
+            "0xf8e9"
+          ]
+        },
+        "limitations": [
+          "external_call_memory_effects_unmodeled",
+          "global_write_alias_effects_unmodeled",
+          "helper_memory_effects_not_propagated",
+          "imprecise_memory_read",
+          "memory_cells_widened",
+          "partial_register_write",
+          "pointer_truncation",
+          "rep_memory_effects_overapproximated",
+          "unmodeled_instruction_effects",
+          "unresolved_indirect_call",
+          "unresolved_memory_write"
+        ],
+        "metrics": {
+          "transfer_evaluations": 23860,
+          "instruction_states": 2366,
+          "functions": 47,
+          "join_updates": 21413
+        }
+      },
+      "fixed_point_analysis": {
+        "analysis_model": "dispatch-rooted finite fixed-point MAY dataflow; predicates discarded",
+        "coverage": {
+          "status": "INCOMPLETE",
+          "complete": false,
+          "dispatch_roots_total": 0,
+          "dispatch_roots_completed": 0,
+          "semantic_coverage_complete": false
+        },
+        "findings": [],
+        "unproven_writable_indirect_calls": [],
+        "nonimage_indirect_call_leads": [],
+        "read_only_image_pointer_calls": [],
+        "limitations": [
+          "device_control_dispatch_not_resolved"
+        ],
+        "metrics": {
+          "transfer_evaluations": 0,
+          "join_updates": 0,
+          "branch_joins": 0,
+          "instruction_states": 0,
+          "functions": 0,
+          "max_queue": 0
+        },
+        "predicates": "DISCARDED_AT_JOINS_NOT_RUNTIME_CONFIRMED"
+      },
+      "wdf_callback_registration": null,
+      "wdf_callback_analysis": null,
+      "analysis_engine": "fixedpoint",
+      "analysis_model": "x64 WDM offsets; abstract initialization, optional synthetic Unicorn path, bounded legacy or finite MAY dispatch analysis",
+      "user_interaction_analysis": {
+        "file": "C:\\Windows\\System32\\drivers\\mmcss.sys",
+        "sha256": "ac39cd989946c2bb1f3d5619467b10fbc4395aa69988fed7f08e171da96363df",
+        "entry_roots": {
+          "CreateFile": [
+            "0xeac0"
+          ],
+          "ReadFile": [],
+          "WriteFile": [],
+          "DeviceIoControl": []
+        },
+        "sites": [
+          {
+            "event": "CreateFile",
+            "entry_model": "WDM",
+            "pointer_kind": "WRITABLE_IMAGE_SLOT",
+            "dispatch_rva": "0xeac0",
+            "function_rva": "0x47d4",
+            "call_rva": "0x4842",
+            "slot_rva": "0x90f8",
+            "section": ".data",
+            "initial_target_rva": null,
+            "instruction": "call 0x140005120",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": null,
+            "field_chain": null,
+            "base_provenance": null,
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "CreateFile",
+            "entry_model": "WDM",
+            "pointer_kind": "WRITABLE_IMAGE_SLOT",
+            "dispatch_rva": "0xeac0",
+            "function_rva": "0x4620",
+            "call_rva": "0x463d",
+            "slot_rva": "0x90f8",
+            "section": ".data",
+            "initial_target_rva": null,
+            "instruction": "call 0x140005120",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": null,
+            "field_chain": null,
+            "base_provenance": null,
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "CreateFile",
+            "entry_model": "WDM",
+            "pointer_kind": "WRITABLE_IMAGE_SLOT",
+            "dispatch_rva": "0xeac0",
+            "function_rva": "0x49a4",
+            "call_rva": "0x49e9",
+            "slot_rva": "0x90f8",
+            "section": ".data",
+            "initial_target_rva": null,
+            "instruction": "call 0x140005120",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": null,
+            "field_chain": null,
+            "base_provenance": null,
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "CreateFile",
+            "entry_model": "WDM",
+            "pointer_kind": "WRITABLE_IMAGE_SLOT",
+            "dispatch_rva": "0xeac0",
+            "function_rva": "0x4960",
+            "call_rva": "0x4990",
+            "slot_rva": "0x90f8",
+            "section": ".data",
+            "initial_target_rva": null,
+            "instruction": "call 0x140005120",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": null,
+            "field_chain": null,
+            "base_provenance": null,
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "CreateFile",
+            "entry_model": "WDM",
+            "pointer_kind": "WRITABLE_IMAGE_SLOT",
+            "dispatch_rva": "0xeac0",
+            "function_rva": "0x49fc",
+            "call_rva": "0x4a34",
+            "slot_rva": "0x90f8",
+            "section": ".data",
+            "initial_target_rva": null,
+            "instruction": "call 0x140005120",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": null,
+            "field_chain": null,
+            "base_provenance": null,
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "CreateFile",
+            "entry_model": "WDM",
+            "pointer_kind": "WRITABLE_IMAGE_SLOT",
+            "dispatch_rva": "0xeac0",
+            "function_rva": "0x4750",
+            "call_rva": "0x47c2",
+            "slot_rva": "0x90f8",
+            "section": ".data",
+            "initial_target_rva": null,
+            "instruction": "call 0x140005120",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": null,
+            "field_chain": null,
+            "base_provenance": null,
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "CreateFile",
+            "entry_model": "WDM",
+            "pointer_kind": "WRITABLE_IMAGE_SLOT",
+            "dispatch_rva": "0xeac0",
+            "function_rva": "0x4d48",
+            "call_rva": "0x4d90",
+            "slot_rva": "0x90f8",
+            "section": ".data",
+            "initial_target_rva": null,
+            "instruction": "call 0x140005120",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": null,
+            "field_chain": null,
+            "base_provenance": null,
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "CreateFile",
+            "entry_model": "WDM",
+            "pointer_kind": "READ_ONLY_IMAGE_POINTER",
+            "dispatch_rva": "0xeac0",
+            "function_rva": "0xeac0",
+            "call_rva": "0xeb1f",
+            "slot_rva": "0x8700",
+            "section": ".rdata",
+            "initial_target_rva": "0xd7e0",
+            "instruction": "call 0x140005120",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": null,
+            "field_chain": null,
+            "base_provenance": null,
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "CreateFile",
+            "entry_model": "WDM",
+            "pointer_kind": "READ_ONLY_IMAGE_POINTER",
+            "dispatch_rva": "0xeac0",
+            "function_rva": "0xeac0",
+            "call_rva": "0xeb1f",
+            "slot_rva": "0x8718",
+            "section": ".rdata",
+            "initial_target_rva": "0xc240",
+            "instruction": "call 0x140005120",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": null,
+            "field_chain": null,
+            "base_provenance": null,
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "CreateFile",
+            "entry_model": "WDM",
+            "pointer_kind": "READ_ONLY_IMAGE_POINTER",
+            "dispatch_rva": "0xeac0",
+            "function_rva": "0xeac0",
+            "call_rva": "0xeb1f",
+            "slot_rva": "0x8730",
+            "section": ".rdata",
+            "initial_target_rva": "0xd400",
+            "instruction": "call 0x140005120",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": null,
+            "field_chain": null,
+            "base_provenance": null,
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          }
+        ],
+        "entry_coverage": {
+          "CreateFile": {
+            "status": "FIXED_POINT_COMPLETE",
+            "complete": true,
+            "dispatch_roots_total": 1,
+            "dispatch_roots_completed": 1,
+            "semantic_coverage_complete": false
+          },
+          "ReadFile": {
+            "status": "ROOT_NOT_RESOLVED",
+            "complete": false
+          },
+          "WriteFile": {
+            "status": "ROOT_NOT_RESOLVED",
+            "complete": false
+          },
+          "DeviceIoControl": {
+            "status": "ROOT_NOT_RESOLVED",
+            "complete": false
+          }
+        },
+        "limitations": [
+          "CreateFile:external_call_memory_effects_unmodeled",
+          "CreateFile:global_write_alias_effects_unmodeled",
+          "CreateFile:helper_memory_effects_not_propagated",
+          "CreateFile:imprecise_memory_read",
+          "CreateFile:partial_register_write",
+          "CreateFile:pointer_truncation",
+          "CreateFile:rep_memory_effects_overapproximated",
+          "CreateFile:unmodeled_instruction_effects",
+          "CreateFile:unresolved_indirect_call",
+          "CreateFile:unresolved_memory_write",
+          "abstract_init:call_depth_or_recursion_limit",
+          "abstract_init:instruction_state_budget_exhausted",
+          "abstract_init:per_instruction_state_limit",
+          "fixed_init:external_call_memory_effects_unmodeled",
+          "fixed_init:global_write_alias_effects_unmodeled",
+          "fixed_init:helper_memory_effects_not_propagated",
+          "fixed_init:imprecise_memory_read",
+          "fixed_init:memory_cells_widened",
+          "fixed_init:partial_register_write",
+          "fixed_init:pointer_truncation",
+          "fixed_init:rep_memory_effects_overapproximated",
+          "fixed_init:unmodeled_instruction_effects",
+          "fixed_init:unresolved_indirect_call",
+          "fixed_init:unresolved_memory_write"
+        ],
+        "runtime_reachability": "UNVERIFIED",
+        "user_handle_access": "UNVERIFIED",
+        "abstract_init_steps": 12005,
+        "wdm_initialization_coverage": {
+          "status": "FIXED_POINT_COMPLETE",
+          "complete": true
+        },
+        "classification": "ROOTED_IMAGE_POINTER_CALL_LEAD",
+        "scope": "A resolved entry and a fixed-point MAY path do not prove a user-visible device, request success, path feasibility, or execution on this machine. Object-field leads do not establish that the field belongs to this image."
+      },
+      "offline_validation": {
+        "schema_version": 1,
+        "engine": "Unicorn synthetic WDM request replay",
+        "image_sha256": "ac39cd989946c2bb1f3d5619467b10fbc4395aa69988fed7f08e171da96363df",
+        "sites_total": 10,
+        "sites_selected": 3,
+        "site_limit": 3,
+        "sites": [
+          {
+            "event": "CreateFile",
+            "entry_model": "WDM",
+            "pointer_kind": "READ_ONLY_IMAGE_POINTER",
+            "dispatch_rva": "0xeac0",
+            "call_rva": "0xeb1f",
+            "slot_rva": "0x8700",
+            "field_chain": null,
+            "input_buffer_variant_candidate": false,
+            "path_evidence": null,
+            "attempts": [
+              {
+                "scenario": {
+                  "name": "matching_name",
+                  "file_name": "\\MmThread",
+                  "ioctl": 0,
+                  "input_length": 0,
+                  "output_length": 0
+                },
+                "status": "TARGET_ENTERED",
+                "instructions": 31,
+                "modeled_import_calls": {
+                  "RtlCompareUnicodeString": 1
+                },
+                "unmodeled_import_calls": {},
+                "synthetic_request": true,
+                "actual_target_rva": "0xd7e0",
+                "actual_target_in_image": true,
+                "slot_rva": "0x8700",
+                "observed_storage_address": null,
+                "observed_storage_region": "UNRESOLVED_OR_REGISTER",
+                "target_matches_image_pointer": true,
+                "concrete_call_witness": {
+                  "entry_rva": "0xeac0",
+                  "event": "CreateFile",
+                  "request": {
+                    "name": "matching_name",
+                    "file_name": "\\MmThread",
+                    "ioctl": 0,
+                    "input_length": 0,
+                    "output_length": 0
+                  },
+                  "call_rva": "0xeb1f",
+                  "target_rva": "0xd7e0",
+                  "pointer_kind": "READ_ONLY_IMAGE_POINTER",
+                  "input_pattern": "byte[i] = i & 0xff",
+                  "input_prefix_hex": "",
+                  "storage_address": null
+                },
+                "target_entered": true,
+                "trace_tail_rvas": [
+                  "0xeac0",
+                  "0xeac5",
+                  "0xeaca",
+                  "0xeacb",
+                  "0xeacc",
+                  "0xeace",
+                  "0xead2",
+                  "0xead9",
+                  "0xeae0",
+                  "0xeae3",
+                  "0xeae8",
+                  "0xeaea",
+                  "0xeaee",
+                  "0xeaf1",
+                  "0xeaf3",
+                  "0xeaf7",
+                  "0xeafa",
+                  "0xeafe",
+                  "0xeb01",
+                  "0xeb05",
+                  "0xeb0c",
+                  "0xeb11",
+                  "0xeb13",
+                  "0xeb15",
+                  "0xeb19",
+                  "0xeb1c",
+                  "0xeb1f",
+                  "0x5120",
+                  "0xd7e0"
+                ]
+              }
+            ],
+            "validation_outcome": "SYNTHETIC_TARGET_ENTERED",
+            "offline_evidence_score": {
+              "value": 85,
+              "tier": "STRONG_SYNTHETIC_EVIDENCE",
+              "scale": "0-85 OFFLINE_EVIDENCE_ONLY",
+              "components": {
+                "rooted_may_flow": 15,
+                "storage_evidence": 20,
+                "initial_local_target": 10,
+                "synthetic_callsite_hit": 20,
+                "synthetic_target_entered": 10,
+                "synthetic_target_match": 10
+              },
+              "not_a_probability": true,
+              "live_user_openability": "UNVERIFIED",
+              "interpretation": "Ranking evidence within the synthetic/static model; not a vulnerability or live-reachability probability."
+            }
+          },
+          {
+            "event": "CreateFile",
+            "entry_model": "WDM",
+            "pointer_kind": "READ_ONLY_IMAGE_POINTER",
+            "dispatch_rva": "0xeac0",
+            "call_rva": "0xeb1f",
+            "slot_rva": "0x8718",
+            "field_chain": null,
+            "input_buffer_variant_candidate": false,
+            "path_evidence": null,
+            "attempts": [
+              {
+                "scenario": {
+                  "name": "matching_name",
+                  "file_name": "\\Notification",
+                  "ioctl": 0,
+                  "input_length": 0,
+                  "output_length": 0
+                },
+                "status": "TARGET_ENTERED",
+                "instructions": 45,
+                "modeled_import_calls": {
+                  "RtlCompareUnicodeString": 2
+                },
+                "unmodeled_import_calls": {},
+                "synthetic_request": true,
+                "actual_target_rva": "0xc240",
+                "actual_target_in_image": true,
+                "slot_rva": "0x8718",
+                "observed_storage_address": null,
+                "observed_storage_region": "UNRESOLVED_OR_REGISTER",
+                "target_matches_image_pointer": true,
+                "concrete_call_witness": {
+                  "entry_rva": "0xeac0",
+                  "event": "CreateFile",
+                  "request": {
+                    "name": "matching_name",
+                    "file_name": "\\Notification",
+                    "ioctl": 0,
+                    "input_length": 0,
+                    "output_length": 0
+                  },
+                  "call_rva": "0xeb1f",
+                  "target_rva": "0xc240",
+                  "pointer_kind": "READ_ONLY_IMAGE_POINTER",
+                  "input_pattern": "byte[i] = i & 0xff",
+                  "input_prefix_hex": "",
+                  "storage_address": null
+                },
+                "target_entered": true,
+                "trace_tail_rvas": [
+                  "0xeae8",
+                  "0xeaea",
+                  "0xeaee",
+                  "0xeaf1",
+                  "0xeaf3",
+                  "0xeaf7",
+                  "0xeafa",
+                  "0xeafe",
+                  "0xeb01",
+                  "0xeb05",
+                  "0xeb0c",
+                  "0xeb11",
+                  "0xeb13",
+                  "0xeb3d",
+                  "0xeb3f",
+                  "0xeaee",
+                  "0xeaf1",
+                  "0xeaf3",
+                  "0xeaf7",
+                  "0xeafa",
+                  "0xeafe",
+                  "0xeb01",
+                  "0xeb05",
+                  "0xeb0c",
+                  "0xeb11",
+                  "0xeb13",
+                  "0xeb15",
+                  "0xeb19",
+                  "0xeb1c",
+                  "0xeb1f",
+                  "0x5120",
+                  "0xc240"
+                ]
+              }
+            ],
+            "validation_outcome": "SYNTHETIC_TARGET_ENTERED",
+            "offline_evidence_score": {
+              "value": 85,
+              "tier": "STRONG_SYNTHETIC_EVIDENCE",
+              "scale": "0-85 OFFLINE_EVIDENCE_ONLY",
+              "components": {
+                "rooted_may_flow": 15,
+                "storage_evidence": 20,
+                "initial_local_target": 10,
+                "synthetic_callsite_hit": 20,
+                "synthetic_target_entered": 10,
+                "synthetic_target_match": 10
+              },
+              "not_a_probability": true,
+              "live_user_openability": "UNVERIFIED",
+              "interpretation": "Ranking evidence within the synthetic/static model; not a vulnerability or live-reachability probability."
+            }
+          },
+          {
+            "event": "CreateFile",
+            "entry_model": "WDM",
+            "pointer_kind": "READ_ONLY_IMAGE_POINTER",
+            "dispatch_rva": "0xeac0",
+            "call_rva": "0xeb1f",
+            "slot_rva": "0x8730",
+            "field_chain": null,
+            "input_buffer_variant_candidate": false,
+            "path_evidence": null,
+            "attempts": [
+              {
+                "scenario": {
+                  "name": "matching_name",
+                  "file_name": "\\TaskIndex",
+                  "ioctl": 0,
+                  "input_length": 0,
+                  "output_length": 0
+                },
+                "status": "TARGET_ENTERED",
+                "instructions": 59,
+                "modeled_import_calls": {
+                  "RtlCompareUnicodeString": 3
+                },
+                "unmodeled_import_calls": {},
+                "synthetic_request": true,
+                "actual_target_rva": "0xd400",
+                "actual_target_in_image": true,
+                "slot_rva": "0x8730",
+                "observed_storage_address": null,
+                "observed_storage_region": "UNRESOLVED_OR_REGISTER",
+                "target_matches_image_pointer": true,
+                "concrete_call_witness": {
+                  "entry_rva": "0xeac0",
+                  "event": "CreateFile",
+                  "request": {
+                    "name": "matching_name",
+                    "file_name": "\\TaskIndex",
+                    "ioctl": 0,
+                    "input_length": 0,
+                    "output_length": 0
+                  },
+                  "call_rva": "0xeb1f",
+                  "target_rva": "0xd400",
+                  "pointer_kind": "READ_ONLY_IMAGE_POINTER",
+                  "input_pattern": "byte[i] = i & 0xff",
+                  "input_prefix_hex": "",
+                  "storage_address": null
+                },
+                "target_entered": true,
+                "trace_tail_rvas": [
+                  "0xeb3d",
+                  "0xeb3f",
+                  "0xeaee",
+                  "0xeaf1",
+                  "0xeaf3",
+                  "0xeaf7",
+                  "0xeafa",
+                  "0xeafe",
+                  "0xeb01",
+                  "0xeb05",
+                  "0xeb0c",
+                  "0xeb11",
+                  "0xeb13",
+                  "0xeb3d",
+                  "0xeb3f",
+                  "0xeaee",
+                  "0xeaf1",
+                  "0xeaf3",
+                  "0xeaf7",
+                  "0xeafa",
+                  "0xeafe",
+                  "0xeb01",
+                  "0xeb05",
+                  "0xeb0c",
+                  "0xeb11",
+                  "0xeb13",
+                  "0xeb15",
+                  "0xeb19",
+                  "0xeb1c",
+                  "0xeb1f",
+                  "0x5120",
+                  "0xd400"
+                ]
+              }
+            ],
+            "validation_outcome": "SYNTHETIC_TARGET_ENTERED",
+            "offline_evidence_score": {
+              "value": 85,
+              "tier": "STRONG_SYNTHETIC_EVIDENCE",
+              "scale": "0-85 OFFLINE_EVIDENCE_ONLY",
+              "components": {
+                "rooted_may_flow": 15,
+                "storage_evidence": 20,
+                "initial_local_target": 10,
+                "synthetic_callsite_hit": 20,
+                "synthetic_target_entered": 10,
+                "synthetic_target_match": 10
+              },
+              "not_a_probability": true,
+              "live_user_openability": "UNVERIFIED",
+              "interpretation": "Ranking evidence within the synthetic/static model; not a vulnerability or live-reachability probability."
+            }
+          }
+        ],
+        "outcomes": {
+          "SYNTHETIC_TARGET_ENTERED": 3
+        },
+        "installed_image_unchanged": true,
+        "evidence_scope": "Synthetic model only. No live device, OS I/O manager, real KMDF queue, handle ACL, or user request was exercised.",
+        "no_live_reachability_claim": true
+      }
+    }
+  ],
+  "summary": {
+    "INCONCLUSIVE": 1
+  }
+}

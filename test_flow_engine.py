@@ -7,6 +7,7 @@ from types import SimpleNamespace
 
 from scanner import Image, Analyzer
 from flow_engine import analyze_dispatch, join_values, join_state, value, UNKNOWN
+from init_flow import recover_registrations_local
 
 ROOT = Path(__file__).resolve().parent
 
@@ -40,6 +41,29 @@ class FlowTests(unittest.TestCase):
         merged,_=join_state({'rcx':value('buffer')},{'rax':value('const',1)})
         self.assertIn(('buffer',0),merged['rcx'])
         self.assertIn(('unknown',None),merged['rcx'])
+
+    def test_local_registration_survives_early_helper_call(self):
+        # DriverEntry calls an unrelated helper before registering an IOCTL root.
+        root=bytes.fromhex('488bd9')
+        root+=b'\xe8'+struct.pack('<i',0x1100-(0x1000+len(root)+5))
+        root+=bytes.fromhex('488bcb')
+        root+=b'\xe8'+struct.pack('<i',0x1200-(0x1000+len(root)+5))+b'\xc3'
+        helper=b'\xc3'
+        writer=b'\x48\x8d\x05'+struct.pack('<i',0x1300-0x1207)
+        writer+=bytes.fromhex('488981e0000000c3')
+        image=self.fake({0x1000:root,0x1100:helper,0x1200:writer,0x1300:b'\xc3'})
+        image.entry=image.base+0x1000
+        recovered=recover_registrations_local(image)
+        self.assertEqual(recovered['dispatch_rvas_by_major']['14'],['0x1300'])
+        self.assertEqual(recovered['call_chains']['14:0x1300'][0],['0x1000','0x1200'])
+
+    @unittest.skipUnless(Path(r'C:\Windows\System32\drivers\afd.sys').exists(),'afd.sys absent')
+    def test_installed_afd_local_registration_read_only(self):
+        path=Path(r'C:\Windows\System32\drivers\afd.sys')
+        before=hashlib.sha256(path.read_bytes()).digest()
+        recovered=recover_registrations_local(Image(path))
+        self.assertTrue(recovered['dispatch_rvas_by_major'].get('14'))
+        self.assertEqual(before,hashlib.sha256(path.read_bytes()).digest())
 
     def test_loop_converges_without_losing_positive(self):
         # buffer in RCX; growing EBX loop; unknown branch eventually reaches slot.
@@ -109,6 +133,22 @@ class FlowTests(unittest.TestCase):
         self.assertEqual(lead['field_displacement'],0x20)
         self.assertEqual(lead['base_provenance'][0]['kind'],'device')
         self.assertEqual(lead['classification'],'NONIMAGE_INDIRECT_CALL_MUTABILITY_UNVERIFIED')
+
+    def test_loaded_object_field_then_register_call(self):
+        # mov rax,[rcx+20]; call rax; ret
+        image=self.fake({0x1000:bytes.fromhex('488b4120ffd0c3')})
+        result=analyze_dispatch(image,[image.base+0x1000])
+        self.assertEqual(len(result['nonimage_indirect_call_leads']),1,result)
+        lead=result['nonimage_indirect_call_leads'][0]
+        self.assertEqual(lead['field_chain'],[0x20])
+        self.assertEqual(lead['call_rva'],'0x1004')
+
+    def test_two_hop_object_field_then_register_call(self):
+        # mov rax,[rcx+40]; mov rax,[rax+20]; call rax; ret
+        image=self.fake({0x1000:bytes.fromhex('488b4140488b4020ffd0c3')})
+        result=analyze_dispatch(image,[image.base+0x1000])
+        self.assertEqual(len(result['nonimage_indirect_call_leads']),1,result)
+        self.assertEqual(result['nonimage_indirect_call_leads'][0]['field_chain'],[0x40,0x20])
 
     def test_read_only_image_pointer_call_is_reported_separately(self):
         image=self.fake({0x1000:self.slot_call(slot_rva=0x3100)})

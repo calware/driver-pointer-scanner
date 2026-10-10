@@ -1,0 +1,3963 @@
+{
+  "results": [
+    {
+      "schema_version": 3,
+      "file": "C:\\Windows\\System32\\drivers\\afd.sys",
+      "sha256": "c6da5fb094ecbe65e9a2ab7a2efb08e67bf8e1e91542fab44683597ce24492a1",
+      "classification": "INCONCLUSIVE",
+      "classification_scope": "Only the bounded, modeled dispatch/callback graph; not a proof of driver-wide absence or user accessibility.",
+      "vulnerability_claim": false,
+      "user_openability": "UNCONFIRMED_REQUIRES_RUNTIME_AND_DEPLOYMENT_SECURITY",
+      "namespace_import_hints": [
+        "IoCreateDevice"
+      ],
+      "namespace_string_hints": [
+        "\\Device\\Afd",
+        "\\Device\\BTHMS_RFCOMM",
+        "\\Device\\IrDA",
+        "\\Device\\Pgm",
+        "\\Device\\RawIp",
+        "\\Device\\RawIp6",
+        "\\Device\\Tcp",
+        "\\Device\\Tcp6",
+        "\\Device\\Udp",
+        "\\Device\\Udp6"
+      ],
+      "create_dispatch_rvas": [],
+      "device_control_dispatch_rvas": [],
+      "findings": [],
+      "unproven_writable_indirect_calls": [],
+      "path_refined_writable_indirect_calls": [],
+      "limitations": [
+        "call_depth_or_recursion_limit",
+        "device_control_dispatch_not_resolved",
+        "instruction_state_budget_exhausted",
+        "per_instruction_state_limit"
+      ],
+      "initialization_limitations": [
+        "call_depth_or_recursion_limit",
+        "instruction_state_budget_exhausted",
+        "per_instruction_state_limit"
+      ],
+      "initialization_states_processed": 12005,
+      "dispatch_root_provenance": {
+        "abstract_initialization_rvas": [],
+        "synthetic_execution_rvas": [],
+        "fixed_point_initialization_rvas": []
+      },
+      "synthetic_initialization": null,
+      "fixed_point_initialization": {
+        "analysis_model": "DriverEntry fixed-point MAY registration analysis; branches joined",
+        "coverage": {
+          "status": "INCOMPLETE",
+          "complete": false
+        },
+        "dispatch_rvas_by_major": {},
+        "device_control_dispatch_rvas": [],
+        "create_dispatch_rvas": [],
+        "registration_sites": {},
+        "limitations": [
+          "callback_slot_address_widened",
+          "external_call_memory_effects_unmodeled",
+          "fixed_point_budget_exhausted",
+          "global_write_alias_effects_unmodeled",
+          "helper_memory_effects_not_propagated",
+          "imprecise_memory_read",
+          "memory_cells_widened",
+          "partial_register_write",
+          "pointer_truncation",
+          "rep_memory_effects_overapproximated",
+          "unmodeled_instruction_effects",
+          "unresolved_indirect_call",
+          "unresolved_memory_write"
+        ],
+        "metrics": {
+          "transfer_evaluations": 30000,
+          "instruction_states": 3427,
+          "functions": 70,
+          "join_updates": 26711
+        }
+      },
+      "fixed_point_analysis": {
+        "analysis_model": "dispatch-rooted finite fixed-point MAY dataflow; predicates discarded",
+        "coverage": {
+          "status": "INCOMPLETE",
+          "complete": false,
+          "dispatch_roots_total": 0,
+          "dispatch_roots_completed": 0,
+          "semantic_coverage_complete": false
+        },
+        "findings": [],
+        "unproven_writable_indirect_calls": [],
+        "nonimage_indirect_call_leads": [],
+        "read_only_image_pointer_calls": [],
+        "limitations": [
+          "device_control_dispatch_not_resolved"
+        ],
+        "metrics": {
+          "transfer_evaluations": 0,
+          "join_updates": 0,
+          "branch_joins": 0,
+          "instruction_states": 0,
+          "functions": 0,
+          "max_queue": 0
+        },
+        "predicates": "DISCARDED_AT_JOINS_NOT_RUNTIME_CONFIRMED"
+      },
+      "wdf_callback_registration": null,
+      "wdf_callback_analysis": null,
+      "analysis_engine": "fixedpoint",
+      "analysis_model": "x64 WDM offsets; abstract initialization, optional synthetic Unicorn path, bounded legacy or finite MAY dispatch analysis",
+      "user_interaction_analysis": {
+        "file": "C:\\Windows\\System32\\drivers\\afd.sys",
+        "sha256": "c6da5fb094ecbe65e9a2ab7a2efb08e67bf8e1e91542fab44683597ce24492a1",
+        "entry_roots": {
+          "CreateFile": [
+            "0x176c0"
+          ],
+          "ReadFile": [
+            "0x176c0"
+          ],
+          "WriteFile": [
+            "0x176c0"
+          ],
+          "DeviceIoControl": [
+            "0x14cc0",
+            "0x176c0"
+          ]
+        },
+        "sites": [
+          {
+            "event": "CreateFile",
+            "entry_model": "WDM",
+            "pointer_kind": "WRITABLE_IMAGE_SLOT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x431a8",
+            "call_rva": "0x431d8",
+            "slot_rva": "0x845d0",
+            "section": ".data",
+            "initial_target_rva": null,
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": null,
+            "field_chain": null,
+            "base_provenance": null,
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "CreateFile",
+            "entry_model": "WDM",
+            "pointer_kind": "WRITABLE_IMAGE_SLOT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x5f930",
+            "call_rva": "0x5fa73",
+            "slot_rva": "0x84bb8",
+            "section": ".data",
+            "initial_target_rva": null,
+            "instruction": "call qword ptr [rip + 0x2b836]",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": null,
+            "field_chain": null,
+            "base_provenance": null,
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "CreateFile",
+            "entry_model": "WDM",
+            "pointer_kind": "IMAGE_POINTER_TABLE",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x3fc90",
+            "call_rva": "0x3fcbe",
+            "slot_rva": "0x78850",
+            "section": ".rdata",
+            "initial_target_rva": "0x5f930",
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": null,
+            "field_chain": null,
+            "base_provenance": null,
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "CreateFile",
+            "entry_model": "WDM",
+            "pointer_kind": "IMAGE_POINTER_TABLE",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x14cc0",
+            "call_rva": "0x14d8e",
+            "slot_rva": "0x78430",
+            "section": ".rdata",
+            "initial_target_rva": "0x39160",
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": null,
+            "field_chain": null,
+            "base_provenance": null,
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "CreateFile",
+            "entry_model": "WDM",
+            "pointer_kind": "OBJECT_FIELD_INDIRECT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x62c70",
+            "call_rva": "0x62c80",
+            "slot_rva": null,
+            "section": null,
+            "initial_target_rva": null,
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": 16,
+            "field_chain": [
+              72,
+              16
+            ],
+            "base_provenance": [
+              {
+                "kind": "irp",
+                "offset": 0
+              }
+            ],
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "CreateFile",
+            "entry_model": "WDM",
+            "pointer_kind": "OBJECT_FIELD_INDIRECT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x62ca0",
+            "call_rva": "0x62cc0",
+            "slot_rva": null,
+            "section": null,
+            "initial_target_rva": null,
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": 8,
+            "field_chain": [
+              72,
+              8
+            ],
+            "base_provenance": [
+              {
+                "kind": "irp",
+                "offset": 0
+              }
+            ],
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "CreateFile",
+            "entry_model": "WDM",
+            "pointer_kind": "OBJECT_FIELD_INDIRECT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x35580",
+            "call_rva": "0x3566b",
+            "slot_rva": null,
+            "section": null,
+            "initial_target_rva": null,
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": 24,
+            "field_chain": [
+              56,
+              24
+            ],
+            "base_provenance": [
+              {
+                "kind": "unknown:r8",
+                "offset": 0
+              }
+            ],
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "CreateFile",
+            "entry_model": "WDM",
+            "pointer_kind": "OBJECT_FIELD_INDIRECT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x61c10",
+            "call_rva": "0x61cff",
+            "slot_rva": null,
+            "section": null,
+            "initial_target_rva": null,
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": 24,
+            "field_chain": [
+              24
+            ],
+            "base_provenance": [
+              {
+                "kind": "unknown:rax",
+                "offset": 0
+              }
+            ],
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "CreateFile",
+            "entry_model": "WDM",
+            "pointer_kind": "OBJECT_FIELD_INDIRECT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x10d8c",
+            "call_rva": "0x10f3e",
+            "slot_rva": null,
+            "section": null,
+            "initial_target_rva": null,
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": 0,
+            "field_chain": [
+              24,
+              192,
+              24,
+              0
+            ],
+            "base_provenance": [
+              {
+                "kind": "unknown:rax",
+                "offset": 0
+              }
+            ],
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "CreateFile",
+            "entry_model": "WDM",
+            "pointer_kind": "OBJECT_FIELD_INDIRECT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x1f9e0",
+            "call_rva": "0x1fac8",
+            "slot_rva": null,
+            "section": null,
+            "initial_target_rva": null,
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": 32,
+            "field_chain": [
+              32
+            ],
+            "base_provenance": [
+              {
+                "kind": "unknown:rdx",
+                "offset": 0
+              }
+            ],
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "CreateFile",
+            "entry_model": "WDM",
+            "pointer_kind": "OBJECT_FIELD_INDIRECT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x376d0",
+            "call_rva": "0x377e2",
+            "slot_rva": null,
+            "section": null,
+            "initial_target_rva": null,
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": 24,
+            "field_chain": [
+              56,
+              24
+            ],
+            "base_provenance": [
+              {
+                "kind": "unknown:r8",
+                "offset": 0
+              }
+            ],
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "CreateFile",
+            "entry_model": "WDM",
+            "pointer_kind": "OBJECT_FIELD_INDIRECT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x1c1e0",
+            "call_rva": "0x1c2ca",
+            "slot_rva": null,
+            "section": null,
+            "initial_target_rva": null,
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": 24,
+            "field_chain": [
+              24
+            ],
+            "base_provenance": [
+              {
+                "kind": "unknown:rax",
+                "offset": 0
+              }
+            ],
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "CreateFile",
+            "entry_model": "WDM",
+            "pointer_kind": "OBJECT_FIELD_INDIRECT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x1d110",
+            "call_rva": "0x1d240",
+            "slot_rva": null,
+            "section": null,
+            "initial_target_rva": null,
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": 0,
+            "field_chain": [
+              0,
+              0
+            ],
+            "base_provenance": [
+              {
+                "kind": "unknown:rdi",
+                "offset": 0
+              }
+            ],
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "CreateFile",
+            "entry_model": "WDM",
+            "pointer_kind": "OBJECT_FIELD_INDIRECT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x24344",
+            "call_rva": "0x243d9",
+            "slot_rva": null,
+            "section": null,
+            "initial_target_rva": null,
+            "instruction": "call qword ptr [rip + 0x671a8]",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": 192,
+            "field_chain": [
+              192,
+              192
+            ],
+            "base_provenance": [
+              {
+                "kind": "unknown:rbx",
+                "offset": 0
+              }
+            ],
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "CreateFile",
+            "entry_model": "WDM",
+            "pointer_kind": "OBJECT_FIELD_INDIRECT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x2faf0",
+            "call_rva": "0x2fbaf",
+            "slot_rva": null,
+            "section": null,
+            "initial_target_rva": null,
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": 40,
+            "field_chain": [
+              40
+            ],
+            "base_provenance": [
+              {
+                "kind": "unknown:rax",
+                "offset": 0
+              }
+            ],
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "CreateFile",
+            "entry_model": "WDM",
+            "pointer_kind": "OBJECT_FIELD_INDIRECT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x1d110",
+            "call_rva": "0x1d1c0",
+            "slot_rva": null,
+            "section": null,
+            "initial_target_rva": null,
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": 0,
+            "field_chain": [
+              0
+            ],
+            "base_provenance": [
+              {
+                "kind": "unknown:rax",
+                "offset": 0
+              }
+            ],
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "CreateFile",
+            "entry_model": "WDM",
+            "pointer_kind": "OBJECT_FIELD_INDIRECT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x61930",
+            "call_rva": "0x61a2d",
+            "slot_rva": null,
+            "section": null,
+            "initial_target_rva": null,
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": 32,
+            "field_chain": [
+              40,
+              32
+            ],
+            "base_provenance": [
+              {
+                "kind": "unknown:rcx",
+                "offset": 0
+              }
+            ],
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "CreateFile",
+            "entry_model": "WDM",
+            "pointer_kind": "OBJECT_FIELD_INDIRECT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x34bc0",
+            "call_rva": "0x34cd9",
+            "slot_rva": null,
+            "section": null,
+            "initial_target_rva": null,
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": 8,
+            "field_chain": [
+              8
+            ],
+            "base_provenance": [
+              {
+                "kind": "unknown:r8",
+                "offset": 0
+              }
+            ],
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "CreateFile",
+            "entry_model": "WDM",
+            "pointer_kind": "OBJECT_FIELD_INDIRECT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x1abd0",
+            "call_rva": "0x1acf2",
+            "slot_rva": null,
+            "section": null,
+            "initial_target_rva": null,
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": 0,
+            "field_chain": [
+              0
+            ],
+            "base_provenance": [
+              {
+                "kind": "unknown:rax",
+                "offset": 0
+              }
+            ],
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "CreateFile",
+            "entry_model": "WDM",
+            "pointer_kind": "OBJECT_FIELD_INDIRECT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x60cf8",
+            "call_rva": "0x60d67",
+            "slot_rva": null,
+            "section": null,
+            "initial_target_rva": null,
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": 56,
+            "field_chain": [
+              56
+            ],
+            "base_provenance": [
+              {
+                "kind": "unknown:rax",
+                "offset": 0
+              }
+            ],
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "CreateFile",
+            "entry_model": "WDM",
+            "pointer_kind": "OBJECT_FIELD_INDIRECT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x34bc0",
+            "call_rva": "0x34cfd",
+            "slot_rva": null,
+            "section": null,
+            "initial_target_rva": null,
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": 8,
+            "field_chain": [
+              8
+            ],
+            "base_provenance": [
+              {
+                "kind": "unknown:r8",
+                "offset": 0
+              }
+            ],
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "CreateFile",
+            "entry_model": "WDM",
+            "pointer_kind": "OBJECT_FIELD_INDIRECT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0xc340",
+            "call_rva": "0xc4a2",
+            "slot_rva": null,
+            "section": null,
+            "initial_target_rva": null,
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": 48,
+            "field_chain": [
+              0,
+              8,
+              48
+            ],
+            "base_provenance": [
+              {
+                "kind": "unknown:rdx",
+                "offset": 0
+              }
+            ],
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "CreateFile",
+            "entry_model": "WDM",
+            "pointer_kind": "OBJECT_FIELD_INDIRECT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x5f930",
+            "call_rva": "0x5fa73",
+            "slot_rva": null,
+            "section": null,
+            "initial_target_rva": null,
+            "instruction": "call qword ptr [rip + 0x2b836]",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": 8,
+            "field_chain": [
+              8
+            ],
+            "base_provenance": [
+              {
+                "kind": "unknown:rax",
+                "offset": 0
+              }
+            ],
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "CreateFile",
+            "entry_model": "WDM",
+            "pointer_kind": "OBJECT_FIELD_INDIRECT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x60cf8",
+            "call_rva": "0x60de6",
+            "slot_rva": null,
+            "section": null,
+            "initial_target_rva": null,
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": 56,
+            "field_chain": [
+              56
+            ],
+            "base_provenance": [
+              {
+                "kind": "unknown:rax",
+                "offset": 0
+              }
+            ],
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "ReadFile",
+            "entry_model": "WDM",
+            "pointer_kind": "WRITABLE_IMAGE_SLOT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x431a8",
+            "call_rva": "0x431d8",
+            "slot_rva": "0x845d0",
+            "section": ".data",
+            "initial_target_rva": null,
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": null,
+            "field_chain": null,
+            "base_provenance": null,
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "ReadFile",
+            "entry_model": "WDM",
+            "pointer_kind": "WRITABLE_IMAGE_SLOT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x5f930",
+            "call_rva": "0x5fa73",
+            "slot_rva": "0x84bb8",
+            "section": ".data",
+            "initial_target_rva": null,
+            "instruction": "call qword ptr [rip + 0x2b836]",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": null,
+            "field_chain": null,
+            "base_provenance": null,
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "ReadFile",
+            "entry_model": "WDM",
+            "pointer_kind": "IMAGE_POINTER_TABLE",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x3fc90",
+            "call_rva": "0x3fcbe",
+            "slot_rva": "0x78850",
+            "section": ".rdata",
+            "initial_target_rva": "0x5f930",
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": null,
+            "field_chain": null,
+            "base_provenance": null,
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "ReadFile",
+            "entry_model": "WDM",
+            "pointer_kind": "IMAGE_POINTER_TABLE",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x14cc0",
+            "call_rva": "0x14d8e",
+            "slot_rva": "0x78430",
+            "section": ".rdata",
+            "initial_target_rva": "0x39160",
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": null,
+            "field_chain": null,
+            "base_provenance": null,
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "ReadFile",
+            "entry_model": "WDM",
+            "pointer_kind": "OBJECT_FIELD_INDIRECT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x62c70",
+            "call_rva": "0x62c80",
+            "slot_rva": null,
+            "section": null,
+            "initial_target_rva": null,
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": 16,
+            "field_chain": [
+              72,
+              16
+            ],
+            "base_provenance": [
+              {
+                "kind": "irp",
+                "offset": 0
+              }
+            ],
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "ReadFile",
+            "entry_model": "WDM",
+            "pointer_kind": "OBJECT_FIELD_INDIRECT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x62ca0",
+            "call_rva": "0x62cc0",
+            "slot_rva": null,
+            "section": null,
+            "initial_target_rva": null,
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": 8,
+            "field_chain": [
+              72,
+              8
+            ],
+            "base_provenance": [
+              {
+                "kind": "irp",
+                "offset": 0
+              }
+            ],
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "ReadFile",
+            "entry_model": "WDM",
+            "pointer_kind": "OBJECT_FIELD_INDIRECT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x35580",
+            "call_rva": "0x3566b",
+            "slot_rva": null,
+            "section": null,
+            "initial_target_rva": null,
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": 24,
+            "field_chain": [
+              56,
+              24
+            ],
+            "base_provenance": [
+              {
+                "kind": "unknown:r8",
+                "offset": 0
+              }
+            ],
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "ReadFile",
+            "entry_model": "WDM",
+            "pointer_kind": "OBJECT_FIELD_INDIRECT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x61c10",
+            "call_rva": "0x61cff",
+            "slot_rva": null,
+            "section": null,
+            "initial_target_rva": null,
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": 24,
+            "field_chain": [
+              24
+            ],
+            "base_provenance": [
+              {
+                "kind": "unknown:rax",
+                "offset": 0
+              }
+            ],
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "ReadFile",
+            "entry_model": "WDM",
+            "pointer_kind": "OBJECT_FIELD_INDIRECT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x10d8c",
+            "call_rva": "0x10f3e",
+            "slot_rva": null,
+            "section": null,
+            "initial_target_rva": null,
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": 0,
+            "field_chain": [
+              24,
+              192,
+              24,
+              0
+            ],
+            "base_provenance": [
+              {
+                "kind": "unknown:rax",
+                "offset": 0
+              }
+            ],
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "ReadFile",
+            "entry_model": "WDM",
+            "pointer_kind": "OBJECT_FIELD_INDIRECT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x1f9e0",
+            "call_rva": "0x1fac8",
+            "slot_rva": null,
+            "section": null,
+            "initial_target_rva": null,
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": 32,
+            "field_chain": [
+              32
+            ],
+            "base_provenance": [
+              {
+                "kind": "unknown:rdx",
+                "offset": 0
+              }
+            ],
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "ReadFile",
+            "entry_model": "WDM",
+            "pointer_kind": "OBJECT_FIELD_INDIRECT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x376d0",
+            "call_rva": "0x377e2",
+            "slot_rva": null,
+            "section": null,
+            "initial_target_rva": null,
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": 24,
+            "field_chain": [
+              56,
+              24
+            ],
+            "base_provenance": [
+              {
+                "kind": "unknown:r8",
+                "offset": 0
+              }
+            ],
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "ReadFile",
+            "entry_model": "WDM",
+            "pointer_kind": "OBJECT_FIELD_INDIRECT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x1c1e0",
+            "call_rva": "0x1c2ca",
+            "slot_rva": null,
+            "section": null,
+            "initial_target_rva": null,
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": 24,
+            "field_chain": [
+              24
+            ],
+            "base_provenance": [
+              {
+                "kind": "unknown:rax",
+                "offset": 0
+              }
+            ],
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "ReadFile",
+            "entry_model": "WDM",
+            "pointer_kind": "OBJECT_FIELD_INDIRECT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x1d110",
+            "call_rva": "0x1d240",
+            "slot_rva": null,
+            "section": null,
+            "initial_target_rva": null,
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": 0,
+            "field_chain": [
+              0,
+              0
+            ],
+            "base_provenance": [
+              {
+                "kind": "unknown:rdi",
+                "offset": 0
+              }
+            ],
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "ReadFile",
+            "entry_model": "WDM",
+            "pointer_kind": "OBJECT_FIELD_INDIRECT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x24344",
+            "call_rva": "0x243d9",
+            "slot_rva": null,
+            "section": null,
+            "initial_target_rva": null,
+            "instruction": "call qword ptr [rip + 0x671a8]",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": 192,
+            "field_chain": [
+              192,
+              192
+            ],
+            "base_provenance": [
+              {
+                "kind": "unknown:rbx",
+                "offset": 0
+              }
+            ],
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "ReadFile",
+            "entry_model": "WDM",
+            "pointer_kind": "OBJECT_FIELD_INDIRECT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x2faf0",
+            "call_rva": "0x2fbaf",
+            "slot_rva": null,
+            "section": null,
+            "initial_target_rva": null,
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": 40,
+            "field_chain": [
+              40
+            ],
+            "base_provenance": [
+              {
+                "kind": "unknown:rax",
+                "offset": 0
+              }
+            ],
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "ReadFile",
+            "entry_model": "WDM",
+            "pointer_kind": "OBJECT_FIELD_INDIRECT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x1d110",
+            "call_rva": "0x1d1c0",
+            "slot_rva": null,
+            "section": null,
+            "initial_target_rva": null,
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": 0,
+            "field_chain": [
+              0
+            ],
+            "base_provenance": [
+              {
+                "kind": "unknown:rax",
+                "offset": 0
+              }
+            ],
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "ReadFile",
+            "entry_model": "WDM",
+            "pointer_kind": "OBJECT_FIELD_INDIRECT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x61930",
+            "call_rva": "0x61a2d",
+            "slot_rva": null,
+            "section": null,
+            "initial_target_rva": null,
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": 32,
+            "field_chain": [
+              40,
+              32
+            ],
+            "base_provenance": [
+              {
+                "kind": "unknown:rcx",
+                "offset": 0
+              }
+            ],
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "ReadFile",
+            "entry_model": "WDM",
+            "pointer_kind": "OBJECT_FIELD_INDIRECT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x34bc0",
+            "call_rva": "0x34cd9",
+            "slot_rva": null,
+            "section": null,
+            "initial_target_rva": null,
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": 8,
+            "field_chain": [
+              8
+            ],
+            "base_provenance": [
+              {
+                "kind": "unknown:r8",
+                "offset": 0
+              }
+            ],
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "ReadFile",
+            "entry_model": "WDM",
+            "pointer_kind": "OBJECT_FIELD_INDIRECT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x1abd0",
+            "call_rva": "0x1acf2",
+            "slot_rva": null,
+            "section": null,
+            "initial_target_rva": null,
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": 0,
+            "field_chain": [
+              0
+            ],
+            "base_provenance": [
+              {
+                "kind": "unknown:rax",
+                "offset": 0
+              }
+            ],
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "ReadFile",
+            "entry_model": "WDM",
+            "pointer_kind": "OBJECT_FIELD_INDIRECT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x60cf8",
+            "call_rva": "0x60d67",
+            "slot_rva": null,
+            "section": null,
+            "initial_target_rva": null,
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": 56,
+            "field_chain": [
+              56
+            ],
+            "base_provenance": [
+              {
+                "kind": "unknown:rax",
+                "offset": 0
+              }
+            ],
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "ReadFile",
+            "entry_model": "WDM",
+            "pointer_kind": "OBJECT_FIELD_INDIRECT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x34bc0",
+            "call_rva": "0x34cfd",
+            "slot_rva": null,
+            "section": null,
+            "initial_target_rva": null,
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": 8,
+            "field_chain": [
+              8
+            ],
+            "base_provenance": [
+              {
+                "kind": "unknown:r8",
+                "offset": 0
+              }
+            ],
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "ReadFile",
+            "entry_model": "WDM",
+            "pointer_kind": "OBJECT_FIELD_INDIRECT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0xc340",
+            "call_rva": "0xc4a2",
+            "slot_rva": null,
+            "section": null,
+            "initial_target_rva": null,
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": 48,
+            "field_chain": [
+              0,
+              8,
+              48
+            ],
+            "base_provenance": [
+              {
+                "kind": "unknown:rdx",
+                "offset": 0
+              }
+            ],
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "ReadFile",
+            "entry_model": "WDM",
+            "pointer_kind": "OBJECT_FIELD_INDIRECT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x5f930",
+            "call_rva": "0x5fa73",
+            "slot_rva": null,
+            "section": null,
+            "initial_target_rva": null,
+            "instruction": "call qword ptr [rip + 0x2b836]",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": 8,
+            "field_chain": [
+              8
+            ],
+            "base_provenance": [
+              {
+                "kind": "unknown:rax",
+                "offset": 0
+              }
+            ],
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "ReadFile",
+            "entry_model": "WDM",
+            "pointer_kind": "OBJECT_FIELD_INDIRECT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x60cf8",
+            "call_rva": "0x60de6",
+            "slot_rva": null,
+            "section": null,
+            "initial_target_rva": null,
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": 56,
+            "field_chain": [
+              56
+            ],
+            "base_provenance": [
+              {
+                "kind": "unknown:rax",
+                "offset": 0
+              }
+            ],
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "WriteFile",
+            "entry_model": "WDM",
+            "pointer_kind": "WRITABLE_IMAGE_SLOT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x431a8",
+            "call_rva": "0x431d8",
+            "slot_rva": "0x845d0",
+            "section": ".data",
+            "initial_target_rva": null,
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": null,
+            "field_chain": null,
+            "base_provenance": null,
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "WriteFile",
+            "entry_model": "WDM",
+            "pointer_kind": "WRITABLE_IMAGE_SLOT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x5f930",
+            "call_rva": "0x5fa73",
+            "slot_rva": "0x84bb8",
+            "section": ".data",
+            "initial_target_rva": null,
+            "instruction": "call qword ptr [rip + 0x2b836]",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": null,
+            "field_chain": null,
+            "base_provenance": null,
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "WriteFile",
+            "entry_model": "WDM",
+            "pointer_kind": "IMAGE_POINTER_TABLE",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x3fc90",
+            "call_rva": "0x3fcbe",
+            "slot_rva": "0x78850",
+            "section": ".rdata",
+            "initial_target_rva": "0x5f930",
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": null,
+            "field_chain": null,
+            "base_provenance": null,
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "WriteFile",
+            "entry_model": "WDM",
+            "pointer_kind": "IMAGE_POINTER_TABLE",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x14cc0",
+            "call_rva": "0x14d8e",
+            "slot_rva": "0x78430",
+            "section": ".rdata",
+            "initial_target_rva": "0x39160",
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": null,
+            "field_chain": null,
+            "base_provenance": null,
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "WriteFile",
+            "entry_model": "WDM",
+            "pointer_kind": "OBJECT_FIELD_INDIRECT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x62c70",
+            "call_rva": "0x62c80",
+            "slot_rva": null,
+            "section": null,
+            "initial_target_rva": null,
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": 16,
+            "field_chain": [
+              72,
+              16
+            ],
+            "base_provenance": [
+              {
+                "kind": "irp",
+                "offset": 0
+              }
+            ],
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "WriteFile",
+            "entry_model": "WDM",
+            "pointer_kind": "OBJECT_FIELD_INDIRECT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x62ca0",
+            "call_rva": "0x62cc0",
+            "slot_rva": null,
+            "section": null,
+            "initial_target_rva": null,
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": 8,
+            "field_chain": [
+              72,
+              8
+            ],
+            "base_provenance": [
+              {
+                "kind": "irp",
+                "offset": 0
+              }
+            ],
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "WriteFile",
+            "entry_model": "WDM",
+            "pointer_kind": "OBJECT_FIELD_INDIRECT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x35580",
+            "call_rva": "0x3566b",
+            "slot_rva": null,
+            "section": null,
+            "initial_target_rva": null,
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": 24,
+            "field_chain": [
+              56,
+              24
+            ],
+            "base_provenance": [
+              {
+                "kind": "unknown:r8",
+                "offset": 0
+              }
+            ],
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "WriteFile",
+            "entry_model": "WDM",
+            "pointer_kind": "OBJECT_FIELD_INDIRECT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x61c10",
+            "call_rva": "0x61cff",
+            "slot_rva": null,
+            "section": null,
+            "initial_target_rva": null,
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": 24,
+            "field_chain": [
+              24
+            ],
+            "base_provenance": [
+              {
+                "kind": "unknown:rax",
+                "offset": 0
+              }
+            ],
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "WriteFile",
+            "entry_model": "WDM",
+            "pointer_kind": "OBJECT_FIELD_INDIRECT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x10d8c",
+            "call_rva": "0x10f3e",
+            "slot_rva": null,
+            "section": null,
+            "initial_target_rva": null,
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": 0,
+            "field_chain": [
+              24,
+              192,
+              24,
+              0
+            ],
+            "base_provenance": [
+              {
+                "kind": "unknown:rax",
+                "offset": 0
+              }
+            ],
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "WriteFile",
+            "entry_model": "WDM",
+            "pointer_kind": "OBJECT_FIELD_INDIRECT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x1f9e0",
+            "call_rva": "0x1fac8",
+            "slot_rva": null,
+            "section": null,
+            "initial_target_rva": null,
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": 32,
+            "field_chain": [
+              32
+            ],
+            "base_provenance": [
+              {
+                "kind": "unknown:rdx",
+                "offset": 0
+              }
+            ],
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "WriteFile",
+            "entry_model": "WDM",
+            "pointer_kind": "OBJECT_FIELD_INDIRECT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x376d0",
+            "call_rva": "0x377e2",
+            "slot_rva": null,
+            "section": null,
+            "initial_target_rva": null,
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": 24,
+            "field_chain": [
+              56,
+              24
+            ],
+            "base_provenance": [
+              {
+                "kind": "unknown:r8",
+                "offset": 0
+              }
+            ],
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "WriteFile",
+            "entry_model": "WDM",
+            "pointer_kind": "OBJECT_FIELD_INDIRECT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x1c1e0",
+            "call_rva": "0x1c2ca",
+            "slot_rva": null,
+            "section": null,
+            "initial_target_rva": null,
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": 24,
+            "field_chain": [
+              24
+            ],
+            "base_provenance": [
+              {
+                "kind": "unknown:rax",
+                "offset": 0
+              }
+            ],
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "WriteFile",
+            "entry_model": "WDM",
+            "pointer_kind": "OBJECT_FIELD_INDIRECT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x1d110",
+            "call_rva": "0x1d240",
+            "slot_rva": null,
+            "section": null,
+            "initial_target_rva": null,
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": 0,
+            "field_chain": [
+              0,
+              0
+            ],
+            "base_provenance": [
+              {
+                "kind": "unknown:rdi",
+                "offset": 0
+              }
+            ],
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "WriteFile",
+            "entry_model": "WDM",
+            "pointer_kind": "OBJECT_FIELD_INDIRECT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x24344",
+            "call_rva": "0x243d9",
+            "slot_rva": null,
+            "section": null,
+            "initial_target_rva": null,
+            "instruction": "call qword ptr [rip + 0x671a8]",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": 192,
+            "field_chain": [
+              192,
+              192
+            ],
+            "base_provenance": [
+              {
+                "kind": "unknown:rbx",
+                "offset": 0
+              }
+            ],
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "WriteFile",
+            "entry_model": "WDM",
+            "pointer_kind": "OBJECT_FIELD_INDIRECT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x2faf0",
+            "call_rva": "0x2fbaf",
+            "slot_rva": null,
+            "section": null,
+            "initial_target_rva": null,
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": 40,
+            "field_chain": [
+              40
+            ],
+            "base_provenance": [
+              {
+                "kind": "unknown:rax",
+                "offset": 0
+              }
+            ],
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "WriteFile",
+            "entry_model": "WDM",
+            "pointer_kind": "OBJECT_FIELD_INDIRECT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x1d110",
+            "call_rva": "0x1d1c0",
+            "slot_rva": null,
+            "section": null,
+            "initial_target_rva": null,
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": 0,
+            "field_chain": [
+              0
+            ],
+            "base_provenance": [
+              {
+                "kind": "unknown:rax",
+                "offset": 0
+              }
+            ],
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "WriteFile",
+            "entry_model": "WDM",
+            "pointer_kind": "OBJECT_FIELD_INDIRECT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x61930",
+            "call_rva": "0x61a2d",
+            "slot_rva": null,
+            "section": null,
+            "initial_target_rva": null,
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": 32,
+            "field_chain": [
+              40,
+              32
+            ],
+            "base_provenance": [
+              {
+                "kind": "unknown:rcx",
+                "offset": 0
+              }
+            ],
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "WriteFile",
+            "entry_model": "WDM",
+            "pointer_kind": "OBJECT_FIELD_INDIRECT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x34bc0",
+            "call_rva": "0x34cd9",
+            "slot_rva": null,
+            "section": null,
+            "initial_target_rva": null,
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": 8,
+            "field_chain": [
+              8
+            ],
+            "base_provenance": [
+              {
+                "kind": "unknown:r8",
+                "offset": 0
+              }
+            ],
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "WriteFile",
+            "entry_model": "WDM",
+            "pointer_kind": "OBJECT_FIELD_INDIRECT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x1abd0",
+            "call_rva": "0x1acf2",
+            "slot_rva": null,
+            "section": null,
+            "initial_target_rva": null,
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": 0,
+            "field_chain": [
+              0
+            ],
+            "base_provenance": [
+              {
+                "kind": "unknown:rax",
+                "offset": 0
+              }
+            ],
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "WriteFile",
+            "entry_model": "WDM",
+            "pointer_kind": "OBJECT_FIELD_INDIRECT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x60cf8",
+            "call_rva": "0x60d67",
+            "slot_rva": null,
+            "section": null,
+            "initial_target_rva": null,
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": 56,
+            "field_chain": [
+              56
+            ],
+            "base_provenance": [
+              {
+                "kind": "unknown:rax",
+                "offset": 0
+              }
+            ],
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "WriteFile",
+            "entry_model": "WDM",
+            "pointer_kind": "OBJECT_FIELD_INDIRECT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x34bc0",
+            "call_rva": "0x34cfd",
+            "slot_rva": null,
+            "section": null,
+            "initial_target_rva": null,
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": 8,
+            "field_chain": [
+              8
+            ],
+            "base_provenance": [
+              {
+                "kind": "unknown:r8",
+                "offset": 0
+              }
+            ],
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "WriteFile",
+            "entry_model": "WDM",
+            "pointer_kind": "OBJECT_FIELD_INDIRECT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0xc340",
+            "call_rva": "0xc4a2",
+            "slot_rva": null,
+            "section": null,
+            "initial_target_rva": null,
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": 48,
+            "field_chain": [
+              0,
+              8,
+              48
+            ],
+            "base_provenance": [
+              {
+                "kind": "unknown:rdx",
+                "offset": 0
+              }
+            ],
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "WriteFile",
+            "entry_model": "WDM",
+            "pointer_kind": "OBJECT_FIELD_INDIRECT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x5f930",
+            "call_rva": "0x5fa73",
+            "slot_rva": null,
+            "section": null,
+            "initial_target_rva": null,
+            "instruction": "call qword ptr [rip + 0x2b836]",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": 8,
+            "field_chain": [
+              8
+            ],
+            "base_provenance": [
+              {
+                "kind": "unknown:rax",
+                "offset": 0
+              }
+            ],
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "WriteFile",
+            "entry_model": "WDM",
+            "pointer_kind": "OBJECT_FIELD_INDIRECT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x60cf8",
+            "call_rva": "0x60de6",
+            "slot_rva": null,
+            "section": null,
+            "initial_target_rva": null,
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": 56,
+            "field_chain": [
+              56
+            ],
+            "base_provenance": [
+              {
+                "kind": "unknown:rax",
+                "offset": 0
+              }
+            ],
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "DeviceIoControl",
+            "entry_model": "WDM",
+            "pointer_kind": "WRITABLE_IMAGE_SLOT",
+            "dispatch_rva": "0x14cc0",
+            "function_rva": "0x431a8",
+            "call_rva": "0x431d8",
+            "slot_rva": "0x845d0",
+            "section": ".data",
+            "initial_target_rva": null,
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": null,
+            "field_chain": null,
+            "base_provenance": null,
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "DeviceIoControl",
+            "entry_model": "WDM",
+            "pointer_kind": "WRITABLE_IMAGE_SLOT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x431a8",
+            "call_rva": "0x431d8",
+            "slot_rva": "0x845d0",
+            "section": ".data",
+            "initial_target_rva": null,
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": null,
+            "field_chain": null,
+            "base_provenance": null,
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "DeviceIoControl",
+            "entry_model": "WDM",
+            "pointer_kind": "WRITABLE_IMAGE_SLOT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x5f930",
+            "call_rva": "0x5fa73",
+            "slot_rva": "0x84bb8",
+            "section": ".data",
+            "initial_target_rva": null,
+            "instruction": "call qword ptr [rip + 0x2b836]",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": null,
+            "field_chain": null,
+            "base_provenance": null,
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "DeviceIoControl",
+            "entry_model": "WDM",
+            "pointer_kind": "IMAGE_POINTER_TABLE",
+            "dispatch_rva": "0x14cc0",
+            "function_rva": "0x14cc0",
+            "call_rva": "0x14d8e",
+            "slot_rva": "0x78430",
+            "section": ".rdata",
+            "initial_target_rva": "0x39160",
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": null,
+            "field_chain": null,
+            "base_provenance": null,
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "DeviceIoControl",
+            "entry_model": "WDM",
+            "pointer_kind": "IMAGE_POINTER_TABLE",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x3fc90",
+            "call_rva": "0x3fcbe",
+            "slot_rva": "0x78850",
+            "section": ".rdata",
+            "initial_target_rva": "0x5f930",
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": null,
+            "field_chain": null,
+            "base_provenance": null,
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "DeviceIoControl",
+            "entry_model": "WDM",
+            "pointer_kind": "IMAGE_POINTER_TABLE",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x14cc0",
+            "call_rva": "0x14d8e",
+            "slot_rva": "0x78430",
+            "section": ".rdata",
+            "initial_target_rva": "0x39160",
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": null,
+            "field_chain": null,
+            "base_provenance": null,
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "DeviceIoControl",
+            "entry_model": "WDM",
+            "pointer_kind": "OBJECT_FIELD_INDIRECT",
+            "dispatch_rva": "0x14cc0",
+            "function_rva": "0x625bc",
+            "call_rva": "0x626a3",
+            "slot_rva": null,
+            "section": null,
+            "initial_target_rva": null,
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": 8,
+            "field_chain": [
+              8
+            ],
+            "base_provenance": [
+              {
+                "kind": "unknown:rax",
+                "offset": 0
+              }
+            ],
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "DeviceIoControl",
+            "entry_model": "WDM",
+            "pointer_kind": "OBJECT_FIELD_INDIRECT",
+            "dispatch_rva": "0x14cc0",
+            "function_rva": "0xc340",
+            "call_rva": "0xc4a2",
+            "slot_rva": null,
+            "section": null,
+            "initial_target_rva": null,
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": 48,
+            "field_chain": [
+              0,
+              8,
+              48
+            ],
+            "base_provenance": [
+              {
+                "kind": "unknown:rdx",
+                "offset": 0
+              }
+            ],
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "DeviceIoControl",
+            "entry_model": "WDM",
+            "pointer_kind": "OBJECT_FIELD_INDIRECT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x62c70",
+            "call_rva": "0x62c80",
+            "slot_rva": null,
+            "section": null,
+            "initial_target_rva": null,
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": 16,
+            "field_chain": [
+              72,
+              16
+            ],
+            "base_provenance": [
+              {
+                "kind": "irp",
+                "offset": 0
+              }
+            ],
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "DeviceIoControl",
+            "entry_model": "WDM",
+            "pointer_kind": "OBJECT_FIELD_INDIRECT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x62ca0",
+            "call_rva": "0x62cc0",
+            "slot_rva": null,
+            "section": null,
+            "initial_target_rva": null,
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": 8,
+            "field_chain": [
+              72,
+              8
+            ],
+            "base_provenance": [
+              {
+                "kind": "irp",
+                "offset": 0
+              }
+            ],
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "DeviceIoControl",
+            "entry_model": "WDM",
+            "pointer_kind": "OBJECT_FIELD_INDIRECT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x35580",
+            "call_rva": "0x3566b",
+            "slot_rva": null,
+            "section": null,
+            "initial_target_rva": null,
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": 24,
+            "field_chain": [
+              56,
+              24
+            ],
+            "base_provenance": [
+              {
+                "kind": "unknown:r8",
+                "offset": 0
+              }
+            ],
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "DeviceIoControl",
+            "entry_model": "WDM",
+            "pointer_kind": "OBJECT_FIELD_INDIRECT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x61c10",
+            "call_rva": "0x61cff",
+            "slot_rva": null,
+            "section": null,
+            "initial_target_rva": null,
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": 24,
+            "field_chain": [
+              24
+            ],
+            "base_provenance": [
+              {
+                "kind": "unknown:rax",
+                "offset": 0
+              }
+            ],
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "DeviceIoControl",
+            "entry_model": "WDM",
+            "pointer_kind": "OBJECT_FIELD_INDIRECT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x10d8c",
+            "call_rva": "0x10f3e",
+            "slot_rva": null,
+            "section": null,
+            "initial_target_rva": null,
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": 0,
+            "field_chain": [
+              24,
+              192,
+              24,
+              0
+            ],
+            "base_provenance": [
+              {
+                "kind": "unknown:rax",
+                "offset": 0
+              }
+            ],
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "DeviceIoControl",
+            "entry_model": "WDM",
+            "pointer_kind": "OBJECT_FIELD_INDIRECT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x1f9e0",
+            "call_rva": "0x1fac8",
+            "slot_rva": null,
+            "section": null,
+            "initial_target_rva": null,
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": 32,
+            "field_chain": [
+              32
+            ],
+            "base_provenance": [
+              {
+                "kind": "unknown:rdx",
+                "offset": 0
+              }
+            ],
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "DeviceIoControl",
+            "entry_model": "WDM",
+            "pointer_kind": "OBJECT_FIELD_INDIRECT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x376d0",
+            "call_rva": "0x377e2",
+            "slot_rva": null,
+            "section": null,
+            "initial_target_rva": null,
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": 24,
+            "field_chain": [
+              56,
+              24
+            ],
+            "base_provenance": [
+              {
+                "kind": "unknown:r8",
+                "offset": 0
+              }
+            ],
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "DeviceIoControl",
+            "entry_model": "WDM",
+            "pointer_kind": "OBJECT_FIELD_INDIRECT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x1c1e0",
+            "call_rva": "0x1c2ca",
+            "slot_rva": null,
+            "section": null,
+            "initial_target_rva": null,
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": 24,
+            "field_chain": [
+              24
+            ],
+            "base_provenance": [
+              {
+                "kind": "unknown:rax",
+                "offset": 0
+              }
+            ],
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "DeviceIoControl",
+            "entry_model": "WDM",
+            "pointer_kind": "OBJECT_FIELD_INDIRECT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x1d110",
+            "call_rva": "0x1d240",
+            "slot_rva": null,
+            "section": null,
+            "initial_target_rva": null,
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": 0,
+            "field_chain": [
+              0,
+              0
+            ],
+            "base_provenance": [
+              {
+                "kind": "unknown:rdi",
+                "offset": 0
+              }
+            ],
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "DeviceIoControl",
+            "entry_model": "WDM",
+            "pointer_kind": "OBJECT_FIELD_INDIRECT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x24344",
+            "call_rva": "0x243d9",
+            "slot_rva": null,
+            "section": null,
+            "initial_target_rva": null,
+            "instruction": "call qword ptr [rip + 0x671a8]",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": 192,
+            "field_chain": [
+              192,
+              192
+            ],
+            "base_provenance": [
+              {
+                "kind": "unknown:rbx",
+                "offset": 0
+              }
+            ],
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "DeviceIoControl",
+            "entry_model": "WDM",
+            "pointer_kind": "OBJECT_FIELD_INDIRECT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x2faf0",
+            "call_rva": "0x2fbaf",
+            "slot_rva": null,
+            "section": null,
+            "initial_target_rva": null,
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": 40,
+            "field_chain": [
+              40
+            ],
+            "base_provenance": [
+              {
+                "kind": "unknown:rax",
+                "offset": 0
+              }
+            ],
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "DeviceIoControl",
+            "entry_model": "WDM",
+            "pointer_kind": "OBJECT_FIELD_INDIRECT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x1d110",
+            "call_rva": "0x1d1c0",
+            "slot_rva": null,
+            "section": null,
+            "initial_target_rva": null,
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": 0,
+            "field_chain": [
+              0
+            ],
+            "base_provenance": [
+              {
+                "kind": "unknown:rax",
+                "offset": 0
+              }
+            ],
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "DeviceIoControl",
+            "entry_model": "WDM",
+            "pointer_kind": "OBJECT_FIELD_INDIRECT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x61930",
+            "call_rva": "0x61a2d",
+            "slot_rva": null,
+            "section": null,
+            "initial_target_rva": null,
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": 32,
+            "field_chain": [
+              40,
+              32
+            ],
+            "base_provenance": [
+              {
+                "kind": "unknown:rcx",
+                "offset": 0
+              }
+            ],
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "DeviceIoControl",
+            "entry_model": "WDM",
+            "pointer_kind": "OBJECT_FIELD_INDIRECT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x34bc0",
+            "call_rva": "0x34cd9",
+            "slot_rva": null,
+            "section": null,
+            "initial_target_rva": null,
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": 8,
+            "field_chain": [
+              8
+            ],
+            "base_provenance": [
+              {
+                "kind": "unknown:r8",
+                "offset": 0
+              }
+            ],
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "DeviceIoControl",
+            "entry_model": "WDM",
+            "pointer_kind": "OBJECT_FIELD_INDIRECT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x1abd0",
+            "call_rva": "0x1acf2",
+            "slot_rva": null,
+            "section": null,
+            "initial_target_rva": null,
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": 0,
+            "field_chain": [
+              0
+            ],
+            "base_provenance": [
+              {
+                "kind": "unknown:rax",
+                "offset": 0
+              }
+            ],
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "DeviceIoControl",
+            "entry_model": "WDM",
+            "pointer_kind": "OBJECT_FIELD_INDIRECT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x60cf8",
+            "call_rva": "0x60d67",
+            "slot_rva": null,
+            "section": null,
+            "initial_target_rva": null,
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": 56,
+            "field_chain": [
+              56
+            ],
+            "base_provenance": [
+              {
+                "kind": "unknown:rax",
+                "offset": 0
+              }
+            ],
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "DeviceIoControl",
+            "entry_model": "WDM",
+            "pointer_kind": "OBJECT_FIELD_INDIRECT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x34bc0",
+            "call_rva": "0x34cfd",
+            "slot_rva": null,
+            "section": null,
+            "initial_target_rva": null,
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": 8,
+            "field_chain": [
+              8
+            ],
+            "base_provenance": [
+              {
+                "kind": "unknown:r8",
+                "offset": 0
+              }
+            ],
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "DeviceIoControl",
+            "entry_model": "WDM",
+            "pointer_kind": "OBJECT_FIELD_INDIRECT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0xc340",
+            "call_rva": "0xc4a2",
+            "slot_rva": null,
+            "section": null,
+            "initial_target_rva": null,
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": 48,
+            "field_chain": [
+              0,
+              8,
+              48
+            ],
+            "base_provenance": [
+              {
+                "kind": "unknown:rdx",
+                "offset": 0
+              }
+            ],
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "DeviceIoControl",
+            "entry_model": "WDM",
+            "pointer_kind": "OBJECT_FIELD_INDIRECT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x5f930",
+            "call_rva": "0x5fa73",
+            "slot_rva": null,
+            "section": null,
+            "initial_target_rva": null,
+            "instruction": "call qword ptr [rip + 0x2b836]",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": 8,
+            "field_chain": [
+              8
+            ],
+            "base_provenance": [
+              {
+                "kind": "unknown:rax",
+                "offset": 0
+              }
+            ],
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          },
+          {
+            "event": "DeviceIoControl",
+            "entry_model": "WDM",
+            "pointer_kind": "OBJECT_FIELD_INDIRECT",
+            "dispatch_rva": "0x176c0",
+            "function_rva": "0x60cf8",
+            "call_rva": "0x60de6",
+            "slot_rva": null,
+            "section": null,
+            "initial_target_rva": null,
+            "instruction": "call 0x140073fb0",
+            "input_buffer_variant_candidate": false,
+            "field_displacement": 56,
+            "field_chain": [
+              56
+            ],
+            "base_provenance": [
+              {
+                "kind": "unknown:rax",
+                "offset": 0
+              }
+            ],
+            "evidence": "ROOTED_FIXED_POINT_MAY",
+            "runtime_reachability": "UNVERIFIED",
+            "user_handle_access": "UNVERIFIED"
+          }
+        ],
+        "entry_coverage": {
+          "CreateFile": {
+            "status": "INCOMPLETE",
+            "complete": false,
+            "dispatch_roots_total": 1,
+            "dispatch_roots_completed": 0,
+            "semantic_coverage_complete": false
+          },
+          "ReadFile": {
+            "status": "INCOMPLETE",
+            "complete": false,
+            "dispatch_roots_total": 1,
+            "dispatch_roots_completed": 0,
+            "semantic_coverage_complete": false
+          },
+          "WriteFile": {
+            "status": "INCOMPLETE",
+            "complete": false,
+            "dispatch_roots_total": 1,
+            "dispatch_roots_completed": 0,
+            "semantic_coverage_complete": false
+          },
+          "DeviceIoControl": {
+            "status": "INCOMPLETE",
+            "complete": false,
+            "dispatch_roots_total": 2,
+            "dispatch_roots_completed": 0,
+            "semantic_coverage_complete": false
+          }
+        },
+        "limitations": [
+          "CreateFile:external_call_memory_effects_unmodeled",
+          "CreateFile:fixed_point_budget_exhausted",
+          "CreateFile:global_write_alias_effects_unmodeled",
+          "CreateFile:helper_memory_effects_not_propagated",
+          "CreateFile:imprecise_memory_read",
+          "CreateFile:memory_cells_widened",
+          "CreateFile:partial_register_write",
+          "CreateFile:pointer_truncation",
+          "CreateFile:rep_memory_effects_overapproximated",
+          "CreateFile:switch_table_bounds_unproved",
+          "CreateFile:unmodeled_instruction_effects",
+          "CreateFile:unresolved_indirect_call",
+          "CreateFile:unresolved_indirect_jump",
+          "CreateFile:unresolved_memory_write",
+          "DeviceIoControl:external_call_memory_effects_unmodeled",
+          "DeviceIoControl:fixed_point_budget_exhausted",
+          "DeviceIoControl:global_write_alias_effects_unmodeled",
+          "DeviceIoControl:helper_memory_effects_not_propagated",
+          "DeviceIoControl:imprecise_memory_read",
+          "DeviceIoControl:memory_cells_widened",
+          "DeviceIoControl:partial_register_write",
+          "DeviceIoControl:pointer_truncation",
+          "DeviceIoControl:rep_memory_effects_overapproximated",
+          "DeviceIoControl:switch_table_bounds_unproved",
+          "DeviceIoControl:unmodeled_instruction_effects",
+          "DeviceIoControl:unresolved_indirect_call",
+          "DeviceIoControl:unresolved_indirect_jump",
+          "DeviceIoControl:unresolved_memory_write",
+          "ReadFile:external_call_memory_effects_unmodeled",
+          "ReadFile:fixed_point_budget_exhausted",
+          "ReadFile:global_write_alias_effects_unmodeled",
+          "ReadFile:helper_memory_effects_not_propagated",
+          "ReadFile:imprecise_memory_read",
+          "ReadFile:memory_cells_widened",
+          "ReadFile:partial_register_write",
+          "ReadFile:pointer_truncation",
+          "ReadFile:rep_memory_effects_overapproximated",
+          "ReadFile:switch_table_bounds_unproved",
+          "ReadFile:unmodeled_instruction_effects",
+          "ReadFile:unresolved_indirect_call",
+          "ReadFile:unresolved_indirect_jump",
+          "ReadFile:unresolved_memory_write",
+          "WriteFile:external_call_memory_effects_unmodeled",
+          "WriteFile:fixed_point_budget_exhausted",
+          "WriteFile:global_write_alias_effects_unmodeled",
+          "WriteFile:helper_memory_effects_not_propagated",
+          "WriteFile:imprecise_memory_read",
+          "WriteFile:memory_cells_widened",
+          "WriteFile:partial_register_write",
+          "WriteFile:pointer_truncation",
+          "WriteFile:rep_memory_effects_overapproximated",
+          "WriteFile:switch_table_bounds_unproved",
+          "WriteFile:unmodeled_instruction_effects",
+          "WriteFile:unresolved_indirect_call",
+          "WriteFile:unresolved_indirect_jump",
+          "WriteFile:unresolved_memory_write",
+          "abstract_init:call_depth_or_recursion_limit",
+          "abstract_init:instruction_state_budget_exhausted",
+          "abstract_init:per_instruction_state_limit",
+          "fixed_init:callback_slot_address_widened",
+          "fixed_init:external_call_memory_effects_unmodeled",
+          "fixed_init:fixed_point_budget_exhausted",
+          "fixed_init:global_write_alias_effects_unmodeled",
+          "fixed_init:helper_memory_effects_not_propagated",
+          "fixed_init:imprecise_memory_read",
+          "fixed_init:memory_cells_widened",
+          "fixed_init:partial_register_write",
+          "fixed_init:pointer_truncation",
+          "fixed_init:rep_memory_effects_overapproximated",
+          "fixed_init:unmodeled_instruction_effects",
+          "fixed_init:unresolved_indirect_call",
+          "fixed_init:unresolved_memory_write"
+        ],
+        "runtime_reachability": "UNVERIFIED",
+        "user_handle_access": "UNVERIFIED",
+        "abstract_init_steps": 12005,
+        "wdm_initialization_coverage": {
+          "status": "INCOMPLETE",
+          "complete": false
+        },
+        "local_initialization": {
+          "dispatch_rvas_by_major": {
+            "0": [
+              "0x176c0"
+            ],
+            "1": [
+              "0x176c0"
+            ],
+            "2": [
+              "0x176c0"
+            ],
+            "3": [
+              "0x176c0"
+            ],
+            "4": [
+              "0x176c0"
+            ],
+            "5": [
+              "0x176c0"
+            ],
+            "6": [
+              "0x176c0"
+            ],
+            "7": [
+              "0x176c0"
+            ],
+            "8": [
+              "0x176c0"
+            ],
+            "9": [
+              "0x176c0"
+            ],
+            "10": [
+              "0x176c0"
+            ],
+            "11": [
+              "0x176c0"
+            ],
+            "12": [
+              "0x176c0"
+            ],
+            "13": [
+              "0x176c0"
+            ],
+            "14": [
+              "0x14cc0",
+              "0x176c0"
+            ],
+            "15": [
+              "0x176c0",
+              "0x3fc90"
+            ],
+            "16": [
+              "0x176c0"
+            ],
+            "17": [
+              "0x176c0"
+            ],
+            "18": [
+              "0x176c0"
+            ],
+            "19": [
+              "0x176c0"
+            ],
+            "20": [
+              "0x176c0"
+            ],
+            "21": [
+              "0x176c0"
+            ],
+            "22": [
+              "0x176c0"
+            ],
+            "23": [
+              "0x176c0",
+              "0x68420"
+            ],
+            "24": [
+              "0x176c0"
+            ],
+            "25": [
+              "0x176c0"
+            ],
+            "26": [
+              "0x176c0"
+            ],
+            "27": [
+              "0x176c0"
+            ]
+          },
+          "registration_sites": {
+            "0": [
+              "0x48c68"
+            ],
+            "1": [
+              "0x48c68"
+            ],
+            "2": [
+              "0x48c68"
+            ],
+            "3": [
+              "0x48c68"
+            ],
+            "4": [
+              "0x48c68"
+            ],
+            "5": [
+              "0x48c68"
+            ],
+            "6": [
+              "0x48c68"
+            ],
+            "7": [
+              "0x48c68"
+            ],
+            "8": [
+              "0x48c68"
+            ],
+            "9": [
+              "0x48c68"
+            ],
+            "10": [
+              "0x48c68"
+            ],
+            "11": [
+              "0x48c68"
+            ],
+            "12": [
+              "0x48c68"
+            ],
+            "13": [
+              "0x48c68"
+            ],
+            "14": [
+              "0x48c68",
+              "0x48c72"
+            ],
+            "15": [
+              "0x48c68",
+              "0x48c80"
+            ],
+            "16": [
+              "0x48c68"
+            ],
+            "17": [
+              "0x48c68"
+            ],
+            "18": [
+              "0x48c68"
+            ],
+            "19": [
+              "0x48c68"
+            ],
+            "20": [
+              "0x48c68"
+            ],
+            "21": [
+              "0x48c68"
+            ],
+            "22": [
+              "0x48c68"
+            ],
+            "23": [
+              "0x48c68",
+              "0x48c8e"
+            ],
+            "24": [
+              "0x48c68"
+            ],
+            "25": [
+              "0x48c68"
+            ],
+            "26": [
+              "0x48c68"
+            ],
+            "27": [
+              "0x48c68"
+            ]
+          },
+          "call_chains": {
+            "0:0x176c0": [
+              [
+                "0x92010",
+                "0x4867c"
+              ]
+            ],
+            "1:0x176c0": [
+              [
+                "0x92010",
+                "0x4867c"
+              ]
+            ],
+            "2:0x176c0": [
+              [
+                "0x92010",
+                "0x4867c"
+              ]
+            ],
+            "3:0x176c0": [
+              [
+                "0x92010",
+                "0x4867c"
+              ]
+            ],
+            "4:0x176c0": [
+              [
+                "0x92010",
+                "0x4867c"
+              ]
+            ],
+            "5:0x176c0": [
+              [
+                "0x92010",
+                "0x4867c"
+              ]
+            ],
+            "6:0x176c0": [
+              [
+                "0x92010",
+                "0x4867c"
+              ]
+            ],
+            "7:0x176c0": [
+              [
+                "0x92010",
+                "0x4867c"
+              ]
+            ],
+            "8:0x176c0": [
+              [
+                "0x92010",
+                "0x4867c"
+              ]
+            ],
+            "9:0x176c0": [
+              [
+                "0x92010",
+                "0x4867c"
+              ]
+            ],
+            "10:0x176c0": [
+              [
+                "0x92010",
+                "0x4867c"
+              ]
+            ],
+            "11:0x176c0": [
+              [
+                "0x92010",
+                "0x4867c"
+              ]
+            ],
+            "12:0x176c0": [
+              [
+                "0x92010",
+                "0x4867c"
+              ]
+            ],
+            "13:0x176c0": [
+              [
+                "0x92010",
+                "0x4867c"
+              ]
+            ],
+            "14:0x176c0": [
+              [
+                "0x92010",
+                "0x4867c"
+              ]
+            ],
+            "14:0x14cc0": [
+              [
+                "0x92010",
+                "0x4867c"
+              ]
+            ],
+            "15:0x176c0": [
+              [
+                "0x92010",
+                "0x4867c"
+              ]
+            ],
+            "15:0x3fc90": [
+              [
+                "0x92010",
+                "0x4867c"
+              ]
+            ],
+            "16:0x176c0": [
+              [
+                "0x92010",
+                "0x4867c"
+              ]
+            ],
+            "17:0x176c0": [
+              [
+                "0x92010",
+                "0x4867c"
+              ]
+            ],
+            "18:0x176c0": [
+              [
+                "0x92010",
+                "0x4867c"
+              ]
+            ],
+            "19:0x176c0": [
+              [
+                "0x92010",
+                "0x4867c"
+              ]
+            ],
+            "20:0x176c0": [
+              [
+                "0x92010",
+                "0x4867c"
+              ]
+            ],
+            "21:0x176c0": [
+              [
+                "0x92010",
+                "0x4867c"
+              ]
+            ],
+            "22:0x176c0": [
+              [
+                "0x92010",
+                "0x4867c"
+              ]
+            ],
+            "23:0x176c0": [
+              [
+                "0x92010",
+                "0x4867c"
+              ]
+            ],
+            "23:0x68420": [
+              [
+                "0x92010",
+                "0x4867c"
+              ]
+            ],
+            "24:0x176c0": [
+              [
+                "0x92010",
+                "0x4867c"
+              ]
+            ],
+            "25:0x176c0": [
+              [
+                "0x92010",
+                "0x4867c"
+              ]
+            ],
+            "26:0x176c0": [
+              [
+                "0x92010",
+                "0x4867c"
+              ]
+            ],
+            "27:0x176c0": [
+              [
+                "0x92010",
+                "0x4867c"
+              ]
+            ]
+          },
+          "functions_analyzed": 6,
+          "limitations": [],
+          "analysis_model": "DriverEntry direct-call chain; function-local MAY flow; callees summarized as unknown"
+        },
+        "classification": "ROOTED_IMAGE_POINTER_CALL_LEAD",
+        "scope": "A resolved entry and a fixed-point MAY path do not prove a user-visible device, request success, path feasibility, or execution on this machine. Object-field leads do not establish that the field belongs to this image."
+      },
+      "offline_validation": {
+        "schema_version": 1,
+        "engine": "Unicorn synthetic WDM request replay",
+        "image_sha256": "c6da5fb094ecbe65e9a2ab7a2efb08e67bf8e1e91542fab44683597ce24492a1",
+        "sites_total": 100,
+        "sites_selected": 12,
+        "site_limit": 12,
+        "sites": [
+          {
+            "event": "CreateFile",
+            "entry_model": "WDM",
+            "pointer_kind": "IMAGE_POINTER_TABLE",
+            "dispatch_rva": "0x176c0",
+            "call_rva": "0x14d8e",
+            "slot_rva": "0x78430",
+            "field_chain": null,
+            "input_buffer_variant_candidate": false,
+            "path_evidence": null,
+            "attempts": [
+              {
+                "scenario": {
+                  "name": "empty_name",
+                  "file_name": "",
+                  "ioctl": 0,
+                  "input_length": 0,
+                  "output_length": 0
+                },
+                "status": "EMU_ERROR",
+                "instructions": 138,
+                "modeled_import_calls": {
+                  "NetioNrtIsTrackerDevice": 1,
+                  "RtlInitString": 3,
+                  "RtlEqualString": 3
+                },
+                "unmodeled_import_calls": {
+                  "NetioNrtIsTrackerDevice": 1,
+                  "RtlInitString": 3,
+                  "RtlEqualString": 3
+                },
+                "synthetic_request": true,
+                "error": "Unhandled CPU exception (UC_ERR_EXCEPTION)",
+                "fault_rva": "0x41cf7"
+              }
+            ],
+            "offline_evidence_score": {
+              "value": 45,
+              "tier": "STATIC_LEAD_ONLY",
+              "scale": "0-85 OFFLINE_EVIDENCE_ONLY",
+              "components": {
+                "rooted_may_flow": 15,
+                "storage_evidence": 20,
+                "initial_local_target": 10
+              },
+              "not_a_probability": true,
+              "live_user_openability": "UNVERIFIED",
+              "interpretation": "Ranking evidence within the synthetic/static model; not a vulnerability or live-reachability probability."
+            }
+          },
+          {
+            "event": "CreateFile",
+            "entry_model": "WDM",
+            "pointer_kind": "IMAGE_POINTER_TABLE",
+            "dispatch_rva": "0x176c0",
+            "call_rva": "0x3fcbe",
+            "slot_rva": "0x78850",
+            "field_chain": null,
+            "input_buffer_variant_candidate": false,
+            "path_evidence": null,
+            "attempts": [
+              {
+                "scenario": {
+                  "name": "empty_name",
+                  "file_name": "",
+                  "ioctl": 0,
+                  "input_length": 0,
+                  "output_length": 0
+                },
+                "status": "EMU_ERROR",
+                "instructions": 138,
+                "modeled_import_calls": {
+                  "NetioNrtIsTrackerDevice": 1,
+                  "RtlInitString": 3,
+                  "RtlEqualString": 3
+                },
+                "unmodeled_import_calls": {
+                  "NetioNrtIsTrackerDevice": 1,
+                  "RtlInitString": 3,
+                  "RtlEqualString": 3
+                },
+                "synthetic_request": true,
+                "error": "Unhandled CPU exception (UC_ERR_EXCEPTION)",
+                "fault_rva": "0x41cf7"
+              }
+            ],
+            "offline_evidence_score": {
+              "value": 45,
+              "tier": "STATIC_LEAD_ONLY",
+              "scale": "0-85 OFFLINE_EVIDENCE_ONLY",
+              "components": {
+                "rooted_may_flow": 15,
+                "storage_evidence": 20,
+                "initial_local_target": 10
+              },
+              "not_a_probability": true,
+              "live_user_openability": "UNVERIFIED",
+              "interpretation": "Ranking evidence within the synthetic/static model; not a vulnerability or live-reachability probability."
+            }
+          },
+          {
+            "event": "DeviceIoControl",
+            "entry_model": "WDM",
+            "pointer_kind": "IMAGE_POINTER_TABLE",
+            "dispatch_rva": "0x14cc0",
+            "call_rva": "0x14d8e",
+            "slot_rva": "0x78430",
+            "field_chain": null,
+            "input_buffer_variant_candidate": false,
+            "path_evidence": null,
+            "attempts": [
+              {
+                "scenario": {
+                  "name": "ioctl_00226000_len4",
+                  "file_name": "",
+                  "ioctl": 2252800,
+                  "input_length": 4,
+                  "output_length": 64
+                },
+                "status": "RETURNED_BEFORE_CALLSITE",
+                "instructions": 36,
+                "modeled_import_calls": {
+                  "NetioNrtIsTrackerDevice": 1,
+                  "IofCompleteRequest": 1
+                },
+                "unmodeled_import_calls": {
+                  "NetioNrtIsTrackerDevice": 1
+                },
+                "synthetic_request": true
+              },
+              {
+                "scenario": {
+                  "name": "ioctl_00226000_len64",
+                  "file_name": "",
+                  "ioctl": 2252800,
+                  "input_length": 64,
+                  "output_length": 64
+                },
+                "status": "RETURNED_BEFORE_CALLSITE",
+                "instructions": 36,
+                "modeled_import_calls": {
+                  "NetioNrtIsTrackerDevice": 1,
+                  "IofCompleteRequest": 1
+                },
+                "unmodeled_import_calls": {
+                  "NetioNrtIsTrackerDevice": 1
+                },
+                "synthetic_request": true
+              },
+              {
+                "scenario": {
+                  "name": "ioctl_00222000_len4",
+                  "file_name": "",
+                  "ioctl": 2236416,
+                  "input_length": 4,
+                  "output_length": 64
+                },
+                "status": "RETURNED_BEFORE_CALLSITE",
+                "instructions": 36,
+                "modeled_import_calls": {
+                  "NetioNrtIsTrackerDevice": 1,
+                  "IofCompleteRequest": 1
+                },
+                "unmodeled_import_calls": {
+                  "NetioNrtIsTrackerDevice": 1
+                },
+                "synthetic_request": true
+              },
+              {
+                "scenario": {
+                  "name": "ioctl_00222000_len64",
+                  "file_name": "",
+                  "ioctl": 2236416,
+                  "input_length": 64,
+                  "output_length": 64
+                },
+                "status": "RETURNED_BEFORE_CALLSITE",
+                "instructions": 36,
+                "modeled_import_calls": {
+                  "NetioNrtIsTrackerDevice": 1,
+                  "IofCompleteRequest": 1
+                },
+                "unmodeled_import_calls": {
+                  "NetioNrtIsTrackerDevice": 1
+                },
+                "synthetic_request": true
+              }
+            ],
+            "offline_evidence_score": {
+              "value": 45,
+              "tier": "STATIC_LEAD_ONLY",
+              "scale": "0-85 OFFLINE_EVIDENCE_ONLY",
+              "components": {
+                "rooted_may_flow": 15,
+                "storage_evidence": 20,
+                "initial_local_target": 10
+              },
+              "not_a_probability": true,
+              "live_user_openability": "UNVERIFIED",
+              "interpretation": "Ranking evidence within the synthetic/static model; not a vulnerability or live-reachability probability."
+            }
+          },
+          {
+            "event": "DeviceIoControl",
+            "entry_model": "WDM",
+            "pointer_kind": "IMAGE_POINTER_TABLE",
+            "dispatch_rva": "0x176c0",
+            "call_rva": "0x14d8e",
+            "slot_rva": "0x78430",
+            "field_chain": null,
+            "input_buffer_variant_candidate": false,
+            "path_evidence": null,
+            "attempts": [
+              {
+                "scenario": {
+                  "name": "ioctl_00226000_len4",
+                  "file_name": "",
+                  "ioctl": 2252800,
+                  "input_length": 4,
+                  "output_length": 64
+                },
+                "status": "EMU_ERROR",
+                "instructions": 82,
+                "modeled_import_calls": {
+                  "NetioNrtIsTrackerDevice": 2,
+                  "IofCompleteRequest": 1
+                },
+                "unmodeled_import_calls": {
+                  "NetioNrtIsTrackerDevice": 2
+                },
+                "synthetic_request": true,
+                "error": "Unhandled CPU exception (UC_ERR_EXCEPTION)",
+                "fault_rva": "0x41cf7"
+              },
+              {
+                "scenario": {
+                  "name": "ioctl_00226000_len64",
+                  "file_name": "",
+                  "ioctl": 2252800,
+                  "input_length": 64,
+                  "output_length": 64
+                },
+                "status": "EMU_ERROR",
+                "instructions": 82,
+                "modeled_import_calls": {
+                  "NetioNrtIsTrackerDevice": 2,
+                  "IofCompleteRequest": 1
+                },
+                "unmodeled_import_calls": {
+                  "NetioNrtIsTrackerDevice": 2
+                },
+                "synthetic_request": true,
+                "error": "Unhandled CPU exception (UC_ERR_EXCEPTION)",
+                "fault_rva": "0x41cf7"
+              },
+              {
+                "scenario": {
+                  "name": "ioctl_00222000_len4",
+                  "file_name": "",
+                  "ioctl": 2236416,
+                  "input_length": 4,
+                  "output_length": 64
+                },
+                "status": "EMU_ERROR",
+                "instructions": 82,
+                "modeled_import_calls": {
+                  "NetioNrtIsTrackerDevice": 2,
+                  "IofCompleteRequest": 1
+                },
+                "unmodeled_import_calls": {
+                  "NetioNrtIsTrackerDevice": 2
+                },
+                "synthetic_request": true,
+                "error": "Unhandled CPU exception (UC_ERR_EXCEPTION)",
+                "fault_rva": "0x41cf7"
+              },
+              {
+                "scenario": {
+                  "name": "ioctl_00222000_len64",
+                  "file_name": "",
+                  "ioctl": 2236416,
+                  "input_length": 64,
+                  "output_length": 64
+                },
+                "status": "EMU_ERROR",
+                "instructions": 82,
+                "modeled_import_calls": {
+                  "NetioNrtIsTrackerDevice": 2,
+                  "IofCompleteRequest": 1
+                },
+                "unmodeled_import_calls": {
+                  "NetioNrtIsTrackerDevice": 2
+                },
+                "synthetic_request": true,
+                "error": "Unhandled CPU exception (UC_ERR_EXCEPTION)",
+                "fault_rva": "0x41cf7"
+              }
+            ],
+            "offline_evidence_score": {
+              "value": 45,
+              "tier": "STATIC_LEAD_ONLY",
+              "scale": "0-85 OFFLINE_EVIDENCE_ONLY",
+              "components": {
+                "rooted_may_flow": 15,
+                "storage_evidence": 20,
+                "initial_local_target": 10
+              },
+              "not_a_probability": true,
+              "live_user_openability": "UNVERIFIED",
+              "interpretation": "Ranking evidence within the synthetic/static model; not a vulnerability or live-reachability probability."
+            }
+          },
+          {
+            "event": "DeviceIoControl",
+            "entry_model": "WDM",
+            "pointer_kind": "IMAGE_POINTER_TABLE",
+            "dispatch_rva": "0x176c0",
+            "call_rva": "0x3fcbe",
+            "slot_rva": "0x78850",
+            "field_chain": null,
+            "input_buffer_variant_candidate": false,
+            "path_evidence": null,
+            "attempts": [
+              {
+                "scenario": {
+                  "name": "ioctl_00226000_len4",
+                  "file_name": "",
+                  "ioctl": 2252800,
+                  "input_length": 4,
+                  "output_length": 64
+                },
+                "status": "EMU_ERROR",
+                "instructions": 82,
+                "modeled_import_calls": {
+                  "NetioNrtIsTrackerDevice": 2,
+                  "IofCompleteRequest": 1
+                },
+                "unmodeled_import_calls": {
+                  "NetioNrtIsTrackerDevice": 2
+                },
+                "synthetic_request": true,
+                "error": "Unhandled CPU exception (UC_ERR_EXCEPTION)",
+                "fault_rva": "0x41cf7"
+              },
+              {
+                "scenario": {
+                  "name": "ioctl_00226000_len64",
+                  "file_name": "",
+                  "ioctl": 2252800,
+                  "input_length": 64,
+                  "output_length": 64
+                },
+                "status": "EMU_ERROR",
+                "instructions": 82,
+                "modeled_import_calls": {
+                  "NetioNrtIsTrackerDevice": 2,
+                  "IofCompleteRequest": 1
+                },
+                "unmodeled_import_calls": {
+                  "NetioNrtIsTrackerDevice": 2
+                },
+                "synthetic_request": true,
+                "error": "Unhandled CPU exception (UC_ERR_EXCEPTION)",
+                "fault_rva": "0x41cf7"
+              },
+              {
+                "scenario": {
+                  "name": "ioctl_00222000_len4",
+                  "file_name": "",
+                  "ioctl": 2236416,
+                  "input_length": 4,
+                  "output_length": 64
+                },
+                "status": "EMU_ERROR",
+                "instructions": 82,
+                "modeled_import_calls": {
+                  "NetioNrtIsTrackerDevice": 2,
+                  "IofCompleteRequest": 1
+                },
+                "unmodeled_import_calls": {
+                  "NetioNrtIsTrackerDevice": 2
+                },
+                "synthetic_request": true,
+                "error": "Unhandled CPU exception (UC_ERR_EXCEPTION)",
+                "fault_rva": "0x41cf7"
+              },
+              {
+                "scenario": {
+                  "name": "ioctl_00222000_len64",
+                  "file_name": "",
+                  "ioctl": 2236416,
+                  "input_length": 64,
+                  "output_length": 64
+                },
+                "status": "EMU_ERROR",
+                "instructions": 82,
+                "modeled_import_calls": {
+                  "NetioNrtIsTrackerDevice": 2,
+                  "IofCompleteRequest": 1
+                },
+                "unmodeled_import_calls": {
+                  "NetioNrtIsTrackerDevice": 2
+                },
+                "synthetic_request": true,
+                "error": "Unhandled CPU exception (UC_ERR_EXCEPTION)",
+                "fault_rva": "0x41cf7"
+              }
+            ],
+            "offline_evidence_score": {
+              "value": 45,
+              "tier": "STATIC_LEAD_ONLY",
+              "scale": "0-85 OFFLINE_EVIDENCE_ONLY",
+              "components": {
+                "rooted_may_flow": 15,
+                "storage_evidence": 20,
+                "initial_local_target": 10
+              },
+              "not_a_probability": true,
+              "live_user_openability": "UNVERIFIED",
+              "interpretation": "Ranking evidence within the synthetic/static model; not a vulnerability or live-reachability probability."
+            }
+          },
+          {
+            "event": "ReadFile",
+            "entry_model": "WDM",
+            "pointer_kind": "IMAGE_POINTER_TABLE",
+            "dispatch_rva": "0x176c0",
+            "call_rva": "0x14d8e",
+            "slot_rva": "0x78430",
+            "field_chain": null,
+            "input_buffer_variant_candidate": false,
+            "path_evidence": null,
+            "attempts": [
+              {
+                "scenario": {
+                  "name": "readfile_64",
+                  "file_name": "",
+                  "ioctl": 0,
+                  "input_length": 64,
+                  "output_length": 64
+                },
+                "status": "EMU_ERROR",
+                "instructions": 37,
+                "modeled_import_calls": {
+                  "NetioNrtIsTrackerDevice": 1
+                },
+                "unmodeled_import_calls": {
+                  "NetioNrtIsTrackerDevice": 1
+                },
+                "synthetic_request": true,
+                "error": "Invalid memory read (UC_ERR_READ_UNMAPPED)",
+                "fault_rva": "0x17801"
+              }
+            ],
+            "offline_evidence_score": {
+              "value": 45,
+              "tier": "STATIC_LEAD_ONLY",
+              "scale": "0-85 OFFLINE_EVIDENCE_ONLY",
+              "components": {
+                "rooted_may_flow": 15,
+                "storage_evidence": 20,
+                "initial_local_target": 10
+              },
+              "not_a_probability": true,
+              "live_user_openability": "UNVERIFIED",
+              "interpretation": "Ranking evidence within the synthetic/static model; not a vulnerability or live-reachability probability."
+            }
+          },
+          {
+            "event": "ReadFile",
+            "entry_model": "WDM",
+            "pointer_kind": "IMAGE_POINTER_TABLE",
+            "dispatch_rva": "0x176c0",
+            "call_rva": "0x3fcbe",
+            "slot_rva": "0x78850",
+            "field_chain": null,
+            "input_buffer_variant_candidate": false,
+            "path_evidence": null,
+            "attempts": [
+              {
+                "scenario": {
+                  "name": "readfile_64",
+                  "file_name": "",
+                  "ioctl": 0,
+                  "input_length": 64,
+                  "output_length": 64
+                },
+                "status": "EMU_ERROR",
+                "instructions": 37,
+                "modeled_import_calls": {
+                  "NetioNrtIsTrackerDevice": 1
+                },
+                "unmodeled_import_calls": {
+                  "NetioNrtIsTrackerDevice": 1
+                },
+                "synthetic_request": true,
+                "error": "Invalid memory read (UC_ERR_READ_UNMAPPED)",
+                "fault_rva": "0x17801"
+              }
+            ],
+            "offline_evidence_score": {
+              "value": 45,
+              "tier": "STATIC_LEAD_ONLY",
+              "scale": "0-85 OFFLINE_EVIDENCE_ONLY",
+              "components": {
+                "rooted_may_flow": 15,
+                "storage_evidence": 20,
+                "initial_local_target": 10
+              },
+              "not_a_probability": true,
+              "live_user_openability": "UNVERIFIED",
+              "interpretation": "Ranking evidence within the synthetic/static model; not a vulnerability or live-reachability probability."
+            }
+          },
+          {
+            "event": "WriteFile",
+            "entry_model": "WDM",
+            "pointer_kind": "IMAGE_POINTER_TABLE",
+            "dispatch_rva": "0x176c0",
+            "call_rva": "0x14d8e",
+            "slot_rva": "0x78430",
+            "field_chain": null,
+            "input_buffer_variant_candidate": false,
+            "path_evidence": null,
+            "attempts": [
+              {
+                "scenario": {
+                  "name": "writefile_64",
+                  "file_name": "",
+                  "ioctl": 0,
+                  "input_length": 64,
+                  "output_length": 64
+                },
+                "status": "EMU_ERROR",
+                "instructions": 37,
+                "modeled_import_calls": {
+                  "NetioNrtIsTrackerDevice": 1
+                },
+                "unmodeled_import_calls": {
+                  "NetioNrtIsTrackerDevice": 1
+                },
+                "synthetic_request": true,
+                "error": "Invalid memory read (UC_ERR_READ_UNMAPPED)",
+                "fault_rva": "0x1789c"
+              }
+            ],
+            "offline_evidence_score": {
+              "value": 45,
+              "tier": "STATIC_LEAD_ONLY",
+              "scale": "0-85 OFFLINE_EVIDENCE_ONLY",
+              "components": {
+                "rooted_may_flow": 15,
+                "storage_evidence": 20,
+                "initial_local_target": 10
+              },
+              "not_a_probability": true,
+              "live_user_openability": "UNVERIFIED",
+              "interpretation": "Ranking evidence within the synthetic/static model; not a vulnerability or live-reachability probability."
+            }
+          },
+          {
+            "event": "WriteFile",
+            "entry_model": "WDM",
+            "pointer_kind": "IMAGE_POINTER_TABLE",
+            "dispatch_rva": "0x176c0",
+            "call_rva": "0x3fcbe",
+            "slot_rva": "0x78850",
+            "field_chain": null,
+            "input_buffer_variant_candidate": false,
+            "path_evidence": null,
+            "attempts": [
+              {
+                "scenario": {
+                  "name": "writefile_64",
+                  "file_name": "",
+                  "ioctl": 0,
+                  "input_length": 64,
+                  "output_length": 64
+                },
+                "status": "EMU_ERROR",
+                "instructions": 37,
+                "modeled_import_calls": {
+                  "NetioNrtIsTrackerDevice": 1
+                },
+                "unmodeled_import_calls": {
+                  "NetioNrtIsTrackerDevice": 1
+                },
+                "synthetic_request": true,
+                "error": "Invalid memory read (UC_ERR_READ_UNMAPPED)",
+                "fault_rva": "0x1789c"
+              }
+            ],
+            "offline_evidence_score": {
+              "value": 45,
+              "tier": "STATIC_LEAD_ONLY",
+              "scale": "0-85 OFFLINE_EVIDENCE_ONLY",
+              "components": {
+                "rooted_may_flow": 15,
+                "storage_evidence": 20,
+                "initial_local_target": 10
+              },
+              "not_a_probability": true,
+              "live_user_openability": "UNVERIFIED",
+              "interpretation": "Ranking evidence within the synthetic/static model; not a vulnerability or live-reachability probability."
+            }
+          },
+          {
+            "event": "CreateFile",
+            "entry_model": "WDM",
+            "pointer_kind": "WRITABLE_IMAGE_SLOT",
+            "dispatch_rva": "0x176c0",
+            "call_rva": "0x431d8",
+            "slot_rva": "0x845d0",
+            "field_chain": null,
+            "input_buffer_variant_candidate": false,
+            "path_evidence": null,
+            "attempts": [
+              {
+                "scenario": {
+                  "name": "empty_name",
+                  "file_name": "",
+                  "ioctl": 0,
+                  "input_length": 0,
+                  "output_length": 0
+                },
+                "status": "EMU_ERROR",
+                "instructions": 138,
+                "modeled_import_calls": {
+                  "NetioNrtIsTrackerDevice": 1,
+                  "RtlInitString": 3,
+                  "RtlEqualString": 3
+                },
+                "unmodeled_import_calls": {
+                  "NetioNrtIsTrackerDevice": 1,
+                  "RtlInitString": 3,
+                  "RtlEqualString": 3
+                },
+                "synthetic_request": true,
+                "error": "Unhandled CPU exception (UC_ERR_EXCEPTION)",
+                "fault_rva": "0x41cf7"
+              }
+            ],
+            "offline_evidence_score": {
+              "value": 35,
+              "tier": "STATIC_LEAD_ONLY",
+              "scale": "0-85 OFFLINE_EVIDENCE_ONLY",
+              "components": {
+                "rooted_may_flow": 15,
+                "storage_evidence": 20
+              },
+              "not_a_probability": true,
+              "live_user_openability": "UNVERIFIED",
+              "interpretation": "Ranking evidence within the synthetic/static model; not a vulnerability or live-reachability probability."
+            }
+          },
+          {
+            "event": "CreateFile",
+            "entry_model": "WDM",
+            "pointer_kind": "WRITABLE_IMAGE_SLOT",
+            "dispatch_rva": "0x176c0",
+            "call_rva": "0x5fa73",
+            "slot_rva": "0x84bb8",
+            "field_chain": null,
+            "input_buffer_variant_candidate": false,
+            "path_evidence": null,
+            "attempts": [
+              {
+                "scenario": {
+                  "name": "empty_name",
+                  "file_name": "",
+                  "ioctl": 0,
+                  "input_length": 0,
+                  "output_length": 0
+                },
+                "status": "EMU_ERROR",
+                "instructions": 138,
+                "modeled_import_calls": {
+                  "NetioNrtIsTrackerDevice": 1,
+                  "RtlInitString": 3,
+                  "RtlEqualString": 3
+                },
+                "unmodeled_import_calls": {
+                  "NetioNrtIsTrackerDevice": 1,
+                  "RtlInitString": 3,
+                  "RtlEqualString": 3
+                },
+                "synthetic_request": true,
+                "error": "Unhandled CPU exception (UC_ERR_EXCEPTION)",
+                "fault_rva": "0x41cf7"
+              }
+            ],
+            "offline_evidence_score": {
+              "value": 35,
+              "tier": "STATIC_LEAD_ONLY",
+              "scale": "0-85 OFFLINE_EVIDENCE_ONLY",
+              "components": {
+                "rooted_may_flow": 15,
+                "storage_evidence": 20
+              },
+              "not_a_probability": true,
+              "live_user_openability": "UNVERIFIED",
+              "interpretation": "Ranking evidence within the synthetic/static model; not a vulnerability or live-reachability probability."
+            }
+          },
+          {
+            "event": "DeviceIoControl",
+            "entry_model": "WDM",
+            "pointer_kind": "WRITABLE_IMAGE_SLOT",
+            "dispatch_rva": "0x14cc0",
+            "call_rva": "0x431d8",
+            "slot_rva": "0x845d0",
+            "field_chain": null,
+            "input_buffer_variant_candidate": false,
+            "path_evidence": null,
+            "attempts": [
+              {
+                "scenario": {
+                  "name": "ioctl_00226000_len4",
+                  "file_name": "",
+                  "ioctl": 2252800,
+                  "input_length": 4,
+                  "output_length": 64
+                },
+                "status": "RETURNED_BEFORE_CALLSITE",
+                "instructions": 36,
+                "modeled_import_calls": {
+                  "NetioNrtIsTrackerDevice": 1,
+                  "IofCompleteRequest": 1
+                },
+                "unmodeled_import_calls": {
+                  "NetioNrtIsTrackerDevice": 1
+                },
+                "synthetic_request": true
+              },
+              {
+                "scenario": {
+                  "name": "ioctl_00226000_len64",
+                  "file_name": "",
+                  "ioctl": 2252800,
+                  "input_length": 64,
+                  "output_length": 64
+                },
+                "status": "RETURNED_BEFORE_CALLSITE",
+                "instructions": 36,
+                "modeled_import_calls": {
+                  "NetioNrtIsTrackerDevice": 1,
+                  "IofCompleteRequest": 1
+                },
+                "unmodeled_import_calls": {
+                  "NetioNrtIsTrackerDevice": 1
+                },
+                "synthetic_request": true
+              },
+              {
+                "scenario": {
+                  "name": "ioctl_00222000_len4",
+                  "file_name": "",
+                  "ioctl": 2236416,
+                  "input_length": 4,
+                  "output_length": 64
+                },
+                "status": "RETURNED_BEFORE_CALLSITE",
+                "instructions": 36,
+                "modeled_import_calls": {
+                  "NetioNrtIsTrackerDevice": 1,
+                  "IofCompleteRequest": 1
+                },
+                "unmodeled_import_calls": {
+                  "NetioNrtIsTrackerDevice": 1
+                },
+                "synthetic_request": true
+              },
+              {
+                "scenario": {
+                  "name": "ioctl_00222000_len64",
+                  "file_name": "",
+                  "ioctl": 2236416,
+                  "input_length": 64,
+                  "output_length": 64
+                },
+                "status": "RETURNED_BEFORE_CALLSITE",
+                "instructions": 36,
+                "modeled_import_calls": {
+                  "NetioNrtIsTrackerDevice": 1,
+                  "IofCompleteRequest": 1
+                },
+                "unmodeled_import_calls": {
+                  "NetioNrtIsTrackerDevice": 1
+                },
+                "synthetic_request": true
+              }
+            ],
+            "offline_evidence_score": {
+              "value": 35,
+              "tier": "STATIC_LEAD_ONLY",
+              "scale": "0-85 OFFLINE_EVIDENCE_ONLY",
+              "components": {
+                "rooted_may_flow": 15,
+                "storage_evidence": 20
+              },
+              "not_a_probability": true,
+              "live_user_openability": "UNVERIFIED",
+              "interpretation": "Ranking evidence within the synthetic/static model; not a vulnerability or live-reachability probability."
+            }
+          }
+        ],
+        "installed_image_unchanged": true,
+        "evidence_scope": "Synthetic model only. No live device, OS I/O manager, real KMDF queue, handle ACL, or user request was exercised.",
+        "no_live_reachability_claim": true
+      }
+    }
+  ],
+  "summary": {
+    "INCONCLUSIVE": 1
+  }
+}
